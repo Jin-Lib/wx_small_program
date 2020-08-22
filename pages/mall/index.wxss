@@ -33,6 +33,9 @@ page{background-color: #f7f7f7}
 .more{float: right; font-size: 24rpx; font-weight: 200; margin-top: 3px;}
 .more i {border: solid black; border-width: 0 1px 1px 0;display: inline-block; padding: 4px;margin-left: 3px;}
 .more_right {transform: rotate(-45deg);-webkit-transform: rotate(-45deg);}
+.more1{float: right; font-size: 24rpx; font-weight: 200; margin-top: 1px; padding: 2rpx 18rpx; background-color: #f86f22; color: #fff; border-radius: 15rpx;}
+.more1 i {border: solid #fff; border-width: 0 1px 1px 0; padding: 4px;margin-left: 13rpx; float: right; margin-top: 0rpx;}
+.more_right1 {transform: rotate(45deg);-webkit-transform: rotate(45deg);}
 .explosion_course{width: 90vw; margin-top: 15px; margin-left: 5vw; float: left; background-color: #fff; border-radius: 10px; position: relative; overflow: hidden;}
 .course_img{margin-left: 2vw; width: 86vw; height: 130px; overflow: hidden; margin-top: 10px; border-radius: 10px;}
 .course_img image{width: 86vw;}
@@ -41,20 +44,50 @@ page{background-color: #f7f7f7}
 .text_Introduction{font-size: 22rpx; color: #686868; width: 100vw; overflow: hidden; height: 14px;}
 .spike{float: right; margin-right: 3vw; background-color: #fc4850; padding: 3px 8px; border-radius: 15px; color: #fff; font-size: 24rpx; margin-top: 8px;}
 .spike i{font-size: 34rpx; font-weight: 900; margin-right: 3px;}
-.time_top{position: absolute;top: 0;right: 0; background-color: #f86f22;padding: 3px 18px; font-size: 20rpx; color: #fff;}
+.time_top{position: absolute;top: 0;right: 0; background-color: #f86f22;padding: 3px 18px; font-size: 18rpx; color: #fff;}
 .arrival{width: 90vw;padding-bottom: 15px; margin-top: 15px; margin-left: 5vw; float: left; background-color: #fff; border-radius: 10px; position: relative; overflow: hidden;}
 .arri_img{margin-left: 2vw; width: 86vw; height: 130px; overflow: hidden; margin-top: 10px; border-radius: 10px;}
 .arri_img image{width: 86vw;}
 .arri_text{margin-left: 4vw; float: left; margin-top: 8px; width: 45vw;}
 .arri_title{font-size: 28rpx; font-weight: 900;}
 .arri_Introduction{font-size: 22rpx; color: #686868; width: 100vw; overflow: hidden; height: 14px;}
-.arri_spike{float: right; margin-right: 3vw; background-color: #f86f22; padding: 3px 8px; color: #fff; font-size: 20rpx; margin-top: 13px;}
+.arri_spike{float: right; margin-right: 3vw; background-color: #f86f22; padding: 3px 8px; color: #fff; font-size: 18rpx; margin-top: 13px;}
 .arri_sort{float: left; width: 88vw; margin-top: 0px; margin-left: 2vw;}
 .sort_k{width: 38vw;margin-left:3.5vw; float: left; overflow: hidden; margin-top: 20px;}
 .sort_img{width: 100%; height: 140px; overflow: hidden; border-radius: 10px;}
 .sort_title{font-size: 28rpx; font-weight: 900; margin-left: 2vw; margin-top: 5px;}
-.sort_spike{ margin-left: 2vw; float: left;background-color: #f86f22; padding: 2px 8px;color: #fff; font-size: 20rpx; margin-top: 5px;}
+.sort_spike{ margin-left: 2vw; float: left;background-color: #f86f22; padding: 2px 8px;color: #fff; font-size: 18rpx; margin-top: 5px;}
 .change{float: left; margin-top: 20px; font-size: 24rpx; padding: 5px 22px;color: #f86f22; background-color: #f7f7f7; border-radius: 15px; margin-left: 32vw;}
+.recommend{width: 90vw;padding-bottom: 15px; margin-top: 15px; margin-left: 5vw; float: left; background-color: #fff; border-radius: 10px; margin-bottom: 150rpx;}
+.reco_k{width: 100%; margin-top: 15px; padding-bottom: 15px; border-bottom: #f7f7f7 solid 1px; float: left;}
+.reco_img{width: 200rpx; height: 200rpx; overflow: hidden; border-radius: 8px; float: left; margin-left: 30rpx;}
+.reco_text{float: left; margin-left: 30rpx; width: 50vw; margin-top: 10rpx;}
+.reco_text_title{font-size: 32rpx; font-weight: 900;}
+.reco_text_introduction{font-size: 22rpx; margin-top: 10rpx; color: #aaa;}
+.reco_buy{float: left; margin-top: 70rpx;}
+.buy_img{width: 40rpx;height: 40rpx; overflow: hidden;float: left; border-radius: 50rpx; margin-left: -15rpx;}
+.buy_img image{width: 100%; }
+.buy_num{float: left; font-size: 20rpx; color: #aaa; margin-top: 10rpx; margin-left: 15rpx;}
+.intelligent{float: left; width: 100%; background-color: #fcf0f1; margin-top: 30rpx;overflow: hidden; }
+.inte_hd{white-space: nowrap;overflow-y: auto;margin-left: 10rpx; }
+.inte_k{width: 300rpx;margin-left: 20rpx; position: relative;display: inline-block;}
+.inte_img{width: 240rpx; height: 240rpx; overflow: hidden; border-radius: 30rpx; position: absolute; top: 10rpx; left: 20rpx;}
+.inte_img image{width: 100%;}
+.inte_text{width: 280rpx; height: 260rpx; border-radius: 30rpx; background-color: #fff; margin-top: 120rpx;}
+.inte_text_title{margin-top: 140rpx; float: left; margin-left: 15rpx;}
+.inte_text_title_title{font-size: 26rpx; font-weight: 900; }
+.inte_text_title_label{padding: 2px 8px; background-color: #f86f22; color: #fff; font-size: 18rpx; border-radius: 15rpx; margin-top: 13rpx;}
+.inte_text_title_Watch{color: #686868; font-size: 18rpx; margin-top: 10rpx;}
+
+
+
+
+
+
+
+
+
+
 
 
 

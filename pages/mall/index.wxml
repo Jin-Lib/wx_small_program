@@ -153,6 +153,59 @@
 </view>
 
 
+<!--智能推荐文字-->
+<view class="category">
+  <view class="explosion">
+    智能推荐
+    <view class="more1">4岁<i class="more_right1"></i></view>
+  </view>
+</view>
+<!--智能推荐课程图-->
+<view class="intelligent">
+  <view class="inte_hd">
+    <view class="inte_k">
+      <view class="inte_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="inte_text">
+        <view class="inte_text_title">
+          <view class="inte_text_title_title">9天提升科学探索欲</view>
+          <view class="inte_text_title_label">标签：4岁的孩子最爱看</view>
+          <view class="inte_text_title_Watch">2.0万人播放</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="inte_k">
+      <view class="inte_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="inte_text">
+        <view class="inte_text_title">
+          <view class="inte_text_title_title">9天提升科学探索欲</view>
+          <view class="inte_text_title_label">标签：4岁的孩子最爱看</view>
+          <view class="inte_text_title_Watch">2.0万人播放</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="inte_k">
+      <view class="inte_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="inte_text">
+        <view class="inte_text_title">
+          <view class="inte_text_title_title">9天提升科学探索欲</view>
+          <view class="inte_text_title_label">标签：4岁的孩子最爱看</view>
+          <view class="inte_text_title_Watch">2.0万人播放</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
 <!--自然科普文字-->
 <view class="category">
   <view class="explosion">
@@ -201,6 +254,157 @@
     为你推荐
   </view>
 </view>
+<!--为你推荐课程图-->
+<view class="recommend">
+  <view class="reco_k">
+    <view class="reco_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+    </view>
+    <view class="reco_text">
+      <view class="reco_text_title">世界地理之最</view>
+      <view class="reco_text_introduction">9天提升科学探索欲望</view>
+      <view class="reco_buy">
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_num">等77098人购买</view>
+      </view>
+    </view>
+  </view> <view class="reco_k">
+    <view class="reco_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+    </view>
+    <view class="reco_text">
+      <view class="reco_text_title">世界地理之最</view>
+      <view class="reco_text_introduction">9天提升科学探索欲望</view>
+      <view class="reco_buy">
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_num">等77098人购买</view>
+      </view>
+    </view>
+  </view>
+
+   <view class="reco_k">
+    <view class="reco_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+    </view>
+    <view class="reco_text">
+      <view class="reco_text_title">世界地理之最</view>
+      <view class="reco_text_introduction">9天提升科学探索欲望</view>
+      <view class="reco_buy">
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_num">等77098人购买</view>
+      </view>
+    </view>
+  </view>
 
 
-<view class="db">213</view>
+   <view class="reco_k">
+    <view class="reco_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+    </view>
+    <view class="reco_text">
+      <view class="reco_text_title">世界地理之最</view>
+      <view class="reco_text_introduction">9天提升科学探索欲望</view>
+      <view class="reco_buy">
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_num">等77098人购买</view>
+      </view>
+    </view>
+  </view>
+
+
+   <view class="reco_k">
+    <view class="reco_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+    </view>
+    <view class="reco_text">
+      <view class="reco_text_title">世界地理之最</view>
+      <view class="reco_text_introduction">9天提升科学探索欲望</view>
+      <view class="reco_buy">
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_num">等77098人购买</view>
+      </view>
+    </view>
+  </view>
+
+   <view class="reco_k">
+    <view class="reco_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+    </view>
+    <view class="reco_text">
+      <view class="reco_text_title">世界地理之最</view>
+      <view class="reco_text_introduction">9天提升科学探索欲望</view>
+      <view class="reco_buy">
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_num">等77098人购买</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
