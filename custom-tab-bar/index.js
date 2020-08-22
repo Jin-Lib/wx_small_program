@@ -5,7 +5,7 @@ Component({
   data: {
     selected: 0,
     color: "#7A7E83",
-    selectedColor: "#56a59f",
+    selectedColor: "#fc4850",
     list: [{
       pagePath: "/pages/mall/index",
       iconPath: "/resource/nav/home.png",
