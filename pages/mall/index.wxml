@@ -1,4 +1,206 @@
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
   购课商城
+</view> -->
+
+<!--轮播图和分类-->
+<view class="carousel">
+  <view class="carousel_frame">
+    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+  </view>
+  <view class="classification">
+    <view class="leaderboard">
+      <view class="lead_img">
+        <image src="/resource/nav/home_active.png" mode="widhthFix"></image>
+      </view>
+      排行榜
+    </view>
+    <view class="leaderboard">
+      <view class="lead_img">
+        <image src="/resource/nav/home_active.png" mode="widhthFix"></image>
+      </view>
+      大语文
+    </view>
+    <view class="leaderboard">
+      <view class="lead_img">
+        <image src="/resource/nav/home_active.png" mode="widhthFix"></image>
+      </view>
+      天文地理
+    </view>
+    <view class="leaderboard">
+      <view class="lead_img">
+        <image src="/resource/nav/home_active.png" mode="widhthFix"></image>
+      </view>
+      名师专区
+    </view>
+    <view class="leaderboard">
+      <view class="lead_img">
+        <image src="/resource/nav/home_active.png" mode="widhthFix"></image>
+      </view>
+      全部课程
+    </view>
+  </view>
 </view>
+<!--限时爆款文字-->
+<view class="category">
+  <view class="explosion">
+    限时爆款
+    <view class="more">更多<i class="more_right"></i></view>
+  </view>
+</view>
+<!--限时爆款课程图-->
+<view class="explosion_course">
+  <view class="time_top">限时1折</view>
+  <view class="course_img">
+    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+  </view>
+  <view class="coures_text">
+    <view class="text_title">遨游宇宙世界</view>
+    <view class="text_Introduction">发现奇妙之旅</view>
+  </view>
+  <view class="spike">￥<i>9.9</i>秒杀</view>
+</view>
+<!--最新上架文字-->
+<view class="category">
+  <view class="explosion">
+    最新上架
+  </view>
+</view>
+<!--最新上架课程图-->
+<view class="arrival">
+  <view class="arri_img">
+    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+  </view>
+  <view class="arri_text">
+    <view class="arri_title">遨游宇宙世界</view>
+    <view class="arri_Introduction">发现奇妙之旅</view>
+  </view>
+  <view class="arri_spike">标签</view>
+  <view class="arri_spike">世界</view>
+  <view class="arri_spike">遨游</view>
+  <view class="arri_sort">
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="change">换一换</view>
+  </view>
+</view>
+
+
+<!--今日热销文字-->
+<view class="category">
+  <view class="explosion">
+    今日热销
+    <view class="more">更多<i class="more_right"></i></view>
+  </view>
+</view>
+<!--今日热销课程图-->
+<view class="arrival">
+  <view class="arri_img">
+    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+  </view>
+  <view class="arri_text">
+    <view class="arri_title">遨游宇宙世界</view>
+    <view class="arri_Introduction">发现奇妙之旅</view>
+  </view>
+  <view class="arri_spike">标签</view>
+  <view class="arri_spike">世界</view>
+  <view class="arri_spike">遨游</view>
+  <view class="arri_sort">
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+  </view>
+</view>
+
+
+<!--自然科普文字-->
+<view class="category">
+  <view class="explosion">
+    自然科普
+    <view class="more">更多<i class="more_right"></i></view>
+  </view>
+</view>
+<!--自然科普课程图-->
+<view class="arrival">
+  <view class="arri_sort">
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+  </view>
+</view>
+
+<!--为你推荐-->
+<view class="category">
+  <view class="explosion">
+    为你推荐
+  </view>
+</view>
+
+
+<view class="db">213</view>

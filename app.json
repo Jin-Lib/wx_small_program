@@ -40,9 +40,9 @@
   },
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#fc4850",
     "navigationBarTitleText": "启明星",
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "backgroundColor": "#f7f7f7"
   },
   "style": "v2",
