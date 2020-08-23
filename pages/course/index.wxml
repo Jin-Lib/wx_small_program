@@ -123,3 +123,77 @@
   </view>
 
 </view>
+
+
+
+<!--限时爆款文字-->
+<view class="category">
+  <view class="explosion">
+    限时爆款
+    <view class="more">更多<i class="more_right"></i></view>
+  </view>
+</view>
+<!--限时爆款课程图-->
+<view class="explosion_course">
+  <view class="time_top">限时1折</view>
+  <view class="course_img">
+    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+  </view>
+  <view class="coures_text">
+    <view class="text_title">遨游宇宙世界</view>
+    <view class="text_Introduction">发现奇妙之旅</view>
+  </view>
+  <view class="spike">￥<i>9.9</i>秒杀</view>
+</view>
+<!--最新上架文字-->
+<view class="category">
+  <view class="explosion">
+    最新上架
+  </view>
+</view>
+<!--最新上架课程图-->
+<view class="arrival">
+  <view class="arri_img">
+    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+  </view>
+  <view class="arri_text">
+    <view class="arri_title">遨游宇宙世界</view>
+    <view class="arri_Introduction">发现奇妙之旅</view>
+  </view>
+  <view class="arri_spike">标签</view>
+  <view class="arri_spike">世界</view>
+  <view class="arri_spike">遨游</view>
+  <view class="arri_sort">
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="change">换一换</view>
+  </view>
+</view>
