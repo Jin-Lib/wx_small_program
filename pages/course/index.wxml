@@ -1,4 +1,125 @@
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
   我的课程
+</view> -->
+
+
+
+
+<!--我的拼团文字-->
+<view class="cour_title">
+  我的拼团
+</view>
+<!--拼团板块-->
+<view class="group">
+  <view class="group_k">
+    <view class="grounp_img">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+    </view>
+    <view class="grounp_text">
+      <view class="grounp_title">10年铠甲一数据库</view>
+      <view class="grpunp_sj">剩余时间：30小时20分18秒</view>
+    </view>
+    <view class="share">邀请好友拼团</view>
+  </view>
+
+  <view class="group_k">
+    <view class="grounp_img">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+    </view>
+    <view class="grounp_text">
+      <view class="grounp_title">10年铠甲一数据库</view>
+      <view class="grpunp_sj">剩余时间：30小时20分18秒</view>
+    </view>
+    <view class="share">邀请好友拼团</view>
+  </view>
+</view>
+
+
+<!--已购课程文字-->
+<view class="cour_title">
+  我的课程
+</view>
+
+<view class="course">
+  <!--未购课程板块not_purchased-->
+  <view class="not_purchased">
+    <image src="/resource/course/not_purchased.png"></image>
+    <view class="not_purc_text">哎呀！这里什么也没有</view>
+    <view class="not_purc_add">点击添加课程</view>
+  </view>
+  <!--已购课程板块purchased-->
+  <view class="purchased">
+     <!--tab切换-->
+     <view class="swiper-tab">
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">最近更新</view>
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">最近学习</view>
+      <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">最近购买</view>
+    </view>
+    <!--tab切换内容-->
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+        <swiper-item>
+            <view class="learn">
+              <view class="learn_img">
+                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+                <view class="update">更新至30集</view>
+              </view>
+              <view class="learn_text">
+                <view class="learn_title">10节跨界艺术课</view>
+                <view class="learn_introduction">课程简介</view>
+                <view class="learn_status">未学习</view>
+                <view class="learn_watch">8299位宝宝正在看</view>
+              </view>
+              <view class="top o_color">置顶</view>
+            </view>
+            <view class="learn">
+              <view class="learn_img">
+                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+                <view class="update">更新至30集</view>
+              </view>
+              <view class="learn_text">
+                <view class="learn_title">10节跨界艺术课</view>
+                <view class="learn_introduction">课程简介</view>
+                <view class="learn_status">学习至2集</view>
+                <view class="learn_watch">8299位宝宝正在看</view>
+              </view>
+              <view class="top">置顶</view>
+            </view>
+        </swiper-item>
+
+        <swiper-item>
+          <view class="learn">
+              <view class="learn_img">
+                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+                <view class="update">更新至30集</view>
+              </view>
+              <view class="learn_text">
+                <view class="learn_title">10节跨界艺术课</view>
+                <view class="learn_introduction">课程简介</view>
+                <view class="learn_status">学习至2集</view>
+                <view class="learn_watch">8299位宝宝正在看</view>
+              </view>
+              <view class="top">置顶</view>
+            </view>
+        </swiper-item>
+
+        <swiper-item>
+          <view class="learn">
+              <view class="learn_img">
+                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+                <view class="update">更新至30集</view>
+              </view>
+              <view class="learn_text">
+                <view class="learn_title">10节跨界艺术课</view>
+                <view class="learn_introduction">课程简介</view>
+                <view class="learn_status">已学完</view>
+                <view class="learn_watch">8299位宝宝正在看</view>
+              </view>
+              <view class="top">置顶</view>
+            </view>
+        </swiper-item>
+
+    </swiper>
+  </view>
+
 </view>

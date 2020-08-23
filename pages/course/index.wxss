@@ -19,3 +19,47 @@
 .usermotto {
   margin-top: 200px;
 }
+
+page{background-color: #f7f7f7;}
+.cour_title{ width: 650rpx; margin-left: 40rpx; margin-top: 30rpx; font-size: 32rpx; border-left: 3px solid #fc4850; padding-left: 10rpx; font-weight: 900;}
+.course{width: 665rpx; margin-left: 40rpx; margin-top: 30rpx;}
+.not_purchased{width: 100%; text-align: center;background-color: #fff; border-radius: 15rpx;  padding-bottom: 30rpx;}
+.not_purchased image{width: 300rpx; height: 200rpx; margin-top: 50rpx;}
+.not_purc_text{font-size: 24rpx; color: #aaa; margin-top: 20rpx;}
+.not_purc_add{font-size: 22rpx; color: #fff; background-color: #fc4850; width: 150rpx; padding: 5rpx 15rpx; border-radius: 30rpx; margin-left: 240rpx;
+margin-top: 30rpx;}
+.swiper-tab{width: 100%;text-align: center;line-height: 50rpx;}
+.swiper-tab-list{  font-size: 24rpx;display: inline-block; width: 120rpx;color: #777777;margin-left: 50rpx;}
+.on{ color: #fc4850; border-bottom: 3rpx solid #fc4850;}
+.swiper-box{width: 100%;}
+.learn{width: 100%; background-color: #fff; border-radius: 15rpx; float: left; margin-top: 20rpx;}
+.learn_img{width: 200rpx; height: 200rpx; overflow: hidden; border-radius: 15rpx; float: left; margin-top: 20rpx; margin-left: 20rpx; margin-bottom: 20rpx; position: relative;}
+.learn_img image{width: 100%;}
+.update{position: absolute; bottom: 0; right: 0; padding: 6rpx 15rpx; color: #fff; font-size: 18rpx; background-color:rgba(248, 111, 34, 0.4);}
+.learn_text{float: left; margin-top: 30rpx; margin-left: 20rpx; }
+.learn_title{font-size: 24rpx; color: #000;}
+.learn_introduction{font-size: 22rpx; color: #aaa; margin-top: 20rpx;}
+.learn_status{font-size: 20rpx; color: #f86f22; margin-top: 20rpx;}
+.learn_watch{font-size: 20rpx; color: #fc4850; margin-top: 30rpx;}
+.top{float: right; margin-right: 30rpx; margin-top: 185rpx; font-size: 22rpx;}
+.o_color{color: #f86f22; font-weight: 900;}
+
+.group{width: 665rpx; margin-left: 40rpx;background-color: #fff; border-radius: 15rpx; margin-top: 20rpx;  padding-bottom: 30rpx; float: left;}
+.group_k{float: left; margin-top: 20rpx; margin-left: 20rpx; width: 96%; border-bottom: #f7f7f7 3rpx solid; padding-bottom: 20rpx;}
+.grounp_img{float: left; width: 140rpx; height: 140rpx; overflow: hidden;}
+.grounp_text{float: left; margin-left: 20rpx; margin-top: 10rpx;}
+.grounp_title{font-size: 26rpx; font-weight: 900;}
+.grpunp_sj{font-size: 22rpx; color: #f86f22; margin-top: 20rpx;}
+.share{float: right; font-size: 24rpx; background-color: #fc4850; padding: 5rpx 13rpx; border-radius: 30rpx; color: #fff; margin-right: 40rpx; margin-top: 110rpx;}
+
+
+
+
+
+
+
+
+
+
+
+
