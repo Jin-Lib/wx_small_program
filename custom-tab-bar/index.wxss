@@ -26,12 +26,12 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 26rpx;
+  padding-top: 15rpx;
 }
 
 .cover-image {
-  width: 56rpx;
-  height: 56rpx;
+  width: 40rpx;
+  height: 40rpx;
 }
 
 .tab-bar-item cover-view {

@@ -23,9 +23,9 @@
 page{background-color: #f7f7f7;}
 .scholarship{position: relative; float: left; width: 750rpx; height:200rpx; background-color: #fc4850; border-bottom-left-radius: 60rpx; border-bottom-right-radius: 60rpx;}
 .scho_title{position: absolute; top: 15rpx; left: 30rpx; font-size: 44rpx; color: #fff;}
-.scho_rule{position: absolute;right: 0rpx;top: 20rpx; padding:15rpx 10rpx; font-size: 24rpx; background-color: #f86f22;width: 25rpx;}
+.scho_rule{position: absolute;right: 0rpx;top: 20rpx; padding:15rpx 10rpx; font-size: 24rpx; background-color: #f86f22;width: 25rpx;color: #fff;}
 .scho_k{position: absolute; float: left; width: 615rpx;top:130rpx; left: 30rpx; background-color: #fff; padding: 30rpx 30rpx; border-radius: 15rpx; font-size: 24rpx; text-align: center;}
 .scho_grandtotal{float: left;width: 307rpx; border-right: 3rpx solid #aaa;}
-.scho_withdraw{float: right;width: 307rpx;}
+.scho_withdraw{float: right;width: 305rpx;}
 .scho_num{margin-top: 20rpx; font-size: 32rpx; font-weight: 900;}
-.recording{ float: left; width: 615rpx;height:700rpx;margin-top:120rpx; margin-left: 30rpx; background-color: #fff; padding: 30rpx 30rpx; border-top-right-radius: 15rpx;border-top-left-radius: 15rpx; font-size: 26rpx;}
+.recording{ float: left; width: 615rpx;margin-top:120rpx; margin-left: 30rpx; background-color: #fff; padding: 30rpx 30rpx; border-top-right-radius: 15rpx;border-top-left-radius: 15rpx; font-size: 26rpx;margin-bottom: 130rpx;}
