@@ -3,7 +3,12 @@
     "pages/mall/index",
     "pages/course/index",
     "pages/money/index",
-    "pages/user/index"
+    "pages/user/index",
+    "pages/course-all/index",
+    "pages/course-detail/index",
+    "pages/course-menu/index",
+    "pages/course-pay/index",
+    "pages/course-share/index"
   ],
   "tabBar": {
     "custom": true,
