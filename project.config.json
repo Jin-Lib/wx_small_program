@@ -17,7 +17,11 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.1",
+<<<<<<< Updated upstream
 	"appid": "wx5cf529679cabbbcb",
+=======
+	"appid": "wxde137a8fd03a6254",
+>>>>>>> Stashed changes
 	"projectname": "%E5%90%AF%E6%98%8E%E6%98%9F",
 	"debugOptions": {
 		"hidedInDevtools": []

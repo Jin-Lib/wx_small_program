@@ -1,4 +1,5 @@
 {
   "navigationBarTitleText": "购课商城",
-  "usingComponents": {}
+  "usingComponents": {},
+  "onReachBottomDistance": 10
 }

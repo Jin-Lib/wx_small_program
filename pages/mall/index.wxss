@@ -36,7 +36,7 @@ page{background-color: #f7f7f7}
 .more1{float: right; font-size: 24rpx; font-weight: 200; margin-top: 1px; padding: 2rpx 18rpx; background-color: #f86f22; color: #fff; border-radius: 15rpx;}
 .more1 i {border: solid #fff; border-width: 0 1px 1px 0; padding: 4px;margin-left: 13rpx; float: right; margin-top: 0rpx;}
 .more_right1 {transform: rotate(45deg);-webkit-transform: rotate(45deg);}
-.explosion_course{width: 90vw; margin-top: 15px; margin-left: 5vw; float: left; background-color: #fff; border-radius: 10px; position: relative; overflow: hidden;}
+.explosion_course{width: 90vw; margin-top: 15px; margin-left: 5vw; float: left; background-color: #fff; border-radius: 10px; position: relative; overflow: hidden; height: 186p}
 .course_img{margin-left: 2vw; width: 86vw; height: 130px; overflow: hidden; margin-top: 10px; border-radius: 10px;}
 .course_img image{width: 86vw;}
 .coures_text{margin-left: 4vw; float: left; margin-top: 8px; margin-bottom: 8px; width: 60vw;}
@@ -58,8 +58,14 @@ page{background-color: #f7f7f7}
 .sort_title{font-size: 28rpx; font-weight: 900; margin-left: 2vw; margin-top: 5px;}
 .sort_spike{ margin-left: 2vw; float: left;background-color: #f86f22; padding: 2px 8px;color: #fff; font-size: 18rpx; margin-top: 5px;}
 .change{float: left; margin-top: 20px; font-size: 24rpx; padding: 5px 22px;color: #f86f22; background-color: #f7f7f7; border-radius: 15px; margin-left: 32vw;}
-.recommend{width: 90vw;padding-bottom: 15px; margin-top: 15px; margin-left: 5vw; float: left; background-color: #fff; border-radius: 10px; margin-bottom: 150rpx;}
+.recommend{width: 90vw;padding-bottom: 15px; margin-top: 15px; margin-left: 5vw; float: left; background-color: #fff; border-radius: 10px; 
+  margin-bottom: 150rpx;
+}
 .reco_k{width: 100%; margin-top: 15px; padding-bottom: 15px; border-bottom: #f7f7f7 solid 1px; float: left;}
+.reco_k:last-child {
+  border: none;
+  padding-bottom: 0;
+}
 .reco_img{width: 200rpx; height: 200rpx; overflow: hidden; border-radius: 8px; float: left; margin-left: 30rpx;}
 .reco_text{float: left; margin-left: 30rpx; width: 50vw; margin-top: 10rpx;}
 .reco_text_title{font-size: 32rpx; font-weight: 900;}
@@ -92,3 +98,12 @@ page{background-color: #f7f7f7}
 
 
 .db{width: 100vw; height: 100px; float: left;}
+
+.loading-info-area {
+  width: 90vw;
+  height: 100rpx;
+  /* margin: 0 auto; */
+  color: red;
+  background: red;
+  margin-bottom: 150rpx;
+}
