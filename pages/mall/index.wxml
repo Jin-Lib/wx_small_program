@@ -5,35 +5,35 @@
 
 <!--轮播图和分类-->
 <view class="carousel">
-  <view class="carousel_frame">
+  <view class="carousel_frame" bindtap='carousel'>
     <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
   </view>
   <view class="classification">
-    <view class="leaderboard">
+    <view class="leaderboard" bindtap="leaderboard">
       <view class="lead_img">
         <image src="/resource/nav/home_active.png" mode="widhthFix"></image>
       </view>
       排行榜
     </view>
-    <view class="leaderboard">
+    <view class="leaderboard" bindtap="chinese">
       <view class="lead_img">
         <image src="/resource/nav/home_active.png" mode="widhthFix"></image>
       </view>
       大语文
     </view>
-    <view class="leaderboard">
+    <view class="leaderboard" bindtap="geography">
       <view class="lead_img">
         <image src="/resource/nav/home_active.png" mode="widhthFix"></image>
       </view>
       天文地理
     </view>
-    <view class="leaderboard">
+    <view class="leaderboard" bindtap="teacher">
       <view class="lead_img">
         <image src="/resource/nav/home_active.png" mode="widhthFix"></image>
       </view>
       名师专区
     </view>
-    <view class="leaderboard">
+    <view class="leaderboard" bindtap="allcourses">
       <view class="lead_img">
         <image src="/resource/nav/home_active.png" mode="widhthFix"></image>
       </view>
@@ -45,11 +45,11 @@
 <view class="category">
   <view class="explosion">
     限时爆款
-    <view class="more">更多<i class="more_right"></i></view>
+    <view class="more" bindtap="more">更多<i class="more_right"></i></view>
   </view>
 </view>
 <!--限时爆款课程图-->
-<view class="explosion_course">
+<view class="explosion_course" bindtap="details">
   <view class="time_top">限时1折</view>
   <view class="course_img">
     <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
@@ -68,25 +68,27 @@
 </view>
 <!--最新上架课程图-->
 <view class="arrival">
-  <view class="arri_img">
-    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+  <view class="arr_top_k" bindtap="details">
+    <view class="arri_img">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+    </view>
+    <view class="arri_text">
+      <view class="arri_title">遨游宇宙世界</view>
+      <view class="arri_Introduction">发现奇妙之旅</view>
+    </view>
+    <view class="arri_spike">标签</view>
+    <view class="arri_spike">世界</view>
+    <view class="arri_spike">遨游</view>
   </view>
-  <view class="arri_text">
-    <view class="arri_title">遨游宇宙世界</view>
-    <view class="arri_Introduction">发现奇妙之旅</view>
-  </view>
-  <view class="arri_spike">标签</view>
-  <view class="arri_spike">世界</view>
-  <view class="arri_spike">遨游</view>
   <view class="arri_sort">
-    <view class="sort_k">
+    <view class="sort_k" bindtap="details">
       <view class="sort_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
       <view class="sort_title">标题：书法课程</view>
       <view class="sort_spike">标签</view>
     </view>
-    <view class="sort_k">
+    <view class="sort_k" bindtap="details">
       <view class="sort_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
@@ -94,14 +96,14 @@
       <view class="sort_spike">标签</view>
       <view class="sort_spike">标签</view>
     </view>
-    <view class="sort_k">
+    <view class="sort_k" bindtap="details">
       <view class="sort_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
       <view class="sort_title">标题：书法课程</view>
       <view class="sort_spike">标签</view>
     </view>
-    <view class="sort_k">
+    <view class="sort_k" bindtap="details">
       <view class="sort_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
@@ -123,25 +125,27 @@
 </view>
 <!--今日热销课程图-->
 <view class="arrival">
-  <view class="arri_img">
-    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+  <view class="arri_top_k" bindtap="details">
+    <view class="arri_img">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+    </view>
+    <view class="arri_text">
+      <view class="arri_title">遨游宇宙世界</view>
+      <view class="arri_Introduction">发现奇妙之旅</view>
+    </view>
+    <view class="arri_spike">标签</view>
+    <view class="arri_spike">世界</view>
+    <view class="arri_spike">遨游</view>
   </view>
-  <view class="arri_text">
-    <view class="arri_title">遨游宇宙世界</view>
-    <view class="arri_Introduction">发现奇妙之旅</view>
-  </view>
-  <view class="arri_spike">标签</view>
-  <view class="arri_spike">世界</view>
-  <view class="arri_spike">遨游</view>
   <view class="arri_sort">
-    <view class="sort_k">
+    <view class="sort_k" bindtap="details">
       <view class="sort_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
       <view class="sort_title">标题：书法课程</view>
       <view class="sort_spike">标签</view>
     </view>
-    <view class="sort_k">
+    <view class="sort_k" bindtap="details">
       <view class="sort_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
@@ -163,7 +167,7 @@
 <!--智能推荐课程图-->
 <view class="intelligent">
   <view class="inte_hd">
-    <view class="inte_k">
+    <view class="inte_k" bindtap="details">
       <view class="inte_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
@@ -176,7 +180,7 @@
       </view>
     </view>
 
-    <view class="inte_k">
+    <view class="inte_k" bindtap="details">
       <view class="inte_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
@@ -189,7 +193,7 @@
       </view>
     </view>
 
-    <view class="inte_k">
+    <view class="inte_k" bindtap="details">
       <view class="inte_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
@@ -210,34 +214,33 @@
 <view class="category">
   <view class="explosion">
     自然科普
-    <view class="more">更多<i class="more_right"></i></view>
   </view>
 </view>
 <!--自然科普课程图-->
 <view class="arrival">
   <view class="arri_sort">
-    <view class="sort_k">
+    <view class="sort_k" bindtap="details">
       <view class="sort_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
       <view class="sort_title">标题：书法课程</view>
       <view class="sort_spike">标签</view>
     </view>
-    <view class="sort_k">
+    <view class="sort_k" bindtap="details">
       <view class="sort_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
       <view class="sort_title">标题：书法课程</view>
       <view class="sort_spike">标签</view>
     </view>
-    <view class="sort_k">
+    <view class="sort_k" bindtap="details">
       <view class="sort_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
       <view class="sort_title">标题：书法课程</view>
       <view class="sort_spike">标签</view>
     </view>
-    <view class="sort_k">
+    <view class="sort_k" bindtap="details">
       <view class="sort_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       </view>
@@ -256,7 +259,7 @@
 </view>
 <!--为你推荐课程图-->
 <view class="recommend">
-  <view class="reco_k">
+  <view class="reco_k" bindtap="details">
     <view class="reco_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
     </view>
@@ -279,32 +282,8 @@
         <view class="buy_num">等77098人购买</view>
       </view>
     </view>
-  </view> <view class="reco_k">
-    <view class="reco_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
-    </view>
-    <view class="reco_text">
-      <view class="reco_text_title">世界地理之最</view>
-      <view class="reco_text_introduction">9天提升科学探索欲望</view>
-      <view class="reco_buy">
-        <view class="buy_img">
-          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
-        </view>
-        <view class="buy_img">
-          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
-        </view>
-        <view class="buy_img">
-          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
-        </view>
-        <view class="buy_img">
-          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
-        </view>
-        <view class="buy_num">等77098人购买</view>
-      </view>
-    </view>
-  </view>
-
-   <view class="reco_k">
+  </view> 
+  <view class="reco_k" bindtap="details">
     <view class="reco_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
     </view>
@@ -329,8 +308,32 @@
     </view>
   </view>
 
+   <view class="reco_k" bindtap="details">
+    <view class="reco_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+    </view>
+    <view class="reco_text">
+      <view class="reco_text_title">世界地理之最</view>
+      <view class="reco_text_introduction">9天提升科学探索欲望</view>
+      <view class="reco_buy">
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_img">
+          <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        </view>
+        <view class="buy_num">等77098人购买</view>
+      </view>
+    </view>
+  </view>
 
-   <view class="reco_k">
+   <view class="reco_k" bindtap="details">
     <view class="reco_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
     </view>
@@ -356,7 +359,7 @@
   </view>
 
 
-   <view class="reco_k">
+   <view class="reco_k" bindtap="details">
     <view class="reco_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
     </view>
@@ -381,7 +384,7 @@
     </view>
   </view>
 
-   <view class="reco_k">
+   <view class="reco_k" bindtap="details">
     <view class="reco_img">
         <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
     </view>

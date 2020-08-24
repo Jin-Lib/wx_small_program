@@ -45,7 +45,7 @@ margin-top: 30rpx;}
 .o_color{color: #f86f22; font-weight: 900;}
 
 .group{width: 665rpx; margin-left: 40rpx;background-color: #fff; border-radius: 15rpx; margin-top: 20rpx; float: left;}
-.group_k{float: left; margin-top: 20rpx; margin-left: 20rpx; width: 96%; border-bottom: #f7f7f7 3rpx solid; padding-bottom: 20rpx;}
+.group_k{float: left; margin-top: 20rpx; margin-left: 20rpx; width: 660rpx; border-bottom: #f7f7f7 3rpx solid; padding-bottom: 20rpx;}
 .grounp_img{float: left; width: 140rpx; height: 140rpx; overflow: hidden; border-radius: 15rpx;}
 .grounp_text{float: left; margin-left: 20rpx; margin-top: 10rpx;}
 .grounp_title{font-size: 26rpx; font-weight: 900;}

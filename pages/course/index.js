@@ -9,6 +9,37 @@ Page({
     winHeight: 0,
     currentTab: 0,
   },
+  //点击邀好友拼团
+  invitefriends: function (event) {
+    wx.navigateTo({
+      url: '/pages/logs/logs'
+    })
+  },
+  //点击添加课程
+  addclass: function (event) {
+    wx.navigateTo({
+      url: '/pages/logs/logs'
+    })
+  },
+  //点击课程学习页
+  learningpage: function (event) {
+    wx.navigateTo({
+      url: '/pages/logs/logs'
+    })
+  },
+  //点击限时爆款更多
+  more: function (event) {
+    wx.navigateTo({
+      url: '/pages/logs/logs'
+    })
+  },
+  //点击商品详情
+  details: function (event) {
+    wx.navigateTo({
+      url: '/pages/logs/logs'
+    })
+  },
+
   onLoad: function () {
 
     //  tab切换

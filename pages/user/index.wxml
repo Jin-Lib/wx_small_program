@@ -16,11 +16,11 @@
       <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
     </view>
 
-    <view class="user_data_text">
+    <view class="user_data_text" bindtap="information">
       <view class="data_text_perfect">尚未完善宝宝信息</view>
     </view>
 
-    <view class="user_data_credit">
+    <view class="user_data_credit" bindtap="credit">
       <view class="data_credit_num">88</view>学分>
     </view>
 
@@ -38,22 +38,22 @@
 
   <view class="surp_k">
 
-    <view class="surp_coupon">
+    <view class="surp_coupon" bindtap="coupon">
       <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       <view class="surp_coupon_text">优惠券</view>
     </view>
 
-    <view class="surp_coupon">
+    <view class="surp_coupon" bindtap="mall">
       <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       <view class="surp_coupon_text">积分商城</view>
     </view>
 
-    <view class="surp_coupon">
+    <view class="surp_coupon" bindtap="challenge">
       <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       <view class="surp_coupon_text">问答挑战</view>
     </view>
 
-    <view class="surp_coupon">
+    <view class="surp_coupon" bindtap="privilege">
       <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       <view class="surp_coupon_text">专属特权</view>
     </view>
@@ -72,17 +72,17 @@
 
   <view class="service_k">
 
-    <view class="service_order">
+    <view class="service_order" bindtap="order">
       <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       <view class="text_order">我的订单</view>
     </view>
 
-    <view class="service_order">
+    <view class="service_order" bindtap="feedback">
       <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       <view class="text_order">意见反馈</view>
     </view>
 
-    <view class="service_order">
+    <view class="service_order" bindtap="advisory">
       <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
       <view class="text_order">咨询客服</view>
     </view>
