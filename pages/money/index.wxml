@@ -1,4 +1,23 @@
-<!--index.wxml-->
+<!--index.wxml
 <view class="container">
   赚奖学金
+</view>-->
+
+<view class="scholarship">
+  <view class="scho_title">邀好友赚奖学金</view>
+  <view class="scho_rule">规则</view>
+  <view class="scho_k">
+    <view class="scho_grandtotal">
+      累计奖学金(元)>
+      <view class="scho_num">0</view>
+    </view>
+    <view class="scho_withdraw">
+      可提现(元)>
+      <view class="scho_num">0</view>
+    </view>
+  </view>
+</view>
+
+<view class="recording">
+  购买课程后才可邀好友赚奖学金哦~
 </view>
