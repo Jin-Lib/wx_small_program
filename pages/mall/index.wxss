@@ -28,7 +28,7 @@ page{background-color: #f7f7f7}
 .leaderboard{width: 18.6vw; float: left; overflow: hidden; text-align: center;}
 .lead_img{width: 18.6vw; overflow: hidden; float: left;}
 .lead_img image{width: 30px; height: 30px;}
-.category{ width: 90vw; margin-left: 5vw; margin-top: 15px; float: left;}
+.category{ width: 650rpx; margin-left: 40rpx; margin-top: 30rpx; float: left;}
 .explosion{font-size: 32rpx; border-left: 3px solid #fc4850; padding-left: 3vw; width: 85vw; font-weight: 900;}
 .more{float: right; font-size: 24rpx; font-weight: 200; margin-top: 3px;}
 .more i {border: solid black; border-width: 0 1px 1px 0;display: inline-block; padding: 4px;margin-left: 3px;}
@@ -36,20 +36,28 @@ page{background-color: #f7f7f7}
 .more1{float: right; font-size: 24rpx; font-weight: 200; margin-top: 1px; padding: 2rpx 18rpx; background-color: #f86f22; color: #fff; border-radius: 15rpx;}
 .more1 i {border: solid #fff; border-width: 0 1px 1px 0; padding: 4px;margin-left: 13rpx; float: right; margin-top: 0rpx;}
 .more_right1 {transform: rotate(45deg);-webkit-transform: rotate(45deg);}
+<<<<<<< HEAD
 .explosion_course{width: 90vw; margin-top: 15px; margin-left: 5vw; float: left; background-color: #fff; border-radius: 10px; position: relative; overflow: hidden; height: 186p}
 .course_img{margin-left: 2vw; width: 86vw; height: 130px; overflow: hidden; margin-top: 10px; border-radius: 10px;}
 .course_img image{width: 86vw;}
 .coures_text{margin-left: 4vw; float: left; margin-top: 8px; margin-bottom: 8px; width: 60vw;}
+=======
+.explosion_course{width: 675rpx; margin-top: 15px; margin-left: 5vw; float: left; background-color: #fff; border-radius: 10px; position: relative; overflow: hidden;}
+.course_img{margin-left: 2vw; width: 645rpx; height: 260rpx; overflow: hidden; margin-top: 20rpx; border-radius: 15rpx;}
+.course_img image{width: 645rpx;}
+.coures_text{margin-left: 30rpx; float: left; margin-top: 14rpx; margin-bottom: 15rpx; width: 450rpx;}
+>>>>>>> master
 .text_title{font-size: 28rpx; font-weight: 900;}
-.text_Introduction{font-size: 22rpx; color: #686868; width: 100vw; overflow: hidden; height: 14px;}
-.spike{float: right; margin-right: 3vw; background-color: #fc4850; padding: 3px 8px; border-radius: 15px; color: #fff; font-size: 24rpx; margin-top: 8px;}
-.spike i{font-size: 34rpx; font-weight: 900; margin-right: 3px;}
+.text_Introduction{font-size: 22rpx; color: #686868; width: 450rpx; overflow: hidden; height: 30rpx;}
+.spike{float: right; margin-right: 24rpx; background-color: #fc4850; padding: 3px 8px; border-radius: 15px; color: #fff; font-size: 24rpx; margin-top: 8px;}
+.spike i{font-size: 34rpx; font-weight: 900; margin-right: 6rpx;}
 .time_top{position: absolute;top: 0;right: 0; background-color: #f86f22;padding: 3px 18px; font-size: 18rpx; color: #fff;}
-.arrival{width: 90vw;padding-bottom: 15px; margin-top: 15px; margin-left: 5vw; float: left; background-color: #fff; border-radius: 10px; position: relative; overflow: hidden;}
-.arri_img{margin-left: 2vw; width: 86vw; height: 130px; overflow: hidden; margin-top: 10px; border-radius: 10px;}
-.arri_img image{width: 86vw;}
-.arri_text{margin-left: 4vw; float: left; margin-top: 8px; width: 45vw;}
+.arrival{width: 675rpx;padding-bottom: 30rpx; margin-top: 30rpx; margin-left: 40rpx; float: left; background-color: #fff; border-radius: 15rpx; position: relative; overflow: hidden;}
+.arri_img{margin-left: 2vw; width: 645rpx; height: 260rpx; overflow: hidden; margin-top: 10px; border-radius: 15rpx;}
+.arri_img image{ width: 645rpx; height: 260rpx; border-radius: 15rpx;}
+.arri_text{margin-left: 30rpx; float: left; margin-top: 14rpx; width: 380rpx;}
 .arri_title{font-size: 28rpx; font-weight: 900;}
+<<<<<<< HEAD
 .arri_Introduction{font-size: 22rpx; color: #686868; width: 100vw; overflow: hidden; height: 14px;}
 .arri_spike{float: right; margin-right: 3vw; background-color: #f86f22; padding: 3px 8px; color: #fff; font-size: 18rpx; margin-top: 13px;}
 .arri_sort{float: left; width: 88vw; margin-top: 0px; margin-left: 2vw;}
@@ -61,6 +69,18 @@ page{background-color: #f7f7f7}
 .recommend{width: 90vw;padding-bottom: 15px; margin-top: 15px; margin-left: 5vw; float: left; background-color: #fff; border-radius: 10px; 
   margin-bottom: 150rpx;
 }
+=======
+.arri_Introduction{font-size: 22rpx; color: #686868; width: 100vw; overflow: hidden; height: 28rpx;}
+.arri_spike{float: right; margin-right: 20rpx; background-color: #f86f22; padding: 3px 8px; color: #fff; font-size: 18rpx; margin-top: 26rpx;}
+.arri_sort{float: left; width: 670rpx; margin-top: 0px; margin-left: 14rpx;}
+.sort_k{width: 300rpx;margin-left:17rpx; float: left; overflow: hidden; margin-top: 40rpx;}
+.sort_img{width: 300rpx; height: 300rpx; overflow: hidden; border-radius: 15rpx;}
+.sort_img image{width: 300rpx; height: 300rpx; border-radius: 15rpx;}
+.sort_title{font-size: 28rpx; font-weight: 900; margin-left: 15rpx; margin-top: 14rpx;}
+.sort_spike{ margin-left: 15rpx; float: left;background-color: #f86f22; padding: 2px 8px;color: #fff; font-size: 18rpx; margin-top: 12rpx;}
+.change{float: left; margin-top: 45rpx; font-size: 24rpx; padding: 5px 22px;color: #f86f22; background-color: #f7f7f7; border-radius: 30rpx; margin-left: 245rpx;}
+.recommend{width: 90vw;padding-bottom: 15px; margin-top: 15px; margin-left: 5vw; float: left; background-color: #fff; border-radius: 10px; margin-bottom: 150rpx;}
+>>>>>>> master
 .reco_k{width: 100%; margin-top: 15px; padding-bottom: 15px; border-bottom: #f7f7f7 solid 1px; float: left;}
 .reco_k:last-child {
   border: none;

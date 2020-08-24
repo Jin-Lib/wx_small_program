@@ -19,3 +19,34 @@
 .usermotto {
   margin-top: 200px;
 }
+
+page{background-color: #f7f7f7;}
+
+.user_top{float: left; position: relative; width: 750rpx; height: 150rpx; background-color: #fc4850;}
+.user_top_y{position: absolute; width: 80rpx; height: 80rpx; border-radius: 50%; top: 40rpx; left: 100rpx; opacity: 0.3; background-color: #fff;}
+.user_top_y1{position: absolute; width: 30rpx; height: 30rpx; border-radius: 50%; top: 25rpx; left: 300rpx; opacity: 0.3; background-color: #fff;}
+.user_top_y2{position: absolute; width: 60rpx; height:60rpx; border-radius: 50%; top: 10rpx; left: 720rpx; opacity: 0.3; background-color: #fff;}
+.user_data{float: left; position: absolute; top: 70rpx; width: 610rpx; left: 40rpx;background-color: #fff;border-radius: 15rpx;padding: 30rpx 30rpx;}
+.user_data_img{width: 100rpx; height: 100rpx; overflow: hidden; border-radius: 50%; float: left;border: 4rpx solid #f86f22;}
+.user_data_img image{width: 100%;}
+.user_data_text{float: left; margin-left: 30rpx; margin-top: 30rpx; font-size: 26rpx; font-weight: 900;}
+.user_data_credit{float: right; font-size: 36rpx;color: #fc4850;}
+.data_credit_num{font-size: 40rpx; font-weight: 900; margin-left: 15rpx;}
+.surprise{float: left; width: 730rpx; margin-left:10rpx; margin-top: 110rpx; background-color: #fff; border-top-left-radius: 20rpx;border-top-right-radius: 20rpx; padding-bottom: 20rpx;}
+.category{ width: 650rpx; margin-left: 40rpx; margin-top: 30rpx; float: left;}
+.explosion{font-size: 32rpx; border-left: 3px solid #fc4850; padding-left: 3vw; width: 85vw; font-weight: 900;}
+.surp_k{float: left;width: 730rpx;}
+.surp_coupon{width: 320rpx; margin-left: 30rpx; margin-top: 30rpx;overflow: hidden; position: relative; float: left; border-radius: 15rpx;}
+.surp_coupon image{width: 320rpx; height: 180rpx; border-radius: 15rpx;}
+.surp_coupon_text{position: absolute; width: 335rpx; text-align: center; top: 60rpx; font-size: 44rpx; color: #fff; font-weight: 900;}
+.service{float: left; width: 730rpx; margin-left:10rpx; margin-top: 20rpx; background-color: #fff;padding-bottom: 20rpx;}
+.service_k{float: left;width: 730rpx;}
+.service_order{float: left; width: 110rpx;text-align: center; margin-left: 30rpx; margin-top: 30rpx; font-size: 24rpx;}
+.service_order image{width: 70rpx; height: 70rpx; overflow: hidden; border-radius: 50%;}
+
+
+
+
+
+
+
