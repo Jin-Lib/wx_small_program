@@ -91,12 +91,13 @@
 <!--目录-->
 <view class="default">
   <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
-</view>
-<!--评价-->
-<view class="default">
   <image src="http://cdn.koalaxiezi.com/ceshi/7.png" mode="widthFix"></image>
 </view>
+<!--评价-->
+<view class="evaluation">
+  
+</view>
 <!--推荐-->
-<view class="default">
-  1
+<view class="recommend">
+  
 </view>
