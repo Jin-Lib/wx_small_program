@@ -4,6 +4,12 @@ const app = getApp()
 
 Page({
   data: {
+    hiddenrule:true,
+  },
+  showrule: function (e) {
+    this.setData({
+      hiddenrule: !this.data.hiddenrule
+    })
   },
   onLoad: function () {
     

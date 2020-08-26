@@ -1,11 +1,26 @@
 <!--index.wxml
 <view class="container">
   赚奖学金
+
 </view>-->
 
+<view class="scho_t_rule" hidden="{{hiddenrule}}">
+  <view class="t_rule_k">
+    <view class="t_rule_title">奖学金规则</view>
+    <view class="close" bindtap="showrule"></view>
+    <view class="t_rule_text">
+      <view class="t_rule_text_title">1、邀好友购课</view>
+      <view class="t_rule_text_text">将购买成功的课程分享给好友，好友通过你分享的链接进来或海报，开团或单购。</view>
+      <view class="t_rule_text_title">2、获得奖学金</view>
+      <view class="t_rule_text_text">好友购买成功后，你将获得奖学金，暂时你的账户中。k</view>
+      <view class="t_rule_text_title">3、邀好友购课</view>
+      <view class="t_rule_text_text">将购买成功的课程分享给好友，好友通过你分享的链接进来或海报，开团或单购。</view>
+    </view>
+  </view>
+</view>
 <view class="scholarship">
   <view class="scho_title">邀好友赚奖学金</view>
-  <view class="scho_rule">规则</view>
+  <view class="scho_rule" bindtap="showrule">规则</view>
   <view class="scho_k">
     <view class="scho_grandtotal">
       累计奖学金(元)>
