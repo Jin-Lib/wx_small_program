@@ -91,13 +91,68 @@
 <!--目录-->
 <view class="default">
   <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
-  <image src="http://cdn.koalaxiezi.com/ceshi/7.png" mode="widthFix"></image>
 </view>
 <!--评价-->
 <view class="evaluation">
-  
+  <image src="http://cdn.koalaxiezi.com/ceshi/7.png" mode="widthFix"></image>
 </view>
 <!--推荐-->
 <view class="recommend">
-  
+  <view class="recommend_title">相关推推荐</view>
+  <view class="recommend_detailed">
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="change">换一换</view>
+  </view>
+</view>
+
+<view class="float">
+  <view class="group"><view class="num">￥29.9</view>发起3人团</view>
+  <view class="single"><view class="num">￥99</view>单独购买价</view>
 </view>

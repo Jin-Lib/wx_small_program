@@ -107,6 +107,27 @@ page{background-color: #f7f7f7;}
 .default{float: left; width: 750rpx;}
 .default image{width: 100%;}
 
+.recommend{float: left; width: 750rpx; margin-top: 30rpx; margin-bottom:115rpx; background-color: #fff;}
+.recommend_title{float: left; width: 750rpx; text-align: center; font-size: 32rpx; font-weight: 900; margin-top: 30rpx;}
+.recommend_detailed{float: left; width: 720rpx; padding: 0rpx 0 20rpx 0rpx; }
+.reco_deta_k{float:left; width: 211rpx; margin-left: 30rpx; margin-top:30rpx; border-radius: 15rpx; overflow: hidden;}
+.reco_deta_k image{width: 211rpx; border-radius: 15rpx;}
+.reco_deta_title{float: left; width: 211rpx; overflow: hidden; height: 34rpx; font-size: 26rpx;font-weight: 900; margin-top: 10rpx;}
+.reco_deta_text{float: left; width: 205rpx; margin-top: 10rpx;}
+.reco_deta_jg{float: left;font-size: 22rpx; font-weight: 900; color: #fc4850;}
+.reco_deta_xl{float: right;font-size: 20rpx; color: #6b6b6b;}
+.change{float: left; margin-top: 40rpx; font-size: 24rpx; padding: 10rpx 40rpx;color: #f86f22; background-color: #f7f7f7; border-radius: 15px; margin-left: 300rpx; margin-bottom: 20rpx; }
+.float{float: left;position: fixed;bottom: 0; left: 0; background-color: #fff; width: 750rpx; font-size: 26rpx;}
+.index{float: left; width: 130rpx; text-align:center; padding: 15rpx 0;}
+.single{float: left; width: 375rpx; text-align: center; background-color: #f86f22; padding: 15rpx 0; color: #fff;}
+.group{float: right; width: 375rpx; text-align: center; background-color: #fc4850; padding: 15rpx 0; color: #fff;}
+.num{font-size: 38rpx; font-weight: 900;}
+
+
+
+
+
+
 
 
 
