@@ -67,6 +67,42 @@
 					"id": -1,
 					"name": "pages/user/index",
 					"pathName": "pages/user/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course-all/index",
+					"pathName": "pages/course-all/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course-detail/index",
+					"pathName": "pages/course-detail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/course-menu/index",
+					"pathName": "pages/course-menu/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/course-pay/index",
+					"pathName": "pages/course-pay/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course-share/index",
+					"pathName": "pages/course-share/index",
+					"query": "",
 					"scene": null
 				}
 			]

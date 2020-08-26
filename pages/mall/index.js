@@ -27,7 +27,7 @@ Page({
   //点击轮播图
   carousel: function (event) {
     wx.navigateTo({
-      url: '/pages/logs/logs'
+      url: '/pages/course-detail/index'
     })
   },
   //点击排行榜
