@@ -14,7 +14,7 @@
 <view class="group">
   <view class="group_k">
     <view class="grounp_img">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
     </view>
     <view class="grounp_text">
       <view class="grounp_title">10年铠甲一数据库</view>
@@ -25,7 +25,7 @@
 
   <view class="group_k">
     <view class="grounp_img">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
     </view>
     <view class="grounp_text">
       <view class="grounp_title">10年铠甲一数据库</view>
@@ -61,7 +61,7 @@
         <swiper-item>
             <view class="learn" bindtap="learningpage">
               <view class="learn_img">
-                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
                 <view class="update">更新至30集</view>
               </view>
               <view class="learn_text">
@@ -74,7 +74,7 @@
             </view>
             <view class="learn" bindtap="learningpage">
               <view class="learn_img">
-                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
                 <view class="update">更新至30集</view>
               </view>
               <view class="learn_text">
@@ -90,7 +90,7 @@
         <swiper-item>
           <view class="learn" bindtap="learningpage">
               <view class="learn_img">
-                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
                 <view class="update">更新至30集</view>
               </view>
               <view class="learn_text">
@@ -106,7 +106,7 @@
         <swiper-item>
           <view class="learn" bindtap="learningpage">
               <view class="learn_img">
-                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
                 <view class="update">更新至30集</view>
               </view>
               <view class="learn_text">
@@ -137,7 +137,7 @@
 <view class="explosion_course" bindtap="details">
   <view class="time_top">限时1折</view>
   <view class="course_img">
-    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
   </view>
   <view class="coures_text">
     <view class="text_title">遨游宇宙世界</view>
@@ -155,7 +155,7 @@
 <view class="arrival">
   <view class="arri_tap_k" bindtap="details">
     <view class="arri_img">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
     </view>
     <view class="arri_text">
       <view class="arri_title">遨游宇宙世界</view>
@@ -168,14 +168,14 @@
   <view class="arri_sort">
     <view class="sort_k" bindtap="details">
       <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
       </view>
       <view class="sort_title">标题：书法课程</view>
       <view class="sort_spike">标签</view>
     </view>
     <view class="sort_k" bindtap="details">
       <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
       </view>
       <view class="sort_title">标题：书法课程</view>
       <view class="sort_spike">标签</view>
@@ -183,14 +183,14 @@
     </view>
     <view class="sort_k" bindtap="details">
       <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
       </view>
       <view class="sort_title">标题：书法课程</view>
       <view class="sort_spike">标签</view>
     </view>
     <view class="sort_k" bindtap="details">
       <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
       </view>
       <view class="sort_title">标题：书法课程</view>
       <view class="sort_spike">标签</view>

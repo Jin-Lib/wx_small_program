@@ -13,7 +13,7 @@
   <view class="user_data">
 
     <view class="user_data_img">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg"></image>
     </view>
 
     <view class="user_data_text" bindtap="information">
@@ -39,22 +39,22 @@
   <view class="surp_k">
 
     <view class="surp_coupon" bindtap="coupon">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
       <view class="surp_coupon_text">优惠券</view>
     </view>
 
     <view class="surp_coupon" bindtap="mall">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
       <view class="surp_coupon_text">积分商城</view>
     </view>
 
     <view class="surp_coupon" bindtap="challenge">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
       <view class="surp_coupon_text">问答挑战</view>
     </view>
 
     <view class="surp_coupon" bindtap="privilege">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
       <view class="surp_coupon_text">专属特权</view>
     </view>
 
@@ -73,17 +73,17 @@
   <view class="service_k">
 
     <view class="service_order" bindtap="order">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg"></image>
       <view class="text_order">我的订单</view>
     </view>
 
     <view class="service_order" bindtap="feedback">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg"></image>
       <view class="text_order">意见反馈</view>
     </view>
 
     <view class="service_order" bindtap="advisory">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widhthFix"></image>
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg"></image>
       <view class="text_order">咨询客服</view>
     </view>
 

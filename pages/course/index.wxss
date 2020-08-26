@@ -80,8 +80,8 @@ margin-top: 30rpx;}
 .arri_spike{float: right; margin-right: 20rpx; background-color: #f86f22; padding: 3px 8px; color: #fff; font-size: 18rpx; margin-top: 26rpx;}
 .arri_sort{float: left; width: 670rpx; margin-top: 0px; margin-left: 14rpx;}
 .sort_k{width: 300rpx;margin-left:17rpx; float: left; overflow: hidden; margin-top: 40rpx;}
-.sort_img{width: 300rpx; height: 300rpx; overflow: hidden; border-radius: 15rpx;}
-.sort_img image{border-radius: 15rpx;width: 300rpx; height: 300rpx; }
+.sort_img{width: 300rpx;overflow: hidden; border-radius: 15rpx;}
+.sort_img image{border-radius: 15rpx;width: 300rpx;}
 .sort_title{font-size: 28rpx; font-weight: 900; margin-left: 15rpx; margin-top: 14rpx;}
 .sort_spike{ margin-left: 15rpx; float: left;background-color: #f86f22; padding: 2px 8px;color: #fff; font-size: 18rpx; margin-top: 12rpx;}
 .change{float: left; margin-top: 45rpx; font-size: 24rpx; padding: 5px 22px;color: #f86f22; background-color: #f7f7f7; border-radius: 30rpx; margin-left: 245rpx;}

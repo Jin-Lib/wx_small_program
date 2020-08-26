@@ -58,7 +58,6 @@ page{background-color: #f7f7f7}
 .arri_spike{float: right; margin-right: 3vw; background-color: #f86f22; padding: 3px 8px; color: #fff; font-size: 18rpx; margin-top: 13px;}
 .arri_sort{float: left; width: 88vw; margin-top: 0px; margin-left: 2vw;}
 .sort_k{width: 38vw;margin-left:3.5vw; float: left; overflow: hidden; margin-top: 20px;}
-.sort_img{width: 100%; height: 140px; overflow: hidden; border-radius: 10px;}
 .sort_title{font-size: 28rpx; font-weight: 900; margin-left: 2vw; margin-top: 5px;}
 .sort_spike{ margin-left: 2vw; float: left;background-color: #f86f22; padding: 2px 8px;color: #fff; font-size: 18rpx; margin-top: 5px;}
 .change{float: left; margin-top: 20px; font-size: 24rpx; padding: 5px 22px;color: #f86f22; background-color: #f7f7f7; border-radius: 15px; margin-left: 32vw;}
@@ -69,8 +68,8 @@ page{background-color: #f7f7f7}
 .arri_spike{float: right; margin-right: 20rpx; background-color: #f86f22; padding: 3px 8px; color: #fff; font-size: 18rpx; margin-top: 26rpx;}
 .arri_sort{float: left; width: 670rpx; margin-top: 0px; margin-left: 14rpx;}
 .sort_k{width: 300rpx;margin-left:17rpx; float: left; overflow: hidden; margin-top: 40rpx;}
-.sort_img{width: 300rpx; height: 300rpx; overflow: hidden; border-radius: 15rpx;}
-.sort_img image{width: 300rpx; height: 300rpx; border-radius: 15rpx;}
+.sort_img{width: 300rpx; overflow: hidden; border-radius: 15rpx;}
+.sort_img image{width: 300rpx;border-radius: 15rpx;}
 .sort_title{font-size: 28rpx; font-weight: 900; margin-left: 15rpx; margin-top: 14rpx;}
 .sort_spike{ margin-left: 15rpx; float: left;background-color: #f86f22; padding: 2px 8px;color: #fff; font-size: 18rpx; margin-top: 12rpx;}
 .change{float: left; margin-top: 45rpx; font-size: 24rpx; padding: 5px 22px;color: #f86f22; background-color: #f7f7f7; border-radius: 30rpx; margin-left: 245rpx;}
@@ -91,10 +90,10 @@ page{background-color: #f7f7f7}
 .intelligent{float: left; width: 100%; background-color: #fcf0f1; margin-top: 30rpx;overflow: hidden; }
 .inte_hd{white-space: nowrap;overflow-y: auto;margin-left: 10rpx; }
 .inte_k{width: 300rpx;margin-left: 20rpx; position: relative;display: inline-block;}
-.inte_img{width: 240rpx; height: 240rpx; overflow: hidden; border-radius: 30rpx; position: absolute; top: 10rpx; left: 20rpx;}
+.inte_img{width: 240rpx;overflow: hidden; border-radius: 30rpx; position: absolute; top: 10rpx; left: 20rpx;}
 .inte_img image{width: 100%;}
-.inte_text{width: 280rpx; height: 260rpx; border-radius: 30rpx; background-color: #fff; margin-top: 120rpx;}
-.inte_text_title{margin-top: 140rpx; float: left; margin-left: 15rpx;}
+.inte_text{width: 280rpx; height: 190rpx; border-radius: 30rpx; background-color: #fff; margin-top: 120rpx;}
+.inte_text_title{margin-top: 70rpx; float: left; margin-left: 15rpx;}
 .inte_text_title_title{font-size: 26rpx; font-weight: 900; }
 .inte_text_title_label{padding: 2px 8px; background-color: #f86f22; color: #fff; font-size: 18rpx; border-radius: 15rpx; margin-top: 13rpx;}
 .inte_text_title_Watch{color: #686868; font-size: 18rpx; margin-top: 10rpx;}
