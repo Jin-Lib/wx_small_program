@@ -24,6 +24,19 @@ Page({
     ],
   },
 
+  //点击浮窗活动右下角
+  bottom_advertising: function (event) {
+    wx.navigateTo({
+      url: '/pages/logs/logs'
+    })
+  },
+
+  //点击搜索
+  search: function (event) {
+    wx.navigateTo({
+      url: '/pages/course-search/index'
+    })
+  },
   //点击轮播图
   carousel: function (event) {
     wx.navigateTo({

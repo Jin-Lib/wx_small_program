@@ -1,4 +1,33 @@
-<!--index.wxml-->
+
+<!--浮窗活动-->
+<view class="bottom_advertising" bindtap="bottom_advertising">
+  <image src="http://cdn.koalaxiezi.com/ceshi/3.png" name="浮窗活动" mode="widthFix"></image>
+</view>
+
+<!--顶部搜索-->
+<view class="floating">
+  <view class="floating_img">
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+  </view>
+  <view class="floating_age">
+    <picker
+      bindchange="recommendedAgeSelect"
+      range="{{recommendedAge}}"
+      value="{{recommendedAgeSelectIndex}}"
+      class="more1">
+      <view class="more1">
+        {{recommendedAge[recommendedAgeSelectIndex]}}
+        <i class="more_right1"></i>
+      </view>
+    </picker>
+  </view>
+  <view class="floating_search" bindtap="search">
+    <view class="search_img">
+      <image src="/resource/img/search.png" mode="widthFix"></image>
+    </view>
+    奥数
+  </view>
+</view>
 <!--轮播图和分类-->
 <view class="carousel">
   <view class="carousel_frame" bindtap='carousel'>
