@@ -45,7 +45,7 @@ Page({
   //点击天文地理
   geography: function (event) {
     wx.navigateTo({
-      url: '/pages/logs/logs'
+      url: '/pages/course-menu/index'
     })
   },
   //点击名师专区

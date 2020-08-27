@@ -1,3 +1,132 @@
-<view >
-  课程目录
+
+<!--轮播图-->
+<view class="carousel">
+  <view class="carousel_frame" bindtap='carousel'>
+    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+  </view>
+</view>
+
+
+<view class="category">
+  <view class="explosion">
+    宇宙天文
+  </view>
+</view>
+<view class="arrival">
+  <view class="arri_sort">
+    <view class="sort_k" bindtap="details">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k" bindtap="details">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k" bindtap="details">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="category">
+  <view class="explosion">
+    自然地理
+  </view>
+</view>
+<view class="arrival">
+  <view class="arri_sort">
+    <view class="sort_k" bindtap="details">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k" bindtap="details">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="category">
+  <view class="explosion">
+    人文地理
+  </view>
+</view>
+<view class="arrival">
+  <view class="arri_sort">
+    <view class="sort_k" bindtap="details">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k" bindtap="details">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k" bindtap="details">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k" bindtap="details">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k" bindtap="details">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k" bindtap="details">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+    <view class="sort_k" bindtap="details">
+      <view class="sort_img">
+        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      </view>
+      <view class="sort_title">标题：书法课程</view>
+      <view class="sort_spike">标签</view>
+      <view class="sort_spike">标签</view>
+    </view>
+  </view>
 </view>

@@ -1,0 +1,19 @@
+
+page{background-color: #f7f7f7}
+
+.carousel{width: 750rpx; padding:20rpx 0rpx;background-color: #ffffff; float: left; margin-bottom: 30rpx;}
+.carousel_frame{width: 660rpx; margin-left: 25px;overflow: hidden; height: 300rpx; float: left;}
+.carousel_frame image{width: 660rpx;}
+
+.category{ width: 650rpx; margin-left: 40rpx; float: left;}
+.explosion{font-size: 32rpx; border-left: 3px solid #fc4850; padding-left: 3vw; width: 85vw; font-weight: 900;}
+
+.arrival{width: 750rpx;padding-bottom: 30rpx; margin-top: 30rpx; margin-bottom: 30rpx; margin-left: 0rpx; float: left; background-color: #fff; position: relative; overflow: hidden;}
+.arri_text{margin-left: 30rpx; float: left; margin-top: 14rpx; width: 380rpx;}
+.arri_title{font-size: 28rpx; font-weight: 900;}
+.arri_sort{float: left; width: 660rpx; margin-top: 0rpx; margin-left: 35rpx;}
+.sort_k{width: 300rpx;margin-left:30rpx; float: left; overflow: hidden; margin-top: 30rpx;}
+.sort_title{font-size: 28rpx; font-weight: 900; margin-left: 10rpx; margin-top: 15rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height: 34rpx; width: 280rpx; }
+.sort_spike{ margin-left: 10rpx; float: left;background-color: #f86f22; padding: 4rpx 12rpx;color: #fff; font-size: 18rpx; margin-top: 10rpx;}
+.sort_img{width: 320rpx; float: left; overflow: hidden;}
+.sort_img image{width: 100%;}

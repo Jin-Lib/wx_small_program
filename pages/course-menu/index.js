@@ -12,4 +12,18 @@ Page({
   onShow: function () {
 
   },
+
+  //点击轮播图
+  carousel: function (event) {
+    wx.navigateTo({
+      url: '/pages/course-detail/index'
+    })
+  },
+  //点击商品详情
+  details: function (event) {
+    wx.navigateTo({
+      url: '/pages/course-detail/index'
+    })
+  },
+
 })
