@@ -1,3 +1,193 @@
-<view >
-  所有课程
+
+
+<view class="category">
+  <view class="category_column add">综合</view>
+  <view class="category_column">上新</view>
+  <view class="category_column">销量</view>
+  <view class="category_column">观看</view>
 </view>
+
+<view class="filter">
+  <view class="filter_age">
+    <view class="filt_age_text">年龄：</view>
+    <view class="filt_age_num">
+      <view class="more1">
+        3岁已下
+        <i class="more_right1"></i>
+      </view>
+    </view>
+  </view>
+
+  <view class="filter_age">
+    <view class="filt_age_text">类目：</view>
+    <view class="filt_age_num">
+      <view class="more1">
+        自然科普
+        <i class="more_right1"></i>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<view class="screening_courses">
+  <view class="scre_cour_k" bindtap="details">
+    <view class="scre_cour_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+    </view>
+    <view class="scre_cour_text">
+      <view class="scre_cour_text_title">世界Top10名画</view>
+      <view class="scre_cour_text_label"><i>5~8岁</i><i>艺术启蒙</i><i>想象力</i></view>
+      <view class="scre_cour_text_buy">
+        <view class="scre_cour_text_buy_ji">10集</view>
+        <view class="scre_cour_text_buy_text">5.67万购买</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="scre_cour_k" bindtap="details">
+    <view class="scre_cour_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+    </view>
+    <view class="scre_cour_text">
+      <view class="scre_cour_text_title">世界Top10名画</view>
+      <view class="scre_cour_text_label"><i>5~8岁</i><i>艺术启蒙</i><i>想象力</i></view>
+      <view class="scre_cour_text_buy">
+        <view class="scre_cour_text_buy_ji">10集</view>
+        <view class="scre_cour_text_buy_text">5.67万购买</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="scre_cour_k" bindtap="details">
+    <view class="scre_cour_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+    </view>
+    <view class="scre_cour_text">
+      <view class="scre_cour_text_title">世界Top10名画</view>
+      <view class="scre_cour_text_label"><i>5~8岁</i><i>艺术启蒙</i><i>想象力</i></view>
+      <view class="scre_cour_text_buy">
+        <view class="scre_cour_text_buy_ji">10集</view>
+        <view class="scre_cour_text_buy_text">5.67万购买</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="scre_cour_k" bindtap="details">
+    <view class="scre_cour_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+    </view>
+    <view class="scre_cour_text">
+      <view class="scre_cour_text_title">世界Top10名画</view>
+      <view class="scre_cour_text_label"><i>5~8岁</i><i>艺术启蒙</i><i>想象力</i></view>
+      <view class="scre_cour_text_buy">
+        <view class="scre_cour_text_buy_ji">10集</view>
+        <view class="scre_cour_text_buy_text">5.67万购买</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="scre_cour_k" bindtap="details">
+    <view class="scre_cour_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+    </view>
+    <view class="scre_cour_text">
+      <view class="scre_cour_text_title">世界Top10名画</view>
+      <view class="scre_cour_text_label"><i>5~8岁</i><i>艺术启蒙</i><i>想象力</i></view>
+      <view class="scre_cour_text_buy">
+        <view class="scre_cour_text_buy_ji">10集</view>
+        <view class="scre_cour_text_buy_text">5.67万购买</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="scre_cour_k" bindtap="details">
+    <view class="scre_cour_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+    </view>
+    <view class="scre_cour_text">
+      <view class="scre_cour_text_title">世界Top10名画</view>
+      <view class="scre_cour_text_label"><i>5~8岁</i><i>艺术启蒙</i><i>想象力</i></view>
+      <view class="scre_cour_text_buy">
+        <view class="scre_cour_text_buy_ji">10集</view>
+        <view class="scre_cour_text_buy_text">5.67万购买</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="scre_cour_k" bindtap="details">
+    <view class="scre_cour_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+    </view>
+    <view class="scre_cour_text">
+      <view class="scre_cour_text_title">世界Top10名画</view>
+      <view class="scre_cour_text_label"><i>5~8岁</i><i>艺术启蒙</i><i>想象力</i></view>
+      <view class="scre_cour_text_buy">
+        <view class="scre_cour_text_buy_ji">10集</view>
+        <view class="scre_cour_text_buy_text">5.67万购买</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="scre_cour_k" bindtap="details">
+    <view class="scre_cour_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+    </view>
+    <view class="scre_cour_text">
+      <view class="scre_cour_text_title">世界Top10名画</view>
+      <view class="scre_cour_text_label"><i>5~8岁</i><i>艺术启蒙</i><i>想象力</i></view>
+      <view class="scre_cour_text_buy">
+        <view class="scre_cour_text_buy_ji">10集</view>
+        <view class="scre_cour_text_buy_text">5.67万购买</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="scre_cour_k" bindtap="details">
+    <view class="scre_cour_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+    </view>
+    <view class="scre_cour_text">
+      <view class="scre_cour_text_title">世界Top10名画</view>
+      <view class="scre_cour_text_label"><i>5~8岁</i><i>艺术启蒙</i><i>想象力</i></view>
+      <view class="scre_cour_text_buy">
+        <view class="scre_cour_text_buy_ji">10集</view>
+        <view class="scre_cour_text_buy_text">5.67万购买</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="scre_cour_k" bindtap="details">
+    <view class="scre_cour_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+    </view>
+    <view class="scre_cour_text">
+      <view class="scre_cour_text_title">世界Top10名画</view>
+      <view class="scre_cour_text_label"><i>5~8岁</i><i>艺术启蒙</i><i>想象力</i></view>
+      <view class="scre_cour_text_buy">
+        <view class="scre_cour_text_buy_ji">10集</view>
+        <view class="scre_cour_text_buy_text">5.67万购买</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="scre_cour_k" bindtap="details">
+    <view class="scre_cour_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+    </view>
+    <view class="scre_cour_text">
+      <view class="scre_cour_text_title">世界Top10名画</view>
+      <view class="scre_cour_text_label"><i>5~8岁</i><i>艺术启蒙</i><i>想象力</i></view>
+      <view class="scre_cour_text_buy">
+        <view class="scre_cour_text_buy_ji">10集</view>
+        <view class="scre_cour_text_buy_text">5.67万购买</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+

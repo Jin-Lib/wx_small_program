@@ -51,13 +51,13 @@ Page({
   //点击名师专区
   teacher: function (event) {
     wx.navigateTo({
-      url: '/pages/logs/logs'
+      url: '/pages/course-menu/index'
     })
   },
   //点击全部课程
   allcourses: function (event) {
     wx.navigateTo({
-      url: '/pages/logs/logs'
+      url: '/pages/course-all/index'
     })
   },
   //点击限时爆款更多
