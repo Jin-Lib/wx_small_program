@@ -37,44 +37,6 @@
   </view>
 </view>
 
-
-
-
-<!--服务说明弹窗-->
-<view class="bottom_popup" hidden="{{hiddenrule}}">
-  <view class="popup">
-    <view class="popup_title">
-      服务说明
-    </view>
-    <view class="close" bindtap="showrule"></view>
-    <view class="popup_detailed">
-      <view class="popup_text_title"><view class="check_red"></view>关于上课</view>
-      <view class="popup_text_deta">课程每周一、三解锁一集，解锁后您可以随意安排时间观看</view>
-    </view>
-    <view class="popup_detailed">
-      <view class="popup_text_title"><view class="check_red"></view>关于退费</view>
-      <view class="popup_text_deta">因课程为虚拟原创内容服务，拼团成功或单购成功后无法退款，请您确认无误后购买。</view>
-    </view>
-    <view class="popup_detailed">
-      <view class="popup_text_title"><view class="check_red"></view>关于有效期</view>
-      <view class="popup_text_deta">本课程一旦单购成功或拼团成功，课程解锁后，可以不限次数，永久回看</view>
-    </view>
-  </view>
-</view>
-
-<!--拼团规则弹窗-->
-<view class="bottom_popup" hidden="{{hiddengroup}}">
-  <view class="popup">
-    <view class="popup_title">
-      拼团规则
-    </view>
-    <view class="close" bindtap="showgroup"></view>
-    <view class="popup_detailed">
-      <view class="popup_text_title_26">团长发起<i>3</i>（数字后台对接）人团后，将拼团链接和加速海报分享给好友和群，<i>48</i>（数字后台对接）小时内邀请<i>2</i>（数字后台对接）位好友参加拼团，即可购买成功，否则系统将自动退款。</view>
-    </view>
-  </view>
-</view>
-
 <view class="navigation">
   <view class="column add">详情</view>
   <view class="column">目录</view>
@@ -102,7 +64,7 @@
   <view class="recommend_detailed">
     <view class="reco_deta_k">
       <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_title">天文地理国家地理海天文地理国家地理海</view>
       <view class="reco_deta_text">
         <view class="reco_deta_jg">￥29.9</view>
         <view class="reco_deta_xl">已售8.0万</view>
@@ -151,8 +113,132 @@
     <view class="change">换一换</view>
   </view>
 </view>
-
+<!--底部购买-->
 <view class="float">
-  <view class="group"><view class="num">￥29.9</view>发起3人团</view>
-  <view class="single"><view class="num">￥99</view>单独购买价</view>
+  <view class="group" bindtap="showpintuan"><view class="num">￥29.9</view>发起3人团</view>
+  <view class="single" bindtap="showsingled"><view class="num">￥99</view>单独购买价</view>
+</view>
+
+<!--回到顶部按钮-->
+<view class="top">
+  <image src="/resource/img/top.png" mode="widthFix"></image>
+</view>
+
+<!--提示***购买成功-->
+<view class="prompt">
+
+
+  <view class="prompt_img">
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+  </view>
+  <view class="prompt_text">
+    <view class="prom_text_name">天空之岚风雨行不</view>
+    <view class="prom_text_title">1分钟前拼团成功</view>
+  </view>
+</view>
+
+
+
+<!--服务说明弹窗-->
+<view class="bottom_popup" hidden="{{hiddenrule}}">
+  <view class="popup">
+    <view class="popup_title">
+      服务说明
+    </view>
+    <view class="close" bindtap="showrule"></view>
+    <view class="popup_detailed">
+      <view class="popup_text_title"><view class="check_red"></view>关于上课</view>
+      <view class="popup_text_deta">课程每周一、三解锁一集，解锁后您可以随意安排时间观看</view>
+    </view>
+    <view class="popup_detailed">
+      <view class="popup_text_title"><view class="check_red"></view>关于退费</view>
+      <view class="popup_text_deta">因课程为虚拟原创内容服务，拼团成功或单购成功后无法退款，请您确认无误后购买。</view>
+    </view>
+    <view class="popup_detailed">
+      <view class="popup_text_title"><view class="check_red"></view>关于有效期</view>
+      <view class="popup_text_deta">本课程一旦单购成功或拼团成功，课程解锁后，可以不限次数，永久回看</view>
+    </view>
+  </view>
+</view>
+
+<!--拼团规则弹窗-->
+<view class="bottom_popup" hidden="{{hiddengroup}}">
+  <view class="popup">
+    <view class="popup_title">
+      拼团规则
+    </view>
+    <view class="close" bindtap="showgroup"></view>
+    <view class="popup_detailed">
+      <view class="popup_text_title_26">团长发起<i>3</i>（数字后台对接）人团后，将拼团链接和加速海报分享给好友和群，<i>48</i>（数字后台对接）小时内邀请<i>2</i>（数字后台对接）位好友参加拼团，即可购买成功，否则系统将自动退款。</view>
+    </view>
+  </view>
+</view>
+
+<!--单独购买弹窗-->
+<view class="bottom_popup" hidden="{{hiddensingle}}">
+  <view class="popup">
+    <view class="popup_title add_red">
+      商品详情
+    </view>
+    <view class="close" bindtap="showsinglegb"></view>
+    <view class="popup_detailed">
+      <view class="commodity comm_add">
+        <view class="comm_title">商品名</view>
+        <view class="comm_text">104节大课启蒙系列课</view>
+      </view>
+      <view class="commodity comm_add">
+        <view class="comm_title">购买方式</view>
+        <view class="comm_text">单独全购价</view>
+      </view>
+      <view class="commodity">
+        <view class="comm_title">支付总额</view>
+        <view class="comm_text">￥199</view>
+      </view>
+      <view class="pay" bindtap="single_pay">确认支付</view>
+    </view>
+  </view>
+</view>
+
+<!--拼团购买弹窗-->
+<view class="bottom_popup" hidden="{{hiddenpintuan}}">
+  <view class="popup">
+    <view class="popup_title add_red">
+      商品详情
+    </view>
+    <view class="close" bindtap="showpintuangb"></view>
+    <view class="popup_detailed">
+      <view class="commodity comm_add">
+        <view class="comm_title">商品名</view>
+        <view class="comm_text">104节大课启蒙系列课</view>
+      </view>
+      <view class="commodity comm_add">
+        <view class="comm_title">购买方式</view>
+        <view class="comm_text">3人拼团购</view>
+      </view>
+      <view class="commodity">
+        <view class="comm_title">支付总额</view>
+        <view class="comm_text">￥29.9</view>
+      </view>
+      <view class="pay" bindtap="spell_pay">确认支付</view>
+    </view>
+  </view>
+</view>
+
+<!--拼团确认取消支付弹窗-->
+<view class="cancelpay" hidden="{{hiddencancelpay}}">
+  <view class="canc_pay_k">
+    <view class="canc_pay_title">确定要取消付款？</view>
+    <view class="canc_pay_determine" bindtap="showcancelpay">确定离开</view>
+    <view class="canc_pay_carry" bindtap="showcarry">继续支付</view>
+  </view>
+</view>
+
+
+<!--单购确认取消支付弹窗-->
+<view class="cancelpay" hidden="{{hiddencancelpayd}}">
+  <view class="canc_pay_k">
+    <view class="canc_pay_title">确定要取消付款？</view>
+    <view class="canc_pay_determine" bindtap="showcancelpayd">确定离开</view>
+    <view class="canc_pay_carry" bindtap="showcarryd">继续支付</view>
+  </view>
 </view>
