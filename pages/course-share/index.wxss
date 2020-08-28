@@ -1,0 +1,9 @@
+page{background-color: #f7f7f7}
+.share_top{width: 750rpx; float: left; background-color: #fff; text-align: center;}
+.share_top_title{width: 750rpx; float: left; font-size: 34rpx; font-weight: 900; margin-top: 30rpx;}
+.share_top_time{width: 750rpx; float: left;font-size: 26rpx; color: #5f635f; font-weight: 900; margin-top: 30rpx;}
+.share_top_img{width: 750rpx; float: left; margin-top: 30rpx;margin-left: -30rpx;}
+.share_top_img image{width: 80rpx; height: 80rpx; overflow: hidden; border-radius: 50%;margin-left: 30rpx;}
+.share_top_button{padding: 15rpx 70rpx; width:240rpx; background-color: #f86f22; margin-top: 60rpx;float: left; color: #fff; border-radius: 40rpx; font-size: 28rpx;margin-left: 170rpx;}
+.share_top_button2{padding: 15rpx 70rpx; width:240rpx; border: solid 3rpx #f86f22; margin-top: 40rpx;float: left; color: #f86f22; border-radius: 40rpx; font-size: 28rpx;margin-left: 170rpx;}
+.share_top_button3{padding: 15rpx 0rpx;border-bottom: solid 3rpx #f86f22; margin-top: 20rpx;float: left; color: #f86f22;font-size: 22rpx;margin-left: 290rpx; margin-bottom: 30rpx;}

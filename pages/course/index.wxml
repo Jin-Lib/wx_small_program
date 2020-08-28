@@ -1,9 +1,7 @@
-<!--index.wxml-->
-<!-- <view class="container">
-  我的课程
-</view> -->
-
-
+<!--浮窗活动-->
+<view class="bottom_advertising" bindtap="bottom_advertising">
+  <image src="http://cdn.koalaxiezi.com/ceshi/3.png" name="浮窗活动" mode="widthFix"></image>
+</view>
 
 
 <!--我的拼团文字-->
@@ -80,7 +78,12 @@
               <view class="learn_text">
                 <view class="learn_title">10节跨界艺术课</view>
                 <view class="learn_introduction">课程简介</view>
-                <view class="learn_status">学习至2集</view>
+                <view class="learn_status">
+                  <view class="loadbar">
+                    <view class="bar" style="width:30%"></view>
+                  </view>
+                  <view class="learn_status_yx">已学1/10集</view>
+                </view>
                 <view class="learn_watch">8299位宝宝正在看</view>
               </view>
               <view class="top">置顶</view>
@@ -96,7 +99,12 @@
               <view class="learn_text">
                 <view class="learn_title">10节跨界艺术课</view>
                 <view class="learn_introduction">课程简介</view>
-                <view class="learn_status">学习至2集</view>
+                <view class="learn_status">
+                  <view class="loadbar">
+                    <view class="bar" style="width:10%"></view>
+                  </view>
+                  <view class="learn_status_yx">已学1/10集</view>
+                </view>
                 <view class="learn_watch">8299位宝宝正在看</view>
               </view>
               <view class="top">置顶</view>
@@ -112,7 +120,12 @@
               <view class="learn_text">
                 <view class="learn_title">10节跨界艺术课</view>
                 <view class="learn_introduction">课程简介</view>
-                <view class="learn_status">已学完</view>
+                <view class="learn_status">
+                  <view class="loadbar">
+                    <view class="bar" style="width:100%"></view>
+                  </view>
+                  <view class="learn_status_yx">已学10/10集</view>
+                </view>
                 <view class="learn_watch">8299位宝宝正在看</view>
               </view>
               <view class="top">置顶</view>

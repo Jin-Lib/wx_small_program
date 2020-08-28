@@ -80,7 +80,7 @@ Page({
   //点击团购支付按钮
   spell_pay: function (event) {
     wx.navigateTo({
-      url: '/pages/logs/logs'
+      url: '/pages/course-share/index'
     })
   },
   onLoad: function () {
