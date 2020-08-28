@@ -4,6 +4,7 @@ page{background-color: #f7f7f7;}
 .play_video{width: 750rpx;}
 .play_video video{width: 750rpx;height: 422rpx;}
 .play_prompt{float: left;width: 700rpx; background-color: #fff;padding: 10rpx 25rpx;font-size: 22rpx;}
+.play_prom_right{float: right;}
 .check{
   float: left;
         width: 33rpx;
@@ -103,8 +104,16 @@ page{background-color: #f7f7f7;}
 .week_ups{width: 750rpx; background: rgba(0, 0, 0, 0.8);height: 100%;z-index: 99999;position: fixed;top: 0;left: 0;}
 .week_ups_img{width: 600rpx; margin-left: 75rpx; margin-top: 260rpx;}
 .week_ups_img image{width: 600rpx;}
-.week_poster_img{width: 600rpx; height: 900rpx; margin-left: 75rpx; margin-top: 140rpx;overflow: hidden;overflow-y:auto;}
-.week_poster_img image{width: 600rpx;}
-
-
+.week_poster_k{float: left;}
+.week_poster_img{width: 500rpx; height: 900rpx; margin-left: 125rpx; margin-top: 80rpx;overflow: hidden;overflow-y:auto;}
+.week_poster_img image{width: 500rpx;}
+.week_poster_title{width: 750rpx; text-align: center;font-size: 24rpx; color: #fff; margin-top: 10rpx;}
+.week_poster_fs{float: left;margin-top: 30rpx; width: 280rpx; margin-left: 230rpx;overflow: hidden;}
+.week_poster_fs image{width: 280rpx;}
+.prompt{position: fixed; right: 20rpx; top: 20rpx; background-color: #f86f22; padding: 5rpx 10rpx;color: #fff; border-radius: 30rpx;}
+.prompt_img{float: left; height: 40rpx; width: 40rpx; overflow: hidden;border-radius: 50%;}
+.prompt_img image{width: 40rpx;}
+.prompt_text{float: left; font-size: 22rpx; margin-top: 5rpx; margin-left: 15rpx;}
+.prom_text_name{float: left; width: 100rpx; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height: 34rpx; }
+.prom_text_title{float: left; margin-left: 10rpx;}
 

@@ -8,6 +8,7 @@
 
 <view class="play_prompt">
   <view class="check"></view>每周二、四、六各解锁一集
+  <view class="play_prom_right">课后答题并完成秀给朋友看加6学分</view><!--<view class="check"></view>学习完成提示：学习完成，加6学分-->
 </view>
 
 <view class="column">
@@ -92,6 +93,15 @@
         <swiper-item>
           <view class="answer">
             <view class="answer_k">
+              <!--提示***答题获得多少积分-->
+              <view class="prompt">
+                <view class="prompt_img">
+                  <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+                </view>
+                <view class="prompt_text">
+                  <view class="prom_text_title">攻克难题+6</view><!--提示：攻克难题+1、课后答题+1、课后问答100分-->
+                </view>
+              </view>
               <view class="answer_top"><image src="/resource/course_play/clip_img.png" mode="widthFix"></image></view>
               <view class="answer_kids">·1857位小朋友正在做·</view>
               <view class="answer_topic">
@@ -214,13 +224,19 @@
 
 <!--
   class：week_ups_img回答错误弹窗
-  class：week_poster_img回答正确生产海报
+  class：week_poster_k回答正确生产海报
 -->
-  <!--<view class="week_ups">
- <view class="week_ups_img">
+<!--<view class="week_ups">
+  <view class="week_ups_img">
     <image src="/resource/course_play/allErrorTc1.png" mode="widthFix"></image>
-  </view>
-  <view class="week_poster_img">
-    <image src="/resource/course_play/hb.jpg" mode="widthFix"></image>
   </view> 
+  <view class="week_poster_k">
+    <view class="week_poster_img">
+      <image src="/resource/course_play/hb.jpg" mode="widthFix"></image>
+    </view>
+    <view class="week_poster_title">长按图片保存至手机相册</view>
+    <view class="week_poster_fs">
+      <image src="/resource/course_play/send_success_btn.png" mode="widthFix"></image>
+    </view>
+  </view>
 </view>-->
