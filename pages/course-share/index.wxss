@@ -17,7 +17,7 @@ page{background-color: #f7f7f7}
 .popups_copy{width: 550rpx; text-align: center; margin-top: 20rpx; float: left; font-size: 28rpx; font-weight: 600; margin-left: -50rpx;}
 
 /*绿色对勾*/
-.check_red{
+.check_lv{
   float: left;
         width: 33rpx;
         height: 33rpx;
@@ -28,7 +28,7 @@ page{background-color: #f7f7f7}
         cursor: pointer;
         margin-left: 140rpx;
     }
-    .check_red:after{
+    .check_lv:after{
         content: '';
         display: block;
         width: 17rpx;

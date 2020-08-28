@@ -168,7 +168,7 @@
       60节趣味动画，结合生活场景，故事化讲解4大知识模块。孩子1分钟秒懂、3分钟开窍，快速打造孩子数学基本功！
     </view>
     <view class="popups_copy">
-      <view class="check_red"></view>文案已复制，快去粘贴吧！
+      <view class="check_lv"></view>文案已复制，快去粘贴吧！
     </view>
   </view>
 </view>
