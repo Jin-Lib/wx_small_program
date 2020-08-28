@@ -18,7 +18,7 @@ Page({
   //点击添加课程
   addclass: function (event) {
     wx.navigateTo({
-      url: '/pages/logs/logs'
+      url: '/pages/course-all/index'
     })
   },
   //点击课程学习页
