@@ -104,6 +104,12 @@
 					"pathName": "pages/course-share/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course-play/index",
+					"pathName": "pages/course-play/index",
+					"scene": null
 				}
 			]
 		}

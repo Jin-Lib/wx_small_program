@@ -74,7 +74,7 @@ Page({
   //点击单购支付按钮
   single_pay: function (event) {
     wx.navigateTo({
-      url: '/pages/logs/logs'
+      url: '/pages/course-play/index'
     })
   },
   //点击团购支付按钮
