@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "拼团详情",
-  "usingComponents": {}
+  "usingComponents": {
+    "mp-sticky": "../../components/sticky/index"
+  }
 }

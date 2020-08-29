@@ -211,11 +211,25 @@ page{background-color: #f7f7f7}
 .group_buy image{width: 60rpx; height: 60rpx; border-radius: 50%; float: left; margin-left: -15rpx;}
 .group_text{font-size: 24rpx; float: left; margin-top: 15rpx; margin-left: 15rpx;}
 .group_rule{float: right; font-size: 26rpx; margin-top: 12rpx;}
+.navigation {
+  /* float: left; */
+  width: 750rpx;
+  background-color: #fff;
+  height: 90rpx;
+  line-height: 90rpx;
+}
 
-.navigation{float: left; width: 750rpx; background-color: #fff; margin-top: 20rpx; padding: 30rpx 0 0rpx  0;}
-.column{float: left; width: 250rpx; text-align: center; font-size: 28rpx; font-weight: 900;}
-.add{color: #fc4850; border-bottom: solid 3rpx #fc4850;padding-bottom: 30rpx;}
-
+.column {
+  float: left;
+  width: 250rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 900;
+}
+.add {
+  color: #fc4850;
+  border-bottom: solid 3rpx #fc4850;
+}
 .default{float: left; width: 750rpx;}
 .default image{width: 100%;}
 .evaluation{float: left; width: 750rpx;}
@@ -255,3 +269,11 @@ page{background-color: #f7f7f7}
 .prompt_text{float: left; font-size: 22rpx; margin-top: 6rpx; margin-left: 8rpx;}
 .prom_text_name{float: left; width: 80rpx; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height: 34rpx; }
 .prom_text_title{float: left; margin-left: 10rpx;}
+
+#navigation-wrap {
+  width: 100%;
+  height: 121rpx;
+  overflow: hidden;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+}
