@@ -116,6 +116,13 @@
 					"id": -1,
 					"name": "pages/course-search/index",
 					"pathName": "pages/course-search/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-spell-group/index",
+					"pathName": "pages/user-spell-group/index",
 					"scene": null
 				}
 			]

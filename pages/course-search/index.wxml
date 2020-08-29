@@ -47,7 +47,7 @@
         <view class="hot_week_text_title">#19.9元必抢好课#</view>
         <view class="hot_week_text_introduction">搜索指数：10500</view>
       </view>
-      <view class="hot_week_mark">1</view>
+      <view class="hot_week_mark_up"></view>
     </view>
 
     
@@ -58,9 +58,9 @@
       </view>
       <view class="hot_week_text">
         <view class="hot_week_text_title">#19.9元必抢好课#</view>
-        <view class="hot_week_text_introduction">搜索指数：10500</view>
+        <view class="hot_week_text_introduction">搜索指数：10000</view>
       </view>
-      <view class="hot_week_mark">1</view>
+      <view class="hot_week_mark_under"></view>
     </view>
 
     
@@ -71,11 +71,10 @@
       </view>
       <view class="hot_week_text">
         <view class="hot_week_text_title">#19.9元必抢好课#</view>
-        <view class="hot_week_text_introduction">搜索指数：10500</view>
+        <view class="hot_week_text_introduction">搜索指数：9000</view>
       </view>
-      <view class="hot_week_mark">1</view>
+      <view class="hot_week_mark_under"></view>
     </view>
-
     
     <view class="hot_k_week">
       <view class="hot_week_num gray">4</view>
@@ -84,9 +83,22 @@
       </view>
       <view class="hot_week_text">
         <view class="hot_week_text_title">#19.9元必抢好课#</view>
-        <view class="hot_week_text_introduction">搜索指数：10500</view>
+        <view class="hot_week_text_introduction">搜索指数：5890</view>
       </view>
-      <view class="hot_week_mark">1</view>
+      <view class="hot_week_mark_new">新</view>
     </view>
+
+    <view class="hot_k_week">
+      <view class="hot_week_num gray">5</view>
+      <view class="hot_week_img">
+        <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+      </view>
+      <view class="hot_week_text">
+        <view class="hot_week_text_title">#19.9元必抢好课#</view>
+        <view class="hot_week_text_introduction">搜索指数：2456</view>
+      </view>
+      <view class="hot_week_mark_heat">热</view>
+    </view>
+
   </view>
 </view>

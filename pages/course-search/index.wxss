@@ -22,11 +22,13 @@ input{padding: 10rpx 30rpx;}
 .gray{color: #6b6b6b;}
 .hot_week_img{width: 100rpx; height: 100rpx; overflow: hidden;border-radius: 15rpx; margin-left: 30rpx;}
 .hot_week_img image{width: 100rpx;}
-.hot_week_text{margin-top: 10rpx; margin-left: 20rpx; width: 440rpx;}
+.hot_week_text{margin-top: 10rpx; margin-left: 20rpx; width: 420rpx;}
 .hot_week_text_title{font-size: 28rpx; font-weight: 900; color: #000;}
 .hot_week_text_introduction{font-size: 22rpx;  color: #6b6b6b; margin-top: 10rpx;}
-.hot_week_mark{margin-top: 20rpx;}
-
+.hot_week_mark_up{margin-top: 30rpx;width: 0;height: 0;border: 15rpx solid;border-color: transparent transparent #fc4850;}
+.hot_week_mark_under{margin-top: 50rpx;width: 0;height: 0;border: 15rpx solid;border-color: transparent transparent #f86f22;transform: rotate(-180deg);-webkit-transform: rotate(-180deg);}
+.hot_week_mark_new{border-radius: 50%; background-color: #f86f22;font-size: 20rpx; color: #fff; padding: 4rpx 8rpx; margin-left: -5rpx;height: 30rpx;margin-top: 35rpx;}
+.hot_week_mark_heat{border-radius: 50%; background-color: #fc4850;font-size: 20rpx; color: #fff; padding: 4rpx 8rpx; margin-left: -5rpx;height: 30rpx;margin-top: 35rpx;}
 
 
 
