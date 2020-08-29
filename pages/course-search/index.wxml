@@ -1,3 +1,92 @@
-<view >
-  课程搜索
+
+
+<view class="search_top">
+  <view class="search_search">
+    <input type='text' placeholder='请您输入想要的搜索内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+  </view>
+  <view class="search_cancel">取消</view>
+</view>
+
+<view class="popular_search">
+  <view class="popular_title">热门搜索</view>
+  <view class="popular_text">
+    <view class="text_titlt">免费<i class="colour_red">热</i></view>
+    <view class="text_titlt">大语文<i class="colour_orange">新</i></view>
+    <view class="text_titlt">棋圣</view>
+    <view class="text_titlt">恐龙世界<i class="colour_red">热</i></view>
+    <view class="text_titlt">恐龙世界<i class="colour_red">热</i></view>
+    <view class="text_titlt">棋圣</view>
+    <view class="text_titlt">恐龙世界<i class="colour_red">热</i></view>
+    <view class="text_titlt">大语文</view>
+    <view class="text_titlt">恐龙世界</view>
+  </view>
+</view>
+
+<view class="history_search">
+  <view class="history_title">
+    <view class="hist_titl">历史搜索</view>
+    <view class="hist_delete">清空</view>
+  </view>
+  <view class="popular_text">
+    <view class="text_titlt">免费</view>
+    <view class="text_titlt">大语文</view>
+    <view class="text_titlt">棋圣</view>
+    <view class="text_titlt">恐龙世界</view>
+  </view>
+</view>
+
+<view class="hot_search">
+  <view class="hot_title">实时热搜</view>
+  <view class="hot_k">
+    <view class="hot_k_week">
+      <view class="hot_week_num">1</view>
+      <view class="hot_week_img">
+        <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+      </view>
+      <view class="hot_week_text">
+        <view class="hot_week_text_title">#19.9元必抢好课#</view>
+        <view class="hot_week_text_introduction">搜索指数：10500</view>
+      </view>
+      <view class="hot_week_mark">1</view>
+    </view>
+
+    
+    <view class="hot_k_week">
+      <view class="hot_week_num">2</view>
+      <view class="hot_week_img">
+        <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+      </view>
+      <view class="hot_week_text">
+        <view class="hot_week_text_title">#19.9元必抢好课#</view>
+        <view class="hot_week_text_introduction">搜索指数：10500</view>
+      </view>
+      <view class="hot_week_mark">1</view>
+    </view>
+
+    
+    <view class="hot_k_week">
+      <view class="hot_week_num">3</view>
+      <view class="hot_week_img">
+        <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+      </view>
+      <view class="hot_week_text">
+        <view class="hot_week_text_title">#19.9元必抢好课#</view>
+        <view class="hot_week_text_introduction">搜索指数：10500</view>
+      </view>
+      <view class="hot_week_mark">1</view>
+    </view>
+
+    
+    <view class="hot_k_week">
+      <view class="hot_week_num gray">4</view>
+      <view class="hot_week_img">
+        <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+      </view>
+      <view class="hot_week_text">
+        <view class="hot_week_text_title">#19.9元必抢好课#</view>
+        <view class="hot_week_text_introduction">搜索指数：10500</view>
+      </view>
+      <view class="hot_week_mark">1</view>
+    </view>
+  </view>
 </view>

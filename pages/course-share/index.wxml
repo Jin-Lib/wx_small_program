@@ -1,6 +1,6 @@
 <view class="share_top">
-  <view class="share_top_title">邀请2个新用户，即可成团</view><!--邀请2个用户，即可成天-->
-  <view class="share_top_time">离结束40：58：42：15</view>
+  <view class="share_top_title">邀请2个新用户，即可成团</view><!--邀请2个用户，即可成团-->
+  <view class="share_top_time">离结束<i>40</i>:<i>58</i>:<i>42</i>:<i>15</i></view>
   <view class="share_top_img">
     <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
     <image src="/resource/img/noUserImg.png" mode="widthFix"></image>
@@ -177,6 +177,9 @@
 <view class="popups_poster" hidden="{{hiddenposter}}">
   <view class="popups_poster_img">
     <image src="/resource/img/jiazhang.png" mode="widthFix"></image>
+  </view>
+  <view class="popups_poster_img3">
+    点击保存海报
   </view>
   <view class="popups_poster_img2">
     <image src="/resource/img/hbcs.jpg" mode="widthFix"></image>

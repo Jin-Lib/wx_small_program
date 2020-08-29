@@ -2,10 +2,26 @@ page{background-color: #f7f7f7}
 .share_top{width: 750rpx; float: left; background-color: #fff; text-align: center;}
 .share_top_title{width: 750rpx; float: left; font-size: 34rpx; font-weight: 900; margin-top: 30rpx;}
 .share_top_time{width: 750rpx; float: left;font-size: 26rpx; color: #5f635f; font-weight: 900; margin-top: 30rpx;}
+.share_top_time i{padding: 6rpx 8rpx; background-color: #5f635f; color: #fff; border-radius: 6rpx; margin-left: 8rpx; margin-right: 8rpx;}
 .share_top_img{width: 750rpx; float: left; margin-top: 30rpx;margin-left: -30rpx;}
 .share_top_img image{width: 80rpx; height: 80rpx; overflow: hidden; border-radius: 50%;margin-left: 30rpx;}
-.share_top_button{padding: 15rpx 70rpx; width:240rpx; background-color: #f86f22; margin-top: 60rpx;float: left; color: #fff; border-radius: 40rpx; font-size: 28rpx;margin-left: 170rpx;}
-.share_top_button1{padding: 15rpx 140rpx;  background-color: #f86f22; margin-top: 60rpx;float: left; color: #fff; border-radius: 40rpx; font-size: 28rpx;margin-left: 170rpx;}
+.share_top_button{padding: 15rpx 70rpx; width:240rpx; background-color: #f86f22; margin-top: 60rpx;float: left; color: #fff; border-radius: 40rpx; font-size: 28rpx;margin-left: 170rpx;animation:mymove 3s infinite; }
+  @keyframes mymove /*Safari and Chrome*/
+            {
+                0%{
+                transform: scale(1);  /*开始为原始大小*/
+                }
+                25%{
+                    transform: scale(1.1); /*放大1.1倍*/
+                }
+                50%{
+                    transform: scale(1);
+                }
+                75%{
+                    transform: scale(1.1);
+                }
+            }
+.share_top_button1{padding: 15rpx 140rpx;  background-color: #f86f22; margin-top: 60rpx;float: left; color: #fff; border-radius: 40rpx; font-size: 28rpx;margin-left: 170rpx;animation:mymove 3s infinite; }
 .share_top_button2{padding: 15rpx 70rpx; width:240rpx; border: solid 3rpx #f86f22; margin-top: 40rpx;float: left; color: #f86f22; border-radius: 40rpx; font-size: 28rpx;margin-left: 170rpx;}
 .share_top_button3{padding: 15rpx 0rpx;border-bottom: solid 3rpx #f86f22; margin-top: 20rpx;float: left; color: #f86f22;font-size: 22rpx;margin-left: 290rpx; margin-bottom: 30rpx;}
 .popups{position: fixed;top: 0; left: 0; width: 750rpx; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 999;}
@@ -49,6 +65,7 @@ page{background-color: #f7f7f7}
 .popups_poster_img image{width: 350rpx;}
 .popups_poster_img2{position: absolute;width: 500rpx; left: 125rpx; top: 230rpx;}
 .popups_poster_img2 image{width: 500rpx;}
+.popups_poster_img3{padding: 10rpx 40rpx;background-color: #f86f22; color: #fff; border-radius: 30rpx; font-size: 24rpx;left: 265rpx; position: absolute;top: 170rpx;animation:mymove 3s infinite; }
 .close3 {
   position: absolute;
   right: 70rpx;
