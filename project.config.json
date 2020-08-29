@@ -17,7 +17,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.1",
-	"appid": "wx5cf529679cabbbcb",
+	"appid": "wx84cb6cf7741fd661",
 	"projectname": "%E5%90%AF%E6%98%8E%E6%98%9F",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -103,6 +103,12 @@
 					"name": "pages/course-share/index",
 					"pathName": "pages/course-share/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course-play/index",
+					"pathName": "pages/course-play/index",
 					"scene": null
 				}
 			]

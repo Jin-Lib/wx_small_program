@@ -97,6 +97,43 @@ page {
   margin-left: -12rpx;
   transform: rotate(-45deg);
 }
+page{background-color: #f7f7f7;}
+.detail_top{float: left; width: 750rpx;}
+.detail_bner{float: left; width: 750rpx;height: 150rpx;}
+.detail_bner image{float: left; width: 750rpx;height: 150rpx;}
+.detail_video{width: 750rpx;}
+.detail_video video{width: 750rpx; height: 422rpx;}
+.detail_title{width: 700rpx; padding: 20rpx 26rpx; background-color: #756cf5; font-size: 28rpx; color: #fff; font-weight: 900; float: left; margin-top: -8rpx;}
+.detail_center{float: left; width: 700rpx;border-bottom: solid 3rpx #e2e2e2; padding: 30rpx 26rpx; background-color: #fff; }
+.deta_center_num{float: left; font-size: 26rpx; font-weight: 900; color: #000;}
+.deta_center_num i{font-size: 42rpx; color: #fc4850;}
+.deta_center_details{float: right; font-size: 26rpx; margin-top: 8rpx;}
+.center_details_age{float: left; margin-left: 20rpx; font-weight: 900; }
+.check{
+  float: left;
+        width: 35rpx;
+        height: 35rpx;
+        background-color: #469dff;
+        position: relative;
+        margin: 0px auto;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right: 5rpx;
+    }
+    .check:after{
+        content: '';
+        display: block;
+        width: 17rpx;
+        height: 10rpx;
+        border: 3rpx solid #fff;
+        border-width: 0 0 5rpx 5rpx;
+        position: absolute;
+        top: 60%;
+        left: 55%;
+        margin-top: -12rpx;
+        margin-left: -12rpx;
+        transform: rotate(-45deg);
+    }
 
 /*红色对勾*/
 

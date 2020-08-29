@@ -39,8 +39,9 @@ margin-top: 30rpx;}
 .learn_text{float: left; margin-top: 30rpx; margin-left: 20rpx; }
 .learn_title{font-size: 24rpx; color: #000;}
 .learn_introduction{font-size: 22rpx; color: #aaa; margin-top: 20rpx;}
-.learn_status{font-size: 20rpx; color: #f86f22; margin-top: 20rpx;}
-.learn_watch{font-size: 20rpx; color: #fc4850; margin-top: 30rpx;}
+.learn_status{font-size: 20rpx; color: #aaa; margin-top: 20rpx;}
+.learn_status_yx{float: left; margin-top: -5rpx; margin-left: 15rpx;}
+.learn_watch{font-size: 20rpx; color: #fc4850; margin-top: 30rpx; width: 200rpx;}
 .top{float: right; margin-right: 30rpx; margin-top: 185rpx; font-size: 22rpx;}
 .o_color{color: #f86f22; font-weight: 900;}
 
@@ -85,8 +86,28 @@ margin-top: 30rpx;}
 .sort_title{font-size: 28rpx; font-weight: 900; margin-left: 15rpx; margin-top: 14rpx;}
 .sort_spike{ margin-left: 15rpx; float: left;background-color: #f86f22; padding: 2px 8px;color: #fff; font-size: 18rpx; margin-top: 12rpx;}
 .change{float: left; margin-top: 45rpx; font-size: 24rpx; padding: 5px 22px;color: #f86f22; background-color: #f7f7f7; border-radius: 30rpx; margin-left: 245rpx;}
-
-
+.loadbar
+    {
+         width:190rpx;
+         height:15rpx;
+         background-color:#fff;
+         border:3rpx solid #f86f22;  
+         border-radius: 30rpx;
+         float: left;
+         margin-bottom: 40rpx;
+    }
+    .bar
+    {
+        height:100%;
+        display:block;		
+        font-family:arial;
+        font-size:18rpx;
+		background-color:#f86f22;		
+        color:#fff;
+         border-radius: 30rpx;
+    }
+.bottom_advertising{position: fixed; bottom: 170rpx; right: 30rpx;z-index: 1112; width: 80rpx; height: 80rpx; overflow: hidden;}
+.bottom_advertising image{width: 80rpx;}
 
 
 

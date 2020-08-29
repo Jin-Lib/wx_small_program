@@ -1,3 +1,185 @@
-<view >
-  课程分享
+<view class="share_top">
+  <view class="share_top_title">邀请2个新用户，即可成团</view><!--邀请2个用户，即可成天-->
+  <view class="share_top_time">离结束40：58：42：15</view>
+  <view class="share_top_img">
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+    <image src="/resource/img/noUserImg.png" mode="widthFix"></image>
+    <image src="/resource/img/noUserImg.png" mode="widthFix"></image>
+  </view>
+  <view class="share_top_button" bindtap="showrecommend">
+    立即邀请
+  </view>
+  <view class="share_top_button2" bindtap="showposter">
+    领加速海报
+  </view>
+  <view class="share_top_button3" bindtap="return_index">
+    回到首页逛逛
+  </view>
+</view>
+
+<!--推荐-->
+<view class="recommend">
+  <view class="recommend_title">相关推荐</view>
+  <view class="recommend_detailed">
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="change">换一换</view>
+  </view>
+</view>
+<!--课程详情-->
+<view class="detail_top">
+  <view class="detail_bner">
+    <image src="http://cdn.koalaxiezi.com/ceshi/1.png" mode="widthFix"></image>
+  </view>
+  <view class="detail_video">
+    <video src="http://cdn.koalaxiezi.com/bh1.mp4" poster="http://cdn.koalaxiezi.com/ceshi/2.png"></video>
+  </view>
+  <view class="detail_title">
+    14天让孩子做情绪的小主人，学会控制自己，提高抗挫折能力，让孩子更自信
+  </view>
+</view>
+
+<view class="detail_center">
+  <view class="deta_center_num">
+    <i>￥29.9</i>起
+  </view>
+  <view class="deta_center_details" bindtap="showrule">
+    <view class="center_details_age"><view class="check"></view>4~12岁</view>
+    <view class="center_details_age"><view class="check"></view>20集</view>
+    <view class="center_details_age"><view class="check"></view>永久回放></view>
+  </view>
+</view>
+
+<view class="group_details">
+  <view class="group_buy">
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+    <view class="group_text">等6893人购买</view>
+  </view>
+  <view class="group_rule" bindtap="showgroup">
+    拼团规则 >
+  </view>
+</view>
+
+<view class="navigation">
+  <view class="column add">详情</view>
+  <view class="column">目录</view>
+  <view class="column">评价</view>
+</view>
+
+<!--详情-->
+<view class="default">
+  <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+  <image src="http://cdn.koalaxiezi.com/ceshi/4.png" mode="widthFix"></image>
+  <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+</view>
+<!--目录-->
+<view class="default">
+  <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
+</view>
+<!--评价-->
+<view class="evaluation">
+  <image src="http://cdn.koalaxiezi.com/ceshi/7.png" mode="widthFix"></image>
+</view>
+<!--底部购买-->
+<view class="float">
+  <view class="share_top_button1" bindtap="showrecommend">
+    立即邀请
+  </view>
+</view>
+
+<!--回到顶部按钮-->
+<view class="top">
+  <image src="/resource/img/top.png" mode="widthFix"></image>
+</view>
+
+
+<!--服务说明弹窗-->
+<view class="bottom_popup" hidden="{{hiddenrule}}">
+  <view class="popup">
+    <view class="popup_title">
+      服务说明
+    </view>
+    <view class="close" bindtap="showrule"></view>
+    <view class="popup_detailed">
+      <view class="popup_text_title"><view class="check_red"></view>关于上课</view>
+      <view class="popup_text_deta">课程每周一、三解锁一集，解锁后您可以随意安排时间观看</view>
+    </view>
+    <view class="popup_detailed">
+      <view class="popup_text_title"><view class="check_red"></view>关于退费</view>
+      <view class="popup_text_deta">因课程为虚拟原创内容服务，拼团成功或单购成功后无法退款，请您确认无误后购买。</view>
+    </view>
+    <view class="popup_detailed">
+      <view class="popup_text_title"><view class="check_red"></view>关于有效期</view>
+      <view class="popup_text_deta">本课程一旦单购成功或拼团成功，课程解锁后，可以不限次数，永久回看</view>
+    </view>
+  </view>
+</view>
+
+<!--拼团规则弹窗-->
+<view class="bottom_popup" hidden="{{hiddengroup}}">
+  <view class="popup">
+    <view class="popup_title">
+      拼团规则
+    </view>
+    <view class="close" bindtap="showgroup"></view>
+    <view class="popup_detailed">
+      <view class="popup_text_title_26">团长发起<i>3</i>（数字后台对接）人团后，将拼团链接和加速海报分享给好友和群，<i>48</i>（数字后台对接）小时内邀请<i>2</i>（数字后台对接）位好友参加拼团，即可购买成功，否则系统将自动退款。</view>
+    </view>
+  </view>
+</view>
+
+
+
+<!--立即邀请弹窗-->
+<view class="popups" hidden="{{hiddenrecommend}}">
+  <view class="popups_img">
+    <image src="/resource/img/arrow.png" mode="widthFix"></image>
+  </view>
+  <view class="popups_title">
+    <view class="popu_text_title">
+      推荐语<view class="close2" bindtap="showrecommenddj"></view>
+    </view>
+    <view class="popups_text">
+      60节趣味动画，结合生活场景，故事化讲解4大知识模块。孩子1分钟秒懂、3分钟开窍，快速打造孩子数学基本功！
+    </view>
+    <view class="popups_copy">
+      <view class="check_red"></view>文案已复制，快去粘贴吧！
+    </view>
+  </view>
+</view>
+
+<!--生成海报弹窗-->
+<view class="popups_poster" hidden="{{hiddenposter}}">
+  <view class="popups_poster_img">
+    <image src="/resource/img/jiazhang.png" mode="widthFix"></image>
+  </view>
+  <view class="popups_poster_img2">
+    <image src="/resource/img/hbcs.jpg" mode="widthFix"></image>
+  </view>
+  <view class="close3" bindtap="showposter"></view>
 </view>
