@@ -9,6 +9,13 @@ Page({
     hiddencancelpay: true, //确认取消支付弹窗
     hiddencancelpayd: true, //单购确认取消支付弹窗
   },
+  onReady() {
+    this.setData({
+      container: () => wx.createSelectorQuery().select('#navigation-wrap')
+    }, () => {
+      console.log(this.data.container())
+    })
+  },
   //服务说明按钮
   showrule: function (e) {
     this.setData({

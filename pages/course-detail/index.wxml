@@ -37,12 +37,17 @@
   </view>
 </view>
 
-<view class="navigation">
-  <view class="column add">详情</view>
-  <view class="column">目录</view>
-  <view class="column">评价</view>
-  <view class="column">推荐</view>
+<view id="navigation-wrap">
+  <mp-sticky offset-top="0">
+    <view class="navigation">
+      <view class="column add">详情</view>
+      <view class="column">目录</view>
+      <view class="column">评价</view>
+      <view class="column">推荐</view>
+    </view>
+  </mp-sticky>
 </view>
+  
 
 <!--详情-->
 <view class="default">
