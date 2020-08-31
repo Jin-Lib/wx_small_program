@@ -89,4 +89,6 @@
 
   </view>
 
+  <v-login wxlogin="{{wxlogin}}"></v-login>
+
 </view>

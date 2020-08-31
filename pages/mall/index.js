@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const API = require('../../config/api');
 
 Page({
   data: {
@@ -22,6 +23,41 @@ Page({
         ]
       }
     ],
+
+    bannerData: []
+  },
+
+
+  onLoad: function () {
+    this.getBannerData();
+  },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 0
+      })
+    }
+
+  },
+
+  // 获取banner
+  getBannerData: function() {
+    API.getBanner({
+      type: 1
+    }).then(res => {
+      const { code, data } = res || {};
+
+      // 如果code为0，代表成功
+      if(code == '0') {
+        this.setData({
+          bannerData: data && data.rows || []
+        });
+      }
+    })
   },
 
   //点击浮窗活动右下角
@@ -125,20 +161,5 @@ Page({
         wx.hideLoading()
       })
     }, 2000)
-  },
-  onLoad: function () {
-    
-  },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-      this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 0
-      })
-    }
-
   },
 })

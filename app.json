@@ -61,6 +61,9 @@
     "navigationBarTextStyle": "white",
     "backgroundColor": "#f7f7f7"
   },
+  "usingComponents": {
+    "v-login": "./components/login/index"
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

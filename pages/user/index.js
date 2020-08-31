@@ -1,11 +1,76 @@
-//index.js
-//获取应用实例
 const app = getApp()
+const Auth = require('../../utils/auth');
 
 Page({
   data: {
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    wxlogin: true,
   },
+
+  onLoad: function () {
+    this.getUserInfo();
+  },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 3
+      })
+    }
+
+    this.isLogin();
+
+  },
+
+  // 获取用户信息
+  getUserInfo: function() {
+    let that = this;
+    API.getUserInfo()
+      .then(data => {
+        that.setData({
+          userInfo: data,
+        });
+      }).catch(err => {
+        console.log('err', err)
+        if(err == '登录已过期') {
+          that.setData({
+            wxlogin: false
+          });
+        }
+      });
+  },
+
+  // 是否登录
+  isLogin: function() {
+    // 是否登录
+    Auth.checkHasLogined()
+      .then(res => {
+        if(res) {
+          this.setData({
+            wxlogin: true
+          });
+        } else {
+          this.setData({
+            wxlogin: false
+          });
+        }
+      }).catch(e => {
+        this.setData({
+          wxlogin: false
+        });
+      })
+  },
+
+  getUserInfoDetail: function() {
+    this.setData({
+      wxlogin: true
+    });
+    this.getUserInfo();
+  },
+  
   //点击修改信息
   information: function (event) {
     wx.navigateTo({
@@ -60,17 +125,5 @@ Page({
       url: '/pages/logs/logs'
     })
   },
-  onLoad: function () {},
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-      this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 3
-      })
-    }
 
-  },
 })
