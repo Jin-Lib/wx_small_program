@@ -18,6 +18,7 @@
     "pages/course-menu/index",
     "pages/course-pay/index",
     "pages/course-share/index",
+    "pages/course-search/index",
     "pages/course-play/index"
   ],
   "tabBar": {

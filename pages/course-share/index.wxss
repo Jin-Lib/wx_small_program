@@ -2,10 +2,26 @@ page{background-color: #f7f7f7}
 .share_top{width: 750rpx; float: left; background-color: #fff; text-align: center;}
 .share_top_title{width: 750rpx; float: left; font-size: 34rpx; font-weight: 900; margin-top: 30rpx;}
 .share_top_time{width: 750rpx; float: left;font-size: 26rpx; color: #5f635f; font-weight: 900; margin-top: 30rpx;}
+.share_top_time i{padding: 6rpx 8rpx; background-color: #5f635f; color: #fff; border-radius: 6rpx; margin-left: 8rpx; margin-right: 8rpx;}
 .share_top_img{width: 750rpx; float: left; margin-top: 30rpx;margin-left: -30rpx;}
-.share_top_img image{width: 80rpx; height: 80rpx; overflow: hidden; border-radius: 50%;margin-left: 30rpx;}
-.share_top_button{padding: 15rpx 70rpx; width:240rpx; background-color: #f86f22; margin-top: 60rpx;float: left; color: #fff; border-radius: 40rpx; font-size: 28rpx;margin-left: 170rpx;}
-.share_top_button1{padding: 15rpx 140rpx;  background-color: #f86f22; margin-top: 60rpx;float: left; color: #fff; border-radius: 40rpx; font-size: 28rpx;margin-left: 170rpx;}
+.share_top_img image{width: 80rpx; height: 80rpx; overflow: hidden; border-radius: 50%;margin-left: 30rpx;border: solid 6rpx #fc4850;}
+.share_top_button{padding: 15rpx 70rpx; width:240rpx; background-color: #f86f22; margin-top: 60rpx;float: left; color: #fff; border-radius: 40rpx; font-size: 28rpx;margin-left: 170rpx;animation:mymove 3s infinite; }
+  @keyframes mymove /*Safari and Chrome*/
+            {
+                0%{
+                transform: scale(1);  /*开始为原始大小*/
+                }
+                25%{
+                    transform: scale(1.1); /*放大1.1倍*/
+                }
+                50%{
+                    transform: scale(1);
+                }
+                75%{
+                    transform: scale(1.1);
+                }
+            }
+.share_top_button1{padding: 15rpx 140rpx;  background-color: #f86f22; margin-top: 60rpx;float: left; color: #fff; border-radius: 40rpx; font-size: 28rpx;margin-left: 170rpx;animation:mymove 3s infinite; }
 .share_top_button2{padding: 15rpx 70rpx; width:240rpx; border: solid 3rpx #f86f22; margin-top: 40rpx;float: left; color: #f86f22; border-radius: 40rpx; font-size: 28rpx;margin-left: 170rpx;}
 .share_top_button3{padding: 15rpx 0rpx;border-bottom: solid 3rpx #f86f22; margin-top: 20rpx;float: left; color: #f86f22;font-size: 22rpx;margin-left: 290rpx; margin-bottom: 30rpx;}
 .popups{position: fixed;top: 0; left: 0; width: 750rpx; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 999;}
@@ -17,7 +33,7 @@ page{background-color: #f7f7f7}
 .popups_copy{width: 550rpx; text-align: center; margin-top: 20rpx; float: left; font-size: 28rpx; font-weight: 600; margin-left: -50rpx;}
 
 /*绿色对勾*/
-.check_red{
+.check_lv{
   float: left;
         width: 33rpx;
         height: 33rpx;
@@ -28,7 +44,7 @@ page{background-color: #f7f7f7}
         cursor: pointer;
         margin-left: 140rpx;
     }
-    .check_red:after{
+    .check_lv:after{
         content: '';
         display: block;
         width: 17rpx;
@@ -49,6 +65,7 @@ page{background-color: #f7f7f7}
 .popups_poster_img image{width: 350rpx;}
 .popups_poster_img2{position: absolute;width: 500rpx; left: 125rpx; top: 230rpx;}
 .popups_poster_img2 image{width: 500rpx;}
+.popups_poster_img3{padding: 10rpx 40rpx;background-color: #f86f22; color: #fff; border-radius: 30rpx; font-size: 24rpx;left: 265rpx; position: absolute;top: 170rpx;animation:mymove 3s infinite; }
 .close3 {
   position: absolute;
   right: 70rpx;
@@ -194,11 +211,25 @@ page{background-color: #f7f7f7}
 .group_buy image{width: 60rpx; height: 60rpx; border-radius: 50%; float: left; margin-left: -15rpx;}
 .group_text{font-size: 24rpx; float: left; margin-top: 15rpx; margin-left: 15rpx;}
 .group_rule{float: right; font-size: 26rpx; margin-top: 12rpx;}
+.navigation {
+  /* float: left; */
+  width: 750rpx;
+  background-color: #fff;
+  height: 90rpx;
+  line-height: 90rpx;
+}
 
-.navigation{float: left; width: 750rpx; background-color: #fff; margin-top: 20rpx; padding: 30rpx 0 0rpx  0;}
-.column{float: left; width: 250rpx; text-align: center; font-size: 28rpx; font-weight: 900;}
-.add{color: #fc4850; border-bottom: solid 3rpx #fc4850;padding-bottom: 30rpx;}
-
+.column {
+  float: left;
+  width: 250rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 900;
+}
+.add {
+  color: #fc4850;
+  border-bottom: solid 3rpx #fc4850;
+}
 .default{float: left; width: 750rpx;}
 .default image{width: 100%;}
 .evaluation{float: left; width: 750rpx;}
@@ -206,7 +237,7 @@ page{background-color: #f7f7f7}
 
 .recommend{float: left; width: 750rpx; margin-top: 15rpx; background-color: #fff;}
 .recommend_title{float: left; width: 750rpx; text-align: center; font-size: 32rpx; font-weight: 900; margin-top: 30rpx;}
-.recommend_detailed{float: left; width: 720rpx; padding: 0rpx 0 20rpx 0rpx; }
+.recommend_detailed{float: left;padding: 0rpx 0 20rpx 0rpx; }
 .reco_deta_k{float:left; width: 211rpx; margin-left: 30rpx; margin-top:30rpx; border-radius: 15rpx; overflow: hidden;}
 .reco_deta_k image{width: 211rpx; border-radius: 15rpx;}
 .reco_deta_title{float: left; width: 211rpx; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height: 34rpx; font-size: 26rpx;font-weight: 900; margin-top: 10rpx;}
@@ -232,9 +263,17 @@ page{background-color: #f7f7f7}
 .canc_pay_carry{float: right;text-align: center; background-color: #fc4850; padding: 20rpx 45rpx; border-radius: 15rpx; color: #fff; margin-right: 60rpx; margin-top: 50rpx; font-size: 26rpx;}
 .top{position: fixed; right: 20rpx; bottom: 200rpx;}
 .top image{width: 70rpx;}
-.prompt{position: fixed; left: 20rpx; top: 230rpx; background: rgba(0, 0, 0, 0.5); padding: 12rpx 20rpx;color: #fff; border-radius: 15rpx;}
-.prompt_img{float: left; height: 60rpx; width: 60rpx; overflow: hidden;border-radius: 50%;}
-.prompt_img image{width: 60rpx;}
-.prompt_text{float: left; font-size: 26rpx; margin-top: 10rpx; margin-left: 15rpx;}
-.prom_text_name{float: left; width: 100rpx; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height: 34rpx; }
+.prompt{position: fixed; left: 20rpx; top: 30rpx; background: rgba(0, 0, 0, 0.5); padding: 8rpx 12rpx;color: #fff; border-radius: 15rpx;}
+.prompt_img{float: left; height: 40rpx; width: 40rpx; overflow: hidden;border-radius: 50%;}
+.prompt_img image{width: 40rpx;}
+.prompt_text{float: left; font-size: 22rpx; margin-top: 6rpx; margin-left: 8rpx;}
+.prom_text_name{float: left; width: 80rpx; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height: 34rpx; }
 .prom_text_title{float: left; margin-left: 10rpx;}
+
+#navigation-wrap {
+  width: 100%;
+  height: 121rpx;
+  overflow: hidden;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+}
