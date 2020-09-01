@@ -46,7 +46,7 @@ const API =  {
    * 课程详情
    * ===================
    */
-  'getBanner': {
+  'getweek': {
     url: `${host}/api/course/detail`,
     method: 'GET'
   },
