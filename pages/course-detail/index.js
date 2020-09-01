@@ -1,4 +1,7 @@
 //index.js
+//获取应用实例
+const app = getApp()
+const API = require('../../config/api');
 
 Page({
   data: {
@@ -91,7 +94,7 @@ Page({
     })
   },
   onLoad: function () {
-
+    this.getdetailData();
   },
   /**
    * 生命周期函数--监听页面显示
@@ -99,4 +102,21 @@ Page({
   onShow: function () {
 
   },
+
+  // 获取课程信息
+  getdetailData: function () {
+    API.getBanner({
+      type: 1
+    }).then(res => {
+      const { code, data } = res || {};
+
+      // 如果code为0，代表成功
+      if (code == '0') {
+        this.setData({
+          bannerData: data && data.rows || []
+        });
+      }
+    })
+  },
+
 })

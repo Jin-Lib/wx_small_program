@@ -41,6 +41,15 @@ const API =  {
     method: 'POST'
   },
 
+  /**
+   * ===================
+   * 课程详情
+   * ===================
+   */
+  'getBanner': {
+    url: `${host}/api/course/detail`,
+    method: 'GET'
+  },
 };
 
 let API_RES = {};

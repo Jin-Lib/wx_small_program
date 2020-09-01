@@ -15,10 +15,9 @@ Page({
         desc: "9天提升科学探索欲望",
         buyCount: '77098',
         buyImages: [
-          "http://cdn.koalaxiezi.com/image1/product.jpg",
-          "http://cdn.koalaxiezi.com/image1/product.jpg",
-          "http://cdn.koalaxiezi.com/image1/product.jpg",
-          "http://cdn.koalaxiezi.com/image1/product.jpg",
+          "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132",
+          "https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132",
+          "https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132",
           "http://cdn.koalaxiezi.com/image1/product.jpg",
         ]
       }
@@ -148,11 +147,9 @@ Page({
       title: "世界地理之最",
       desc: "9天提升科学探索欲望",
       buyCount: '77098',
-      buyImages: [
-        "http://cdn.koalaxiezi.com/image1/product.jpg",
-        "http://cdn.koalaxiezi.com/image1/product.jpg",
-        "http://cdn.koalaxiezi.com/image1/product.jpg",
-        "http://cdn.koalaxiezi.com/image1/product.jpg",
+      buyImages: ["https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132",
+        "https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132",
+        "https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132",
         "http://cdn.koalaxiezi.com/image1/product.jpg",
       ]
     }
