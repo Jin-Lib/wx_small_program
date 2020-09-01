@@ -24,24 +24,6 @@ Page({
     ],
 
     bannerData: [
-      {
-        id: 1,
-        url: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        banner_type: 1
-      },
-      {
-        id: 1,
-        url: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        banner_type: 2
-      },
-      {
-        id: 1,
-        url: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        banner_type: 3
-      }
     ]
   },
 
@@ -67,14 +49,18 @@ Page({
     API.getBanner({
       type: 1
     }).then(res => {
-      const { code, data } = res || {};
+      console.log(res);
+      const { rows } = res || {};
 
-      // 如果code为0，代表成功
-      if(code == '0') {
-        this.setData({
-          bannerData: data && data.rows || []
-        });
-      }
+      this.setData({
+        bannerData: rows || []
+      });
+    }).catch(err => {
+      wx.showToast({
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
     })
   },
 

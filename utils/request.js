@@ -133,9 +133,11 @@ const toLogin = () => {
   var pages = getCurrentPages();
   
   if(pages && pages[pages.length - 1].route.indexOf('login') === -1) {
+    /**
     wx.reLaunch({
       url: '/pages/login/index'
     });
+     */
   }
 }
 
