@@ -42,7 +42,7 @@ Component({
         success: res => {
           let code = res.code;
           let { encryptedData, rawData, signature, iv } = data.detail;
-          console.log(data);
+          console.log('data.detail', data.detail);
           let params = {
             code: encodeURIComponent(code),
             encryptedData: encodeURIComponent(encryptedData),
