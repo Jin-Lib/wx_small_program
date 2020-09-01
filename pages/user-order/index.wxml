@@ -51,13 +51,15 @@
  </view>
 
 <view class="{{selected1?'show1':'hidden1'}}">
-
-2
+  <view class="order_k_img">
+    <image src="/resource/img/order_no.png" mode="widthFix"></image>
+  </view>
 </view>
 
 <view class="{{selected2?'show1':'hidden1'}}">
-
-3
+  <view class="order_k_img">
+    <image src="/resource/img/order_no.png" mode="widthFix"></image>
+  </view>
 </view>
 
 <view class="{{selected3?'show1':'hidden1'}}">

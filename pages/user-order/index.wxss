@@ -18,3 +18,5 @@ page{background-color: #f7f7f7;}
 .status_num{font-size: 26rpx;}
 .order_buy{margin-left: 438rpx; margin-right: 35rpx; padding: 10rpx 20rpx;border: #f86f22 3rpx solid;border-radius: 30rpx; color: #f86f22; margin-top: 20rpx;font-size: 24rpx;}
 .huise{border: #6b6b6b 3rpx solid;color: #6b6b6b;}
+.order_k_img{width: 750rpx; text-align: center; margin-top: 220rpx;}
+.order_k_img image{width: 240rpx;}
