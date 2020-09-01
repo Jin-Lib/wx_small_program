@@ -1,5 +1,6 @@
 const app = getApp()
 const Auth = require('../../utils/auth');
+const API = require('../../config/api.js');
 
 Page({
   data: {
@@ -30,6 +31,7 @@ Page({
     let that = this;
     API.getUserInfo()
       .then(data => {
+        console.log('data', data)
         that.setData({
           userInfo: data,
         });

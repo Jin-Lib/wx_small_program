@@ -24,7 +24,26 @@ Page({
       }
     ],
 
-    bannerData: []
+    bannerData: [
+      {
+        id: 1,
+        url: "http://cdn.koalaxiezi.com/image1/product.jpg",
+        image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
+        banner_type: 1
+      },
+      {
+        id: 1,
+        url: "http://cdn.koalaxiezi.com/image1/product.jpg",
+        image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
+        banner_type: 2
+      },
+      {
+        id: 1,
+        url: "http://cdn.koalaxiezi.com/image1/product.jpg",
+        image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
+        banner_type: 3
+      }
+    ]
   },
 
 
@@ -75,9 +94,9 @@ Page({
   },
   //点击轮播图
   carousel: function (event) {
-    wx.navigateTo({
-      url: '/pages/course-detail/index'
-    })
+    // wx.navigateTo({
+    //   url: '/pages/course-detail/index'
+    // })
   },
   //点击排行榜
   leaderboard: function (event) {
@@ -162,4 +181,25 @@ Page({
       })
     }, 2000)
   },
+  // 点击banner详情图
+  bannerTap: function (event) {
+    const target = event.currentTarget;
+    const { dataset: { bannerType, url } } = target;
+
+    // 处理不同类型的点击事件
+    switch (bannerType) {
+      // 跳转h5
+      case 1:
+        console.log('跳转h5')
+        break;
+      // 跳转小程序页面
+      case 2:
+        console.log('跳转小程序页面')
+        break;
+      // 跳转播放视频
+      case 3:
+        console.log('跳转播放视频')
+        break;
+    }
+  }
 })

@@ -31,7 +31,24 @@
 <!--轮播图和分类-->
 <view class="carousel">
   <view class="carousel_frame" bindtap='carousel'>
-    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+    <swiper
+      autoplay="{{true}}"
+      indicatorDots="{{true}}"
+      interval="{{2000}}"
+      duration="{{500}}"
+      circular="{{true}}"
+      >
+      <block
+        wx:for="{{bannerData}}"
+        wx:key="id">
+        <swiper-item
+        data-banner-type="{{item.banner_type}}"
+        data-url="{{item.url}}"
+        bindtap="bannerTap">
+          <image src="{{item.image_url}}" mode="widthFix"></image>
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
   <view class="classification">
     <view class="leaderboard" bindtap="leaderboard">
