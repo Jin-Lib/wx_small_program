@@ -9,7 +9,7 @@
     <video src="http://cdn.koalaxiezi.com/bh1.mp4" poster="http://cdn.koalaxiezi.com/ceshi/2.png"></video>
   </view>
   <view class="detail_title">
-    14天让孩子做情绪的小主人，学会控制自己，提高抗挫折能力，让孩子更自信
+    {{coursedetail.title}}
   </view>
 </view>
 <!--price-->
@@ -120,7 +120,7 @@
 </view>
 <!--底部购买-->
 <view class="float">
-  <view class="group" bindtap="showpintuan"><view class="num">￥29.9</view>发起3人团</view>
+  <view class="group" bindtap="showpintuan"><view class="num">￥29.9</view>发起{{coursedetail.group_num}}人团</view>
   <view class="single" bindtap="showsingled"><view class="num">￥99</view>单独购买价</view>
 </view>
 
