@@ -1,3 +1,124 @@
-<view >
-  优惠卷
+
+ <view class="nav1 bc_white">
+  <view class="{{selected?'red1':'default1'}}" bindtap="selected">未使用(4)</view>
+  <view class="{{selected1?'red1':'default1'}}" bindtap="selected1">已使用(2)</view>
+  <view class="{{selected2?'red1':'default1'}}" bindtap="selected2">已过期(2)</view>
+  </view>
+ <view class="{{selected?'show1':'hidden1'}}">
+
+  <view class="coupon">
+    <view class="coupon_left">
+      ￥<i>40</i>
+    </view>
+    <view class="coupon_right">
+      <view class="coupon_title">新课限时立减券</view>
+      <view class="coupon_time">2020.09.01-2020.10.09</view>
+      <view class="coupon_only">仅限（汉字思维）课程使用</view>
+      <view class="coupon_use">去使用</view>
+    </view>
+  </view>
+  <view class="coupon">
+    <view class="coupon_left">
+      ￥<i>6</i>
+    </view>
+    <view class="coupon_right">
+      <view class="coupon_title">邀新团专享券</view>
+      <view class="coupon_time">2020.09.01-2020.10.09</view>
+      <view class="coupon_only">仅限（汉字思维）课程使用</view>
+      <view class="coupon_use">去使用</view>
+    </view>
+  </view>
+  <view class="coupon">
+    <view class="coupon_left">
+      ￥<i>40</i>
+    </view>
+    <view class="coupon_right">
+      <view class="coupon_title">新课限时立减券</view>
+      <view class="coupon_time">2020.09.01-2020.10.09</view>
+      <view class="coupon_only">仅限（汉字思维）课程使用</view>
+      <view class="coupon_use">去使用</view>
+    </view>
+  </view>
+  <view class="coupon">
+    <view class="coupon_expired">快过期</view>
+    <view class="coupon_left">
+      ￥<i>3</i>
+    </view>
+    <view class="coupon_right">
+      <view class="coupon_title">子午线课程立减3元</view>
+      <view class="coupon_time">2020.09.01-2020.09.06</view>
+      <view class="coupon_only">仅限（汉字思维）课程使用</view>
+      <view class="coupon_use">去使用</view>
+    </view>
+  </view>
+
+ </view>
+
+<view class="{{selected1?'show1':'hidden1'}}">
+
+  <view class="coupon">
+    <view class="coupon_left expired_left">
+      ￥<i>40</i>
+    </view>
+    <view class="coupon_right">
+      <view class="coupon_title">新课限时立减券</view>
+      <view class="coupon_time">2020.09.01-2020.10.09</view>
+      <view class="coupon_only">仅限（汉字思维）课程使用</view>
+      <view class="expired_use">
+        <image src="/resource/img/used-time-icon.e617fa75.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="coupon">
+    <view class="coupon_left expired_left">
+      ￥<i>40</i>
+    </view>
+    <view class="coupon_right">
+      <view class="coupon_title">新课限时立减券</view>
+      <view class="coupon_time">2020.09.01-2020.10.09</view>
+      <view class="coupon_only">仅限（汉字思维）课程使用</view>
+      <view class="expired_use">
+        <image src="/resource/img/used-time-icon.e617fa75.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="used_img">
+    <image src="/resource/img/no-coupon-icon.dcf6834c.png" mode="widthFix"></image>
+    <view class="used_title">您还没有使用过优惠券哦~</view>
+  </view>
+
+</view>
+
+<view class="{{selected2?'show1':'hidden1'}}">
+
+  <view class="coupon">
+    <view class="coupon_left expired_left">
+      ￥<i>40</i>
+    </view>
+    <view class="coupon_right">
+      <view class="coupon_title">新课限时立减券</view>
+      <view class="coupon_time">2020.09.01-2020.10.09</view>
+      <view class="coupon_only">仅限（汉字思维）课程使用</view>
+      <view class="expired_use">
+        <image src="/resource/img/exceed-time-icon.e617fa75.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="coupon">
+    <view class="coupon_left expired_left">
+      ￥<i>40</i>
+    </view>
+    <view class="coupon_right">
+      <view class="coupon_title">新课限时立减券</view>
+      <view class="coupon_time">2020.09.01-2020.10.09</view>
+      <view class="coupon_only">仅限（汉字思维）课程使用</view>
+      <view class="expired_use">
+        <image src="/resource/img/exceed-time-icon.e617fa75.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+
 </view>

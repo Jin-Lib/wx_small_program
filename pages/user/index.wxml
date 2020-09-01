@@ -18,6 +18,10 @@
 
     <view class="user_data_text" bindtap="information">
       <view class="data_text_perfect">尚未完善宝宝信息</view>
+      <view class="edit_img">
+        <image src="/resource/user/baby_info_modify_img.png" mode="widthFix"></image>
+      </view>
+      <i></i>
     </view>
 
     <view class="user_data_credit" bindtap="credit">
