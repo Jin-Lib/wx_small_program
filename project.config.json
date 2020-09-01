@@ -86,7 +86,7 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 4,
 					"name": "pages/course-detail/index",
 					"pathName": "pages/course-detail/index",
 					"query": "",

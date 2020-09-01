@@ -12,6 +12,35 @@ Page({
     hiddencancelpay: true, //确认取消支付弹窗
     hiddencancelpayd: true, //单购确认取消支付弹窗
   },
+  onLoad: function () {
+    this.getdetailData();
+  },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  // 获取课程信息
+  getdetailData: function () {
+    API.getweek({
+      id: 1
+    }).then(res => {//成功
+      console.log(res);
+      //const { rows } = res || {};
+
+      this.setData({
+        coursedetail: res
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
+  },
   onReady() {
     this.setData({
       container: () => wx.createSelectorQuery().select('#navigation-wrap')
@@ -91,31 +120,6 @@ Page({
   spell_pay: function (event) {
     wx.navigateTo({
       url: '/pages/course-share/index'
-    })
-  },
-  onLoad: function () {
-    this.getdetailData();
-  },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  // 获取课程信息
-  getdetailData: function () {
-    API.getBanner({
-      type: 1
-    }).then(res => {
-      const { code, data } = res || {};
-
-      // 如果code为0，代表成功
-      if (code == '0') {
-        this.setData({
-          bannerData: data && data.rows || []
-        });
-      }
     })
   },
 

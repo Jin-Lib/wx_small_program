@@ -48,15 +48,16 @@ Page({
   getBannerData: function() {
     API.getBanner({
       type: 1
-    }).then(res => {
+    }).then(res => {//成功
       console.log(res);
-      const { rows } = res || {};
+      //const { rows } = res || {};
+      const rows = res && res.rows || []
 
       this.setData({
         bannerData: rows || []
       });
     }).catch(err => {
-      wx.showToast({
+      wx.showToast({//错误
         title: err,
         icon: 'none',
         duration: 1000

@@ -47,7 +47,7 @@ const API =  {
    * ===================
    */
   'getweek': {
-    url: `${host}/api/course/detail`,
+    url: `${host}/api/course/detail?id=1`,
     method: 'GET'
   },
 };

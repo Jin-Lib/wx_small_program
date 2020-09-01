@@ -12,10 +12,10 @@
     14天让孩子做情绪的小主人，学会控制自己，提高抗挫折能力，让孩子更自信
   </view>
 </view>
-
+<!--price-->
 <view class="detail_center">
   <view class="deta_center_num">
-    <i>￥29.9</i>起
+      <i>￥{{coursedetail.price}}</i>起
   </view>
   <view class="deta_center_details" bindtap="showrule">
     <view class="center_details_age"><view class="check"></view>4~12岁</view>
