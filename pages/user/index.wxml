@@ -12,8 +12,8 @@
 
   <view class="user_data">
 
-    <view class="user_data_img">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg"></image>
+    <view class="user_data_img" bindtap="information">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
     </view>
 
     <view class="user_data_text" bindtap="information">
