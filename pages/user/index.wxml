@@ -13,7 +13,7 @@
   <view class="user_data">
 
     <view class="user_data_img" bindtap="information">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
     </view>
 
     <view class="user_data_text" bindtap="information">

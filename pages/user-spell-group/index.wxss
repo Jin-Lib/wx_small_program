@@ -321,3 +321,10 @@ page{background-color: #f7f7f7}
 .prompt_text{float: left; font-size: 22rpx; margin-top: 6rpx; margin-left: 8rpx;}
 .prom_text_name{float: left; width: 80rpx; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height: 34rpx; }
 .prom_text_title{float: left; margin-left: 10rpx;}
+#navigation-wrap {
+  width: 100%;
+  height: 121rpx;
+  overflow: hidden;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+}
