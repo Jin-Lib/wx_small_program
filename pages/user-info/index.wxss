@@ -1,0 +1,13 @@
+page{background-color: #f7f7f7}
+.info{width: 750rpx;background-color: #fff;}
+.info_k{width: 670rpx; padding: 20rpx 40rpx; border-bottom: solid 3rpx #e2e2e2;display: flex;flex-wrap: wrap;justify-content:space-between;/*左右分开*/}
+.info_k_text{font-size: 32rpx; color: #000;margin-top: 18rpx;position: relative; margin-left: 15rpx;}
+.info_k_text i{position: absolute;top: 15rpx; left: -20rpx; height: 10rpx; width: 10rpx; background-color:red;border-radius: 50%;}
+.info_k_select{width: 300rpx;text-align: right; height: 80rpx; position: relative;margin-right: 40rpx;}
+.info_k_select image{width: 80rpx;}
+.info_k_select i {border: solid black; border-width: 0 1px 1px 0;display: inline-block; padding: 5px;position: absolute;top: 27rpx; right: -40rpx;}
+.more_right {transform: rotate(-45deg);-webkit-transform: rotate(-45deg);}
+.info_k_select_text{width: 300rpx;text-align: right; height: 60rpx; position: relative;margin-right: 40rpx;margin-top: 20rpx;}
+.info_k_select_text i {border: solid black; border-width: 0 1px 1px 0;display: inline-block; padding: 5px;position: absolute;top: 13rpx; right: -40rpx;}
+.bind{padding: 10rpx 20rpx; background-color: #f86f22; font-size: 24rpx; border-radius: 30rpx; width: 95rpx;color: #fff;margin-left: 200rpx;}
+

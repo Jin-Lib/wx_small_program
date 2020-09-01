@@ -131,6 +131,21 @@
 					"id": -1,
 					"name": "pages/user-spell-group/index",
 					"pathName": "pages/user-spell-group/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-info/index",
+					"pathName": "pages/user-info/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-coupons/index",
+					"pathName": "pages/user-coupons/index",
+					"query": "",
 					"scene": null
 				}
 			]
