@@ -30,7 +30,7 @@ page{background-color: #f7f7f7;}
 .scho_num{margin-top: 20rpx; font-size: 32rpx; font-weight: 900;}
 .recording{ float: left; width: 635rpx;margin-top:120rpx; margin-left: 30rpx; background-color: #fff; padding: 30rpx 30rpx; border-top-right-radius: 15rpx;border-top-left-radius: 15rpx; font-size: 26rpx;margin-bottom: 130rpx;}
 .scho_t_rule{position: fixed; height: 100%; width: 100%; top:0rpx;left:0; z-index: 999; background: rgba(0,0,0,0.7)}
-.t_rule_k{width: 485rpx; margin-left:105rpx; background-color: #fff; padding: 40rpx 30rpx; border-radius: 15rpx; margin-top: 100rpx; position: relative;}
+.t_rule_k{width: 485rpx; margin-left:105rpx; background-color: #fff; padding: 40rpx 30rpx; border-radius: 15rpx; margin-top: 260rpx; position: relative; animation: shaking .6s;}
 .t_rule_title{width: 485rpx; text-align: center; font-size: 30rpx; font-weight: 900;}
 .t_rule_text{margin-top: 30rpx; background: rgba(252, 72,80 ); padding: 15rpx 20rpx; border-radius: 15rpx; font-size: 26rpx; color: #fff; height: 500rpx;}
 .t_rule_text_title{font-size: 28rpx; font-weight: 700; margin-top: 40rpx;}
@@ -58,12 +58,23 @@ page{background-color: #f7f7f7;}
 }
 
 
-
-
-
-
-
-
-
-
-
+@keyframes shaking{
+  0% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+  }
+  40% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+  }
+  60% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+  }
+  80% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(0px) rotate(0deg);
+  }
+}

@@ -1,3 +1,54 @@
-<view >
-  问答挑战
+<view class="challenge">
+  <view class="chall_img"><image src="/resource/img/baby_head.png" mode="widthFix"></image></view>
+  <view class="chall_text_k">
+    <view class="chall_text_img"><image src="/resource/img/baby_head_title.png" mode="widthFix"></image></view>
+    <view class="chall_text">
+      <view class="chall_p">
+        1/宝宝可以通过在'问答挑战'中回答题目,来了解宇宙,海洋,历史,动物...等各类知识
+      </view>
+      <view class="chall_p">
+        2/每人每天可参与2轮挑战,每轮有10道问答题目
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="nav1 bc_white">
+  <view class="{{selected?'red1':'default1'}}" bindtap="selected">答题</view>
+  <view class="{{selected1?'red1':'default1'}}" bindtap="selected1">历史成绩</view>
+</view>
+<view class="{{selected?'show1':'hidden1'}}">
+  <view class="chall_dt_k">
+    <view class="chall_dt_title">答题1标题标题标题标题标题标题</view>
+    <view class="chall_dt_an">开始答题</view>
+  </view>
+  <view class="chall_dt_k">
+    <view class="chall_dt_title">答题2标题标题标题标题标题标题</view>
+    <view class="chall_dt_an huise">开始答题</view>
+  </view>
+</view>
+<view class="{{selected1?'show1':'hidden1'}}">
+  <view class="history">
+    <view class="history_title">
+      <view class="ceshi">答题时间</view>
+      <view class="zong">总分</view>
+      <view class="xiangq">详情</view>
+    </view>
+    <view class="history_cj">
+      <view class="time">2020-09-02 21:36:42</view>
+      <view class="fraction">20</view>
+      <view class="details">查看</view>
+    </view>
+    <view class="history_cj">
+      <view class="time">2020-09-01 01:34:41</view>
+      <view class="fraction">10</view>
+      <view class="details">查看</view>
+    </view>
+    <view class="history_cj">
+      <view class="time">2020-09-01 11:36:42</view>
+      <view class="fraction">80</view>
+      <view class="details">查看</view>
+    </view>
+  </view>
 </view>
