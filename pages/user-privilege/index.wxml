@@ -1,3 +1,59 @@
-<view >
-  专属特权
+
+
+<view class="privil">
+  <image src="/resource/img/headImg.a0fb3681.png" mode="widthFix"></image>
+</view>
+
+<view class="privil_imgk">
+  <view class="privil_img">
+    <image src="/resource/img/card.48f5d5fe.png" mode="widthFix"></image>
+  </view>
+
+  <view class="giveaway">
+    <view class="nav1 bc_white">
+      <view class="{{selected?'red1':'default1'}}" bindtap="selected">可赠送</view>
+      <view class="{{selected1?'red1':'default1'}}" bindtap="selected1">已赠出</view>
+    </view>
+    <view class="{{selected?'show1':'hidden1'}}">
+      <view class="zengsong">
+        <view class="zs_left">
+          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+        </view>
+        <view class="zs_right">
+          <view class="zs_right_title">海洋世界总动员</view>
+          <view class="zs_right_text">深入海底两万里,探索神秘的海洋王治郅撒撒娇发了多少积分</view>
+          <view class="zs_xy">99999+想要</view>
+          <view class="zs_anniu">赠送给好友</view>
+        </view>
+      </view>
+      <view class="zengsong">
+        <view class="zs_left">
+          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+        </view>
+        <view class="zs_right">
+          <view class="zs_right_title">海洋世界总动员</view>
+          <view class="zs_right_text">深入海底两万里,探索神秘的海洋王治郅撒撒娇发了多少积分</view>
+          <view class="zs_xy">99999+想要</view>
+          <view class="zs_anniu">赠送给好友</view>
+        </view>
+      </view>
+      <view class="zengsong">
+        <view class="zs_left">
+          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+        </view>
+        <view class="zs_right">
+          <view class="zs_right_title">海洋世界总动员</view>
+          <view class="zs_right_text">深入海底两万里,探索神秘的海洋王治郅撒撒娇发了多少积分</view>
+          <view class="zs_xy">99999+想要</view>
+          <view class="zs_anniu">赠送给好友</view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{selected1?'show1':'hidden1'}}">
+      <view class="zengchu">
+        还没有好友领取您的课哦~
+      </view>
+    </view>
+  </view>
 </view>
