@@ -1,3 +1,39 @@
-<view >
-  体检反馈
+
+<view class="feedback_title">
+  请留下您的宝贵建议：
+</view>
+<view class="feedback_edit">
+  <textarea placeholder-class="place-holder"  placeholder="请填写您的建议；感谢您提出的宝贵的建议，我们将不断的优化产品" name="introduction" maxlength='300' bindinput='limit' value="{{text}}"/>
+      <!-- 显示字数 -->
+      <view class="clear">{{current}} / {{max}} （最多可写300字）</view>
+</view>
+
+<view class="feedback_jobs">
+  留下您的姓名和联系电话，工作人员会及时和您联系，解决您的问题~
+</view>
+
+<view class="feedback_input">
+  <input placeholder="请输入您的姓名"/>
+  <input placeholder="请输入您的手机号"/>
+</view>
+
+<view class="button" bindtap="show">提交</view><!--每个用户每天只能提交一次~-->
+
+<!--弹窗-->
+<view class="bottom_popup" hidden="{{hidden}}">
+  <view class="popup">
+    <view class="check_red"></view>
+    <view class="popup_title">谢谢您的反馈，我们会认真听取并改进的~</view>
+    <view class="popup_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/4.png" mode="widthFix"></image>
+    </view>
+    <view class="code">
+      <view class="code_title">添加助教,对课程有问题可随时咨询哟~</view>
+      <view class="code_text">点击复制助教微信</view>
+      <view class="code_img">点击保存二维码</view>
+    </view>
+    <view class="carry">
+      <view class="carry_text" bindtap="carry">完成</view>
+    </view>
+  </view>
 </view>

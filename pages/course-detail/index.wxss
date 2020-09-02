@@ -182,8 +182,7 @@ page{background-color: #f7f7f7;}
   left: 0;
   padding: 30rpx 50rpx;
   padding-bottom: 0rpx;
-  border-top-left-radius: 30rpx;
-  border-top-right-radius: 30rpx;
+  animation: popups .4s;
 }
 
 .popup_title {
@@ -499,6 +498,7 @@ page{background-color: #f7f7f7;}
   background-color: #fff;
   border-radius: 15rpx;
   padding: 40rpx 0rpx;
+  animation: shaking .6s;
 }
 
 .canc_pay_title {
@@ -591,4 +591,35 @@ page{background-color: #f7f7f7;}
   overflow: hidden;
   padding-top: 30rpx;
   box-sizing: border-box;
+}
+
+
+@keyframes popups{
+  0%{
+    bottom:-500rpx;
+  }
+  100%{
+    bottom:0rpx;
+  }
+}
+
+@keyframes shaking{
+  0% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+  }
+  40% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+  }
+  60% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+  }
+  80% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(0px) rotate(0deg);
+  }
 }

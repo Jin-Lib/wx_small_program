@@ -4,7 +4,7 @@
       头像
     </view>
     <view class="info_k_select">
-      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image><i class="more_right"></i>
+      <image src="{{infodetail.head_img}}" mode="widthFix"></image><i class="more_right"></i>
     </view>
   </view>
   <view class="info_k">
@@ -12,7 +12,7 @@
       宝宝昵称
     </view>
     <view class="info_k_select_text">
-      子欣<i class="more_right"></i>
+      {{infodetail.nick_name}}<i class="more_right"></i>
     </view>
   </view>
   <view class="info_k">
@@ -20,7 +20,7 @@
       <i></i>宝宝性别
     </view>
     <view class="info_k_select_text">
-      请选择<i class="more_right"></i>
+      {{infodetail.sex}}<i class="more_right"></i>
     </view>
   </view>
   <view class="info_k">
@@ -28,7 +28,7 @@
       <i></i>宝宝生日
     </view>
     <view class="info_k_select_text">
-      请选择<i class="more_right"></i>
+      {{infondetail.birthday}}<i class="more_right"></i>
     </view>
   </view>
   <view class="info_k">
@@ -36,7 +36,7 @@
       <i></i>绑定手机号码
     </view>
     <view class="info_k_select_text">
-      <!-- 15267010876<i class="more_right"></i> 绑定之后的样式-->
+      <!-- {{infodetail.phone}}<i class="more_right"></i> 绑定之后的样式-->
       <view class="bind">立即绑定</view>
     </view>
   </view>
