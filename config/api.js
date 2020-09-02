@@ -47,8 +47,17 @@ const API =  {
    * ===================
    */
   'getweek': {
-    url: `${host}/api/course/detail?id=1`,
+    url: `${host}/api/course/detail`,
     method: 'GET'
+  },
+  /**
+   * ===================
+   * 下单
+   * ===================
+   */
+  'getcreate': {
+    url: `${host}/api/order/create`,
+    method: 'POST'
   },
 };
 

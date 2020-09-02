@@ -41,6 +41,40 @@ Page({
       })
     })
   },
+
+  // 下单
+  getcreateData: function () {
+    API.getcreate({
+      courseId: 1
+    }).then(res => {//成功
+      console.log(res);
+      //const { rows } = res || {};
+      wx.requestPayment(
+        {
+          'timeStamp': res.timeStamp,
+          'nonceStr': res.nonceStr,
+          'package': res.package,
+          'signType': res.signType,
+          'paySign': res.paySign,
+          'success': function (res) {
+            hiddenpintuan: !this.data.hiddenpintuan;
+            hiddensingle: !this.data.hiddensingle;
+            url: '/pages/course-share/index';
+           },
+          'fail': function (res) { },
+          'complete': function (res) { }
+        })
+      this.setData({
+        coursecreate: res,
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
+  },
   onReady() {
     this.setData({
       container: () => wx.createSelectorQuery().select('#navigation-wrap')
@@ -112,15 +146,18 @@ Page({
   },
   //点击单购支付按钮
   single_pay: function (event) {
-    wx.navigateTo({
-      url: '/pages/course-play/index'
-    })
+    this.getcreateData();
+    // wx.navigateTo({
+    //   url: '/pages/course-play/index'
+    // })
   },
   //点击团购支付按钮
   spell_pay: function (event) {
-    wx.navigateTo({
-      url: '/pages/course-share/index'
-    })
+    this.getcreateData();
+
+    // wx.navigateTo({
+    //   url: '/pages/course-share/index'
+    // })
   },
 
 })
