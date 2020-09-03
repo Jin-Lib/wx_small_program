@@ -6,7 +6,20 @@
 
 <view class="privil_imgk">
   <view class="privil_img">
-    <image src="/resource/img/card.48f5d5fe.png" mode="widthFix"></image>
+    <image src="/resource/img/card.48f5d5fe.png" mode="widthFix" bindtap="show"></image>
+    <view class="privil_img_jd">
+      <view class="privil_img_y addy"></view>
+      <view class="privil_img_g addg"></view>
+      <view class="privil_img_y"></view>
+      <view class="privil_img_g"></view>
+      <view class="privil_img_y"></view>
+    </view>
+    <view class="privil_img_text">
+      已赠给<i>1</i>个好友，已获得<i>18</i>元优惠券
+    </view>
+    <view class="privil_img_js">
+      仅剩 05:00:29:9
+    </view>
   </view>
 
   <view class="giveaway">
@@ -51,9 +64,19 @@
 
     </view>
     <view class="{{selected1?'show1':'hidden1'}}">
+      
       <view class="zengchu">
         还没有好友领取您的课哦~
       </view>
     </view>
+  </view>
+</view>
+
+<view class="bottom_popup" hidden="{{hidden}}" bindtap="show">
+  <view class="popup_img1">
+    <image src="/resource/img/point.ade02a12.png" mode="widthFix"></image>
+  </view>
+  <view class="popup_img2">
+    <image src="/resource/img/share_img.d068682a.png" mode="widthFix"></image>
   </view>
 </view>

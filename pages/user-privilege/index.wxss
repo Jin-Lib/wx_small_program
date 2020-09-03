@@ -3,8 +3,16 @@ page{background-color: #f7f7f7;}
 .privil{width: 750rpx;}
 .privil image{width: 750rpx;}
 .privil_imgk{width: 750rpx;margin-top: -200rpx;background: -webkit-linear-gradient(right,#fe5c33,#fc9012);padding-bottom:40rpx;}
-.privil_img{width: 750rpx;}
+.privil_img{width: 750rpx; position: relative;}
 .privil_img image{width: 750rpx;}
+.privil_img_text{position: absolute;top: 310rpx;width: 750rpx; text-align: center;font-size: 24rpx;}
+.privil_img_text i{color: #fc4850;font-weight: 900;}
+.privil_img_jd{ display: flex;flex-wrap: wrap;position: absolute;top: 195rpx;width: 540rpx;left: 110rpx;}
+.privil_img_y{width: 15rpx;height: 15rpx;border-radius: 50%;background-color: #fff;border: 12rpx solid #fac990;}
+.privil_img_g{width: 215rpx;height: 10rpx; background-color: #fac990;margin-top: 13rpx;}
+.addy{border: 12rpx solid #fc9012;}
+.addg{ background-color: #fc9012;}
+.privil_img_js{position: absolute;top: 460rpx;width: 750rpx;text-align: center;font-size: 24rpx;color: #fff;}
 
 .giveaway{width: 660rpx; padding: 20rpx 25rpx; background-color: #fff; border-radius: 20rpx;margin-left: 20rpx;padding-bottom: 30rpx;}
 .bc_white{width: 660rpx;background-color:#fff;z-index: 999; display: flex;flex-wrap: wrap;color:#000;}
@@ -23,3 +31,17 @@ page{background-color: #f7f7f7;}
   .zs_anniu{padding: 8rpx 20rpx; background-color:#fc9012; margin-top: -45rpx; font-size: 26rpx; width: 130rpx; margin-left:220rpx;color: #fff; border-radius: 30rpx;}
 
 .zengchu{width: 660rpx; text-align: center; margin-top: 150rpx; font-size: 24rpx;}
+
+.bottom_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+.popup_img1{margin-top: 100rpx; margin-left: 520rpx; width: 100rpx;}
+.popup_img1 image{width: 100rpx;}
+.popup_img2{margin-top: 0rpx; margin-left: 120rpx; width: 500rpx;}
+.popup_img2 image{width: 500rpx;}
