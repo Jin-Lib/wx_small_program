@@ -68,6 +68,15 @@ const API =  {
     url: `${host}/api/user/info`,
     method: 'POST'
   },
+  /**
+   * ===================
+   * 订单
+   * ===================
+   */
+  'getorder': {
+    url: `${host}/api/Order/orderList`,
+    method: 'POST'
+  },
 };
 
 let API_RES = {};

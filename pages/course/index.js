@@ -39,7 +39,11 @@ Page({
       url: '/pages/course-detail/index'
     })
   },
-
+  lessons: function (event) {
+    wx.navigateTo({
+      url: '/pages/course-play/index'
+    })
+  },
   onLoad: function () {
 
     //  tab切换

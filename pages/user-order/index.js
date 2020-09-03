@@ -1,5 +1,8 @@
 //index.js
 
+//获取应用实例
+const app = getApp()
+const API = require('../../config/api');
 
 Page({
   data: {
@@ -8,6 +11,8 @@ Page({
     selected2: false,
     selected3: false,
     selected4: false,
+    orderData: [
+    ]
   },
   selected: function (e) {
     this.setData({
@@ -55,12 +60,32 @@ Page({
     });
   },
   onLoad: function () {
-
+    this.getorderData();
   },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
 
+  },
+  // 获取订单信息
+  getorderData: function () {
+    API.getorder({
+      type: 0
+    }).then(res => {//成功
+      console.log(res);
+      //const { rows } = res || {};
+      const rows = res && res.rows || []
+
+      this.setData({
+        orderData: rows || []
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
   },
 })

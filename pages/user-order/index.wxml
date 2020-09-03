@@ -8,8 +8,12 @@
 </view>
 <view class="{{selected?'show1':'hidden1'}}">
 
+  
+<block
+    wx:for="{{orderData}}"
+    wx:key="id">
   <view class="order_k">
-    <view class="single_number">订单号：20200901191926926</view><!--前面是单号生成日期中间是课程编号末尾随机-->
+    <view class="single_number">订单号：{{item.order_no}}</view><!--前面是单号生成日期中间是课程编号末尾随机-->
     <view class="order_conteron">
       <view class="order_right">
         <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
@@ -27,26 +31,7 @@
     </view>
     <view class="order_buy">再次购买</view>
   </view>
-
-  <view class="order_k">
-    <view class="single_number">订单号：20200901191926926</view><!--前面是单号生成日期中间是课程编号末尾随机-->
-    <view class="order_conteron">
-      <view class="order_right">
-        <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-      </view>
-      <view class="order_left">
-        <view class="order_left_title">
-          <view class="text_title">100手唐诗国学</view>
-          <view class="text_num">￥9.9</view>
-        </view>
-        <view class="order_left_status">
-          <view class="status_title">拼团失败已退款</view>
-          <view class="status_num">￥3.9</view>
-        </view>
-      </view>
-    </view>
-    <view class="order_buy">再次购买</view>
-  </view>
+</block>
 
  </view>
 
