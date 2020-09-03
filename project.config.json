@@ -175,6 +175,12 @@
 					"pathName": "pages/user-privilege/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-extract/index",
+					"pathName": "pages/user-extract/index",
+					"scene": null
 				}
 			]
 		}

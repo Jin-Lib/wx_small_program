@@ -1,0 +1,60 @@
+
+
+
+page{background-color: #f7f7f7;}
+.extract{width: 700rpx; margin-left: 25rpx;margin-top: 100rpx;text-align: center;}
+.extract image{width: 150rpx; height: 150rpx;}
+.yue{font-size: 26rpx; margin-top: 20rpx;}
+.num{font-size: 42rpx; font-weight: 900; margin-top: 20rpx;}
+.tixian{font-size: 26rpx; margin-top: 40rpx; background-color: #f86f22; padding: 20rpx 100rpx;color: #fff;border-radius: 15rpx;}
+.tixianmx{font-size: 26rpx; margin-top: 30rpx; border: #f86f22 3rpx solid; padding: 20rpx 100rpx; color: #f86f22;border-radius: 15rpx;}
+.bottom_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+.popup_center{margin: 0 auto; color: #fff; font-size: 24rpx; background: rgba(0, 0, 0, 0.8);padding: 12rpx 15rpx;width: 300rpx; text-align:center;border-radius: 30rpx; margin-top: 630rpx;}
+.bottom_popupmx {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+.poptmx{width: 640rpx; left: 25rpx; padding: 20rpx 30rpx; background-color: #fff; top: 90rpx; border-radius: 15rpx; height:950rpx; position: absolute;}
+.dsjfs{overflow: hidden;overflow-y:visible;width: 640rpx;height:800rpx;}
+.popuch{width: 640rpx; text-align: right;}
+.close {
+  position: absolute;
+  right: 30rpx;
+  top: 110rpx;
+  width: 50rpx;
+  height: 50rpx;
+  z-index: 999;
+}
+.close:before, .close:after {
+  position: absolute;
+  right: 30rpx;
+  content: ' ';
+  height: 40rpx;
+  width: 2px;
+  background-color: #000;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.yansd{width: 640rpx; text-align: center; font-size: 26rpx;margin-top: 80rpx;}
+.shije{display: flex;flex-wrap: wrap;width: 640rpx; margin-top: 50rpx;text-align: center; font-size: 28rpx; color: #f86f22;font-weight: 900;border-bottom:#e2e2e2 3rpx solid;padding: 20rpx 0;}
+.shijetext{display: flex;flex-wrap: wrap;width: 640rpx;text-align: center; font-size: 24rpx;border-bottom:#e2e2e2 3rpx solid;padding: 20rpx 0;}
+.shijian{width: 320rpx;}
+.jinije{width: 320rpx;}
