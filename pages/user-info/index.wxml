@@ -4,10 +4,10 @@
       头像
     </view>
     <view class="info_k_select">
-      <image src="{{infodetail.head_img}}" mode="widthFix"></image><i class="more_right"></i>
+      <image src="{{infodetail.head_img}}" mode="widthFix" bindtap='clickImg'></image><i class="more_right"></i>
     </view>
   </view>
-  <view class="info_k">
+  <view class="info_k" bindtap="nameshow">
     <view class="info_k_text">
       宝宝昵称
     </view>
@@ -20,24 +20,60 @@
       <i></i>宝宝性别
     </view>
     <view class="info_k_select_text">
-      {{infodetail.sex}}<i class="more_right"></i>
+      <picker
+        bindchange="recommendedAgeSelectxb"
+        range="{{recommendedAgexb}}"
+        value="{{recommendedAgeSelectIndexxb}}">
+          {{recommendedAgexb[recommendedAgeSelectIndexxb]}}
+          <i class="more_right"></i>
+      </picker>
     </view>
   </view>
-  <view class="info_k">
+  <view class="info_k" bindtap="recommendedAgeSelect">
     <view class="info_k_text">
       <i></i>宝宝生日
     </view>
     <view class="info_k_select_text">
-      {{infondetail.birthday}}<i class="more_right"></i>
+      <picker
+        bindchange="recommendedAgeSelect"
+        range="{{recommendedAge}}"
+        value="{{recommendedAgeSelectIndex}}">
+          {{recommendedAge[recommendedAgeSelectIndex]}}
+          <i class="more_right"></i>
+      </picker>
     </view>
   </view>
-  <view class="info_k">
+  <view class="info_k" bindtap="iphoneshow">
     <view class="info_k_text">
       <i></i>绑定手机号码
     </view>
     <view class="info_k_select_text">
       <!-- {{infodetail.phone}}<i class="more_right"></i> 绑定之后的样式-->
       <view class="bind">立即绑定</view>
+    </view>
+  </view>
+</view>
+<!--头像放大-->
+<view class="img_popup" hidden="{{hidden}}" bindtap='clickImg'>
+  <image src="{{infodetail.head_img}}" mode="widthFix"></image>
+</view>
+<!--姓名修改-->
+<view class="name_popup" hidden="{{namehidden}}">
+  <view class="popup_input">
+    <input placeholder="张驰"></input>
+    <view class="popup_anniu">
+      <view class="anniu_qx" bindtap="nameshow">取消</view>
+      <view class="anniu_qd" bindtap="nameshow">确定</view>
+    </view>
+  </view>
+</view>
+<!--姓名手机号-->
+<view class="name_popup" hidden="{{iphonehidden}}">
+  <view class="popup_input">
+    <input placeholder="15267000200"></input>
+    <view class="popup_anniu">
+      <view class="anniu_qx" bindtap="iphoneshow">取消</view>
+      <view class="anniu_qd" bindtap="iphoneshow">确定</view>
     </view>
   </view>
 </view>

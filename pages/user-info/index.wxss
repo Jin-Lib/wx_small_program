@@ -10,4 +10,35 @@ page{background-color: #f7f7f7}
 .info_k_select_text{width: 300rpx;text-align: right; height: 60rpx; position: relative;margin-right: 40rpx;margin-top: 20rpx;}
 .info_k_select_text i {border: solid black; border-width: 0 1px 1px 0;display: inline-block; padding: 5px;position: absolute;top: 13rpx; right: -40rpx;}
 .bind{padding: 10rpx 20rpx; background-color: #f86f22; font-size: 24rpx; border-radius: 30rpx; width: 95rpx;color: #fff;margin-left: 200rpx;}
+.img_popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999;}
 
+  .img_popup image{width: 500rpx; height: 500rpx; margin-left: 125rpx; margin-top: 200rpx;}
+  .name_popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999;}
+.popup_input{position: absolute;bottom: 0;width: 695rpx; padding: 30rpx; background-color: #fff;height: 460rpx;border-top-right-radius: 15rpx;border-top-left-radius: 15rpx;
+  animation:popups 0.6s; }
+.popup_input input{margin-top: 200rpx;border-bottom:  solid 3rpx #e2e2e2; padding-bottom: 15rpx; font-size: 24rpx;width: 675rpx;padding-left: 20rpx;}
+.popup_anniu{margin-top: 130rpx;display: flex;flex-wrap: wrap;}
+.anniu_qx{width: 180rpx;color: #05c260; background-color: #f2f2f2; padding: 15rpx 0rpx;text-align: center;border-radius: 10rpx;font-size: 24rpx;margin-left: 130rpx;}
+.anniu_qd{width: 180rpx;color: #fff; background-color: #05c260; padding: 15rpx 0rpx;text-align: center;border-radius: 10rpx;font-size: 24rpx;margin-left: 30rpx;}
+@keyframes popups{
+  0%{
+    bottom:-800rpx;
+  }
+  100%{
+    bottom:0rpx;
+  }
+}
