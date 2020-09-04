@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "拼团详情",
-  "usingComponents": {}
+  "usingComponents": {
+    "scroll-top": "../../components/scrollToTop/scrollToTop"
+  }
 }

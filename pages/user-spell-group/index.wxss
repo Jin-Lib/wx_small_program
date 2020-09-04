@@ -292,7 +292,7 @@ page{background-color: #f7f7f7}
 .reco_deta_jg{float: left;font-size: 22rpx; font-weight: 900; color: #fc4850;}
 .reco_deta_xl{float: right;font-size: 20rpx; color: #6b6b6b;}
 .change{float: left; margin-top: 40rpx; font-size: 24rpx; padding: 10rpx 40rpx;color: #f86f22; background-color: #f7f7f7; border-radius: 15px; margin-left: 300rpx;}
-.float{float: left;position: fixed;bottom: 0rpx; left: 0; background-color: #fff; }
+.float{float: left;position: fixed;bottom: 0rpx; left: 0; background-color: #fff; display: flex; }
 .index{float: left; width: 130rpx; text-align:center; padding: 15rpx 0;}
 .single{float: left; width: 150rpx; text-align: center; color: #000; font-size: 20rpx;margin-top: 8rpx;}
 .single_sy{float: left; width: 150rpx;color: #fff;}
@@ -321,3 +321,13 @@ page{background-color: #f7f7f7}
 .prompt_text{float: left; font-size: 22rpx; margin-top: 6rpx; margin-left: 8rpx;}
 .prom_text_name{float: left; width: 80rpx; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height: 34rpx; }
 .prom_text_title{float: left; margin-left: 10rpx;}
+
+.spell-group-wrapper {
+  position: fixed;
+  left: 20rpx;
+  top: 30rpx;
+  z-index: 400;
+  width: 430rpx;
+  height: 100rpx;
+  overflow: hidden;
+}

@@ -123,7 +123,6 @@
   </view>
 </view>
 
-÷
 <scroll-top isTopBtnShow="{{isTopBtnShow}}"></scroll-top>
 
 <!--底部购买-->
