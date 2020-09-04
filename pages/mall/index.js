@@ -62,6 +62,12 @@ Page({
     ]
   },
 
+  //合伙人临时入口
+  hhsr: function (event) {
+    wx.navigateTo({
+      url: '/pages/partner/partner-mall/index'
+    })
+  },
 
   onLoad: function () {
     this.getBannerData();

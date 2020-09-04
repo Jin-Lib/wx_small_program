@@ -1,3 +1,8 @@
+<!--合伙人临时入口-->
+<view class="hhsr" bindtap="hhsr">
+  合伙人临时入口
+</view>
+
 
 <!--浮窗活动-->
 <view class="bottom_advertising" bindtap="bottom_advertising">
