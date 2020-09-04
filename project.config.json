@@ -180,6 +180,21 @@
 					"id": -1,
 					"name": "pages/user-extract/index",
 					"pathName": "pages/user-extract/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 18,
+					"name": "pages/partner/partner-mall/index",
+					"pathName": "pages/partner/partner-mall/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-bonus-income/index",
+					"pathName": "pages/user-bonus-income/index",
+					"query": "",
 					"scene": null
 				}
 			]
