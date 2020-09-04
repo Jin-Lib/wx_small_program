@@ -1,3 +1,743 @@
-<view >
-  合伙人商城
+
+
+<view class="partner_menu_top">
+  <view class="nav1 bc_white">
+    <view class="{{selected?'red1':'default1'}}" style="margin-left:10rpx;" bindtap="selected">精选课程</view>
+    <view class="{{selected1?'red1':'default1'}}" bindtap="selected1">自然科普</view>
+    <view class="{{selected2?'red1':'default1'}}" bindtap="selected2">人文历史</view>
+    <view class="{{selected3?'red1':'default1'}}" bindtap="selected3">艺术启蒙</view>
+    <view class="{{selected4?'red1':'default1'}}" bindtap="selected4">艺术启蒙艺术启蒙</view>
+  </view>
+  <view class="floating_search" bindtap="search">
+    <view class="search_img">
+      <image src="/resource/img/search.png" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+
+<view class="{{selected?'show1':'hidden1'}}">
+
+  <!--轮播图和分类-->
+  <view class="carousel">
+    <view class="carousel_frame" bindtap='carousel'>
+      <swiper
+        autoplay="{{true}}"
+        indicatorDots="{{true}}"
+        interval="{{2000}}"
+        duration="{{500}}"
+        circular="{{true}}"
+        >
+        <block
+          wx:for="{{bannerData}}"
+          wx:key="id">
+          <swiper-item
+          data-banner-type="{{item.banner_type}}"
+          data-url="{{item.url}}"
+          bindtap="bannerTap">
+            <image src="{{item.image_url}}" mode="widthFix"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="classification">
+      <view class="leaderboard" bindtap="leaderboard">
+        <view class="lead_img">
+          <image src="/resource/partner/kk_1.png" mode="widthFix"></image>
+        </view>
+        锁粉利器
+      </view>
+      <view class="leaderboard" bindtap="chinese">
+        <view class="lead_img">
+          <image src="/resource/partner/kk_2.png" mode="widthFix"></image>
+        </view>
+        高勇专区
+      </view>
+      <view class="leaderboard" bindtap="teacher">
+        <view class="lead_img">
+          <image src="/resource/partner/kk_3.png" mode="widthFix"></image>
+        </view>
+        打卡0元学
+      </view>
+      <view class="leaderboard" bindtap="allcourses">
+        <view class="lead_img">
+          <image src="/resource/partner/kk_4.png" mode="widthFix"></image>
+        </view>
+        外部严选课
+      </view>
+    </view>
+  </view>
+  <view class="partner_meun_p">
+        
+    <view class="bc_white1">
+      <view class="{{partner?'red':'default'}}" style="margin-left:80rpx;" bindtap="partner">推荐1</view>
+      <view class="{{partner1?'red':'default'}}" bindtap="partner1">
+        销量<i class="down_x jys"></i><i class="top_x"></i>
+      </view>
+      <view class="{{partner2?'red':'default'}}" bindtap="partner2">
+        价格<i class="down_x"></i><i class="top_x jys"></i>
+      </view>
+      <view class="{{partner3?'red':'default'}}" bindtap="partner3">
+        佣金<i class="down_x"></i><i class="top_x"></i>
+      </view>
+    </view>
+    <view class="{{partner?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">用思维导图学好语数英</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_215_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">这是什么？科普动画第二季第一集哦！</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">这是什么？科普动画第二季第一集哦！</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner1?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_285_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">云舒写高分作文成语训练营</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner2?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_276_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">云舒写小学语文基础知识</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner3?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_284_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">英文立体阅读动画课</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+
+</view>
+
+<view class="{{selected1?'show1':'hidden1'}}">
+
+
+  <view class="partner_meun_p">
+        
+    <view class="bc_white1">
+      <view class="{{partnerq?'red':'default'}}" style="margin-left:80rpx;" bindtap="partnerq">推荐2</view>
+      <view class="{{partner1q?'red':'default'}}" bindtap="partner1q">
+        销量<i class="down_x jys"></i><i class="top_x"></i>
+      </view>
+      <view class="{{partner2q?'red':'default'}}" bindtap="partner2q">
+        价格<i class="down_x"></i><i class="top_x jys"></i>
+      </view>
+      <view class="{{partner3q?'red':'default'}}" bindtap="partner3q">
+        佣金<i class="down_x"></i><i class="top_x"></i>
+      </view>
+    </view>
+    <view class="{{partnerq?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">用思维导图学好语数英</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">这是什么？科普动画第二季第一集哦！</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner1q?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_285_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">云舒写高分作文成语训练营</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner2q?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_276_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">云舒写小学语文基础知识</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner3q?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_284_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">英文立体阅读动画课</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>
+
+<view class="{{selected2?'show1':'hidden1'}}">
+
+
+  <view class="partner_meun_p">
+        
+    <view class="bc_white1">
+      <view class="{{partnerw?'red':'default'}}" style="margin-left:80rpx;" bindtap="partnerw">推荐3</view>
+      <view class="{{partner1w?'red':'default'}}" bindtap="partner1w">
+        销量<i class="down_x jys"></i><i class="top_x"></i>
+      </view>
+      <view class="{{partner2w?'red':'default'}}" bindtap="partner2w">
+        价格<i class="down_x"></i><i class="top_x jys"></i>
+      </view>
+      <view class="{{partner3w?'red':'default'}}" bindtap="partner3w">
+        佣金<i class="down_x"></i><i class="top_x"></i>
+      </view>
+    </view>
+    <view class="{{partnerw?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">用思维导图学好语数英</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">这是什么？科普动画第二季第一集哦！</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner1w?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_285_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">云舒写高分作文成语训练营</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner2w?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_276_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">云舒写小学语文基础知识</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner3w?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_284_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">英文立体阅读动画课</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>
+
+<view class="{{selected3?'show1':'hidden1'}}">
+
+
+
+  <view class="partner_meun_p">
+        
+    <view class="bc_white1">
+      <view class="{{partnere?'red':'default'}}" style="margin-left:80rpx;" bindtap="partnere">推荐4</view>
+      <view class="{{partner1e?'red':'default'}}" bindtap="partner1e">
+        销量<i class="down_x jys"></i><i class="top_x"></i>
+      </view>
+      <view class="{{partner2e?'red':'default'}}" bindtap="partner2e">
+        价格<i class="down_x"></i><i class="top_x jys"></i>
+      </view>
+      <view class="{{partner3e?'red':'default'}}" bindtap="partner3e">
+        佣金<i class="down_x"></i><i class="top_x"></i>
+      </view>
+    </view>
+    <view class="{{partnere?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">用思维导图学好语数英</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">这是什么？科普动画第二季第一集哦！</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner1e?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_285_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">云舒写高分作文成语训练营</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner2e?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_276_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">云舒写小学语文基础知识</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner3e?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_284_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">英文立体阅读动画课</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>
+
+<view class="{{selected4?'show1':'hidden1'}}">
+
+
+  <view class="partner_meun_p">
+        
+    <view class="bc_white1">
+      <view class="{{partnerr?'red':'default'}}" style="margin-left:80rpx;" bindtap="partnerr">推荐5</view>
+      <view class="{{partner1r?'red':'default'}}" bindtap="partner1r">
+        销量<i class="down_x jys"></i><i class="top_x"></i>
+      </view>
+      <view class="{{partner2r?'red':'default'}}" bindtap="partner2r">
+        价格<i class="down_x"></i><i class="top_x jys"></i>
+      </view>
+      <view class="{{partner3r?'red':'default'}}" bindtap="partner3r">
+        佣金<i class="down_x"></i><i class="top_x"></i>
+      </view>
+    </view>
+    <view class="{{partnerr?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">用思维导图学好语数英</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">这是什么？科普动画第二季第一集哦！</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner1r?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_285_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">云舒写高分作文成语训练营</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner2r?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_276_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">云舒写小学语文基础知识</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="{{partner3r?'show':'hidden'}}">
+
+      <view class="part_xxk">
+        <view class="part_xxk_left">
+          <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_284_intro_share.png" mode="widthFix"></image>
+        </view>
+        <view class="part_xxk_right">
+          <view class="part_xxk_title">英文立体阅读动画课</view>
+          <view class="part_xxk_bq">畅游科普知识海洋</view>
+          <view class="part_xxk_jie">
+            <view class="part_xxk_num">￥99</view>
+            <i>100节</i>
+            <i>3人团</i>
+            <i>已售50023</i>
+          </view>
+          <view class="part_xxk_butotn">
+            最高赚￥<i>20.82</i>*3
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--合伙人浮窗按钮-->
+<view class="partner_float">
+  <image src="/resource/partner/floathhr.png" mode="widthFix"></image>
+</view>
+
+<!--红包浮窗按钮成为合伙人48小时内有效-->
+<view class="partner_float_hb" bindtap="show">
+  <image src="/resource/partner/indexxhb.png" mode="widthFix"></image>
+  <view class="partner_float_hb_time">48:39:29</view>
+</view>
+
+<!--红包弹窗-->
+<view class="bottom_popup" hidden="{{hidden}}">
+  <view class="dtxg">
+    <image src="/resource/partner/indexhb.png" mode="widthFix"></image>
+    <view class="bottom_popup_time">48:39:29</view>
+    <view class="close" bindtap="show"></view>
+  </view>
 </view>
