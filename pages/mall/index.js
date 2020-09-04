@@ -4,6 +4,8 @@ const app = getApp()
 const API = require('../../config/api');
 
 Page({
+  searchSwiperSub: 0,
+
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     recommendedAge: ['4岁', '5岁'],
@@ -43,6 +45,21 @@ Page({
         image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
         banner_type: 3
       }
+    ],
+
+    searchKeywords: [
+      {
+        text: '奥数',
+        id: 1,
+      },
+      {
+        text: '关键字',
+        id: 2,
+      },
+      {
+        text: '画画',
+        id: 3,
+      },
     ]
   },
 
@@ -68,14 +85,12 @@ Page({
     API.getBanner({
       type: 1
     }).then(res => {
-      const { code, data } = res || {};
+      const { code, data, rows } = res || {};
 
       // 如果code为0，代表成功
-      if(code == '0') {
-        this.setData({
-          bannerData: data && data.rows || []
-        });
-      }
+      this.setData({
+        bannerData: rows || []
+      });
     })
   },
 
@@ -88,8 +103,17 @@ Page({
 
   //点击搜索
   search: function (event) {
+    console.log()
+    let searchKeywords;
+    if (this.searchSwiperSub !== -1) {
+      searchKeywords = this.data.searchKeywords[this.searchSwiperSub]
+    }
+
     wx.navigateTo({
-      url: '/pages/course-search/index'
+      url: '/pages/course-search/index',
+      success: function(res) {
+        res.eventChannel.emit('acceptDataFromOpenerPage', { searchKeywords })
+      }
     })
   },
   //点击轮播图
@@ -201,5 +225,9 @@ Page({
         console.log('跳转播放视频')
         break;
     }
+  },
+
+  searchSwiperChange: function(event) {
+    this.searchSwiperSub = event.detail.current;
   }
 })
