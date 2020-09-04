@@ -28,6 +28,19 @@ Page({
         status: '1分钟前拼团成功'
       },
     ], // 拼团列表
+    courseBannerDetail: [
+      {
+        type: 'video',
+        src: 'http://cdn.koalaxiezi.com/bh1.mp4',
+        poster: 'http://cdn.koalaxiezi.com/ceshi/2.png'
+      },
+      {
+        src: 'http://cdn.koalaxiezi.com/ceshi/2.png',
+      },
+      {
+        src: 'http://cdn.koalaxiezi.com/ceshi/2.png',
+      },
+    ], // banner 轮播区域数据
   },
   onReady() {
     this.setData({

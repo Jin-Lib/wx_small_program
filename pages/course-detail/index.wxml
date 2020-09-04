@@ -6,14 +6,23 @@
     <image src="http://cdn.koalaxiezi.com/ceshi/1.png" mode="widthFix"></image>
   </view>
   <view class="detail_video">
-    <video src="http://cdn.koalaxiezi.com/bh1.mp4" poster="http://cdn.koalaxiezi.com/ceshi/2.png"></video>
+    <swiper autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+      <block
+        wx:for="{{courseBannerDetail}}"
+        wx:key="*this">
+        <swiper-item>
+          <video wx:if="{{item.type === 'video'}}" src="{{item.src}}" poster="{{item.poster}}"></video>
+          <image wx:else class="swiper-image" src="{{item.src}}" />
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
   <view class="detail_title">
     14天让孩子做情绪的小主人，学会控制自己，提高抗挫折能力，让孩子更自信
   </view>
 </view>
 
-<view class="detail_center">
+<view class="detail_center clear">
   <view class="deta_center_num">
     <i>￥29.9</i>起
   </view>
