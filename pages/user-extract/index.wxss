@@ -56,5 +56,6 @@ page{background-color: #f7f7f7;}
 .yansd{width: 640rpx; text-align: center; font-size: 26rpx;margin-top: 80rpx;}
 .shije{display: flex;flex-wrap: wrap;width: 640rpx; margin-top: 50rpx;text-align: center; font-size: 28rpx; color: #f86f22;font-weight: 900;border-bottom:#e2e2e2 3rpx solid;padding: 20rpx 0;}
 .shijetext{display: flex;flex-wrap: wrap;width: 640rpx;text-align: center; font-size: 24rpx;border-bottom:#e2e2e2 3rpx solid;padding: 20rpx 0;}
-.shijian{width: 320rpx;}
-.jinije{width: 320rpx;}
+.shijian{width: 420rpx;}
+.shijian i{font-size: 22rpx; padding: 5rpx;color: #fff;background-color: #05c260;}
+.jinije{width: 220rpx;}

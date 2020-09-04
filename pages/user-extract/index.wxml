@@ -24,12 +24,12 @@
     </view>
     <view class="dsjfs">
       <view class="shijetext">
-        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="shijian">2020-09-02 17:58:30 <i>提现中</i></view>
         <view class="jinije">100</view>
       </view>
       
       <view class="shijetext">
-        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="shijian">2020-09-02 17:58:30 <i>已完成</i></view>
         <view class="jinije">100</view>
       </view>
       

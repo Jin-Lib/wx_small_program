@@ -1,0 +1,12 @@
+
+page{background-color: #f7f7f7;}
+
+.income{width: 700rpx; padding: 20rpx 25rpx; background-color: #fff; margin-top: 20rpx;display: flex;flex-wrap: wrap;}
+.income_left{width: 100rpx; height: 100rpx; overflow: hidden;}
+.income_left image{width: 100rpx;}
+.income_center{font-size: 24rpx;margin-left: 15rpx;margin-top: 10rpx;width: 380rpx;}
+.income_text{font-size: 26rpx; font-weight: 900;}
+.income_jine{font-size: 24rpx;margin-top: 15rpx;}
+.income_right{font-size: 24rpx;text-align: center;margin-top: 15rpx;}
+.incom_right_jine{font-size: 26rpx; font-weight: 900;color: #f86f22;}
+.incom_right_time{color: #6b6b6b;margin-top: 15rpx;}

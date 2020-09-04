@@ -196,6 +196,12 @@
 					"pathName": "pages/user-bonus-income/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/successful-purchase/index",
+					"pathName": "pages/successful-purchase/index",
+					"scene": null
 				}
 			]
 		}
