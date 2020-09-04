@@ -263,7 +263,16 @@ page{background-color: #f7f7f7}
 .canc_pay_carry{float: right;text-align: center; background-color: #fc4850; padding: 20rpx 45rpx; border-radius: 15rpx; color: #fff; margin-right: 60rpx; margin-top: 50rpx; font-size: 26rpx;}
 .top{position: fixed; right: 20rpx; bottom: 200rpx;}
 .top image{width: 70rpx;}
-.prompt{position: fixed; left: 20rpx; top: 30rpx; background: rgba(0, 0, 0, 0.5); padding: 8rpx 12rpx;color: #fff; border-radius: 15rpx;}
+.spell-group-wrapper {
+  position: fixed;
+  left: 20rpx;
+  top: 100rpx;
+  z-index: 400;
+  width: 350rpx;
+  height: 100rpx;
+  overflow: hidden;
+}
+.prompt{ height: 56rpx; box-sizing: border-box; position: relative;background: rgba(0, 0, 0, 0.5); padding: 8rpx 12rpx;color: #fff; border-radius: 15rpx;}
 .prompt_img{float: left; height: 40rpx; width: 40rpx; overflow: hidden;border-radius: 50%;}
 .prompt_img image{width: 40rpx;}
 .prompt_text{float: left; font-size: 22rpx; margin-top: 6rpx; margin-left: 8rpx;}

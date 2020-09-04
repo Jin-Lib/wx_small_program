@@ -25,7 +25,25 @@
     <view class="search_img">
       <image src="/resource/img/search.png" mode="widthFix"></image>
     </view>
-    奥数
+    <view class="search_keyboards">
+      <swiper
+        autoplay="{{true}}"
+        interval="{{2000}}"
+        duration="{{500}}"
+        circular="{{true}}"
+        vertical="{{true}}"
+        bindchange="searchSwiperChange"
+      >
+        <block
+          wx:for="{{searchKeywords}}"
+          wx:key="id"
+        >
+          <swiper-item>
+            <text>{{item.text}}</text>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
   </view>
 </view>
 <!--轮播图和分类-->

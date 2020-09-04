@@ -11,6 +11,39 @@ Page({
     hiddenpintuan: true, //拼团购买弹窗
     hiddencancelpay: true, //确认取消支付弹窗
     hiddencancelpayd: true, //单购确认取消支付弹窗
+    tabList: ['详情', '目录', '评价', '推荐'], // tab 分类
+    currentTabSub: 0, // 记录当前tab下标
+    isTopBtnShow: false, // 是否展示返回顶部按钮
+    spellGroupList: [
+      {
+        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
+        nick: '天空之岚风雨行不1',
+        status: '1分钟前拼团成功'
+      },
+      {
+        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
+        nick: '天空之岚风雨行不2',
+        status: '1分钟前拼团成功'
+      },
+      {
+        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
+        nick: '天空之岚风雨行不3',
+        status: '1分钟前拼团成功'
+      },
+    ], // 拼团列表
+    courseBannerDetail: [
+      {
+        type: 'video',
+        src: 'http://cdn.koalaxiezi.com/bh1.mp4',
+        poster: 'http://cdn.koalaxiezi.com/ceshi/2.png'
+      },
+      {
+        src: 'http://cdn.koalaxiezi.com/ceshi/2.png',
+      },
+      {
+        src: 'http://cdn.koalaxiezi.com/ceshi/2.png',
+      },
+    ], // banner 轮播区域数据
   },
   onLoad: function () {
     this.getdetailData();
@@ -153,6 +186,17 @@ Page({
   },
   //点击团购支付按钮
   spell_pay: function (event) {
+    wx.navigateTo({
+      url: '/pages/course-share/index'
+    })
+  },
+  // tab 切换
+  tabChange: function(event) {
+    this.setData({
+      currentTabSub: event.currentTarget.dataset.sub
+    })
+  },
+  onLoad: function () {
     this.getcreateData();
 
     // wx.navigateTo({
@@ -160,4 +204,15 @@ Page({
     // })
   },
 
+  /**
+   * 监听页面滚动事件
+   * @date 2020-09-04
+   * @param {any} e
+   * @returns {any}
+   */
+  onPageScroll: function(e) {
+    this.setData({
+      isTopBtnShow: e.scrollTop > 100
+    })
+  },
 })

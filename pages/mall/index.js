@@ -4,6 +4,8 @@ const app = getApp()
 const API = require('../../config/api');
 
 Page({
+  searchSwiperSub: 0,
+
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     recommendedAge: ['4岁', '5岁'],
@@ -24,6 +26,39 @@ Page({
     ],
 
     bannerData: [
+      {
+        id: 1,
+        url: "http://cdn.koalaxiezi.com/image1/product.jpg",
+        image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
+        banner_type: 1
+      },
+      {
+        id: 1,
+        url: "http://cdn.koalaxiezi.com/image1/product.jpg",
+        image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
+        banner_type: 2
+      },
+      {
+        id: 1,
+        url: "http://cdn.koalaxiezi.com/image1/product.jpg",
+        image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
+        banner_type: 3
+      }
+    ],
+
+    searchKeywords: [
+      {
+        text: '奥数',
+        id: 1,
+      },
+      {
+        text: '关键字',
+        id: 2,
+      },
+      {
+        text: '画画',
+        id: 3,
+      },
     ]
   },
 
@@ -48,20 +83,13 @@ Page({
   getBannerData: function() {
     API.getBanner({
       type: 1
-    }).then(res => {//成功
-      console.log(res);
-      //const { rows } = res || {};
-      const rows = res && res.rows || []
+    }).then(res => {
+      const { code, data, rows } = res || {};
 
+      // 如果code为0，代表成功
       this.setData({
         bannerData: rows || []
       });
-    }).catch(err => {
-      wx.showToast({//错误
-        title: err,
-        icon: 'none',
-        duration: 1000
-      })
     })
   },
 
@@ -74,8 +102,17 @@ Page({
 
   //点击搜索
   search: function (event) {
+    console.log()
+    let searchKeywords;
+    if (this.searchSwiperSub !== -1) {
+      searchKeywords = this.data.searchKeywords[this.searchSwiperSub]
+    }
+
     wx.navigateTo({
-      url: '/pages/course-search/index'
+      url: '/pages/course-search/index',
+      success: function(res) {
+        res.eventChannel.emit('acceptDataFromOpenerPage', { searchKeywords })
+      }
     })
   },
   //点击轮播图
@@ -185,5 +222,9 @@ Page({
         console.log('跳转播放视频')
         break;
     }
+  },
+
+  searchSwiperChange: function(event) {
+    this.searchSwiperSub = event.detail.current;
   }
 })

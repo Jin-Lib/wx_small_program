@@ -145,28 +145,40 @@
   </view>
 </view>
 <!--底部购买-->
-<view class="float">
-  <view class="group" bindtap="showpintuan">￥3.9立即参团</view>
+<view class="float" hidden="{{!isShowBottonBuy}}">
   <view class="single" bindtap="return_index">
     <view class="single_sy"><image src="/resource/nav/home_active.png" mode="widthFix"></image></view>
     首页
   </view>
+  <view class="group" bindtap="showpintuan">￥3.9立即参团</view>
 </view>
 
 <!--回到顶部按钮-->
-<view class="top">
-  <image src="/resource/img/top.png" mode="widthFix"></image>
-</view>
+<scroll-top isTopBtnShow="{{isTopBtnShow}}"></scroll-top>
 
 <!--提示***购买成功-->
-<view class="prompt">
-  <view class="prompt_img">
-    <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
-  </view>
-  <view class="prompt_text">
-    <view class="prom_text_name">天空之岚风雨行不</view>
-    <view class="prom_text_title">拼团成功</view>
-  </view>
+<view class="spell-group-wrapper">
+  <swiper
+    autoplay="{{true}}"
+    vertical="{{true}}"
+  >
+    <block
+      wx:for="{{spellGroupList}}"
+      wx:key="*this"
+    >
+      <swiper-item>
+        <view class="prompt">
+          <view class="prompt_img">
+            <image src="{{item.image}}" mode="widthFix"></image>
+          </view>
+          <view class="prompt_text">
+            <view class="prom_text_name">{{item.nick}}</view>
+            <view class="prom_text_title">{{item.status}}</view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
 </view>
 
 

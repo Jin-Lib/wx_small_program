@@ -1,0 +1,7 @@
+<!--回到顶部按钮-->
+<view
+  hidden="{{!isTopBtnShow}}"
+  class="top"
+  bindtap="scrollToTop">
+  <image src="/resource/img/top.png" mode="widthFix"></image>
+</view>

@@ -8,6 +8,25 @@ Page({
     hiddenpintuan: true, //拼团购买弹窗
     hiddencancelpay: true, //确认取消支付弹窗
     hiddencancelpayd: true, //单购确认取消支付弹窗
+    isTopBtnShow: false, // 是否展示返回顶部按钮
+    isShowBottonBuy: false, // 是否展示底部购买
+    spellGroupList: [
+      {
+        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
+        nick: '天空之岚风雨行不1',
+        status: '1分钟前拼团成功'
+      },
+      {
+        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
+        nick: '天空之岚风雨行不2',
+        status: '1分钟前拼团成功'
+      },
+      {
+        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
+        nick: '天空之岚风雨行不3',
+        status: '1分钟前拼团成功'
+      },
+    ], // 拼团列表
   },
   onReady() {
     this.setData({
@@ -73,5 +92,17 @@ Page({
    */
   onShow: function () {
 
+  },
+  /**
+   * 监听页面滚动事件
+   * @date 2020-09-04
+   * @param {any} e
+   * @returns {any}
+   */
+  onPageScroll: function(e) {
+    this.setData({
+      isTopBtnShow: e.scrollTop > 100,
+      isShowBottonBuy: e.scrollTop > 100
+    })
   },
 })

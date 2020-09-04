@@ -3,29 +3,31 @@ page {
 }
 
 .detail_top {
-  float: left;
   width: 750rpx;
 }
 
 .detail_bner {
-  float: left;
   width: 750rpx;
   height: 150rpx;
 }
 
 .detail_bner image {
-  float: left;
   width: 750rpx;
   height: 150rpx;
 }
 
 .detail_video {
   width: 100%;
+  height: 421rpx;
+}
+
+.detail_video swiper {
+  height: 100%;
 }
 
 .detail_video video {
   width: 100%;
-  height: 421rpx;
+  height: 100%;
 }
 
 .detail_title {
@@ -35,8 +37,6 @@ page {
   font-size: 28rpx;
   color: #fff;
   font-weight: 900;
-  float: left;
-  margin-top: -8rpx;
 }
 
 .detail_center {
@@ -99,11 +99,11 @@ page {
 }
 page{background-color: #f7f7f7;}
 .detail_top{float: left; width: 750rpx;}
-.detail_bner{float: left; width: 750rpx;height: 150rpx;}
-.detail_bner image{float: left; width: 750rpx;height: 150rpx;}
-.detail_video{width: 750rpx;}
+.detail_bner{width: 750rpx;height: 150rpx;}
+.detail_bner image{width: 750rpx;height: 150rpx;}
+.detail_video{width: 750rpx; height: 422rpx;}
 .detail_video video{width: 750rpx; height: 422rpx;}
-.detail_title{width: 700rpx; padding: 20rpx 26rpx; background-color: #756cf5; font-size: 28rpx; color: #fff; font-weight: 900; float: left; margin-top: -8rpx;}
+.detail_title{width: 700rpx; padding: 20rpx 26rpx; background-color: #756cf5; font-size: 28rpx; color: #fff; font-weight: 900; float: left;}
 .detail_center{float: left; width: 700rpx;border-bottom: solid 3rpx #e2e2e2; padding: 30rpx 26rpx; background-color: #fff; }
 .deta_center_num{float: left; font-size: 26rpx; font-weight: 900; color: #000;}
 .deta_center_num i{font-size: 42rpx; color: #fc4850;}
@@ -532,24 +532,26 @@ page{background-color: #f7f7f7;}
   font-size: 26rpx;
 }
 
-.top {
-  position: fixed;
-  right: 20rpx;
-  bottom: 200rpx;
-}
-
-.top image {
-  width: 70rpx;
-}
-
-.prompt {
+.spell-group-wrapper {
   position: fixed;
   left: 20rpx;
   top: 230rpx;
+  z-index: 400;
+  width: 430rpx;
+  height: 100rpx;
+  overflow: hidden;
+}
+
+.prompt {
+  width: 100%;
+  height: 84rpx;
   background: rgba(0, 0, 0, 0.5);
   padding: 12rpx 20rpx;
   color: #fff;
   border-radius: 15rpx;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
 }
 
 .prompt_img {
@@ -567,7 +569,6 @@ page{background-color: #f7f7f7;}
 .prompt_text {
   float: left;
   font-size: 26rpx;
-  margin-top: 10rpx;
   margin-left: 15rpx;
 }
 
@@ -593,6 +594,10 @@ page{background-color: #f7f7f7;}
   box-sizing: border-box;
 }
 
+.clear {
+  content: " ";
+  clear: both;
+}
 
 @keyframes popups{
   0%{
