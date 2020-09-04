@@ -8,6 +8,26 @@ Page({
     hiddenpintuan: true, //拼团购买弹窗
     hiddencancelpay: true, //确认取消支付弹窗
     hiddencancelpayd: true, //单购确认取消支付弹窗
+    tabList: ['详情', '目录', '评价', '推荐'], // tab 分类
+    currentTabSub: 0, // 记录当前tab下标
+    isTopBtnShow: false, // 是否展示返回顶部按钮
+    spellGroupList: [
+      {
+        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
+        nick: '天空之岚风雨行不1',
+        status: '1分钟前拼团成功'
+      },
+      {
+        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
+        nick: '天空之岚风雨行不2',
+        status: '1分钟前拼团成功'
+      },
+      {
+        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
+        nick: '天空之岚风雨行不3',
+        status: '1分钟前拼团成功'
+      },
+    ], // 拼团列表
   },
   onReady() {
     this.setData({
@@ -90,6 +110,12 @@ Page({
       url: '/pages/course-share/index'
     })
   },
+  // tab 切换
+  tabChange: function(event) {
+    this.setData({
+      currentTabSub: event.currentTarget.dataset.sub
+    })
+  },
   onLoad: function () {
 
   },
@@ -98,5 +124,16 @@ Page({
    */
   onShow: function () {
 
+  },
+  /**
+   * 监听页面滚动事件
+   * @date 2020-09-04
+   * @param {any} e
+   * @returns {any}
+   */
+  onPageScroll: function(e) {
+    this.setData({
+      isTopBtnShow: e.scrollTop > 100
+    })
   },
 })

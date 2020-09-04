@@ -6,6 +6,27 @@ Page({
     hiddenrecommend: true, //推荐语弹窗
     hiddenrule: true, //服务说明弹窗
     hiddengroup: true,  //拼团规则弹窗
+    isTopBtnShow: false, // 是否展示返回顶部按钮
+    isInvitationShow: false, // 是否展示立即邀请按钮
+    spellGroupList: [
+      {
+        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
+        nick: '天空之岚风雨行不1',
+        status: '1分钟前拼团成功'
+      },
+      {
+        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
+        nick: '天空之岚风雨行不2',
+        status: '1分钟前拼团成功'
+      },
+      {
+        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
+        nick: '天空之岚风雨行不3',
+        status: '1分钟前拼团成功'
+      },
+    ], // 拼团列表
+    tabChangeList: ['详情', '目录', '评价'], // tab切换目录
+    currentTabSub: 0, // tab切换下标
   },
   //服务说明按钮
   showrule: function (e) {
@@ -53,4 +74,27 @@ Page({
   onShow: function () {
 
   },
+  /**
+   * 监听页面滚动事件
+   * @date 2020-09-04
+   * @param {any} e
+   * @returns {any}
+   */
+  onPageScroll: function(e) {
+    this.setData({
+      isTopBtnShow: e.scrollTop > 100,
+      isInvitationShow: e.scrollTop > 170
+    })
+  },
+  /**
+   * tab切换时
+   * @date 2020-09-04
+   * @param {any} event
+   * @returns {any}
+   */
+  tabChangeClick: function(event) {
+    this.setData({
+      currentTabSub: event.currentTarget.dataset.sub
+    })
+  }
 })

@@ -40,31 +40,35 @@
 <view id="navigation-wrap">
   <mp-sticky offset-top="0">
     <view class="navigation">
-      <view class="column add">详情</view>
-      <view class="column">目录</view>
-      <view class="column">评价</view>
-      <view class="column">推荐</view>
+      <view
+        wx:for="{{tabList}}"
+        wx:key="*this"
+        class="column {{currentTabSub === index ? 'add' : ''}}"
+        data-sub="{{index}}"
+        bindtap="tabChange">
+        {{item}}
+      </view>
     </view>
   </mp-sticky>
 </view>
   
 
 <!--详情-->
-<view class="default">
+<view wx:if="{{currentTabSub === 0}}" class="default">
   <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
   <image src="http://cdn.koalaxiezi.com/ceshi/4.png" mode="widthFix"></image>
   <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
 </view>
 <!--目录-->
-<view class="default">
+<view wx:if="{{currentTabSub === 1}}" class="default">
   <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
 </view>
 <!--评价-->
-<view class="evaluation">
+<view wx:if="{{currentTabSub === 2}}" class="evaluation">
   <image src="http://cdn.koalaxiezi.com/ceshi/7.png" mode="widthFix"></image>
 </view>
 <!--推荐-->
-<view class="recommend">
+<view wx:if="{{currentTabSub === 3}}" class="recommend">
   <view class="recommend_title">相关推推荐</view>
   <view class="recommend_detailed">
     <view class="reco_deta_k">
@@ -118,30 +122,40 @@
     <view class="change">换一换</view>
   </view>
 </view>
+
+÷
+<scroll-top isTopBtnShow="{{isTopBtnShow}}"></scroll-top>
+
 <!--底部购买-->
 <view class="float">
   <view class="group" bindtap="showpintuan"><view class="num">￥29.9</view>发起3人团</view>
   <view class="single" bindtap="showsingled"><view class="num">￥99</view>单独购买价</view>
 </view>
 
-<!--回到顶部按钮-->
-<view class="top">
-  <image src="/resource/img/top.png" mode="widthFix"></image>
-</view>
-
 <!--提示***购买成功-->
-<view class="prompt">
-
-
-  <view class="prompt_img">
-    <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
-  </view>
-  <view class="prompt_text">
-    <view class="prom_text_name">天空之岚风雨行不</view>
-    <view class="prom_text_title">1分钟前拼团成功</view>
-  </view>
+<view class="spell-group-wrapper">
+  <swiper
+    autoplay="{{true}}"
+    vertical="{{true}}"
+  >
+    <block
+      wx:for="{{spellGroupList}}"
+      wx:key="*this"
+    >
+      <swiper-item>
+        <view class="prompt">
+          <view class="prompt_img">
+            <image src="{{item.image}}" mode="widthFix"></image>
+          </view>
+          <view class="prompt_text">
+            <view class="prom_text_name">{{item.nick}}</view>
+            <view class="prom_text_title">{{item.status}}</view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
 </view>
-
 
 
 <!--服务说明弹窗-->

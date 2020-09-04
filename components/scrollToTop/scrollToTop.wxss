@@ -1,0 +1,10 @@
+/* components/scrollToTop/scrollToTop.wxss */
+.top {
+    position: fixed;
+    right: 20rpx;
+    bottom: 200rpx;
+}
+
+.top image {
+    width: 70rpx;
+}

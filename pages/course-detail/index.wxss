@@ -532,24 +532,26 @@ page{background-color: #f7f7f7;}
   font-size: 26rpx;
 }
 
-.top {
-  position: fixed;
-  right: 20rpx;
-  bottom: 200rpx;
-}
-
-.top image {
-  width: 70rpx;
-}
-
-.prompt {
+.spell-group-wrapper {
   position: fixed;
   left: 20rpx;
   top: 230rpx;
+  z-index: 400;
+  width: 430rpx;
+  height: 100rpx;
+  overflow: hidden;
+}
+
+.prompt {
+  width: 100%;
+  height: 84rpx;
   background: rgba(0, 0, 0, 0.5);
   padding: 12rpx 20rpx;
   color: #fff;
   border-radius: 15rpx;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
 }
 
 .prompt_img {
@@ -567,7 +569,6 @@ page{background-color: #f7f7f7;}
 .prompt_text {
   float: left;
   font-size: 26rpx;
-  margin-top: 10rpx;
   margin-left: 15rpx;
 }
 
