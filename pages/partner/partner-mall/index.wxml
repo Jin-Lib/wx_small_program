@@ -82,7 +82,7 @@
     </view>
     <view class="{{partner?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
         </view>
@@ -101,7 +101,7 @@
         </view>
       </view>
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_215_intro_share.png" mode="widthFix"></image>
         </view>
@@ -120,7 +120,7 @@
         </view>
       </view>
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
         </view>
@@ -142,7 +142,7 @@
     </view>
     <view class="{{partner1?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_285_intro_share.png" mode="widthFix"></image>
         </view>
@@ -164,7 +164,7 @@
     </view>
     <view class="{{partner2?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_276_intro_share.png" mode="widthFix"></image>
         </view>
@@ -186,7 +186,7 @@
     </view>
     <view class="{{partner3?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_284_intro_share.png" mode="widthFix"></image>
         </view>
@@ -230,7 +230,7 @@
     </view>
     <view class="{{partnerq?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
         </view>
@@ -249,7 +249,7 @@
         </view>
       </view>
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
         </view>
@@ -271,7 +271,7 @@
     </view>
     <view class="{{partner1q?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_285_intro_share.png" mode="widthFix"></image>
         </view>
@@ -293,7 +293,7 @@
     </view>
     <view class="{{partner2q?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_276_intro_share.png" mode="widthFix"></image>
         </view>
@@ -315,7 +315,7 @@
     </view>
     <view class="{{partner3q?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_284_intro_share.png" mode="widthFix"></image>
         </view>
@@ -358,7 +358,7 @@
     </view>
     <view class="{{partnerw?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
         </view>
@@ -377,7 +377,7 @@
         </view>
       </view>
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
         </view>
@@ -399,7 +399,7 @@
     </view>
     <view class="{{partner1w?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_285_intro_share.png" mode="widthFix"></image>
         </view>
@@ -421,7 +421,7 @@
     </view>
     <view class="{{partner2w?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_276_intro_share.png" mode="widthFix"></image>
         </view>
@@ -443,7 +443,7 @@
     </view>
     <view class="{{partner3w?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_284_intro_share.png" mode="widthFix"></image>
         </view>
@@ -487,7 +487,7 @@
     </view>
     <view class="{{partnere?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
         </view>
@@ -506,7 +506,7 @@
         </view>
       </view>
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
         </view>
@@ -528,7 +528,7 @@
     </view>
     <view class="{{partner1e?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_285_intro_share.png" mode="widthFix"></image>
         </view>
@@ -550,7 +550,7 @@
     </view>
     <view class="{{partner2e?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_276_intro_share.png" mode="widthFix"></image>
         </view>
@@ -572,7 +572,7 @@
     </view>
     <view class="{{partner3e?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_284_intro_share.png" mode="widthFix"></image>
         </view>
@@ -615,7 +615,7 @@
     </view>
     <view class="{{partnerr?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
         </view>
@@ -634,7 +634,7 @@
         </view>
       </view>
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
         </view>
@@ -656,7 +656,7 @@
     </view>
     <view class="{{partner1r?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_285_intro_share.png" mode="widthFix"></image>
         </view>
@@ -678,7 +678,7 @@
     </view>
     <view class="{{partner2r?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_276_intro_share.png" mode="widthFix"></image>
         </view>
@@ -700,7 +700,7 @@
     </view>
     <view class="{{partner3r?'show':'hidden'}}">
 
-      <view class="part_xxk">
+      <view class="part_xxk" bindtap="details">
         <view class="part_xxk_left">
           <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_284_intro_share.png" mode="widthFix"></image>
         </view>

@@ -281,6 +281,14 @@ Page({
       hidden: !this.data.hidden
     })
   },
+
+  
+  //点击课程
+  details: function(event) {
+    wx.navigateTo({
+      url: '../course-details/index'
+    })
+  },
   onLoad: function () {
     this.getBannerData();
   },

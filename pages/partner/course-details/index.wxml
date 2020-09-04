@@ -1,3 +1,303 @@
-<view >
+
+<!-- <view >
   课程详情
+</view> -->
+<view class="detail_top">
+  <view class="detail_bner">
+    <image src="http://cdn.koalaxiezi.com/ceshi/1.png" mode="widthFix"></image>
+  </view>
+  <view class="detail_video">
+    <video src="http://cdn.koalaxiezi.com/bh1.mp4" poster="http://cdn.koalaxiezi.com/ceshi/2.png"></video>
+  </view>
+  <view class="detail_title">
+    14天让孩子做情绪的小主人，学会控制自己，提高抗挫折能力，让孩子更自信
+  </view>
 </view>
+
+<!--样式1-->
+<view class="limited">
+  <view class="detail_center1">
+    <image src="/resource/partner/coupon-bg.png" mode="widthFix"></image>
+    <view class="deta_center_num1">
+      <i>￥29.9</i>
+      <view class="huodongys">原价169</view>
+      <view class="sanrentuan1">3人团</view>
+    </view>
+    <view class="hd_time">离结束10天09:15:28</view>
+    <view class="zigou">自购可用</view>
+  </view>
+  <view class="deta_center_details3" bindtap="showrule">
+    <view class="center_details_age"><view class="check"></view>4~12岁</view>
+    <view class="center_details_age"><view class="check"></view>20集</view>
+    <view class="center_details_age"><view class="check"></view>永久回放></view>
+  </view>
+  <view class="group_details">
+    <view class="group_buy">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+      <view class="group_text">等6893人购买</view>
+    </view>
+    <!-- <view class="group_rule" bindtap="showgroup">
+      拼团规则 >
+    </view> -->
+  </view>
+
+</view>
+
+
+<!--样式2-->
+<view class="limited">
+  <view class="detail_center">
+    <view class="deta_center_num">
+      <i>￥29.9</i>
+      <view class="sanrentuan">3人团</view>
+    </view>
+    <view class="group_buy2">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+      <view class="group_text">等6893人购买</view>
+    </view>
+  </view>
+  <view class="deta_center_details2" bindtap="showrule">
+    <view class="center_details_age"><view class="check"></view>原价￥99</view>
+    <view class="center_details_age"><view class="check"></view>4~12岁</view>
+    <view class="center_details_age"><view class="check"></view>20集</view>
+    <view class="center_details_age"><view class="check"></view>永久回放</view>
+    <view class="jiantouys">></view>
+  </view>
+</view>
+<!--样式3-->
+<view class="limited">
+  <view class="detail_center">
+    <view class="deta_center_num">
+      <i>￥29.9</i>
+      <view class="sanrentuan">单购</view>
+    </view>
+    <view class="group_buy2">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+      <view class="group_text">等6893人购买</view>
+    </view>
+  </view>
+  <view class="deta_center_details2" bindtap="showrule">
+    <view class="center_details_age"><view class="check"></view>4~12岁</view>
+    <view class="center_details_age"><view class="check"></view>20集</view>
+    <view class="center_details_age"><view class="check"></view>永久回放</view>
+    <view class="jiantouys">></view>
+  </view>
+</view>
+
+
+
+<view id="navigation-wrap">
+  <mp-sticky offset-top="0">
+    <view class="navigation">
+      <view class="column add">详情</view>
+      <view class="column">目录</view>
+      <view class="column">评价</view>
+      <view class="column">推荐</view>
+    </view>
+  </mp-sticky>
+</view>
+  
+
+<!--详情-->
+<view class="default">
+  <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+  <image src="http://cdn.koalaxiezi.com/ceshi/4.png" mode="widthFix"></image>
+  <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+</view>
+<!--目录-->
+<view class="default">
+  <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
+</view>
+<!--评价-->
+<view class="evaluation">
+  <image src="http://cdn.koalaxiezi.com/ceshi/7.png" mode="widthFix"></image>
+</view>
+<!--推荐-->
+<view class="recommend">
+  <view class="recommend_title">相关推推荐</view>
+  <view class="recommend_detailed">
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="change">换一换</view>
+  </view>
+</view>
+<!--底部购买-->
+<view class="float">
+  <view class="single" bindtap="showsingled"><view class="num"><i>￥159</i>（返￥27.18）</view>免拼购买</view>
+  <view class="group" bindtap="showpintuan"><view class="num">最高￥<i>45.93</i>*3</view>分享赚</view>
+</view>
+
+<!--回到顶部按钮-->
+<scroll-top isTopBtnShow="{{isTopBtnShow}}"></scroll-top>
+
+<!--提示***购买成功-->
+<view class="spell-group-wrapper">
+  <swiper
+    autoplay="{{true}}"
+    vertical="{{true}}"
+  >
+    <block
+      wx:for="{{spellGroupList}}"
+      wx:key="*this"
+    >
+      <swiper-item>
+        <view class="prompt">
+          <view class="prompt_img">
+            <image src="{{item.image}}" mode="widthFix"></image>
+          </view>
+          <view class="prompt_text">
+            <view class="prom_text_name">{{item.nick}}</view>
+            <view class="prom_text_title">{{item.status}}</view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+
+
+<!--服务说明弹窗-->
+<view class="bottom_popup" hidden="{{hiddenrule}}">
+  <view class="popup">
+    <view class="popup_title">
+      服务说明
+    </view>
+    <view class="close" bindtap="showrule"></view>
+    <view class="popup_detailed">
+      <view class="popup_text_title"><view class="check_red"></view>关于上课</view>
+      <view class="popup_text_deta">课程每周一、三解锁一集，解锁后您可以随意安排时间观看</view>
+    </view>
+    <view class="popup_detailed">
+      <view class="popup_text_title"><view class="check_red"></view>关于退费</view>
+      <view class="popup_text_deta">因课程为虚拟原创内容服务，拼团成功或单购成功后无法退款，请您确认无误后购买。</view>
+    </view>
+    <view class="popup_detailed">
+      <view class="popup_text_title"><view class="check_red"></view>关于有效期</view>
+      <view class="popup_text_deta">本课程一旦单购成功或拼团成功，课程解锁后，可以不限次数，永久回看</view>
+    </view>
+  </view>
+</view>
+
+<!--拼团规则弹窗-->
+<view class="bottom_popup" hidden="{{hiddengroup}}">
+  <view class="popup">
+    <view class="popup_title">
+      拼团规则
+    </view>
+    <view class="close" bindtap="showgroup"></view>
+    <view class="popup_detailed">
+      <view class="popup_text_title_26">团长发起<i>3</i>（数字后台对接）人团后，将拼团链接和加速海报分享给好友和群，<i>48</i>（数字后台对接）小时内邀请<i>2</i>（数字后台对接）位好友参加拼团，即可购买成功，否则系统将自动退款。</view>
+    </view>
+  </view>
+</view>
+
+<!--拼团购买弹窗-->
+<view class="bottom_popup" hidden="{{hiddenpintuan}}">
+  <view class="popup">
+    <view class="popup_title add_red">
+      商品详情
+    </view>
+    <view class="close" bindtap="showpintuangb"></view>
+    <view class="popup_detailed">
+      <view class="commodity comm_add">
+        <view class="comm_title">商品名</view>
+        <view class="comm_text">104节大课启蒙系列课</view>
+      </view>
+      <view class="commodity comm_add">
+        <view class="comm_title">购买方式</view>
+        <view class="comm_text">3人拼团购</view>
+      </view>
+      <view class="commodity comm_add">
+        <view class="comm_title">优惠券抵扣</view>
+        <view class="comm_text">-￥6 ></view>
+        <view class="comm_coupon">
+          <view class="coupon_text add_yellow"><view class="check_yellow"></view>省6元：启明星新人专享券</view>
+          <view class="coupon_text"><view class="check_wrill"></view>省6元：邀新团专享券</view>
+          <view class="coupon_text"><view class="check_wrill"></view>不使用优惠券</view>
+        </view>
+      </view>
+      <view class="commodity">
+        <view class="comm_title">支付总额</view>
+        <view class="comm_text">￥29.9</view>
+      </view>
+      <view class="pay" bindtap="spell_pay">确认支付</view>
+    </view>
+  </view>
+</view>
+
+<!--拼团确认取消支付弹窗-->
+<view class="cancelpay" hidden="{{hiddencancelpay}}">
+  <view class="canc_pay_k">
+    <view class="canc_pay_title">确定要取消付款？</view>
+    <view class="canc_pay_determine" bindtap="showcancelpay">确定离开</view>
+    <view class="canc_pay_carry" bindtap="showcarry">继续支付</view>
+  </view>
+</view>
+
+
+<!--单购确认取消支付弹窗-->
+<view class="cancelpay" hidden="{{hiddencancelpayd}}">
+  <view class="canc_pay_k">
+    <view class="canc_pay_title">确定要取消付款？</view>
+    <view class="canc_pay_determine" bindtap="showcancelpayd">确定离开</view>
+    <view class="canc_pay_carry" bindtap="showcarryd">继续支付</view>
+  </view>
+</view>
+
+

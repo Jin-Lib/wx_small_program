@@ -201,6 +201,13 @@
 					"id": -1,
 					"name": "pages/successful-purchase/index",
 					"pathName": "pages/successful-purchase/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/course-details/index",
+					"pathName": "pages/partner/course-details/index",
 					"scene": null
 				}
 			]
