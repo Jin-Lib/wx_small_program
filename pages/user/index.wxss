@@ -30,6 +30,10 @@ page{background-color: #f7f7f7;}
 .user_data_img{width: 100rpx; height: 100rpx; overflow: hidden; border-radius: 50%; float: left;border: 4rpx solid #f86f22;}
 .user_data_img image{width: 100%;}
 .user_data_text{float: left; margin-left: 30rpx; margin-top: 30rpx; font-size: 26rpx; font-weight: 900;}
+.user_data_text i{ height: 10rpx; width: 10rpx; background-color:red;border-radius: 50%; float: left;}
+.data_text_perfect{float: left;}
+.edit_img{float: left; width: 25rpx; height: 25rpx; margin-top: 5rpx; margin-left: 10rpx;}
+.edit_img image{width: 25rpx;}
 .user_data_credit{float: right; font-size: 36rpx;color: #fc4850;}
 .data_credit_num{font-size: 40rpx; font-weight: 900; margin-left: 15rpx;}
 .surprise{float: left; width: 730rpx; margin-left:10rpx; margin-top: 110rpx; background-color: #fff; border-top-left-radius: 20rpx;border-top-right-radius: 20rpx; padding-bottom: 20rpx;}

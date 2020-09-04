@@ -1,0 +1,77 @@
+page{background-color: #f7f7f7;}
+.feedback_title{width: 720rpx;margin-left: 30rpx; font-size: 28rpx;font-weight: 900;margin-top: 30rpx;}
+.feedback_edit{width: 700rpx;padding: 20rpx 30rpx;background-color: #fff; margin-top: 30rpx;}
+.feedback_edit textarea{width: 690rpx;font-size: 24rpx;}
+.clear{color: #ccc; font-size: 24rpx; float: right; margin-right: 2%;margin-top: -20rpx;}
+.feedback_jobs{width: 700rpx;margin-left: 30rpx; font-size: 28rpx;font-weight: 900;margin-top: 30rpx;}
+.feedback_input{width: 700rpx;margin-left: 30rpx;margin-top: 10rpx; }
+.feedback_input input{border:solid 3rpx #e2e2e2; font-size: 24rpx; margin-top: 20rpx; width: 630rpx;padding: 20rpx 30rpx;}
+.button{width: 300rpx; text-align: center;margin-left: 225rpx; margin-top: 40rpx; background-color: #fc4850;color: #fff; font-size: 26rpx; padding: 20rpx 0;border-radius: 50rpx;}
+
+.bottom_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.popup {
+  width: 655rpx;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30rpx 50rpx;
+  animation:popups 0.6s; 
+}
+
+/*对勾*/
+.check_red {
+  float: left;
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #fff;
+  border: #fc4850 3rpx solid;
+  position: relative;
+  margin: 6rpx auto;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 13rpx;
+  margin-left:270rpx;
+}
+
+.check_red:after {
+  content: '';
+  display: block;
+  width: 50rpx;
+  height: 30rpx;
+  border: 3rpx solid #fc4850;
+  border-width: 0 0 5rpx 5rpx;
+  position: absolute;
+  top: 33%;
+  left: 34%;
+  margin-top: -12rpx;
+  margin-left: -12rpx;
+  transform: rotate(-45deg);
+}
+.popup_title{width: 650rpx; font-size: 30rpx; font-weight: 900; text-align: center;margin-top:130rpx;}
+.popup_img{width: 150rpx; height: 150rpx; overflow: hidden;margin-left: 230rpx; margin-top: 50rpx; border: #fc4850 7rpx solid;border-radius: 15rpx;}
+.popup_img image{width: 150rpx;}
+.code{width: 650rpx; text-align: center;margin-top:30rpx; color: #fff;font-size: 22rpx;}
+.code_text{padding: 8rpx 0rpx; border-radius: 30rpx; background-color: #fc4850; width: 230rpx; margin-top: 20rpx;margin-left: 210rpx;}
+.code_img{padding: 8rpx 0rpx; border-radius: 30rpx; background-color: #f86f22; width: 230rpx; margin-top: 20rpx;margin-left: 210rpx;}
+.code_title{color: #000;font-size: 26rpx; font-weight: 900;}
+.carry{width:750rpx;margin-top: 40rpx;padding-top: 30rpx;text-align: center;float: left; border-top: solid 3rpx #e2e2e2;margin-left: -47rpx;}
+.carry_text{background-color: #62ddaf; border-radius: 50%;color: #fff; width: 80rpx; height: 80rpx; text-align: center;font-size: 26rpx; line-height: 80rpx;margin-left: 325rpx;}
+
+@keyframes popups{
+  0%{
+    bottom:-800rpx;
+  }
+  100%{
+    bottom:0rpx;
+  }
+}

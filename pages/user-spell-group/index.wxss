@@ -273,12 +273,36 @@ page{background-color: #f7f7f7}
 .group_text{font-size: 24rpx; float: left; margin-top: 15rpx; margin-left: 15rpx;}
 .group_rule{float: right; font-size: 26rpx; margin-top: 12rpx;}
 
-.navigation{float: left; width: 750rpx; background-color: #fff; margin-top: 20rpx; padding: 30rpx 0 0rpx  0;}
-.column{float: left; width: 185rpx; text-align: center; font-size: 28rpx; font-weight: 900;}
-.add{color: #fc4850; border-bottom: solid 3rpx #fc4850;padding-bottom: 30rpx;}
 
-.default{float: left; width: 750rpx;}
-.default image{width: 100%;}
+.navigation {
+  /* float: left; */
+  width: 750rpx;
+  background-color: #fff;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.column {
+  float: left;
+  width: 185rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 900;
+}
+
+.add {
+  color: #fc4850;
+  border-bottom: solid 3rpx #fc4850;
+}
+
+.default {
+  float: left;
+  width: 750rpx;
+}
+
+.default image {
+  width: 100%;
+}
 .evaluation{float: left; width: 750rpx;}
 .evaluation image{width: 100%;}
 
@@ -330,4 +354,11 @@ page{background-color: #f7f7f7}
   width: 430rpx;
   height: 100rpx;
   overflow: hidden;
+}
+#navigation-wrap {
+  width: 100%;
+  height: 121rpx;
+  overflow: hidden;
+  padding-top: 30rpx;
+  box-sizing: border-box;
 }

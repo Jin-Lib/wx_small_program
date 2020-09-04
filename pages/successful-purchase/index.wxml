@@ -1,0 +1,63 @@
+<view class="share_top">
+  <view class="share_top_title">您已购课成功</view>
+  <view class="share_top_img">
+    <view class="share_img_kimg">
+      <view class="share_tz">团长</view>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+      <i>lkjdfi</i>
+    </view>
+    <view class="share_img_kimg">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+      <i>驰驰</i>
+    </view>
+    <view class="share_img_kimg">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+      <i>胖胖</i>
+    </view>
+  </view>
+  <view class="share_top_button" bindtap="gotoclass">
+    去上课
+  </view>
+  <view class="share_top_button2" bindtap="activity">
+    0元领地图
+  </view>
+  <view class="share_top_button3" bindtap="return_index">
+    回到首页逛逛
+  </view>
+</view>
+
+<!--推荐-->
+<view class="recommend">
+  <view class="recommend_title">相关推荐</view>
+  <view class="recommend_detailed">
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="reco_deta_k">
+      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="reco_deta_title">天文地理国家地理海</view>
+      <view class="reco_deta_text">
+        <view class="reco_deta_jg">￥29.9</view>
+        <view class="reco_deta_xl">已售8.0万</view>
+      </view>
+    </view>
+    <view class="change">换一换</view>
+  </view>
+</view>
+
+<view class="week_Introduction">
+  课程介绍
+</view>

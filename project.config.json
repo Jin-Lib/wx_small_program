@@ -86,7 +86,7 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 4,
 					"name": "pages/course-detail/index",
 					"pathName": "pages/course-detail/index",
 					"query": "",
@@ -131,6 +131,76 @@
 					"id": -1,
 					"name": "pages/user-spell-group/index",
 					"pathName": "pages/user-spell-group/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-info/index",
+					"pathName": "pages/user-info/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-coupons/index",
+					"pathName": "pages/user-coupons/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-order/index",
+					"pathName": "pages/user-order/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-feedback/index",
+					"pathName": "pages/user-feedback/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-challenge/index",
+					"pathName": "pages/user-challenge/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-privilege/index",
+					"pathName": "pages/user-privilege/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-extract/index",
+					"pathName": "pages/user-extract/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 18,
+					"name": "pages/partner/partner-mall/index",
+					"pathName": "pages/partner/partner-mall/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-bonus-income/index",
+					"pathName": "pages/user-bonus-income/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/successful-purchase/index",
+					"pathName": "pages/successful-purchase/index",
 					"scene": null
 				}
 			]

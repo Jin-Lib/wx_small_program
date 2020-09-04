@@ -18,17 +18,17 @@
     </swiper>
   </view>
   <view class="detail_title">
-    14天让孩子做情绪的小主人，学会控制自己，提高抗挫折能力，让孩子更自信
+    {{coursedetail.title}}
   </view>
 </view>
 
 <view class="detail_center clear">
   <view class="deta_center_num">
-    <i>￥29.9</i>起
+      <i>￥{{coursedetail.price}}</i>起
   </view>
   <view class="deta_center_details" bindtap="showrule">
-    <view class="center_details_age"><view class="check"></view>4~12岁</view>
-    <view class="center_details_age"><view class="check"></view>20集</view>
+    <view class="center_details_age"><view class="check"></view>{{coursedetail.min_age}}~{{coursedetail.max_age}}岁</view>
+    <view class="center_details_age"><view class="check"></view>{{coursedetail.chapter_count}}集</view>
     <view class="center_details_age"><view class="check"></view>永久回放></view>
   </view>
 </view>
@@ -136,8 +136,8 @@
 
 <!--底部购买-->
 <view class="float">
-  <view class="group" bindtap="showpintuan"><view class="num">￥29.9</view>发起3人团</view>
-  <view class="single" bindtap="showsingled"><view class="num">￥99</view>单独购买价</view>
+  <view class="group" bindtap="showpintuan"><view class="num">￥{{coursedetail.group_price}}</view>发起{{coursedetail.group_num}}人团</view>
+  <view class="single" bindtap="showsingled"><view class="num">￥{{coursedetail.price}}</view>单独购买价</view>
 </view>
 
 <!--提示***购买成功-->
@@ -196,7 +196,7 @@
     </view>
     <view class="close" bindtap="showgroup"></view>
     <view class="popup_detailed">
-      <view class="popup_text_title_26">团长发起<i>3</i>（数字后台对接）人团后，将拼团链接和加速海报分享给好友和群，<i>48</i>（数字后台对接）小时内邀请<i>2</i>（数字后台对接）位好友参加拼团，即可购买成功，否则系统将自动退款。</view>
+      <view class="popup_text_title_26">团长发起<i>{{coursedetail.group_num}}</i>人团后，将拼团链接和加速海报分享给好友和群，<i>48</i>（数字后台对接）小时内邀请<i>2</i>（数字后台对接）位好友参加拼团，即可购买成功，否则系统将自动退款。</view>
     </view>
   </view>
 </view>
@@ -211,7 +211,7 @@
     <view class="popup_detailed">
       <view class="commodity comm_add">
         <view class="comm_title">商品名</view>
-        <view class="comm_text">104节大课启蒙系列课</view>
+        <view class="comm_text">{{coursedetail.title}}</view>
       </view>
       <view class="commodity comm_add">
         <view class="comm_title">购买方式</view>
@@ -219,7 +219,7 @@
       </view>
       <view class="commodity">
         <view class="comm_title">支付总额</view>
-        <view class="comm_text">￥199</view>
+        <view class="comm_text">￥{{coursedetail.price}}</view>
       </view>
       <view class="pay" bindtap="single_pay">确认支付</view>
     </view>
@@ -236,15 +236,15 @@
     <view class="popup_detailed">
       <view class="commodity comm_add">
         <view class="comm_title">商品名</view>
-        <view class="comm_text">104节大课启蒙系列课</view>
+        <view class="comm_text">{{coursedetail.title}}</view>
       </view>
       <view class="commodity comm_add">
         <view class="comm_title">购买方式</view>
-        <view class="comm_text">3人拼团购</view>
+        <view class="comm_text">{{coursedetail.group_num}}人拼团购</view>
       </view>
       <view class="commodity">
         <view class="comm_title">支付总额</view>
-        <view class="comm_text">￥29.9</view>
+        <view class="comm_text">￥{{coursedetail.group_price}}</view>
       </view>
       <view class="pay" bindtap="spell_pay">确认支付</view>
     </view>

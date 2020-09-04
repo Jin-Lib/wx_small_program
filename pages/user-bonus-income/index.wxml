@@ -1,3 +1,30 @@
-<view >
-  奖金收益
+
+
+<view class="income">
+  <view class="income_left">
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+  </view>
+  <view class="income_center">
+    <view class="income_text">匆匆那些年</view>
+    <view class="income_jine">￥3.9购买《100节唐诗宋词》</view>
+  </view>
+  <view class="income_right">
+    <view class="incom_right_jine">+1.09元</view>
+    <view class="incom_right_time">2020/09/03 20:43</view>
+  </view>
+</view>
+
+
+<view class="income">
+  <view class="income_left">
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+  </view>
+  <view class="income_center">
+    <view class="income_text">匆匆那些年</view>
+    <view class="income_jine">￥3.9购买《100节唐诗宋词》</view>
+  </view>
+  <view class="income_right">
+    <view class="incom_right_jine">+1.09元</view>
+    <view class="incom_right_time">2020/09/03 20:43</view>
+  </view>
 </view>

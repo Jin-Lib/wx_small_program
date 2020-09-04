@@ -28,6 +28,13 @@ Page({
       },
     ], // 拼团列表
   },
+  onReady() {
+    this.setData({
+      container: () => wx.createSelectorQuery().select('#navigation-wrap')
+    }, () => {
+      console.log(this.data.container())
+    })
+  },
   //服务说明按钮
   showrule: function (e) {
     this.setData({

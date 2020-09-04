@@ -19,7 +19,13 @@
     "pages/course-pay/index",
     "pages/course-share/index",
     "pages/course-search/index",
-    "pages/course-play/index"
+    "pages/course-play/index",
+    "pages/successful-purchase/index",
+    "pages/partner/partner-mall/index",
+    "pages/partner/task/index",
+    "pages/partner/user/index",
+    "pages/partner/classification/index",
+    "pages/partner/course-details/index"
   ],
   "tabBar": {
     "custom": true,

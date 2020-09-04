@@ -57,7 +57,7 @@
     <!--tab切换内容-->
     <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
         <swiper-item>
-            <view class="learn" bindtap="details">
+            <view class="learn" bindtap="lessons">
               <view class="learn_img">
                 <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
                 <view class="update">更新至30集</view>
@@ -70,7 +70,7 @@
               </view>
               <view class="top o_color">置顶</view>
             </view>
-            <view class="learn" bindtap="details">
+            <view class="learn" bindtap="lessons">
               <view class="learn_img">
                 <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
                 <view class="update">更新至30集</view>
@@ -91,7 +91,7 @@
         </swiper-item>
 
         <swiper-item>
-          <view class="learn" bindtap="details">
+          <view class="learn" bindtap="lessons">
               <view class="learn_img">
                 <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
                 <view class="update">更新至30集</view>
@@ -112,7 +112,7 @@
         </swiper-item>
 
         <swiper-item>
-          <view class="learn" bindtap="details">
+          <view class="learn" bindtap="lessons">
               <view class="learn_img">
                 <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
                 <view class="update">更新至30集</view>
@@ -147,7 +147,7 @@
   </view>
 </view>
 <!--限时爆款课程图-->
-<view class="explosion_course" bindtap="details">
+<view class="explosion_course" bindtap="lessons">
   <view class="time_top">限时1折</view>
   <view class="course_img">
     <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>

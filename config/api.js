@@ -41,6 +41,42 @@ const API =  {
     method: 'POST'
   },
 
+  /**
+   * ===================
+   * 课程详情
+   * ===================
+   */
+  'getweek': {
+    url: `${host}/api/course/detail`,
+    method: 'GET'
+  },
+  /**
+   * ===================
+   * 下单
+   * ===================
+   */
+  'getcreate': {
+    url: `${host}/api/order/create`,
+    method: 'POST'
+  },
+  /**
+   * ===================
+   * 用户详情
+   * ===================
+   */
+  'getinfo': {
+    url: `${host}/api/user/info`,
+    method: 'POST'
+  },
+  /**
+   * ===================
+   * 订单
+   * ===================
+   */
+  'getorder': {
+    url: `${host}/api/Order/orderList`,
+    method: 'POST'
+  },
 };
 
 let API_RES = {};

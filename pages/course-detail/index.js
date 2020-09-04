@@ -1,4 +1,7 @@
 //index.js
+//获取应用实例
+const app = getApp()
+const API = require('../../config/api');
 
 Page({
   data: {
@@ -41,6 +44,69 @@ Page({
         src: 'http://cdn.koalaxiezi.com/ceshi/2.png',
       },
     ], // banner 轮播区域数据
+  },
+  onLoad: function () {
+    this.getdetailData();
+  },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  // 获取课程信息
+  getdetailData: function () {
+    API.getweek({
+      id: 1
+    }).then(res => {//成功
+      console.log(res);
+      //const { rows } = res || {};
+
+      this.setData({
+        coursedetail: res
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
+  },
+
+  // 下单
+  getcreateData: function () {
+    API.getcreate({
+      courseId: 1
+    }).then(res => {//成功
+      console.log(res);
+      //const { rows } = res || {};
+      wx.requestPayment(
+        {
+          'timeStamp': res.timeStamp,
+          'nonceStr': res.nonceStr,
+          'package': res.package,
+          'signType': res.signType,
+          'paySign': res.paySign,
+          'success': function (res) {
+            hiddenpintuan: !this.data.hiddenpintuan;
+            hiddensingle: !this.data.hiddensingle;
+            url: '/pages/course-share/index';
+           },
+          'fail': function (res) { },
+          'complete': function (res) { }
+        })
+      this.setData({
+        coursecreate: res,
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
   },
   onReady() {
     this.setData({
@@ -113,9 +179,10 @@ Page({
   },
   //点击单购支付按钮
   single_pay: function (event) {
-    wx.navigateTo({
-      url: '/pages/course-play/index'
-    })
+    this.getcreateData();
+    // wx.navigateTo({
+    //   url: '/pages/course-play/index'
+    // })
   },
   //点击团购支付按钮
   spell_pay: function (event) {
@@ -130,14 +197,13 @@ Page({
     })
   },
   onLoad: function () {
+    this.getcreateData();
 
+    // wx.navigateTo({
+    //   url: '/pages/course-share/index'
+    // })
   },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
 
-  },
   /**
    * 监听页面滚动事件
    * @date 2020-09-04

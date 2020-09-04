@@ -12,7 +12,7 @@ Page({
   //点击邀好友拼团
   invitefriends: function (event) {
     wx.navigateTo({
-      url: '/pages/logs/logs'
+      url: '/pages/course-share/index'
     })
   },
   //点击添加课程
@@ -39,7 +39,11 @@ Page({
       url: '/pages/course-detail/index'
     })
   },
-
+  lessons: function (event) {
+    wx.navigateTo({
+      url: '/pages/course-play/index'
+    })
+  },
   onLoad: function () {
 
     //  tab切换

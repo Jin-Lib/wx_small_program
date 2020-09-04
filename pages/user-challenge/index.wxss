@@ -1,0 +1,28 @@
+page{background-color: #f7f7f7;}
+.challenge{width: 750rpx;position: relative;}
+.chall_img{width: 750rpx;}
+.chall_img image{width: 750rpx;}
+.chall_text_k{width: 640rpx; background-color: #fff;position: absolute;top: 200rpx; left: 25rpx; padding: 20rpx 30rpx;border-radius: 20rpx;box-shadow:0 0 8px rgba(81, 81,81,0.8);}
+.chall_text_img{width: 260rpx;margin-left: 200rpx; margin-top: 20rpx;}
+.chall_text_img image{width: 260rpx;}
+.chall_text{border-top: solid 3rpx #e2e2e2; margin-top: 20rpx; padding-bottom: 20rpx;}
+.chall_p{margin-top: 30rpx; font-size: 26rpx;}
+
+.bc_white{width: 725rpx;padding-left: 25rpx; background-color:#fff;padding-top: 10px;   z-index: 999; display: flex;flex-wrap: wrap;margin-top: 180rpx;}
+.default1{text-align:center;flex:1;color:#000;font-size:24rpx;  padding: 8px 0px;padding-bottom: 25rpx;}
+.red1{text-align:center;flex:1;font-weight:bold;font-size:24rpx;color:#fc4850;border-bottom: solid 3rpx #fc4850; padding: 8px 0px;padding-bottom: 25rpx;}
+.show1{display:block;margin-top: 40rpx;}
+.hidden1{display:none;margin-top: 40rpx;}
+.chall_dt_k{width: 640rpx; margin-left: 25rpx; padding: 20rpx 30rpx; background-color: #fff;border-radius: 15rpx; display: flex;flex-wrap: wrap;margin-top: 20rpx;}
+.chall_dt_title{width: 500rpx;font-size: 24rpx;}
+.chall_dt_an{font-size: 22rpx; padding: 8rpx 25rpx; background-color: #fc4850; color: #fff; border-radius: 30rpx;}
+.huise{background-color: #e2e2e2;}
+.history{width: 640rpx; margin-left: 25rpx; padding: 20rpx 30rpx; background-color: #fff;border-radius: 15rpx; margin-top: 20rpx;}
+.history_title{display: flex;flex-wrap: wrap;font-size: 30rpx; font-weight: 900;padding: 20rpx 0rpx;color: #a079ef;text-align: center;border-bottom: #e2e2e2 3rpx solid;}
+.ceshi{width: 215rpx;}
+.zong{width: 210rpx;}
+.xiangq{width: 210rpx;}
+.history_cj{display: flex;flex-wrap: wrap;font-size: 24rpx; padding: 20rpx 0rpx;margin-top: 20rpx;text-align: center;border-bottom: #e2e2e2 3rpx solid;}
+.time{width: 215rpx;margin-top: -20rpx;}
+.fraction{width: 210rpx;}
+.details{width: 110rpx;padding: 8rpx 12rpx; background-color: #a079ef; color: #fff;margin-left:35rpx;border-radius: 30rpx;margin-top:-8rpx;}
