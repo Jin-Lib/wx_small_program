@@ -4,11 +4,17 @@ const app = getApp()
 
 Page({
   data: {
+    hiddenweek:false,
     hiddenrule:true,
   },
   showrule: function (e) {
     this.setData({
       hiddenrule: !this.data.hiddenrule
+    })
+  },
+  showweek: function (e) {
+    this.setData({
+      hiddenweek: !this.data.hiddenweek
     })
   },
   onLoad: function () {

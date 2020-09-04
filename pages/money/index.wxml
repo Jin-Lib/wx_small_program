@@ -36,3 +36,56 @@
 <view class="recording">
   购买课程后才可邀好友赚奖学金哦~
 </view>
+
+<view class="bottom_popup" hidden="{{hiddenweek}}">
+  <view class="popup_img_text">
+    <view class="popup_img">
+      <image src="/resource/img/weekts.png" mode="widthFix"></image>
+    </view>
+    <view class="popup_text"></view>
+    <view class="popup_kk">
+      <view class="popup_kx">
+        <view class="popup_img_left">
+          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+        </view>
+        <view class="popup_text_right">
+          <view class="text_one">世界地理之最</view>
+          <view class="text_jiag">价格：￥29.9</view>
+          <view class="text_ann">赚￥7.53</view>
+        </view>
+      </view>
+      <view class="popup_kx">
+        <view class="popup_img_left">
+          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+        </view>
+        <view class="popup_text_right">
+          <view class="text_one">世界地理之最</view>
+          <view class="text_jiag">价格：￥29.9</view>
+          <view class="text_ann">赚￥7.53</view>
+        </view>
+      </view>
+      <view class="popup_kx">
+        <view class="popup_img_left">
+          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+        </view>
+        <view class="popup_text_right">
+          <view class="text_one">世界地理之最</view>
+          <view class="text_jiag">价格：￥29.9</view>
+          <view class="text_ann">赚￥7.53</view>
+        </view>
+      </view>
+      
+      <view class="popup_kx">
+        <view class="popup_img_left">
+          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+        </view>
+        <view class="popup_text_right">
+          <view class="text_one">世界地理之最</view>
+          <view class="text_jiag">价格：￥29.9</view>
+          <view class="text_ann">赚￥7.53</view>
+        </view>
+      </view>
+    </view>
+    <view class="popup_bul" bindtap="showweek"></view>
+  </view>
+</view>
