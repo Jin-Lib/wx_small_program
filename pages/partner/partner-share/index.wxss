@@ -1,0 +1,71 @@
+page{background-color: #ffc7af;}
+
+.partner_share{width: 650rpx; margin-top: 20rpx; padding: 20rpx 30rpx; margin-left: 25rpx; background-color: #fff; border-radius: 10rpx; display: flex;flex-wrap: wrap;margin-bottom:110rpx;}
+.partner_share_name{font-size: 30rpx;color: #fc4850;width: 650rpx;}
+.partner_share_title{font-size: 40rpx; font-weight: 900; color: #f86f22;width: 650rpx;}
+.partner_share_zeng{font-size: 28rpx;width: 650rpx;}
+.partner_share_yue{font-size: 28rpx;width: 650rpx;}
+.partner_k{width: 650rpx; display: flex;flex-wrap: wrap;margin-left: -5rpx;}
+.partner_img_center{width: 300rpx; margin-left: 20rpx; margin-top: 20rpx;}
+.partner_img_center image{width: 300rpx;border-radius: 10rpx;}
+.partner_img_center_text{font-size: 28rpx; width: 300rpx; height: 34rpx; overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap;}
+.partner_img_center_jg{width: 300rpx; display: flex;flex-wrap: wrap;margin-top: 10rpx;}
+.center_jgy{font-size: 20rpx;width: 120rpx;}
+.center_gou{color: #fc4850; width: 180rpx; font-size: 20rpx;margin-top: -5rpx;}
+.center_gou i{font-size: 30rpx;font-weight: 900;}
+.bottom_float{padding: 30rpx 0;background-color: #f86f22; font-size: 28rpx; color: #fff; position: fixed;bottom: 0rpx;left: 0rpx; text-align: center;width: 750rpx;}
+.bottom_float_img{ position: fixed;bottom: 40rpx;right: 60rpx; width: 300rpx;}
+.bottom_float_img image{width: 300rpx;}
+
+
+  .bottom_popup {
+     animation: shaking .6s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  text-align: center;
+}
+.bottom_popup image{width: 450rpx;margin-top: 20rpx;}
+.popup_text{width: 750rpx; text-align: center; margin-top: 100rpx;}
+.popup_text_title{font-size: 32rpx;font-weight: 900; color: #f86f22;}
+.popup_text image{width: 450rpx;margin-left: 0rpx;margin-top: 20rpx;}
+.button_bc{padding: 8rpx 15rpx; background-color: #00c469;font-size: 26rpx;color: #fff;width: 140rpx;text-align: center;margin-left: 305rpx;border-radius: 10rpx; margin-top: 20rpx;}
+.close {
+  position: absolute;
+  right: 120rpx;
+  top: 250rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  right: 30rpx;
+  content: ' ';
+  height: 50rpx;
+  width: 3px;
+  background-color: #fff;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+
+@keyframes shaking{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

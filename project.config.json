@@ -217,6 +217,13 @@
 					"pathName": "pages/partner/partner-class-share/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/partner-share/index",
+					"pathName": "pages/partner/partner-share/index",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

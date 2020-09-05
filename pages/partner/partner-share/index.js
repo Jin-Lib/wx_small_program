@@ -2,6 +2,14 @@
 
 Page({
   data: {
+    hidden: true,
+  },
+
+  //海报弹窗
+  show: function (e) {
+    this.setData({
+      hidden: !this.data.hidden
+    })
   },
   onLoad: function () {
 

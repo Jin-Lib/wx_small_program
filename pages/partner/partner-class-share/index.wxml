@@ -89,6 +89,16 @@
 
 </view>
 
-<view class="parten_bottom">
+<view class="parten_bottom" bindtap="show">
   邀请合伙人
+</view>
+
+<view class="bottom_popup" hidden="{{hidden}}">
+  <view class="close" bindtap="show"></view>
+  <view class="popup_text">
+    <view class="popup_text_title">选择任意方式邀请好友购买均可锁粉&赚奖金</view>
+    <image src="/resource/partner/sts.png" mode="widthFix"></image>
+  </view>
+  <image src="/resource/partner/hb.jpg" mode="widthFix"></image>
+  <view class="button_bc">保存海报</view>
 </view>

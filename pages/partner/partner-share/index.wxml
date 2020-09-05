@@ -1,3 +1,83 @@
-<view >
-  购买支付
+
+<view class="partner_share">
+  <view class="partner_share_name">张驰粉丝专享</view>
+  <view class="partner_share_title">98元任选5门</view>
+  <view class="partner_share_zeng">赠10000学分，总价值最高498元</view>
+  <view class="partner_share_yue">购买后可兑换以下任意5门课程</view>
+  <view class="partner_k">
+    <view class="partner_img_center" bindtap="share_details">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_203_intro_share.png" mode="widthFix"></image>
+      <view class="partner_img_center_text">10天看懂TOP10名画</view>
+      <view class="partner_img_center_jg">
+        <view class="center_jgy">原价 ￥90</view>
+        <view class="center_gou"><i>84821</i>人已购买</view>
+      </view>
+    </view>
+    <view class="partner_img_center" bindtap="share_details">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_203_intro_share.png" mode="widthFix"></image>
+      <view class="partner_img_center_text">10天看懂TOP10名画</view>
+      <view class="partner_img_center_jg">
+        <view class="center_jgy">原价 ￥90</view>
+        <view class="center_gou"><i>84821</i>人已购买</view>
+      </view>
+    </view>
+    <view class="partner_img_center" bindtap="share_details">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_203_intro_share.png" mode="widthFix"></image>
+      <view class="partner_img_center_text">10天看懂TOP10名画</view>
+      <view class="partner_img_center_jg">
+        <view class="center_jgy">原价 ￥90</view>
+        <view class="center_gou"><i>84821</i>人已购买</view>
+      </view>
+    </view>
+    <view class="partner_img_center" bindtap="share_details">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_203_intro_share.png" mode="widthFix"></image>
+      <view class="partner_img_center_text">10天看懂TOP10名画</view>
+      <view class="partner_img_center_jg">
+        <view class="center_jgy">原价 ￥90</view>
+        <view class="center_gou"><i>84821</i>人已购买</view>
+      </view>
+    </view>
+    <view class="partner_img_center" bindtap="share_details">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_203_intro_share.png" mode="widthFix"></image>
+      <view class="partner_img_center_text">10天看懂TOP10名画</view>
+      <view class="partner_img_center_jg">
+        <view class="center_jgy">原价 ￥90</view>
+        <view class="center_gou"><i>84821</i>人已购买</view>
+      </view>
+    </view>
+    <view class="partner_img_center" bindtap="share_details">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_203_intro_share.png" mode="widthFix"></image>
+      <view class="partner_img_center_text">10天看懂TOP10名画</view>
+      <view class="partner_img_center_jg">
+        <view class="center_jgy">原价 ￥90</view>
+        <view class="center_gou"><i>84821</i>人已购买</view>
+      </view>
+    </view>
+    <view class="partner_img_center" bindtap="share_details">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_203_intro_share.png" mode="widthFix"></image>
+      <view class="partner_img_center_text">10天看懂TOP10名画</view>
+      <view class="partner_img_center_jg">
+        <view class="center_jgy">原价 ￥90</view>
+        <view class="center_gou"><i>84821</i>人已购买</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="bottom_float" bindtap="show">
+  分享赚￥50
+</view>
+<view class="bottom_float_img" bindtap="show">
+  <image src="/resource/partner/hy10000.png" mode="widthFix"></image>
+</view>
+
+
+<view class="bottom_popup" hidden="{{hidden}}">
+  <view class="close" bindtap="show"></view>
+  <view class="popup_text">
+    <view class="popup_text_title">选择任意方式邀请好友购买均可锁粉&赚奖金</view>
+    <image src="/resource/partner/sts.png" mode="widthFix"></image>
+  </view>
+  <image src="/resource/partner/hb.jpg" mode="widthFix"></image>
+  <view class="button_bc">保存海报</view>
 </view>
