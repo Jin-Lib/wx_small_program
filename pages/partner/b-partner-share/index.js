@@ -4,17 +4,10 @@ Page({
   data: {
     hidden: true,
   },
-
-  //--分享出去，别人看到的页面--
-  hhsr: function (event) {
+  //点击课程
+  share_details: function(event) {
     wx.navigateTo({
-      url: '/pages/partner/b-partner-share/index'
-    })
-  },
-  //课程详情
-  share_details: function (event) {
-    wx.navigateTo({
-      url: '/pages/partner/details/index'
+      url: '../b-course-details/index'
     })
   },
   //海报弹窗

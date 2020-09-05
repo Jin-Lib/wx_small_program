@@ -27,7 +27,10 @@
     "pages/partner/classification/index",
     "pages/partner/course-details/index",
     "pages/partner/partner-class-share/index",
-    "pages/partner/partner-share/index"
+    "pages/partner/details/index",
+    "pages/partner/partner-share/index",
+    "pages/partner/b-partner-share/index",
+    "pages/partner/b-course-details/index"
   ],
   "tabBar": {
     "custom": true,

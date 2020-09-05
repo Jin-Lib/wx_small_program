@@ -63,9 +63,7 @@ position: absolute;
 .part_xxk_left{width: 200rpx;height: 200rpx; overflow: hidden;border-radius: 15rpx;}
 .part_xxk_left image{width: 200rpx;}
 .part_xxk_right{margin-top: 5rpx; margin-left: 20rpx;width: 470rpx;}
-.part_xxk_title{font-size: 32rpx; font-weight: 900;width: 470rpx; height: 36rpx; overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;}
+.part_xxk_title{font-size: 32rpx; font-weight: 900;width: 470rpx; height: 38rpx; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .part_xxk_bq{font-size: 26rpx;color: #6b6b6b;margin-top: 10rpx;}
 .part_xxk_jie{display: flex;flex-wrap: wrap;margin-top: 10rpx;}
 .part_xxk_jie i{padding: 3rpx 5rpx; border: #f86f22 solid 3rpx;margin-left: 10rpx;color: #f86f22;font-size: 20rpx;}
