@@ -208,6 +208,14 @@
 					"id": -1,
 					"name": "pages/partner/course-details/index",
 					"pathName": "pages/partner/course-details/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/partner-class-share/index",
+					"pathName": "pages/partner/partner-class-share/index",
+					"query": "",
 					"scene": null
 				}
 			]

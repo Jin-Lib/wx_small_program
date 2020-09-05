@@ -1,0 +1,19 @@
+
+
+page{background-color: #f7f7f7;}
+.par_class_share_top{width: 750rpx; text-align: center; color: #725860; background-color: #ffeac7; font-size: 32rpx;font-weight: 900; padding: 40rpx 0rpx;position: fixed;top: 0;left: 0;}
+.parten_bottom{width: 750rpx; text-align: center; color: #fff; background-color: #f86f22; font-size: 32rpx;font-weight: 900; padding: 30rpx 0rpx;position: fixed;bottom: 0;left: 0;}
+.par_zong{margin-top: 140rpx;margin-bottom: 120rpx;}
+.par_class_center{background-color: #fff;width: 690rpx; padding: 20rpx 30rpx;display: flex;flex-wrap: wrap;margin-top: 20rpx;}
+.par_center_left{width: 200rpx; height: 200rpx; overflow: hidden; border-radius: 10rpx;}
+.par_center_left image{width: 200rpx;}
+.par_center_right{margin-left: 15rpx; margin-top: 5rpx;}
+.par_cen_ri_title{font-size: 32rpx; font-weight: 900;width: 450rpx; height: 36rpx; overflow: hidden;color: #725860;
+  text-overflow: ellipsis;
+  white-space: nowrap;}
+  .par_cen_ri_bq{display: flex;flex-wrap: wrap;margin-top: 10rpx;}
+  .par_cen_ri_bq i{border-radius: 10rpx; padding: 3rpx 5rpx;background-color: #ffefcc;color: #eeb867; margin-left: 8rpx;font-size: 22rpx;}
+  .par_cen_ri_gm{font-size: 24rpx; color: #6b6b6b;margin-top: 10rpx;}
+  .par_cen_jg_gm{display: flex;flex-wrap: wrap;margin-top: 30rpx;font-size: 26rpx;}
+  .par_cen_jg_gm_mun{font-size: 30rpx;color: #f86f22;font-weight: 900;margin-top: 15rpx;width: 120rpx;}
+  .par_cen_jg_gm_button{padding: 10rpx 0;width: 190rpx; text-align: center;color: #fff;background-color: #f86f22;border-radius: 10rpx;margin-left: 160rpx;}

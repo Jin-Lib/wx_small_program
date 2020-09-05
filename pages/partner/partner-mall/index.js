@@ -281,12 +281,23 @@ Page({
       hidden: !this.data.hidden
     })
   },
+  //浮窗合伙人按钮
+  partnerbutton: function (e) {
+    this.setData({
+      hidden: !this.data.hidden
+    })
+  },
 
-  
   //点击课程
   details: function(event) {
     wx.navigateTo({
       url: '../course-details/index'
+    })
+  },
+  //浮窗合伙人按钮
+  partnerbutton: function (event) {
+    wx.navigateTo({
+      url: '/pages/partner/partner-class-share/index'
     })
   },
   onLoad: function () {

@@ -1,0 +1,94 @@
+
+<view class="par_class_share_top">
+  分享已下课程/合集均可邀请合伙人
+</view>
+<view class="par_zong">
+  <view class="par_class_center" bindtap="partner_share">
+    <view class="par_center_left">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/act/partner/giftPart/98_intro.png" mode="widthFix"></image>
+    </view>
+    <view class="par_center_right">
+      <view class="par_cen_ri_title">98元任选5门课程</view>
+      <view class="par_cen_ri_bq">
+        <i>3-8岁</i><i>任选5门</i>
+      </view>
+      <view class="par_cen_ri_gm">1.3万人购买</view>
+      <view class="par_cen_jg_gm">
+        <view class="par_cen_jg_gm_mun">￥98</view>
+        <view class="par_cen_jg_gm_button">分享赚￥50</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="par_class_center" bindtap="course_details">
+    <view class="par_center_left">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_190_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="par_center_right">
+      <view class="par_cen_ri_title">222节经典名著启蒙课</view>
+      <view class="par_cen_ri_bq">
+        <i>5~12岁</i><i>打卡返现</i>
+      </view>
+      <view class="par_cen_ri_gm">1.2万人购买</view>
+      <view class="par_cen_jg_gm">
+        <view class="par_cen_jg_gm_mun">￥198</view>
+        <view class="par_cen_jg_gm_button">分享赚￥19</view>
+      </view>
+    </view>
+  </view>
+
+  
+  <view class="par_class_center" bindtap="course_details">
+    <view class="par_center_left">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_203_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="par_center_right">
+      <view class="par_cen_ri_title">一年级数学83讲</view>
+      <view class="par_cen_ri_bq">
+        <i>运算能力</i><i>举一反三</i>
+      </view>
+      <view class="par_cen_ri_gm">1.3万人购买</view>
+      <view class="par_cen_jg_gm">
+        <view class="par_cen_jg_gm_mun">￥98</view>
+        <view class="par_cen_jg_gm_button">分享赚￥17.87</view>
+      </view>
+    </view>
+  </view>
+  <view class="par_class_center" bindtap="course_details">
+    <view class="par_center_left">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_203_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="par_center_right">
+      <view class="par_cen_ri_title">一年级数学83讲</view>
+      <view class="par_cen_ri_bq">
+        <i>运算能力</i><i>举一反三</i>
+      </view>
+      <view class="par_cen_ri_gm">1.3万人购买</view>
+      <view class="par_cen_jg_gm">
+        <view class="par_cen_jg_gm_mun">￥98</view>
+        <view class="par_cen_jg_gm_button">分享赚￥17.87</view>
+      </view>
+    </view>
+  </view>
+  <view class="par_class_center" bindtap="course_details">
+    <view class="par_center_left">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_203_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="par_center_right">
+      <view class="par_cen_ri_title">一年级数学83讲</view>
+      <view class="par_cen_ri_bq">
+        <i>运算能力</i><i>举一反三</i>
+      </view>
+      <view class="par_cen_ri_gm">1.3万人购买</view>
+      <view class="par_cen_jg_gm">
+        <view class="par_cen_jg_gm_mun">￥98</view>
+        <view class="par_cen_jg_gm_button">分享赚￥17.87</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<view class="parten_bottom">
+  邀请合伙人
+</view>

@@ -25,7 +25,9 @@
     "pages/partner/task/index",
     "pages/partner/user/index",
     "pages/partner/classification/index",
-    "pages/partner/course-details/index"
+    "pages/partner/course-details/index",
+    "pages/partner/partner-class-share/index",
+    "pages/partner/partner-share/index"
   ],
   "tabBar": {
     "custom": true,

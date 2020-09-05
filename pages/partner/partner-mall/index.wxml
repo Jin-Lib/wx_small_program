@@ -723,7 +723,7 @@
 </view>
 
 <!--合伙人浮窗按钮-->
-<view class="partner_float">
+<view class="partner_float" bindtap="partnerbutton">
   <image src="/resource/partner/floathhr.png" mode="widthFix"></image>
 </view>
 
