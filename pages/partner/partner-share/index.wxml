@@ -82,7 +82,7 @@
     <view class="popup_text_title">选择任意方式邀请好友购买均可锁粉&赚奖金</view>
     <image src="/resource/partner/sts.png" mode="widthFix"></image>
   </view>
-  <image src="/resource/partner/hb.jpg" mode="widthFix"></image>
+  <image src="http://cdn.koalaxiezi.com/ceshi/hb.jpg" mode="widthFix"></image>
   <view class="button_bc">保存海报</view>
 </view>
 

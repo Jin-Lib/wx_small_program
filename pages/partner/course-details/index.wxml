@@ -241,7 +241,7 @@
     <view class="popup_title add_red">
       商品详情
     </view>
-    <view class="close" bindtap="showsinglegb"></view>
+    <view class="closebuy" bindtap="showsinglegb"></view>
     <view class="popup_detailed">
       <view class="commodity comm_add">
         <view class="comm_title">商品名</view>

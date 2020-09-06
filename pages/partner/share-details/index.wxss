@@ -747,6 +747,32 @@ page{background-color: #f7f7f7;}
   transform: rotate(-45deg);
 }
 
+/* //支付关闭按钮 */
+.closebuy {
+  position: absolute;
+  right: 15rpx;
+  top: 30rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.closebuy:before, .closebuy:after {
+  position: absolute;
+  right: 30rpx;
+  content: ' ';
+  height: 40rpx;
+  width: 2px;
+  background-color: #333;
+}
+
+.closebuy:before {
+  transform: rotate(45deg);
+}
+
+.closebuy:after {
+  transform: rotate(-45deg);
+}
+
 .kaiguanjs{position: absolute;top: 0rpx; left: 0rpx;width: 750rpx; height: 100%;}
 .kaiguanjs image{margin-top: 65rpx; margin-left: 120rpx;}
 @keyframes shakingopin{
