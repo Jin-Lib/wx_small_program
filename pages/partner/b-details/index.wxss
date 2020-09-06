@@ -109,11 +109,12 @@ page{background-color: #f7f7f7;}
 .detail_center1{width: 750rpx;position: relative;}
 .detail_center1 image{width: 750rpx;}
 .deta_center_num{float: left; font-size: 26rpx; font-weight: 900; color: #000;}
-.deta_center_num1{position: absolute;top: 10rpx;left: 30rpx; display: flex;flex-wrap: wrap;}
-.deta_center_num1 i{font-size: 42rpx; color: #fff; font-weight: 900;}
-.huodongys{font-size: 26rpx;text-decoration:line-through;color: #fff;margin-top: 15rpx; margin-left: 10rpx;}
+.deta_center_num1{position: absolute;top: 25rpx;left: 30rpx; display: flex;flex-wrap: wrap;}
+.deta_center_num1 i{font-size: 50rpx; color: #fff; font-weight: 900;}
+.huodongys{font-size: 28rpx;text-decoration:line-through;color: #fff;margin-top: 15rpx; margin-left: 10rpx;}
 .sanrentuan1{padding: 3rpx 8rpx;font-size: 22rpx; height: 30rpx; line-height: 30rpx;color: #f86f22;margin-top:13rpx;border-radius: 10rpx;background-color: #ffe719; margin-left: 10rpx;}
-.hd_time{position: absolute;top: 70rpx;left: 30rpx; color: #fff; font-size: 26rpx;}
+.group_titlep{color: #6b6b6b; background-color: #fff; font-size: 24rpx;padding-left: 20rpx;width: 750rpx;padding-top: 10rpx;}
+.hd_time{position: absolute;top: 70rpx;right: 36rpx; color: #fff; font-size: 26rpx;}
 .zigou{position: absolute;top: 70rpx;right: 40rpx; color: #fff; font-size: 26rpx;}
 .deta_center_num i{font-size: 42rpx; color: #fc4850;}
 .deta_center_details{margin-left: 100rpx; font-size: 26rpx; margin-top: 8rpx;}
@@ -442,7 +443,10 @@ page{background-color: #f7f7f7;}
 .single{float: left; width: 150rpx; text-align: center; color: #000; font-size: 20rpx;margin-top: 8rpx;}
 .single_sy{float: left; width: 150rpx;color: #fff;margin-top:8rpx;}
 .single_sy image{width: 40rpx;}
-.group{float: right; width: 603rpx; text-align: center; background-color: #fc4850; padding: 10rpx 0; color: #fff;}
+.group{ width: 750rpx; text-align: center; background-color: #fc4850; padding: 30rpx 0; color: #fff;font-size: 30rpx;}
+
+.bottom_float_img{position: fixed;bottom: 50rpx;right: 60rpx; width: 240rpx;}
+.bottom_float_img image{width: 240rpx;}
 .num{font-size: 24rpx;}
 .num i{
   font-size: 30rpx;

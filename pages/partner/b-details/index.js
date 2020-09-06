@@ -84,48 +84,6 @@ Page({
       url: '/pages/course-share/index'
     })
   },
-  //单独购买弹窗按钮
-  showsingled: function (e) {
-    this.setData({
-      hiddensingle: !this.data.hiddensingle
-    })
-  },
-
-  //单购关闭弹窗购买按钮
-  showsinglegb: function (e) {
-    this.setData({
-      hiddencancelpayd: !this.data.hiddencancelpayd
-    })
-  },
-
-  //单购确定离开按钮
-  showcancelpayd: function (e) {
-    this.setData({
-      hiddencancelpayd: !this.data.hiddencancelpayd,
-      hiddensingle: !this.data.hiddensingle,
-    })
-  },
-
-  //单购继续支付按钮
-  showcarryd: function (e) {
-    this.setData({
-      hiddencancelpayd: !this.data.hiddencancelpayd
-    })
-  },
-
-  //点击单购支付按钮
-  single_pay: function (event) {
-    wx.navigateTo({
-      url: '/pages/course-play/index'
-    })
-  },
-
-  //更多素材按钮
-  moremater: function (event) {
-    wx.navigateTo({
-      url: '/pages/partner/more-material/index'
-    })
-  },
   onLoad: function () {
 
   },

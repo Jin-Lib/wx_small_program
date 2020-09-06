@@ -455,7 +455,7 @@ page{background-color: #f7f7f7;}
   padding: 15rpx 0;
   color: #fff;
 }
-
+.more_material{position: fixed;bottom: 140rpx; right: 50rpx; padding: 15rpx 25rpx; color: #fff;background-color: #f86f22; border-radius: 30rpx; font-size: 26rpx;}
 .num {
   font-size: 28rpx;
 }
@@ -477,19 +477,65 @@ page{background-color: #f7f7f7;}
   color: #f86f22;
 }
 
-.comm_title {
+.comm_title{float: left; font-size: 32rpx; color: #000; font-weight: 900}
+.comm_text{float: right;font-size: 28rpx;color: #6b6b6b;}
+.comm_coupon{float: left;}
+.coupon_text{float: left; width: 500rpx; margin-top: 20rpx; font-size: 24rpx;}
+.add_yellow{color: #f86f22;}
+
+/*黄色对勾*/
+.check_yellow{
   float: left;
-  font-size: 32rpx;
-  color: #000;
-  font-weight: 900;
-}
-
-.comm_text {
-  float: right;
-  font-size: 28rpx;
-  color: #6b6b6b;
-}
-
+        width: 23rpx;
+        height: 23rpx;
+        border: solid 3rpx #f86f22;
+        position: relative;
+        margin: 6rpx auto;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right: 13rpx;
+    }
+    .check_yellow:after{
+        content: '';
+        display: block;
+        width: 17rpx;
+        height: 10rpx;
+        border: 3rpx solid #f86f22;
+        border-width: 0 0 5rpx 5rpx;
+        position: absolute;
+        top: 60%;
+        left: 58%;
+        margin-top: -12rpx;
+        margin-left: -12rpx;
+        transform: rotate(-45deg);
+    }
+    
+/*白色对勾*/
+.check_wrill{
+  float: left;
+        width: 23rpx;
+        height: 23rpx;
+        border: solid 3rpx #f86f22;
+        position: relative;
+        margin: 6rpx auto;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right: 13rpx;
+    }
+    .check_wrill:after{
+        content: '';
+        display: block;
+        width: 17rpx;
+        height: 10rpx;
+        border: 3rpx solid #fff;
+        border-width: 0 0 5rpx 5rpx;
+        position: absolute;
+        top: 60%;
+        left: 58%;
+        margin-top: -12rpx;
+        margin-left: -12rpx;
+        transform: rotate(-45deg);
+    }
 .pay {
   padding: 20rpx 0rpx;
   width: 600rpx;

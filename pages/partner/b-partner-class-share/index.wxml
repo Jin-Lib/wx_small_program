@@ -1,10 +1,14 @@
-<!--分享出去，别人看到的页面-->
-<view class="hhsr" bindtap="hhsr" style="position: fixed; top: 70rpx; right: 0rpx;background-color: #fc4850;padding: 8rpx 20rpx;font-size: 24rpx;color: #fff;z-index: 999999;">
-  分享出去，别人看到的页面
-</view>
 
 <view class="par_class_share_top">
-  分享已下课程/合集均可邀请合伙人
+  <view class="par_class_share_top_images">
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+  </view>
+  <view class="par_class_share_text">
+    张驰邀请你一起成为小灯塔合伙人
+  </view>
+  <view class="par_class_share_text_title">
+    购买以下课程/合计均可获增10000学分，可限时解锁合伙人
+  </view>
 </view>
 <view class="par_zong">
   <view class="par_class_center" bindtap="partner_share">
@@ -19,7 +23,7 @@
       <view class="par_cen_ri_gm">1.3万人购买</view>
       <view class="par_cen_jg_gm">
         <view class="par_cen_jg_gm_mun">￥98</view>
-        <view class="par_cen_jg_gm_button">分享赚￥50</view>
+        <view class="par_cen_jg_gm_button">立即购买</view>
       </view>
     </view>
   </view>
@@ -36,7 +40,7 @@
       <view class="par_cen_ri_gm">1.2万人购买</view>
       <view class="par_cen_jg_gm">
         <view class="par_cen_jg_gm_mun">￥198</view>
-        <view class="par_cen_jg_gm_button">分享赚￥19</view>
+        <view class="par_cen_jg_gm_button">立即购买</view>
       </view>
     </view>
   </view>
@@ -54,7 +58,7 @@
       <view class="par_cen_ri_gm">1.3万人购买</view>
       <view class="par_cen_jg_gm">
         <view class="par_cen_jg_gm_mun">￥98</view>
-        <view class="par_cen_jg_gm_button">分享赚￥17.87</view>
+        <view class="par_cen_jg_gm_button">立即购买</view>
       </view>
     </view>
   </view>
@@ -70,7 +74,7 @@
       <view class="par_cen_ri_gm">1.3万人购买</view>
       <view class="par_cen_jg_gm">
         <view class="par_cen_jg_gm_mun">￥98</view>
-        <view class="par_cen_jg_gm_button">分享赚￥17.87</view>
+        <view class="par_cen_jg_gm_button">立即购买</view>
       </view>
     </view>
   </view>
@@ -86,23 +90,9 @@
       <view class="par_cen_ri_gm">1.3万人购买</view>
       <view class="par_cen_jg_gm">
         <view class="par_cen_jg_gm_mun">￥98</view>
-        <view class="par_cen_jg_gm_button">分享赚￥17.87</view>
+        <view class="par_cen_jg_gm_button">立即购买</view>
       </view>
     </view>
   </view>
 
-</view>
-
-<view class="parten_bottom" bindtap="show">
-  邀请合伙人
-</view>
-
-<view class="bottom_popup" hidden="{{hidden}}">
-  <view class="close" bindtap="show"></view>
-  <view class="popup_text">
-    <view class="popup_text_title">选择任意方式邀请好友购买均可锁粉&赚奖金</view>
-    <image src="/resource/partner/sts.png" mode="widthFix"></image>
-  </view>
-  <image src="/resource/partner/hb.jpg" mode="widthFix"></image>
-  <view class="button_bc">保存海报</view>
 </view>

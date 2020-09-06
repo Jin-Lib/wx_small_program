@@ -31,6 +31,7 @@
     <view class="center_details_age"><view class="check"></view>20集</view>
     <view class="center_details_age"><view class="check"></view>永久回放></view>
   </view>
+  <view class="group_titlep">·普通用户下单可获得10000学分，可限时解锁合伙人</view>
   <view class="group_details">
     <view class="group_buy">
       <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
@@ -47,51 +48,6 @@
 </view>
 
 
-<!--样式2-->
-<view class="limited">
-  <view class="detail_center">
-    <view class="deta_center_num">
-      <i>￥29.9</i>
-      <view class="sanrentuan">3人团</view>
-    </view>
-    <view class="group_buy2">
-      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
-      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
-      <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
-      <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
-      <view class="group_text">等6893人购买</view>
-    </view>
-  </view>
-  <view class="deta_center_details2" bindtap="showrule">
-    <view class="center_details_age"><view class="check"></view>原价￥99</view>
-    <view class="center_details_age"><view class="check"></view>4~12岁</view>
-    <view class="center_details_age"><view class="check"></view>20集</view>
-    <view class="center_details_age"><view class="check"></view>永久回放</view>
-    <view class="jiantouys">></view>
-  </view>
-</view>
-<!--样式3-->
-<view class="limited">
-  <view class="detail_center">
-    <view class="deta_center_num">
-      <i>￥29.9</i>
-      <view class="sanrentuan">单购</view>
-    </view>
-    <view class="group_buy2">
-      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
-      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
-      <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
-      <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
-      <view class="group_text">等6893人购买</view>
-    </view>
-  </view>
-  <view class="deta_center_details2" bindtap="showrule">
-    <view class="center_details_age"><view class="check"></view>4~12岁</view>
-    <view class="center_details_age"><view class="check"></view>20集</view>
-    <view class="center_details_age"><view class="check"></view>永久回放</view>
-    <view class="jiantouys">></view>
-  </view>
-</view>
 
 
 

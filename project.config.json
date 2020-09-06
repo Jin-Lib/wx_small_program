@@ -245,6 +245,26 @@
 					"pathName": "pages/partner/details/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/b-partner-class-share/index",
+					"pathName": "pages/partner/b-partner-class-share/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/b-details/index",
+					"pathName": "pages/partner/b-details/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/share-details/index",
+					"pathName": "pages/partner/share-details/index",
+					"scene": null
 				}
 			]
 		}

@@ -5,6 +5,12 @@ Page({
     hidden: true,
   },
 
+  //--分享出去，别人看到的页面--
+  hhsr: function (event) {
+    wx.navigateTo({
+      url: '/pages/partner/b-partner-class-share/index'
+    })
+  },
   //海报弹窗
   show: function (e) {
     this.setData({
@@ -22,7 +28,7 @@ Page({
   //课程分享详情
   course_details: function (event) {
     wx.navigateTo({
-      url: '/pages/partner/course-details/index'
+      url: '/pages/partner/share-details/index'
     })
   },
   onLoad: function () {
