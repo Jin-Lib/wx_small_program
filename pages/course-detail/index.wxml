@@ -64,13 +64,29 @@
 
 <!--详情-->
 <view wx:if="{{currentTabSub === 0}}" class="default">
-  <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-  <image src="http://cdn.koalaxiezi.com/ceshi/4.png" mode="widthFix"></image>
-  <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+  <block
+    wx:if="{{coursedetail.detail}}"
+  >
+    <image
+      wx:for="{{coursedetail.detail}}"
+      wx:key="*this"
+      src="{{item}}"
+      mode="widthFix">
+    </image>
+  </block>
 </view>
 <!--目录-->
 <view wx:if="{{currentTabSub === 1}}" class="default">
-  <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
+  <block
+    wx:if="{{coursedetail.catalog_img && Array.isArray(coursedetail.catalog_img)}}"
+  >
+    <image
+      wx:for="{{coursedetail.catalog_img}}"
+      wx:key="this"
+      src="{{item}}"
+      mode="widthFix">
+    </image>
+  </block>
 </view>
 <!--评价-->
 <view wx:if="{{currentTabSub === 2}}" class="evaluation">

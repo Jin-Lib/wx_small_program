@@ -45,9 +45,6 @@ Page({
       },
     ], // banner 轮播区域数据
   },
-  onLoad: function () {
-    this.getdetailData();
-  },
   /**
    * 生命周期函数--监听页面显示
    */
@@ -60,7 +57,7 @@ Page({
     API.getweek({
       id: 1
     }).then(res => {//成功
-      console.log(res);
+      console.log('课程详情', res);
       //const { rows } = res || {};
 
       this.setData({
@@ -198,6 +195,8 @@ Page({
   },
   onLoad: function () {
     this.getcreateData();
+
+    this.getdetailData();
 
     // wx.navigateTo({
     //   url: '/pages/course-share/index'
