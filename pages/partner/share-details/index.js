@@ -34,6 +34,12 @@ Page({
       console.log(this.data.container())
     })
   },
+  //--分享出去，别人看到的页面--
+  hhsr: function (event) {
+    wx.navigateTo({
+      url: '/pages/partner/b-details/index'
+    })
+  },
   //分享弹窗
   showsharehb: function (e) {
     this.setData({
