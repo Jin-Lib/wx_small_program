@@ -10,19 +10,33 @@
   <view class="filter_age">
     <view class="filt_age_text">年龄：</view>
     <view class="filt_age_num">
-      <view class="more1">
-        3岁已下
-        <i class="more_right1"></i>
-      </view>
+      <picker
+        bindchange="agePickerChange"
+        value="{{agePickerIndex}}"
+        range="{{agePickerArray}}"
+        >
+        <view class="more1">
+          {{agePickerArray[agePickerIndex]}}
+          <i class="more_right1"></i>
+        </view>
+      </picker>
     </view>
   </view>
   <view class="filter_age">
     <view class="filt_age_text">类目：</view>
     <view class="filt_age_num">
-      <view class="more1">
-        自然科普
-        <i class="more_right1"></i>
-      </view>
+      <picker
+        mode="multiSelector"
+        bindchange="classificationChange"
+        bindcolumnchange="classificationColumnChange"
+        value="{{classificationIndex}}"
+        range="{{classification}}"
+        class="more1">
+        <view class="more1">
+          {{classification[1][classificationIndex[1]]}}
+          <i class="more_right1"></i>
+        </view>
+      </picker>
     </view>
   </view>
 </view>
