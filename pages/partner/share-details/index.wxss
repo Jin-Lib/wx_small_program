@@ -696,3 +696,64 @@ page{background-color: #f7f7f7;}
     -webkit-transform: translateX(0px) rotate(0deg);
   }
 }
+
+.share_popup {
+     animation: shakingopin .6s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.purchase_reminder{width: 705rpx; background-color: #fff;padding: 20rpx 25rpx;border-bottom-right-radius: 30rpx;border-bottom-left-radius: 30rpx; display: flex;flex-wrap: wrap;}
+.share_popup image{width: 450rpx;margin-left: 150rpx;margin-top: 20rpx;}
+.purc_text_title{font-size: 26rpx;}
+.purc_text_title i{font-size: 28rpx;padding: 0rpx 14rpx; background-color: #f86f22; color: #fff;height: 17rpx;border-radius: 50%;margin-left: 5rpx;}
+.purc_text_kg{margin-left: 390rpx;}
+.huise{width: 80rpx; border-radius: 30rpx; height: 30rpx; background-color: #b6b6b6;margin-top: 5rpx;margin-left: 400rpx;}
+.wahtih{width: 30rpx; height: 30rpx; border-radius: 50%; background-color: #fff;margin-left: 50rpx;}
+.addjj{width: 30rpx; height: 30rpx; border-radius: 50%; background-color: #fff;margin-left: 3rpx;}
+.purchase_text{margin-top: 20rpx;margin-left: 25rpx;}
+.purchase_text_title{color: #f86f22;font-weight: 900; font-size: 30rpx;}
+.purchase_text_text{font-size: 26rpx; color: #fff; margin-top: 15rpx;}
+.purchase_text_text i{width: 20rpx; height: 20rpx; border-radius: 50%; font-size: 24rpx; font-weight: 900; color: #fff; background-color: #f86f22; padding: 0rpx 10rpx;margin-right: 5rpx;}
+.button_bc{padding: 8rpx 15rpx; background-color: #00c469;font-size: 26rpx;color: #fff;width: 140rpx;text-align: center;margin-left: 305rpx;border-radius: 10rpx; margin-top: 20rpx;}
+
+.close {
+  position: absolute;
+  right: 120rpx;
+  top: 150rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  right: 30rpx;
+  content: ' ';
+  height: 50rpx;
+  width: 3px;
+  background-color: #fff;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.kaiguanjs{position: absolute;top: 0rpx; left: 0rpx;width: 750rpx; height: 100%;}
+.kaiguanjs image{margin-top: 65rpx; margin-left: 120rpx;}
+@keyframes shakingopin{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

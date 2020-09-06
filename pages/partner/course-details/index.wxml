@@ -270,7 +270,7 @@
 </view>
 
 <!--分享赚弹窗-->
-<view class="bottom_popup" hidden="{{hiddenshare}}">
+<view class="share_popup" hidden="{{hiddenshare}}">
   <view class="kaiguanjs" bindtap="showkg" hidden="{{hiddenkg}}">
     <image src="/resource/partner/group_tip.png" mode="widthFix"></image>
   </view>

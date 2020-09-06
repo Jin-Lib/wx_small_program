@@ -186,6 +186,16 @@ page{background-color: #f7f7f7;}
   z-index: 999;
 }
 
+.share_popup {
+     animation: shakingopin .6s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
 .popup {
   width: 655rpx;
   background-color: #fff;
@@ -698,7 +708,7 @@ page{background-color: #f7f7f7;}
 }
 
 .purchase_reminder{width: 705rpx; background-color: #fff;padding: 20rpx 25rpx;border-bottom-right-radius: 30rpx;border-bottom-left-radius: 30rpx; display: flex;flex-wrap: wrap;}
-.bottom_popup image{width: 450rpx;margin-left: 150rpx;margin-top: 20rpx;}
+.share_popup image{width: 450rpx;margin-left: 150rpx;margin-top: 20rpx;}
 .purc_text_title{font-size: 26rpx;}
 .purc_text_title i{font-size: 28rpx;padding: 0rpx 14rpx; background-color: #f86f22; color: #fff;height: 17rpx;border-radius: 50%;margin-left: 5rpx;}
 .purc_text_kg{margin-left: 390rpx;}
@@ -738,3 +748,13 @@ page{background-color: #f7f7f7;}
 
 .kaiguanjs{position: absolute;top: 0rpx; left: 0rpx;width: 750rpx; height: 100%;}
 .kaiguanjs image{margin-top: 65rpx; margin-left: 120rpx;}
+
+
+@keyframes shakingopin{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
