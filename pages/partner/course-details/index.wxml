@@ -179,7 +179,7 @@
 <!--底部购买-->
 <view class="float">
   <view class="single" bindtap="showsingled"><view class="num"><i>￥159</i>（返￥27.18）</view>免拼购买</view>
-  <view class="group" bindtap="showpintuan"><view class="num">最高￥<i>45.93</i>*3</view>分享赚</view>
+  <view class="group" bindtap="showsharehb"><view class="num">最高￥<i>45.93</i>*3</view>分享赚</view>
 </view>
 
 <!--回到顶部按钮-->
@@ -234,18 +234,6 @@
   </view>
 </view>
 
-<!--拼团规则弹窗-->
-<view class="bottom_popup" hidden="{{hiddengroup}}">
-  <view class="popup">
-    <view class="popup_title">
-      拼团规则
-    </view>
-    <view class="close" bindtap="showgroup"></view>
-    <view class="popup_detailed">
-      <view class="popup_text_title_26">团长发起<i>3</i>（数字后台对接）人团后，将拼团链接和加速海报分享给好友和群，<i>48</i>（数字后台对接）小时内邀请<i>2</i>（数字后台对接）位好友参加拼团，即可购买成功，否则系统将自动退款。</view>
-    </view>
-  </view>
-</view>
 
 <!--单独购买弹窗-->
 <view class="bottom_popup" hidden="{{hiddensingle}}">
@@ -282,8 +270,24 @@
 </view>
 
 <!--分享赚弹窗-->
-<view class="bottom_popup" hidden="{{hiddenpintuan}}">
-  123
+<view class="bottom_popup" hidden="{{hiddenshare}}">
+  <view class="kaiguanjs" bindtap="showkg" hidden="{{hiddenkg}}">
+    <image src="/resource/partner/group_tip.png" mode="widthFix"></image>
+  </view>
+  <view class="purchase_reminder">
+    <view class="purc_text_title" bindtap="showkg">新用户免拼购课<i>?</i></view>
+    <view class="purc_text_kg">
+      <switch-button id="derail"></switch-button>
+    </view>
+  </view>
+  <view class="purchase_text">
+    <view class="close" bindtap="showsharehb"></view>
+    <view class="purchase_text_title">选择任意方式邀请好友购买均可锁粉&赚奖金</view>
+    <view class="purchase_text_text"><i>1</i>点击右上角，分享链接给好友</view>
+    <view class="purchase_text_text"><i>2</i>保存海报/分享给好友</view>
+  </view>
+  <image src="http://cdn.koalaxiezi.com/ceshi/hb.jpg" mode="widthFix"></image>
+  <view class="button_bc">保存海报</view>
 </view>
 
 

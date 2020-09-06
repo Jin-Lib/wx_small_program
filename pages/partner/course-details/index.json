@@ -2,6 +2,7 @@
   "navigationBarTitleText": "课程详情",
   "usingComponents": {
     "scroll-top": "../../../components/scrollToTop/scrollToTop",
-    "mp-sticky": "../../../components/sticky/index"
+    "mp-sticky": "../../../components/sticky/index",
+    "switch-button": "../../../components/switch/index"
   }
 }

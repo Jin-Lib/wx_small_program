@@ -736,7 +736,7 @@
 <!--红包弹窗-->
 <view class="bottom_popup" hidden="{{hidden}}">
   <view class="dtxg">
-    <image src="/resource/partner/indexhb.png" mode="widthFix"></image>
+    <image src="http://cdn.koalaxiezi.com/ceshi/indexhb.png" mode="widthFix"></image>
     <view class="bottom_popup_time">48:39:29</view>
     <view class="close" bindtap="show"></view>
   </view>

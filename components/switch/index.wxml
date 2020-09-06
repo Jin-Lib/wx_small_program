@@ -1,0 +1,6 @@
+
+<view animation="{{movebg}}" bindtap='switchTap' class="radio row">
+  <view animation="{{move}}" class="circle">
+    <view class="{{swit ? 'centerline' : 'centercir'}}"></view>
+  </view>
+</view>
