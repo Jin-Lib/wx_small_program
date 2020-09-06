@@ -180,8 +180,6 @@ Page({
   recommendedAgeSelect(event) {
     this.setData({
       recommendedAgeSelectIndex: event.detail.value
-    }, () => {
-      console.log('选择完成')
     })
   },
   // 上拉加载
