@@ -77,6 +77,15 @@ const API =  {
     url: `${host}/api/Order/orderList`,
     method: 'POST'
   },
+  /**
+   * ===================
+   * 课程 分类
+   * ===================
+   */
+  'getCourseCate': {
+    url: `${host}/api/course/cate`,
+    method: 'GET'
+  },
 };
 
 let API_RES = {};
