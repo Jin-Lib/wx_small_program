@@ -13,15 +13,15 @@
       </view>
     </view>
   </view>
-  <view class="share_top_title">仅剩2个名额，先到先得</view>
+  <view class="share_top_title"><view class="check_red"></view><view class="ccgg">该团已拼团成功！</view></view>
   <view class="share_top_img">
     <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
-    <image src="/resource/img/noUserImg.png" mode="widthFix"></image>
-    <image src="/resource/img/noUserImg.png" mode="widthFix"></image>
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
   </view>
   <view class="share_top_time">离结束<i>40</i>:<i>58</i>:<i>42</i>:<i>15</i></view>
   <view class="share_top_button" bindtap="showpintuan">
-    ￥3.9立即参团
+    ￥3.9立即发起团购
   </view>
 </view>
 <!-- <view >
@@ -150,7 +150,7 @@
     <view class="single_sy"><image src="/resource/nav/home_active.png" mode="widthFix"></image></view>
     首页
   </view>
-  <view class="group" bindtap="showpintuan">￥3.9立即参团</view>
+  <view class="group" bindtap="showpintuan">￥3.9立即发起团购</view>
 </view>
 
 <!--回到顶部按钮-->

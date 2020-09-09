@@ -1,4 +1,29 @@
+<view class="share_top">
+  <view class="share_t_k">
+    <view class="share_t_k_img">
+      <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+    </view>
+    <view class="share_t_k_text">
+      <view class="share_t_k_text_title">14天让孩子做情绪的主人，学会控制自己</view>
+      <view class="share_t_k_text_price">
+        <view class="share_t_k_text_price_x">新人价：￥3.9</view>
+        <view class="share_t_k_text_price_s">原价￥99</view>
+        <view class="share_t_k_text_price_g">48223人购买</view>
 
+      </view>
+    </view>
+  </view>
+  <view class="share_top_title">仅剩2个名额，先到先得</view>
+  <view class="share_top_img">
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
+    <image src="/resource/img/noUserImg.png" mode="widthFix"></image>
+  </view>
+  <view class="share_top_time">离结束<i>2</i>:<i>58</i>:<i>42</i>:<i>15</i></view>
+  <view class="share_top_button" bindtap="showpintuan">
+    ￥3.9立即参团
+  </view>
+</view>
 <!-- <view >
   课程详情
 </view> -->
@@ -14,32 +39,84 @@
   </view>
 </view>
 
-
-<!--样式0-->
-<view class="detail_center">
-  <view class="deta_center_num">
-    <i>￥29.9</i>起
+<!--样式1-->
+<view class="limited">
+  <view class="detail_center1">
+    <image src="/resource/partner/coupon-bg.png" mode="widthFix"></image>
+    <view class="deta_center_num1">
+      <i>￥29.9</i>
+      <view class="huodongys">原价169</view>
+      <view class="sanrentuan1">3人团</view>
+    </view>
+    <view class="hd_time">离结束10天09:15:28</view>
+    <view class="zigou">自购可用</view>
   </view>
-  <view class="deta_center_details" bindtap="showrule">
+  <view class="deta_center_details3" bindtap="showrule">
     <view class="center_details_age"><view class="check"></view>4~12岁</view>
     <view class="center_details_age"><view class="check"></view>20集</view>
     <view class="center_details_age"><view class="check"></view>永久回放></view>
   </view>
+  <view class="group_details">
+    <view class="group_buy">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+      <view class="group_text">等6893人购买</view>
+    </view>
+    <!-- <view class="group_rule" bindtap="showgroup">
+      拼团规则 >
+    </view> -->
+  </view>
+
 </view>
 
-<view class="group_details">
-  <view class="group_buy">
-    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
-    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
-    <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
-    <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
-    <view class="group_text">等6893人购买</view>
+
+<!--样式2-->
+<view class="limited">
+  <view class="detail_center">
+    <view class="deta_center_num">
+      <i>￥29.9</i>
+      <view class="sanrentuan">3人团</view>
+    </view>
+    <view class="group_buy2">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+      <view class="group_text">等6893人购买</view>
+    </view>
   </view>
-  <view class="group_rule" bindtap="showgroup">
-    拼团规则 >
+  <view class="deta_center_details2" bindtap="showrule">
+    <view class="center_details_age"><view class="check"></view>原价￥99</view>
+    <view class="center_details_age"><view class="check"></view>4~12岁</view>
+    <view class="center_details_age"><view class="check"></view>20集</view>
+    <view class="center_details_age"><view class="check"></view>永久回放</view>
+    <view class="jiantouys">></view>
   </view>
 </view>
-
+<!--样式3-->
+<view class="limited">
+  <view class="detail_center">
+    <view class="deta_center_num">
+      <i>￥29.9</i>
+      <view class="sanrentuan">单购</view>
+    </view>
+    <view class="group_buy2">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+      <view class="group_text">等6893人购买</view>
+    </view>
+  </view>
+  <view class="deta_center_details2" bindtap="showrule">
+    <view class="center_details_age"><view class="check"></view>4~12岁</view>
+    <view class="center_details_age"><view class="check"></view>20集</view>
+    <view class="center_details_age"><view class="check"></view>永久回放</view>
+    <view class="jiantouys">></view>
+  </view>
+</view>
 
 <view id="navigation-wrap">
   <mp-sticky offset-top="0">
@@ -123,9 +200,12 @@
   </view>
 </view>
 <!--底部购买-->
-<view class="float">
-  <view class="single" bindtap="showsingled"><view class="num"><i>￥159</i></view>单独全价购</view>
-  <view class="group" bindtap="showpintuan"><view class="num">￥<i>45.93</i></view>发起3人团</view>
+<view class="float" hidden="{{!isShowBottonBuy}}">
+  <view class="single" bindtap="return_index">
+    <view class="single_sy"><image src="/resource/nav/home_active.png" mode="widthFix"></image></view>
+    首页
+  </view>
+  <view class="group" bindtap="showpintuan">￥3.9立即参团</view>
 </view>
 
 <!--回到顶部按钮-->
@@ -176,31 +256,6 @@
     <view class="popup_detailed">
       <view class="popup_text_title"><view class="check_red"></view>关于有效期</view>
       <view class="popup_text_deta">本课程一旦单购成功或拼团成功，课程解锁后，可以不限次数，永久回看</view>
-    </view>
-  </view>
-</view>
-
-<!--单独购买弹窗-->
-<view class="bottom_popup" hidden="{{hiddensingle}}">
-  <view class="popup">
-    <view class="popup_title add_red">
-      商品详情
-    </view>
-    <view class="close" bindtap="showsinglegb"></view>
-    <view class="popup_detailed">
-      <view class="commodity comm_add">
-        <view class="comm_title">商品名</view>
-        <view class="comm_text">萨达是根深蒂固的</view>
-      </view>
-      <view class="commodity comm_add">
-        <view class="comm_title">购买方式</view>
-        <view class="comm_text">单独全购价</view>
-      </view>
-      <view class="commodity">
-        <view class="comm_title">支付总额</view>
-        <view class="comm_text">￥159</view>
-      </view>
-      <view class="pay" bindtap="single_pay">确认支付</view>
     </view>
   </view>
 </view>

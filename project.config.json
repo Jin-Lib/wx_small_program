@@ -264,6 +264,13 @@
 					"id": -1,
 					"name": "pages/partner/share-details/index",
 					"pathName": "pages/partner/share-details/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/group-success/index",
+					"pathName": "pages/group-success/index",
 					"scene": null
 				}
 			]

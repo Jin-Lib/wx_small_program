@@ -1,3 +1,15 @@
+<!--分享出去，别人看到的页面-->
+<view class="hhsr" bindtap="hhsr" style="position: fixed; top: 70rpx; right: 0rpx;background-color: #fc4850;padding: 8rpx 20rpx;font-size: 24rpx;color: #fff;z-index: 999999;">
+  分享出去，别人看到的拼团页面
+</view>
+
+<view class="hhsr" bindtap="hhsrr" style="position: fixed; top: 170rpx; right: 0rpx;background-color: #fc4850;padding: 8rpx 20rpx;font-size: 24rpx;color: #fff;z-index: 999999;">
+  分享出去，别人看到的已完成的拼团页面
+</view>
+<view class="hhsr" bindtap="hhsrrr" style="position: fixed; top: 240rpx; right: 0rpx;background-color: #fc4850;padding: 8rpx 20rpx;font-size: 24rpx;color: #fff;z-index: 999999;">
+  自己看到已完成的拼团页面
+</view>
+
 <view class="share_top">
   <view class="share_top_title">邀请2个新用户，即可成团</view><!--邀请2个用户，即可成团-->
   <view class="share_top_time">离结束<i>40</i>:<i>58</i>:<i>42</i>:<i>15</i></view>

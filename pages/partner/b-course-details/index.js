@@ -1,7 +1,4 @@
 //index.js
-//获取应用实例
-const app = getApp()
-const API = require('../../../config/api');
 
 Page({
   data: {
@@ -11,9 +8,8 @@ Page({
     hiddenpintuan: true, //拼团购买弹窗
     hiddencancelpay: true, //确认取消支付弹窗
     hiddencancelpayd: true, //单购确认取消支付弹窗
-    tabList: ['详情', '目录', '评价', '推荐'], // tab 分类
-    currentTabSub: 0, // 记录当前tab下标
     isTopBtnShow: false, // 是否展示返回顶部按钮
+    isShowBottonBuy: false, // 是否展示底部购买
     spellGroupList: [
       {
         image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
@@ -31,82 +27,6 @@ Page({
         status: '1分钟前拼团成功'
       },
     ], // 拼团列表
-    courseBannerDetail: [
-      {
-        type: 'video',
-        src: 'http://cdn.koalaxiezi.com/bh1.mp4',
-        poster: 'http://cdn.koalaxiezi.com/ceshi/2.png'
-      },
-      {
-        src: 'http://cdn.koalaxiezi.com/ceshi/2.png',
-      },
-      {
-        src: 'http://cdn.koalaxiezi.com/ceshi/2.png',
-      },
-    ], // banner 轮播区域数据
-  },
-  onLoad: function () {
-    this.getdetailData();
-  },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  // 获取课程信息
-  getdetailData: function () {
-    API.getweek({
-      id: 1
-    }).then(res => {//成功
-      console.log(res);
-      //const { rows } = res || {};
-
-      this.setData({
-        coursedetail: res
-      });
-    }).catch(err => {
-      wx.showToast({//错误
-        title: err,
-        icon: 'none',
-        duration: 1000
-      })
-    })
-  },
-
-  // 下单
-  getcreateData: function () {
-    API.getcreate({
-      courseId: 1
-    }).then(res => {//成功
-      console.log(res);
-      //const { rows } = res || {};
-      wx.requestPayment(
-        {
-          'timeStamp': res.timeStamp,
-          'nonceStr': res.nonceStr,
-          'package': res.package,
-          'signType': res.signType,
-          'paySign': res.paySign,
-          'success': function (res) {
-            hiddenpintuan: !this.data.hiddenpintuan;
-            hiddensingle: !this.data.hiddensingle;
-            url: '/pages/course-share/index';
-          },
-          'fail': function (res) { },
-          'complete': function (res) { }
-        })
-      this.setData({
-        coursecreate: res,
-      });
-    }).catch(err => {
-      wx.showToast({//错误
-        title: err,
-        icon: 'none',
-        duration: 1000
-      })
-    })
   },
   onReady() {
     this.setData({
@@ -127,16 +47,10 @@ Page({
       hiddengroup: !this.data.hiddengroup
     })
   },
-  //单独购买弹窗按钮
-  showsingled: function (e) {
-    this.setData({
-      hiddensingle: !this.data.hiddensingle
-    })
-  },
-  //单购关闭弹窗购买按钮
-  showsinglegb: function (e) {
-    this.setData({
-      hiddencancelpayd: !this.data.hiddencancelpayd
+  //点击返回首页按钮
+  return_index: function (event) {
+    wx.navigateTo({
+      url: '/pages/mall/index'
     })
   },
   //拼团购买弹窗按钮
@@ -164,46 +78,21 @@ Page({
       hiddencancelpay: !this.data.hiddencancelpay
     })
   },
-  //单购确定离开按钮
-  showcancelpayd: function (e) {
-    this.setData({
-      hiddencancelpayd: !this.data.hiddencancelpayd,
-      hiddensingle: !this.data.hiddensingle,
-    })
-  },
-  //单购继续支付按钮
-  showcarryd: function (e) {
-    this.setData({
-      hiddencancelpayd: !this.data.hiddencancelpayd
-    })
-  },
-  //点击单购支付按钮
-  single_pay: function (event) {
-    this.getcreateData();
-    // wx.navigateTo({
-    //   url: '/pages/course-play/index'
-    // })
-  },
   //点击团购支付按钮
   spell_pay: function (event) {
     wx.navigateTo({
       url: '/pages/course-share/index'
     })
   },
-  // tab 切换
-  tabChange: function (event) {
-    this.setData({
-      currentTabSub: event.currentTarget.dataset.sub
-    })
-  },
   onLoad: function () {
-    this.getcreateData();
 
-    // wx.navigateTo({
-    //   url: '/pages/course-share/index'
-    // })
   },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
 
+  },
   /**
    * 监听页面滚动事件
    * @date 2020-09-04
@@ -212,7 +101,8 @@ Page({
    */
   onPageScroll: function (e) {
     this.setData({
-      isTopBtnShow: e.scrollTop > 100
+      isTopBtnShow: e.scrollTop > 100,
+      isShowBottonBuy: e.scrollTop > 100
     })
   },
 })

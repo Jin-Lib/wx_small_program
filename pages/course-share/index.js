@@ -28,6 +28,24 @@ Page({
     tabChangeList: ['详情', '目录', '评价'], // tab切换目录
     currentTabSub: 0, // tab切换下标
   },
+  //--分享出去，别人看到的页面--
+  hhsr: function (event) {
+    wx.navigateTo({
+      url: '/pages/user-spell-group/index'
+    })
+  },
+  //--分享出去，别人看到的已完成的页面--
+  hhsrr: function (event) {
+    wx.navigateTo({
+      url: '/pages/group-success/index'
+    })
+  },
+  //--分享出去，团购成功的页面--
+  hhsrrr: function (event) {
+    wx.navigateTo({
+      url: '/pages/successful-purchase/index'
+    })
+  },
   //服务说明按钮
   showrule: function (e) {
     this.setData({

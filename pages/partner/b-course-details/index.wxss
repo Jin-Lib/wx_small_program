@@ -121,16 +121,32 @@ page{background-color: #f7f7f7}
 
 
 
-.detail_top{float: left; width: 750rpx; margin-top: 20rpx;}
+.detail_top{ display: flex;flex-wrap: wrap;width: 750rpx;}
 .detail_bner{float: left; width: 750rpx;height: 150rpx;}
 .detail_bner image{float: left; width: 750rpx;height: 150rpx;}
 .detail_video{width: 750rpx;}
 .detail_video video{width: 750rpx; height: 422rpx;}
 .detail_title{width: 700rpx; padding: 20rpx 26rpx; background-color: #756cf5; font-size: 28rpx; color: #fff; font-weight: 900; float: left; margin-top: -8rpx;}
-.detail_center{float: left; width: 700rpx;border-bottom: solid 3rpx #e2e2e2; padding: 30rpx 26rpx; background-color: #fff; }
-.deta_center_num{float: left; font-size: 26rpx; font-weight: 900; color: #000;}
+.limited{ display: flex;flex-wrap: wrap;}
+.detail_center{width: 700rpx;border-bottom: solid 3rpx #e2e2e2; padding: 30rpx 26rpx; background-color: #fff; display: flex;flex-wrap: wrap;}
+.detail_center1{width: 750rpx;position: relative;}
+.detail_center1 image{width: 750rpx;}
+.deta_center_num{float: left; font-size: 26rpx; font-weight: 900; color: #000;
+  }
+.deta_center_num1{position: absolute;top: 10rpx;left: 30rpx; display: flex;flex-wrap: wrap;}
+.deta_center_num1 i{font-size: 42rpx; color: #fff; font-weight: 900;}
+.huodongys{font-size: 26rpx;text-decoration:line-through;color: #fff;margin-top: 15rpx; margin-left: 10rpx;}
+.sanrentuan1{padding: 3rpx 8rpx;font-size: 22rpx; height: 30rpx; line-height: 30rpx;color: #f86f22;margin-top:13rpx;border-radius: 10rpx;background-color: #ffe719; margin-left: 10rpx;}
+.hd_time{position: absolute;top: 70rpx;left: 30rpx; color: #fff; font-size: 26rpx;}
+.zigou{position: absolute;top: 70rpx;right: 40rpx; color: #fff; font-size: 26rpx;}
 .deta_center_num i{font-size: 42rpx; color: #fc4850;}
-.deta_center_details{float: right; font-size: 26rpx; margin-top: 8rpx;}
+
+.sanrentuan{border:#e2e2e2 solid 3rpx;padding: 3rpx 8rpx;font-size: 22rpx; height: 30rpx; line-height: 30rpx;color: #333;margin-top:13rpx;border-radius: 10rpx;}
+
+.deta_center_details{margin-left: 100rpx; font-size: 26rpx; margin-top: 8rpx;}
+.deta_center_details2{font-size: 26rpx; background-color: #fff;padding: 15rpx 0rpx;width: 750rpx;}
+.deta_center_details3{font-size: 26rpx; background-color: #fff;padding: 15rpx 0rpx;width: 750rpx;border-bottom: solid 3rpx #e2e2e2;}
+.jiantouys{margin-left: 700rpx;}
 .center_details_age{float: left; margin-left: 20rpx; font-weight: 900; }
 .check{
   float: left;
@@ -273,6 +289,43 @@ page{background-color: #f7f7f7}
 .group_text{font-size: 24rpx; float: left; margin-top: 15rpx; margin-left: 15rpx;}
 .group_rule{float: right; font-size: 26rpx; margin-top: 12rpx;}
 
+.group_buy {
+  width: 370rpx;
+  margin-left: 20rpx;
+}
+
+.group_buy2 {
+  width: 340rpx;
+  margin-left: 150rpx;
+}
+
+.group_buy image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  float: left;
+  margin-left: -15rpx;
+}
+
+.group_buy2 image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  float: left;
+  margin-left: -15rpx;
+}
+.group_text {
+  font-size: 24rpx;
+  float: left;
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+}
+
+.group_rule {
+  float: right;
+  font-size: 26rpx;
+  margin-top: 12rpx;
+}
 
 .navigation {
   /* float: left; */
@@ -318,36 +371,12 @@ page{background-color: #f7f7f7}
 .change{float: left; margin-top: 40rpx; font-size: 24rpx; padding: 10rpx 40rpx;color: #f86f22; background-color: #f7f7f7; border-radius: 15px; margin-left: 300rpx;}
 .float{float: left;position: fixed;bottom: 0rpx; left: 0; background-color: #fff; display: flex; }
 .index{float: left; width: 130rpx; text-align:center; padding: 15rpx 0;}
-
-.single {
-  float: left;
-  width: 375rpx;
-  text-align: center;
-  background-color: #f86f22;
-  padding: 15rpx 0;
-  color: #fff;
-}
-
-.group {
-  float: right;
-  width: 375rpx;
-  text-align: center;
-  background-color: #fc4850;
-  padding: 15rpx 0;
-  color: #fff;
-}
-
-.num {
-  font-size: 38rpx;
-  font-weight: 900;
-}
-
-.commodity {
-  width: 630rpx;
-  padding: 20rpx 20rpx;
-  float: left;
-  margin-left: -25rpx;
-}
+.single{float: left; width: 150rpx; text-align: center; color: #000; font-size: 20rpx;margin-top: 8rpx;}
+.single_sy{float: left; width: 150rpx;color: #fff;}
+.single_sy image{width: 40rpx;}
+.group{float: right; width: 603rpx; text-align: center; background-color: #fc4850; padding: 20rpx 0; color: #fff;}
+.num{font-size: 38rpx; font-weight: 900;}
+.commodity{width: 630rpx; padding: 20rpx 20rpx;float: left; margin-left: -25rpx;}
 .comm_add{ border-bottom: solid 3rpx #e2e2e2; }
 .add_red{color: #f86f22;}
 .comm_title{float: left; font-size: 32rpx; color: #000; font-weight: 900}
