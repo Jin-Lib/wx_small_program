@@ -58,6 +58,6 @@
   </view>
 </view>
 
-<view class="week_Introduction">
+<view class="week_Introduction" bindtap="week_js">
   课程介绍
 </view>

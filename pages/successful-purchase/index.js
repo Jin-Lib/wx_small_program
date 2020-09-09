@@ -11,6 +11,12 @@ Page({
    */
   onShow: function () {
 
+  }, 
+  //点击课程介绍
+  week_js: function(event) {
+    wx.navigateTo({
+      url: '/pages/course-detail/index'
+    })
   },
   //点击去上课
   gotoclass: function (event) {
