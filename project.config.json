@@ -271,6 +271,13 @@
 					"id": -1,
 					"name": "pages/group-success/index",
 					"pathName": "pages/group-success/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/more-material/index",
+					"pathName": "pages/partner/more-material/index",
 					"scene": null
 				}
 			]

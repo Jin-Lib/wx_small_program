@@ -1,4 +1,6 @@
 {
-  "navigationBarTitleText": "购买支付",
-  "usingComponents": {}
+  "navigationBarTitleText": "课程素材",
+  "usingComponents": {
+    "switch-button": "../../../components/switch/index"
+  }
 }

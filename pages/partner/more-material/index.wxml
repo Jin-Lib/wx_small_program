@@ -1,3 +1,39 @@
-<view >
-  更多素材
+
+  <view class="share_popup">
+    <view class="kaiguanjs" bindtap="showkg" hidden="{{hiddenkg}}">
+      <image src="/resource/partner/group_tip.png" mode="widthFix"></image>
+    </view>
+    <view class="purchase_reminder">
+      <view class="purc_text_title" bindtap="showkg">新用户免拼购课<i>?</i></view>
+      <view class="purc_text_kg">
+        <switch-button id="derail"></switch-button>
+      </view>
+    </view>
+  </view>
+
+<!--推广图片-->
+<view class="category">
+  <view class="explosion">
+    推广图片
+  </view>
+</view>
+
+<view class="marter">
+  <view class="marter_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/4.png" mode="widthFix"></image>
+    <i>专属海报</i>
+  </view>
+  <view class="marter_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+  </view>
+  <view class="marter_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
+  </view>
+  <view class="marter_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
+  </view>
+  <view class="marter_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
+  </view>
+
 </view>
