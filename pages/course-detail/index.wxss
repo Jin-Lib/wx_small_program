@@ -103,6 +103,7 @@ page{background-color: #f7f7f7;}
 .detail_bner image{width: 750rpx;height: 150rpx;}
 .detail_video{width: 750rpx; height: 422rpx;}
 .detail_video video{width: 750rpx; height: 422rpx;}
+.detail_video image{width: 750rpx;}
 .detail_title{width: 700rpx; padding: 20rpx 26rpx; background-color: #756cf5; font-size: 28rpx; color: #fff; font-weight: 900; float: left;}
 .detail_center{float: left; width: 700rpx;border-bottom: solid 3rpx #e2e2e2; padding: 30rpx 26rpx; background-color: #fff; }
 .deta_center_num{float: left; font-size: 26rpx; font-weight: 900; color: #000;}
