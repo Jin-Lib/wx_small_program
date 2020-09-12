@@ -49,9 +49,7 @@
 
   <view class="promote">
     <view class="promote_text">
-      常爸大语文年课L1来了~<text>\n</text>
-      语文特级团队专为4-6岁孩子打造，趣味动画+智能ai互动学习，48周助力宝宝打造核心基础！<text>\n</text>
-      附赠实物教具大礼包<text>\n</text>
+      {{contents}}<text>\n</text>
       戳->http://klart.cn
     </view>
     <view class="promote_copy">

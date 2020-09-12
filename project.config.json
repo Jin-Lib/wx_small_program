@@ -278,6 +278,13 @@
 					"id": -1,
 					"name": "pages/partner/more-material/index",
 					"pathName": "pages/partner/more-material/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/explosion-more/index",
+					"pathName": "pages/explosion-more/index",
 					"scene": null
 				}
 			]

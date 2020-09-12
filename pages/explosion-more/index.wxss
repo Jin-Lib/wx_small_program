@@ -1,0 +1,16 @@
+
+page{background-color: #f7f7f7;}
+
+
+.explosion_course{width: 690rpx; margin-top: 60rpx; margin-bottom: 20rpx; margin-left: 30rpx; background-color: #fff; border-radius: 15rpx; position: relative; overflow: hidden;}
+.course_img{width: 690rpx; border-radius: 15rpx;position: relative;overflow: hidden;}
+.xianshiimg{width: 650rpx; background: rgba(0, 0, 0, 0.2);padding: 10rpx 20rpx 10rpx 470rpx;position: absolute;bottom: 10rpx;left: 0;color: #fff;text-align: right;font-size: 22rpx; display: flex;flex-wrap: wrap;}
+.buy_img{width: 40rpx;height: 40rpx; overflow: hidden;border-radius: 50rpx; margin-left: -15rpx;}
+.buy_img .image{width: 40rpx; }
+.course_img image{width: 690rpx; border-radius: 15rpx;}
+.coures_text{margin-left: 30rpx; margin-top: 14rpx; margin-bottom: 15rpx; width: 350rpx;}
+.text_title{font-size: 32rpx; font-weight: 900;}
+.text_Introduction{font-size: 22rpx; color: #686868; width: 450rpx; overflow: hidden; height: 30rpx;}
+.spike{background-color: #fc4850; padding: 3px 8px; border-radius: 15px; color: #fff; font-size: 22rpx; margin-top: 12px; height: 30rpx;margin-left: 60rpx;}
+.cour_xian{display: flex;flex-wrap: wrap;width: 690rpx;}
+.xianshi{position: absolute;top: -20rpx;right: 0; background-color: #f86f22;padding: 3px 10px; font-size: 18rpx; color: #fff; height: 30rpx;margin-top: 12px;}
