@@ -14,7 +14,7 @@ page{background-color: #f7f7f7;}
 .marter_img i{position: absolute;top: 0;right: 0; width: 150rpx; text-align: center; font-size: 20rpx; color: #fff;background-color:#f86f22;}
 .promote_hua{width: 715rpx;display: flex;overflow-x: scroll;justify-content: space-between;margin-left: 15rpx;}
 .promote{width: 520rpx; background-color: #fff; padding: 30rpx 25rpx; border-radius: 10rpx;margin-left: 20rpx;margin-top: 30rpx;}
-.promote_text{font-size: 24rpx;line-height: 35rpx;}
+.promote_text{font-size: 24rpx;white-space:pre-line;margin-top: -30rpx;line-height: 34rpx;}
 .promote_copy{font-size: 22rpx; color: #f86f22;border-bottom: solid #f86f22 3rpx; padding-bottom: 3rpx; margin-left: 390rpx; width: 135rpx;margin-top: 10rpx;}
 
 

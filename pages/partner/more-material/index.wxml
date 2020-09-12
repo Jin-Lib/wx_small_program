@@ -49,34 +49,33 @@
 
   <view class="promote">
     <view class="promote_text">
-      {{contents}}<text>\n</text>
-      戳->http://klart.cn
+      {{
+      contents
+      }}
     </view>
-    <view class="promote_copy">
+    <view class="promote_copy" bindtap="copywriting" data-text="{{contents}}">
       点击复制文案
     </view>
   </view>
 
   <view class="promote">
     <view class="promote_text">
-      常爸大语文年课L1来了~<text>\n</text>
-      语文特级团队专为4-6岁孩子打造，趣味动画+智能ai互动学习，48周助力宝宝打造核心基础！<text>\n</text>
-      附赠实物教具大礼包<text>\n</text>
-      戳->http://klart.cn
+      {{
+      contents
+      }}
     </view>
-    <view class="promote_copy">
+    <view class="promote_copy" bindtap="copywriting" data-text="{{contents}}">
       点击复制文案
     </view>
   </view>
 
   <view class="promote">
     <view class="promote_text">
-      常爸大语文年课L1来了~<text>\n</text>
-      语文特级团队专为4-6岁孩子打造，趣味动画+智能ai互动学习，48周助力宝宝打造核心基础！<text>\n</text>
-      附赠实物教具大礼包<text>\n</text>
-      戳->http://klart.cn
+      {{
+      contents
+      }}
     </view>
-    <view class="promote_copy">
+    <view class="promote_copy" bindtap="copywriting" data-text="{{contents}}">
       点击复制文案
     </view>
   </view>
@@ -96,7 +95,7 @@
     <view class="promote_video_copy">
       点击下载视频
     </view>
-    <view class="promote_video_lj">
+    <view class="promote_video_lj" bindtap="copyvideolink" data-text="{{videolink}}">
       点击复制视频链接
     </view>
   </view>
@@ -107,7 +106,7 @@
     <view class="promote_video_copy">
       点击下载视频
     </view>
-    <view class="promote_video_lj">
+    <view class="promote_video_lj" bindtap="copyvideolink" data-text="{{videolink}}">
       点击复制视频链接
     </view>
   </view>
@@ -118,7 +117,7 @@
     <view class="promote_video_copy">
       点击下载视频
     </view>
-    <view class="promote_video_lj">
+    <view class="promote_video_lj" bindtap="copyvideolink" data-text="{{videolink}}">
       点击复制视频链接
     </view>
   </view>
@@ -129,7 +128,7 @@
     <view class="promote_video_copy">
       点击下载视频
     </view>
-    <view class="promote_video_lj">
+    <view class="promote_video_lj" bindtap="copyvideolink" data-text="{{videolink}}">
       点击复制视频链接
     </view>
   </view>
@@ -145,7 +144,7 @@
     <view class="promote_text">
       http://klart.cn
     </view>
-    <view class="promote_copy">
+    <view class="promote_copy" bindtap="copysponsoredlinks" data-text="{{sponsoredlinks}}">
       点击复制链接
     </view>
   </view>
@@ -153,7 +152,7 @@
     <view class="promote_text">
       http://klart.cn
     </view>
-    <view class="promote_copy">
+    <view class="promote_copy" bindtap="copysponsoredlinks" data-text="{{sponsoredlinks}}">
       点击复制链接
     </view>
   </view>
@@ -161,7 +160,7 @@
     <view class="promote_text">
       http://klart.cn
     </view>
-    <view class="promote_copy">
+    <view class="promote_copy" bindtap="copysponsoredlinks" data-text="{{sponsoredlinks}}">
       点击复制链接
     </view>
   </view>
