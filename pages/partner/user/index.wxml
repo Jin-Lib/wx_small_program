@@ -1,3 +1,79 @@
-<view >
-  个人中心
+
+
+<view class="partner_user">
+  <view class="partner_top_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/user/cp-top.0365f123.png" mode="widthFix"></image>
+  </view>
+  <view class="partner_nim">
+    <view class="partner_nim_img">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <image class="partnervip" src="http://cdn.koalaxiezi.com/ceshi/user/v-icon.76ec6b35.png" mode="widthFix"></image>
+    </view>
+    <view class="partner_nim_name">张驰</view>
+    <view class="partner_nim_partn">初级合伙人</view>
+  </view>
+
+  <view class="partner_usertext">
+    <view class="partner_user_num">
+      <view class="partner_user_num_sy">
+        累计总收益
+        <view><i>10423</i></view>
+        <view>今日<span>+1423</span></view>
+      </view>
+      <view class="partner_user_num_fs">
+        当前粉丝数
+        <view><i>123</i></view>
+        <view>今日<span>+13</span></view>
+      </view>
+      <view class="partner_user_num_rs">
+        社群合伙人数
+        <view><i>5423</i></view>
+        <view>今日<span>+3</span></view>
+      </view>
+    </view>
+    <view class="partner_tinum">
+      <view class="tinum_text">可提现(元)</view>
+      <view class="tinum_num">5092 ></view>
+    </view>
+  </view>
+</view>
+
+<view class="unlock_progress">
+  <view class="unlock_progress_title">解锁进度</view>
+  <view class="unlock_progress_zy">解锁为高级合伙人，收益直涨2-10倍！</view>
+  <view class="unlock_progress_jdzt">
+    <view class="loadbar">
+      <i>7/10</i>
+      <view class="bar ff6422" style="width:70%"></view>
+    </view>
+    直推合伙人数
+  </view>
+  <view class="unlock_progress_jdsq">
+    <view class="loadbar">
+      <i>7/200</i>
+      <view class="bar fd8d14" style="width:2%"></view>
+    </view>
+    社群累计粉丝数
+  </view>
+  <view class="unlock_progress_jdgr">
+    <view class="loadbar">
+      <i>200/1000</i>
+      <view class="bar fdbe14" style="width:20%"></view>
+    </view>
+    个人累计总收益
+  </view>
+</view>
+
+<view class="unlock_progress">
+  <view class="unlock_progress_title">推广锁粉</view>
+  <view class="unlock_progress_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/user/fansLockBg.png" mode="widthFix"></image>
+  </view>
+</view>
+
+<view class="unlock_progress">
+  <view class="unlock_progress_title">工具中心</view>
+  <view class="unlock_progress_img2">
+    <image src="http://cdn.koalaxiezi.com/ceshi/user/gongJu.png" mode="widthFix"></image>
+  </view>
 </view>
