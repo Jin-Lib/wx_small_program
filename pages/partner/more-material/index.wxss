@@ -1,5 +1,5 @@
 page{background-color: #f7f7f7;}
-.purchase_reminder{width: 705rpx; background-color: #fff;padding: 30rpx 25rpx;border-bottom-right-radius: 30rpx;border-bottom-left-radius: 30rpx; display: flex;flex-wrap: wrap;}
+.purchase_reminder{width: 704rpx; background-color: #fff;padding: 30rpx 25rpx;border-bottom-right-radius: 30rpx;border-bottom-left-radius: 30rpx; display: flex;flex-wrap: wrap;}
 .share_popup image{width: 450rpx;margin-left: 150rpx;margin-top: 20rpx;}
 .purc_text_title{font-size: 26rpx;font-weight: 900;}
 .purc_text_title i{font-size: 28rpx;padding: 0rpx 14rpx; background-color: #f86f22; color: #fff;height: 17rpx;border-radius: 50%;margin-left: 5rpx;}
@@ -12,3 +12,15 @@ page{background-color: #f7f7f7;}
 .marter_img{width: 210rpx; margin-left: 30rpx; height: 210rpx; overflow: hidden;border-radius: 10rpx; margin-top:20rpx;position: relative;}
 .marter_img image{width: 210rpx;}
 .marter_img i{position: absolute;top: 0;right: 0; width: 150rpx; text-align: center; font-size: 20rpx; color: #fff;background-color:#f86f22;}
+.promote_hua{width: 715rpx;display: flex;overflow-x: scroll;justify-content: space-between;margin-left: 15rpx;}
+.promote{width: 520rpx; background-color: #fff; padding: 30rpx 25rpx; border-radius: 10rpx;margin-left: 20rpx;margin-top: 30rpx;}
+.promote_text{font-size: 24rpx;line-height: 35rpx;}
+.promote_copy{font-size: 22rpx; color: #f86f22;border-bottom: solid #f86f22 3rpx; padding-bottom: 3rpx; margin-left: 390rpx; width: 135rpx;margin-top: 10rpx;}
+
+
+.promote_vi{width: 270rpx; background-color: #fff; padding: 30rpx 25rpx; border-radius: 10rpx;margin-left: 20rpx;margin-top: 30rpx;}
+.promote_video{font-size: 24rpx;line-height: 35rpx;}
+.promote_video video{height: 470rpx; width: 268rpx;}
+.promote_video_copy{font-size: 22rpx; color: #f86f22;border-bottom: solid #f86f22 3rpx; padding-bottom: 3rpx; margin-left: 130rpx; width: 135rpx;margin-top: 10rpx;}
+.promote_video_lj{font-size: 22rpx; color: #fc4850;border-bottom: solid #fc4850 3rpx; padding-bottom: 3rpx; margin-left: 90rpx; width: 175rpx;margin-top: 10rpx;}
+.bottomjl{margin-bottom: 50rpx;}

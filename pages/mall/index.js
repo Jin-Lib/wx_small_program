@@ -169,7 +169,7 @@ Page({
   //点击限时爆款更多
   more: function (event) {
     wx.navigateTo({
-      url: '/pages/logs/logs'
+      url: '/pages/explosion-more/index'
     })
   },
   //点击商品详情
