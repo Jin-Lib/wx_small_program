@@ -15,23 +15,23 @@
 
   <view class="partner_usertext">
     <view class="partner_user_num">
-      <view class="partner_user_num_sy">
-        累计总收益
+      <view class="partner_user_num_sy" bindtap="totalrevenue">
+        累计总收益 >
         <view><i>10423</i></view>
         <view>今日<span>+1423</span></view>
       </view>
-      <view class="partner_user_num_fs">
-        当前粉丝数
+      <view class="partner_user_num_fs" bindtap="numberoffans">
+        当前粉丝数 >
         <view><i>123</i></view>
         <view>今日<span>+13</span></view>
       </view>
-      <view class="partner_user_num_rs">
-        社群合伙人数
+      <view class="partner_user_num_rs" bindtap="community">
+        社群合伙人数 >
         <view><i>5423</i></view>
         <view>今日<span>+3</span></view>
       </view>
     </view>
-    <view class="partner_tinum">
+    <view class="partner_tinum" bindtap="withdraw">
       <view class="tinum_text">可提现(元)</view>
       <view class="tinum_num">5092 ></view>
     </view>
@@ -69,11 +69,20 @@
   <view class="unlock_progress_img">
     <image src="http://cdn.koalaxiezi.com/ceshi/user/fansLockBg.png" mode="widthFix"></image>
   </view>
+  <view class="unlock_progress_djk">
+    <view class="unlock_prog_lsfs" bindtap="temporaryfans"></view>
+    <view class="unlock_prog_zksf" bindtap="lockpowder"></view>
+    <view class="unlock_prog_ppjs" bindtap="introduction"></view>
+  </view>
 </view>
 
 <view class="unlock_progress">
   <view class="unlock_progress_title">工具中心</view>
   <view class="unlock_progress_img2">
     <image src="http://cdn.koalaxiezi.com/ceshi/user/gongJu.png" mode="widthFix"></image>
+  </view>
+  <view class="unlock_progress_djk">
+    <view class="unlock_prog_lsfs" bindtap="visitors"></view>
+    <view class="unlock_prog_zksf" bindtap="addressbook"></view>
   </view>
 </view>

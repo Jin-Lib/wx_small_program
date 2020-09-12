@@ -25,7 +25,7 @@ page{background-color: #f7f7f7;position: relative;}
 .partner_user_num_rs view{margin-top: 10rpx; font-size: 20rpx;}
 .partner_user_num_rs view span{font-size: 20rpx;color: #f86f22;}
 .partner_tinum{width: 580rpx; display: flex;flex-wrap: wrap;justify-content:space-between;/*左右分开*/border-top: #e2e2e2 solid 3rpx; padding: 15rpx 40rpx;font-size: 22rpx;margin-top: 20rpx;}
-.unlock_progress{width: 610rpx;background-color: #fff;border-radius: 15rpx; padding: 20rpx 40rpx;margin-left: 30rpx;margin-top: 20rpx;}
+.unlock_progress{width: 610rpx;background-color: #fff;border-radius: 15rpx; padding: 20rpx 40rpx;margin-left: 30rpx;margin-top: 20rpx;position: relative;}
 .unlock_progress_title{font-size: 36rpx; font-weight: 900;}
 .unlock_progress_zy{font-size: 22rpx;margin-top: 6rpx;}
 .unlock_progress_jdzt{font-size: 22rpx;margin-top: 15rpx;}
@@ -61,3 +61,7 @@ page{background-color: #f7f7f7;position: relative;}
     .unlock_progress_img image{width: 320rpx;}
     .unlock_progress_img2{width: 200rpx;margin-top: 30rpx;}
     .unlock_progress_img2 image{width: 200rpx;}
+    .unlock_progress_djk{position: absolute;top: 80rpx; left: 10rpx;display: flex;flex-wrap: wrap;}
+    .unlock_prog_lsfs{ width: 120rpx; height: 120rpx;}
+    .unlock_prog_zksf{ width: 120rpx; height: 120rpx;}
+    .unlock_prog_ppjs{ width: 120rpx; height: 120rpx;}
