@@ -8,7 +8,7 @@ page{background-color: #f7f7f7;}
 .category{position: fixed;top: 0;left: 0; width: 700rpx; padding:0rpx 30rpx; background-color: #fff;}
 .category_column{float: left; text-align: center; width: 170rpx; font-size: 28rpx; padding:20rpx 0rpx; }
 .add{color: #fc4850; border-bottom: solid 3rpx #fc4850; font-weight: 900;}
-.filter{float: left;width: 750rpx; background-color: #fcfcfc;margin-top:-16rpx;}
+.filter{float: left;width: 750rpx; background-color: #fcfcfc;margin-top:-16rpx;margin-top: 100rpx;}
 .filter_age{float: left; width: 330rpx; padding: 20rpx 0rpx; text-align: center; margin-left: 25rpx;}
 .filt_age_text{float: left; margin-left: 30rpx; font-size: 28rpx;}
 .filt_age_num{float: left; margin-top: -3rpx; margin-left: 15rpx;}

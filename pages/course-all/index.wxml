@@ -1,9 +1,9 @@
 
 <view class="nav1 bc_white">
-  <view class="{{selected?'red1':'default1'}}" bindtap="selected">综合</view>
-  <view class="{{selected1?'red1':'default1'}}" bindtap="selected1">上新</view>
-  <view class="{{selected2?'red1':'default1'}}" bindtap="selected2">销量</view>
-  <view class="{{selected3?'red1':'default1'}}" bindtap="selected3">观看</view>
+  <view class="{{selectedKey === '0'?'red1':'default1'}}" data-key="0" bindtap="selected">综合</view>
+  <view class="{{selectedKey === '1'?'red1':'default1'}}" data-key="1" bindtap="selected">上新</view>
+  <view class="{{selectedKey === '2'?'red1':'default1'}}" data-key="2" bindtap="selected">销量</view>
+  <view class="{{selectedKey === '3'?'red1':'default1'}}" data-key="3" bindtap="selected">观看</view>
 </view>
 
 <view class="filter">
@@ -41,25 +41,33 @@
   </view>
 </view>
 
-
-<view class="{{selected?'show1':'hidden1'}}">
-  <view class="screening_courses">
-    <view class="scre_cour_k" bindtap="details">
-      <view class="scre_cour_img">
-        <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
-      </view>
-      <view class="scre_cour_text">
-        <view class="scre_cour_text_title">423423</view>
-        <view class="scre_cour_text_label"><i>5~8岁</i><i>艺术启蒙</i><i>想象力</i></view>
-        <view class="scre_cour_text_buy">
-          <view class="scre_cour_text_buy_ji">100集</view>
-          <view class="scre_cour_text_buy_text">5e.67万购买</view>
+<view>
+  <block
+    wx:for="{{courseList}}"
+    wx:key="*this"
+  >
+    <view class="screening_courses">
+      <view class="scre_cour_k" data-id="{{item.id}}" bindtap="details">
+        <view class="scre_cour_img">
+          <image src="{{item.imgs && item.imgs[0]}}" mode="widthFix"></image>
+        </view>
+        <view class="scre_cour_text">
+          <view class="scre_cour_text_title">{{item.title}}</view>
+          <view class="scre_cour_text_label">
+            <i wx:for="{{item.label || []}}" wx:for-item="itemData" wx:key="index">
+              {{ itemData }}
+            </i>  
+          </view>
+          <view class="scre_cour_text_buy">
+            <view class="scre_cour_text_buy_ji">{{item.chapter_count}}集</view>
+            <view class="scre_cour_text_buy_text">{{item.buy_count}}购买</view>
+          </view>
         </view>
       </view>
     </view>
-  </view>
+  </block>
 </view>
-
+<!-- 
 <view class="{{selected1?'show1':'hidden1'}}">
   <view class="screening_courses">
     <view class="scre_cour_k" bindtap="details">
@@ -112,7 +120,7 @@
       </view>
     </view>
   </view>
-</view>
+</view> -->
 
 
 

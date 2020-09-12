@@ -3,46 +3,24 @@ const API = require('../../config/api');
 
 Page({
   data: {
-    selected: true,
-    selected1: false,
-    selected2: false,
-    selected3: false,
+    pagination: {
+      page: 1,
+      pageSize: 10
+    },
+    selectedKey: '0',
     cacheClassification: [], // 存储类目数据列表
     classification: [], // 类目数据列表
-    classificationIndex: [0, 0], // 类目数据列表选项
+    classificationIndex: [], // 类目数据列表选项
     agePickerArray: [], // 年龄数据
     agePickerIndex: 0, // 年龄选择值
+
+    courseList: []
   },
   selected: function (e) {
     this.setData({
-      selected1: false,
-      selected: true,
-      selected2: false,
-      selected3: false,
-    });
-  },
-  selected1: function (e) {
-    this.setData({
-      selected: false,
-      selected1: true,
-      selected2: false,
-      selected3: false,
-    });
-  },
-  selected2: function (e) {
-    this.setData({
-      selected: false,
-      selected1: false,
-      selected2: true,
-      selected3: false,
-    });
-  },
-  selected3: function (e) {
-    this.setData({
-      selected: false,
-      selected1: false,
-      selected2: false,
-      selected3: true,
+      selectedKey: e.target.dataset.key
+    }, () => {
+      this.searchCourseList();
     });
   },
   onLoad: function () {
@@ -50,6 +28,8 @@ Page({
     this.getCourseCate();
     // 创建年龄数据
     this.createAgeList();
+
+    this.searchCourseList();
   },
   /**
    * 生命周期函数--监听页面显示
@@ -76,9 +56,9 @@ Page({
     })
   },
   //点击商品详情
-  details: function (event) {
+  details: function (e) {
     wx.navigateTo({
-      url: '/pages/course-detail/index'
+      url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}`
     })
   },
   /**
@@ -89,6 +69,7 @@ Page({
    */
   getCourseCate: function(event) {
     let that = this;
+
     API.getCourseCate()
       .then(res => {
         const list = res && res.list || [];
@@ -96,7 +77,7 @@ Page({
         this.setData({
           cacheClassification: list,
           classification: that.getClassificationColumnData(list, 0),
-          classificationIndex: [0, 0]
+          classificationIndex: []
         })
       })
   },
@@ -110,6 +91,25 @@ Page({
     this.setData({
       classificationIndex: event.detail.value
     })
+  },
+
+  // 搜索课程列表
+  searchCourseList: function() {
+    let that = this;
+    let { pagination, selectedKey } = this.data;
+    let param = {
+      ...pagination,
+      sort: selectedKey,
+      // cateId: 
+    };
+
+    API.searchCourseList(param)
+      .then(res => {
+
+        that.setData({
+          courseList: res && res.items || []
+        });
+      })
   },
 
   /**

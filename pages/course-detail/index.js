@@ -45,17 +45,27 @@ Page({
       },
     ], // banner 轮播区域数据
   },
+
+  onLoad: function (options) {
+    // this.getcreateData();
+
+    this.getdetailData(options.id);
+
+    // wx.navigateTo({
+    //   url: '/pages/course-share/index'
+    // })
+  },
+
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   // 获取课程信息
-  getdetailData: function () {
+  getdetailData: function (id) {
     API.getweek({
-      id: 1
+      id
     }).then(res => {//成功
       console.log('课程详情', res);
       //const { rows } = res || {};
@@ -193,16 +203,6 @@ Page({
       currentTabSub: event.currentTarget.dataset.sub
     })
   },
-  onLoad: function () {
-    this.getcreateData();
-
-    this.getdetailData();
-
-    // wx.navigateTo({
-    //   url: '/pages/course-share/index'
-    // })
-  },
-
   /**
    * 监听页面滚动事件
    * @date 2020-09-04

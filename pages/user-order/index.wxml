@@ -1,116 +1,53 @@
 
 <view class="nav1 bc_white">
-  <view class="{{selected?'red1':'default1'}}" bindtap="selected">全部(14)</view>
-  <view class="{{selected1?'red1':'default1'}}" bindtap="selected1">待付款(2)</view>
-  <view class="{{selected2?'red1':'default1'}}" bindtap="selected2">拼团中(2)</view>
-  <view class="{{selected3?'red1':'default1'}}" bindtap="selected3">拼团失败(2)</view>
-  <view class="{{selected4?'red1':'default1'}}" bindtap="selected4">已完成(2)</view>
+  <view class="{{selected === '0' ?'red1':'default1'}}" data-key="0" bindtap="selectTab">全部</view>
+  <view class="{{selected === '1' ?'red1':'default1'}}" data-key="1" bindtap="selectTab">待付款</view>
+  <view class="{{selected === '2' ?'red1':'default1'}}" data-key="2" bindtap="selectTab">拼团中</view>
+  <view class="{{selected === '3' ?'red1':'default1'}}" data-key="3" bindtap="selectTab">拼团失败</view>
+  <view class="{{selected === '4' ?'red1':'default1'}}" data-key="4" bindtap="selectTab">已完成</view>
 </view>
-<view class="{{selected?'show1':'hidden1'}}">
 
-  
-<block
+<view style="margin-top: 130rpx">
+  <block
     wx:for="{{orderData}}"
     wx:key="id">
-  <view class="order_k">
-    <view class="single_number">订单号：{{item.order_no}}</view><!--前面是单号生成日期中间是课程编号末尾随机-->
-    <view class="order_conteron">
-      <view class="order_right">
-        <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-      </view>
-      <view class="order_left">
-        <view class="order_left_title">
-          <view class="text_title">100手唐诗国学</view>
-          <view class="text_num">￥9.9</view>
+    <view class="order_k">
+      <view class="single_number">订单号：{{item.order_no}}</view><!--前面是单号生成日期中间是课程编号末尾随机-->
+      <view class="order_conteron">
+        <view class="order_right">
+          <image src="{{item.catalog_img}}" mode="widthFix"></image>
         </view>
-        <view class="order_left_status">
-          <view class="status_title">交易取消</view>
-          <view class="status_num">￥0</view>
+        <view class="order_left">
+          <view class="order_left_title">
+            <view class="text_title">{{item.title}}</view>
+            <view class="text_num">￥{{item.course_price}}</view>
+          </view>
+          <!-- 0=>创建订单等待付款 1=>付款成功等待成团 2=>购买成功 3=>订单取消 4拼团失败 -->
+          <view class="order_left_status">
+            <view class="status_title">{{
+              item.status === 0 ? '等待付款' : (
+                item.status === 1 ? '付款成功等待成团' : (
+                  item.status === 2 ? '购买成功' : (
+                    item.status === 3 ? '订单取消' : (
+                      item.status === 4 ? '拼团失败' : ''
+                    )
+                  )
+                )
+              )
+            }}</view>
+            <view class="status_num">￥{{item.price}}</view>
+          </view>
         </view>
       </view>
+      <view wx:if="{{item.status === 0}}" class="order_buy">付款</view>
+      <view class="order_buy huise">赚奖学金</view>
     </view>
-    <view class="order_buy">再次购买</view>
-  </view>
-</block>
-
+  </block>
  </view>
 
-<view class="{{selected1?'show1':'hidden1'}}">
+<view wx:if="{{orderData.length === 0}}">
   <view class="order_k_img">
     <image src="/resource/img/order_no.png" mode="widthFix"></image>
   </view>
 </view>
 
-<view class="{{selected2?'show1':'hidden1'}}">
-  <view class="order_k_img">
-    <image src="/resource/img/order_no.png" mode="widthFix"></image>
-  </view>
-</view>
-
-<view class="{{selected3?'show1':'hidden1'}}">
-
-  <view class="order_k">
-    <view class="single_number">订单号：20200901191926926</view><!--前面是单号生成日期中间是课程编号末尾随机-->
-    <view class="order_conteron">
-      <view class="order_right">
-        <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-      </view>
-      <view class="order_left">
-        <view class="order_left_title">
-          <view class="text_title">100手唐诗国学</view>
-          <view class="text_num">￥9.9</view>
-        </view>
-        <view class="order_left_status">
-          <view class="status_title">拼团失败已退款</view>
-          <view class="status_num">￥3.9</view>
-        </view>
-      </view>
-    </view>
-    <view class="order_buy">再次购买</view>
-  </view>
-
-</view>
-
-<view class="{{selected4?'show1':'hidden1'}}">
-
-  <view class="order_k">
-    <view class="single_number">订单号：20200901191926926</view><!--前面是单号生成日期中间是课程编号末尾随机-->
-    <view class="order_conteron">
-      <view class="order_right">
-        <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-      </view>
-      <view class="order_left">
-        <view class="order_left_title">
-          <view class="text_title">100手唐诗国学</view>
-          <view class="text_num">￥0</view>
-        </view>
-        <view class="order_left_status">
-          <view class="status_title">已完成</view>
-          <view class="status_num">￥0</view>
-        </view>
-      </view>
-    </view>
-    <view class="order_buy">赚奖学金</view>
-  </view>
-
-  <view class="order_k">
-    <view class="single_number">订单号：20200901191926926</view><!--前面是单号生成日期中间是课程编号末尾随机-->
-    <view class="order_conteron">
-      <view class="order_right">
-        <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-      </view>
-      <view class="order_left">
-        <view class="order_left_title">
-          <view class="text_title">100手唐诗国学</view>
-          <view class="text_num">￥10</view>
-        </view>
-        <view class="order_left_status">
-          <view class="status_title">已完成</view>
-          <view class="status_num">￥10</view>
-        </view>
-      </view>
-    </view>
-    <view class="order_buy huise">赚奖学金</view>
-  </view>
-
-</view>

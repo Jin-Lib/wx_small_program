@@ -16,6 +16,17 @@ const API =  {
     method: 'POST'
   },
 
+  // 首页类目
+  getType: {
+    url: `${host}/api/sys/getType`,
+    method: 'GET'
+  },
+
+  // 限时爆款
+  activity: {
+    url: `${host}/api/Course/activity`,
+    method: 'POST'
+  },
 
   /**
    * ======================
@@ -86,6 +97,20 @@ const API =  {
     url: `${host}/api/course/cate`,
     method: 'GET'
   },
+
+  // 根据分类id获取课程
+  'getCourseByCate': {
+    url: `${host}/course/getCourseByCate`,
+    method: 'GET'
+  },
+
+  /**
+   * 所有课程
+   */
+  'searchCourseList': {
+    url: `${host}/api/course/courseList`,
+    method: 'GET'
+  }
 };
 
 let API_RES = {};

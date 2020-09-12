@@ -74,36 +74,16 @@
     </swiper>
   </view>
   <view class="classification">
-    <view class="leaderboard" bindtap="leaderboard">
-      <view class="lead_img">
-        <image src="/resource/nav/home_active.png" mode="widthFix"></image>
+    <block
+      wx:for="{{types}}"
+      wx:key="id">
+      <view class="leaderboard" data-type="{{item.type}}" data-id="{{item.id}}" data-typeid="{{item.type_id}}" bindtap="onClickM">
+        <view class="lead_img">
+          <image src="{{item.image_url}}" mode="widthFix"></image>
+        </view>
+        {{ item.name }}
       </view>
-      排行榜
-    </view>
-    <view class="leaderboard" bindtap="chinese">
-      <view class="lead_img">
-        <image src="/resource/nav/home_active.png" mode="widthFix"></image>
-      </view>
-      大语文
-    </view>
-    <view class="leaderboard" bindtap="geography">
-      <view class="lead_img">
-        <image src="/resource/nav/home_active.png" mode="widthFix"></image>
-      </view>
-      天文地理
-    </view>
-    <view class="leaderboard" bindtap="teacher">
-      <view class="lead_img">
-        <image src="/resource/nav/home_active.png" mode="widthFix"></image>
-      </view>
-      名师专区
-    </view>
-    <view class="leaderboard" bindtap="allcourses">
-      <view class="lead_img">
-        <image src="/resource/nav/home_active.png" mode="widthFix"></image>
-      </view>
-      全部课程
-    </view>
+    </block>
   </view>
 </view>
 <!--限时爆款文字-->

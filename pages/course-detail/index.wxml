@@ -90,7 +90,7 @@
 </view>
 <!--评价-->
 <view wx:if="{{currentTabSub === 2}}" class="evaluation">
-  <image src="http://cdn.koalaxiezi.com/ceshi/7.png" mode="widthFix"></image>
+  <image src="{{coursedetail.appraise_img}}" mode="widthFix"></image>
 </view>
 <!--推荐-->
 <view wx:if="{{currentTabSub === 3}}" class="recommend">

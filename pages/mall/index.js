@@ -59,7 +59,9 @@ Page({
         text: '画画',
         id: 3,
       },
-    ]
+    ],
+
+    types: []
   },
 
   //合伙人临时入口
@@ -71,6 +73,7 @@ Page({
 
   onLoad: function () {
     this.getBannerData();
+    this.getTypeData();
   },
   /**
    * 生命周期函数--监听页面显示
@@ -98,6 +101,21 @@ Page({
       });
     })
   },
+
+  // 获取类目
+  getTypeData: function() {
+    API.getType().then(res => {
+      const { rows } = res || {};
+
+      // 如果code为0，代表成功
+      this.setData({
+        types: rows || []
+      });
+    })
+  },
+
+  // 显示爆款
+  getSomeCourseList: function() {},
 
   //点击浮窗活动右下角
   bottom_advertising: function (event) {
@@ -127,35 +145,26 @@ Page({
     //   url: '/pages/course-detail/index'
     // })
   },
-  //点击排行榜
-  leaderboard: function (event) {
-    wx.navigateTo({
-      url: '/pages/logs/logs'
-    })
-  },
-  //点击大语文
-  chinese: function (event) {
-    wx.navigateTo({
-      url: '/pages/logs/logs'
-    })
-  },
-  //点击天文地理
-  geography: function (event) {
-    wx.navigateTo({
-      url: '/pages/course-menu/index'
-    })
-  },
-  //点击名师专区
-  teacher: function (event) {
-    wx.navigateTo({
-      url: '/pages/course-menu/index'
-    })
-  },
-  //点击全部课程
-  allcourses: function (event) {
-    wx.navigateTo({
-      url: '/pages/course-all/index'
-    })
+
+  // 点击类目
+  onClickM: function(e) {
+    console.log(e);
+    const { type, id, typeid } = e.currentTarget.dataset;
+
+    switch(type) {
+      case 1: // 排行榜
+        break;
+      case 2: // 课程
+        wx.navigateTo({
+          url: '/pages/course-menu/index'
+        })
+        break;
+      case 3: // 全部课程
+        wx.navigateTo({
+          url: '/pages/course-all/index'
+        })
+        break;
+    }
   },
   //点击限时爆款更多
   more: function (event) {
