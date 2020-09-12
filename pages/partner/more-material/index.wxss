@@ -3,7 +3,7 @@ page{background-color: #f7f7f7;}
 .share_popup image{width: 450rpx;margin-left: 150rpx;margin-top: 20rpx;}
 .purc_text_title{font-size: 26rpx;font-weight: 900;}
 .purc_text_title i{font-size: 28rpx;padding: 0rpx 14rpx; background-color: #f86f22; color: #fff;height: 17rpx;border-radius: 50%;margin-left: 5rpx;}
-.purc_text_kg{margin-left: 385rpx;}
+.purc_text_kg{margin-left: 390rpx;}
 .kaiguanjs{position: absolute;top: 0rpx; left: 0rpx;width: 750rpx; height: 100%;}
 .kaiguanjs image{margin-top: 65rpx; margin-left: 120rpx;}
 .category{ width: 650rpx; margin-left: 40rpx; margin-top: 30rpx; }
