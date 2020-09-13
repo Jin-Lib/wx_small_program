@@ -39,15 +39,6 @@ const API =  {
    * 用户模块
    * ======================
    */
-  /**
-   * 获取用户信息
-   * @param 无
-   */
-  'getUserInfo': {
-    url: `${host}/student/user/info`,
-    method: 'POST'
-  },
-
 
   /**
    * 登录接口
@@ -55,6 +46,12 @@ const API =  {
    */
   'login': {
     url: `${host}/api/Login/Login`,
+    method: 'POST'
+  },
+
+  // 意见反馈
+  feedback: {
+    url: `${host}/api/user/feedback`,
     method: 'POST'
   },
 

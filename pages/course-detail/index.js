@@ -212,10 +212,10 @@ Page({
   },
   //点击团购支付按钮
   spell_pay: function (event) {
-    wx.navigateTo({
-      url: `/pages/course-share/index?groupId=2&id=${this.data.coursedetail.id}`
-    })
-    return;
+    // wx.navigateTo({
+    //   url: `/pages/course-share/index?groupId=2&id=${this.data.coursedetail.id}`
+    // })
+    // return;
     let that = this;
     API.getcreate({
       courseId: this.data.coursedetail.id,
@@ -240,7 +240,7 @@ Page({
               duration: 1000
             })
             wx.navigateTo({
-              url: `/pages/course-share/index?groupId=${res.groupId}&id=${coursedetail.id}`
+              url: `/pages/course-share/index?groupId=${res.groupId}&id=${that.data.coursedetail.id}`
             })
             
            },

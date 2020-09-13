@@ -13,11 +13,11 @@
 </view>
 
 <view class="feedback_input">
-  <input placeholder="请输入您的姓名"/>
-  <input placeholder="请输入您的手机号"/>
+  <input placeholder="请输入您的姓名" bindinput="onNameInput"/>
+  <input placeholder="请输入您的手机号" bindinput="onPhoneInput"/>
 </view>
 
-<view class="button" bindtap="show">提交</view><!--每个用户每天只能提交一次~-->
+<view class="button" bindtap="submitFeedback">提交</view><!--每个用户每天只能提交一次~-->
 
 <!--弹窗-->
 <view class="bottom_popup" hidden="{{hidden}}">
