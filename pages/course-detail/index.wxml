@@ -3,22 +3,24 @@
 </view> -->
 <view class="detail_top">
   <view class="detail_bner">
-    <image src="http://cdn.koalaxiezi.com/ceshi/1.png" mode="widthFix"></image>
+    <image src="{{coursedetail.top_img}}"></image>
   </view>
   <view class="detail_video">
     <swiper autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+      <swiper-item wx:if="{{coursedetail.video}}">
+        <video src="{{coursedetail.video}}"></video>
+      </swiper-item>
       <block
-        wx:for="{{courseBannerDetail}}"
+        wx:for="{{coursedetail.imgs || []}}"
         wx:key="*this">
         <swiper-item>
-          <video wx:if="{{item.type === 'video'}}" src="{{item.src}}" poster="{{item.poster}}"></video>
-          <image wx:else class="swiper-image" src="{{item.src}}" />
+          <image class="swiper-image" src="{{item}}" />
         </swiper-item>
       </block>
     </swiper>
   </view>
   <view class="detail_title">
-    {{coursedetail.title}}
+    {{coursedetail.subtitle}}
   </view>
 </view>
 
@@ -78,10 +80,10 @@
 <!--目录-->
 <view wx:if="{{currentTabSub === 1}}" class="default">
   <block
-    wx:if="{{coursedetail.catalog_img && Array.isArray(coursedetail.catalog_img)}}"
+    wx:if="{{coursedetail.catalog_img}}"
   >
     <image
-      wx:for="{{coursedetail.catalog_img}}"
+      wx:for="{{coursedetail.catalog_img || []}}"
       wx:key="this"
       src="{{item}}"
       mode="widthFix">
@@ -90,58 +92,27 @@
 </view>
 <!--评价-->
 <view wx:if="{{currentTabSub === 2}}" class="evaluation">
-  <image src="{{coursedetail.appraise_img}}" mode="widthFix"></image>
+  <block
+    wx:if="{{coursedetail.appraise_img}}"
+  >
+    <image
+      wx:for="{{coursedetail.appraise_img}}"
+      wx:key="this"
+      src="{{item}}"
+      mode="widthFix">
+    </image>
+  </block>
 </view>
 <!--推荐-->
 <view wx:if="{{currentTabSub === 3}}" class="recommend">
   <view class="recommend_title">相关推推荐</view>
   <view class="recommend_detailed">
-    <view class="reco_deta_k">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      <view class="reco_deta_title">天文地理国家地理海天文地理国家地理海</view>
+    <view class="reco_deta_k" wx:for="{{recommendCourseData}}" wx:key="index" data-id="{{item.id}}">
+      <image src="{{item.main_img}}" mode="widthFix"></image>
+      <view class="reco_deta_title">{{item.title}}</view>
       <view class="reco_deta_text">
-        <view class="reco_deta_jg">￥29.9</view>
-        <view class="reco_deta_xl">已售8.0万</view>
-      </view>
-    </view>
-    <view class="reco_deta_k">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      <view class="reco_deta_title">天文地理国家地理海</view>
-      <view class="reco_deta_text">
-        <view class="reco_deta_jg">￥29.9</view>
-        <view class="reco_deta_xl">已售8.0万</view>
-      </view>
-    </view>
-    <view class="reco_deta_k">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      <view class="reco_deta_title">天文地理国家地理海</view>
-      <view class="reco_deta_text">
-        <view class="reco_deta_jg">￥29.9</view>
-        <view class="reco_deta_xl">已售8.0万</view>
-      </view>
-    </view>
-    <view class="reco_deta_k">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      <view class="reco_deta_title">天文地理国家地理海</view>
-      <view class="reco_deta_text">
-        <view class="reco_deta_jg">￥29.9</view>
-        <view class="reco_deta_xl">已售8.0万</view>
-      </view>
-    </view>
-    <view class="reco_deta_k">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      <view class="reco_deta_title">天文地理国家地理海</view>
-      <view class="reco_deta_text">
-        <view class="reco_deta_jg">￥29.9</view>
-        <view class="reco_deta_xl">已售8.0万</view>
-      </view>
-    </view>
-    <view class="reco_deta_k">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      <view class="reco_deta_title">天文地理国家地理海</view>
-      <view class="reco_deta_text">
-        <view class="reco_deta_jg">￥29.9</view>
-        <view class="reco_deta_xl">已售8.0万</view>
+        <view class="reco_deta_jg">￥{{item.price}}</view>
+        <view class="reco_deta_xl">已售{{item.buy_count}}</view>
       </view>
     </view>
     <view class="change">换一换</view>
@@ -163,17 +134,17 @@
     vertical="{{true}}"
   >
     <block
-      wx:for="{{spellGroupList}}"
+      wx:for="{{broadcastData }}"
       wx:key="*this"
     >
       <swiper-item>
         <view class="prompt">
           <view class="prompt_img">
-            <image src="{{item.image}}" mode="widthFix"></image>
+            <image src="{{item.logo}}" mode="widthFix"></image>
           </view>
           <view class="prompt_text">
-            <view class="prom_text_name">{{item.nick}}</view>
-            <view class="prom_text_title">{{item.status}}</view>
+            <view class="prom_text_name">{{item.nickname}}</view>
+            <view class="prom_text_title">{{item.time}}{{item.unit}}前拼团成功</view>
           </view>
         </view>
       </swiper-item>

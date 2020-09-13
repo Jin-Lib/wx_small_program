@@ -49,7 +49,7 @@
     <view class="screening_courses">
       <view class="scre_cour_k" data-id="{{item.id}}" bindtap="details">
         <view class="scre_cour_img">
-          <image src="{{item.imgs && item.imgs[0]}}" mode="widthFix"></image>
+          <image src="{{item.main_img}}" mode="widthFix"></image>
         </view>
         <view class="scre_cour_text">
           <view class="scre_cour_text_title">{{item.title}}</view>

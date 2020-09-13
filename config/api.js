@@ -28,6 +28,12 @@ const API =  {
     method: 'POST'
   },
 
+  // 首页分类数据
+  indexCateCourse: {
+    url: `${host}/api/course/indexCateCourse`,
+    method: 'GET'
+  },
+
   /**
    * ======================
    * 用户模块
@@ -61,6 +67,12 @@ const API =  {
     url: `${host}/api/course/detail`,
     method: 'GET'
   },
+
+  // 课程跑马灯
+  'broadcast': {
+    url: `${host}/api/course/broadcast`,
+    method: 'GET'
+  },
   /**
    * ===================
    * 下单
@@ -69,6 +81,12 @@ const API =  {
   'getcreate': {
     url: `${host}/api/order/create`,
     method: 'POST'
+  },
+
+  // 支付
+  pay: {
+    url: `${host}/api/order/pay`,
+    method: 'GET'
   },
   /**
    * ===================
@@ -98,9 +116,14 @@ const API =  {
     method: 'GET'
   },
 
+  'groupInfo': {
+    url: `${host}/api/order/groupInfo`,
+    method: 'GET'
+  },
+
   // 根据分类id获取课程
   'getCourseByCate': {
-    url: `${host}/course/getCourseByCate`,
+    url: `${host}/api/course/getCourseByCate`,
     method: 'GET'
   },
 
@@ -109,6 +132,12 @@ const API =  {
    */
   'searchCourseList': {
     url: `${host}/api/course/courseList`,
+    method: 'GET'
+  },
+
+  // 推荐
+  recommend: {
+    url: `${host}/api/course/recommend`,
     method: 'GET'
   }
 };

@@ -9,6 +9,7 @@ page {
 .detail_bner {
   width: 750rpx;
   height: 150rpx;
+
 }
 
 .detail_bner image {

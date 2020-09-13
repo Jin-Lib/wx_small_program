@@ -11,12 +11,14 @@
 </view>
 
 <view class="share_top">
-  <view class="share_top_title">邀请2个新用户，即可成团</view><!--邀请2个用户，即可成团-->
+  <view class="share_top_title">邀请{{groupInfo.groupNum - length}}个新用户，即可成团</view><!--邀请2个用户，即可成团-->
   <view class="share_top_time">离结束<i>40</i>:<i>58</i>:<i>42</i>:<i>15</i></view>
   <view class="share_top_img">
-    <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
-    <image src="/resource/img/noUserImg.png" mode="widthFix"></image>
-    <image src="/resource/img/noUserImg.png" mode="widthFix"></image>
+    <image 
+      wx:for="{{users}}" 
+      src="{{item.head_img ? item.head_img : '/resource/img/noUserImg.png'}}" 
+      mode="widthFix">
+    </image>
   </view>
   <view class="share_top_button" bindtap="showrecommend">
     立即邀请
@@ -33,30 +35,15 @@
 <view class="recommend">
   <view class="recommend_title">相关推荐</view>
   <view class="recommend_detailed">
-    <view class="reco_deta_k">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      <view class="reco_deta_title">天文地理国家地理海天文地理国家地理海</view>
+    <view class="reco_deta_k" wx:for="{{courseData}}" wx:key="{{index}}">
+      <image src="{{item.main_img}}" mode="widthFix"></image>
+      <view class="reco_deta_title">{{item.title}}</view>
       <view class="reco_deta_text">
-        <view class="reco_deta_jg">￥29.9</view>
-        <view class="reco_deta_xl">已售8.0万</view>
+        <view class="reco_deta_jg">￥{{'没有字段'}}</view>
+        <view class="reco_deta_xl">已售{{item.buy_count}}万</view>
       </view>
     </view>
-    <view class="reco_deta_k">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      <view class="reco_deta_title">天文地理国家地理海</view>
-      <view class="reco_deta_text">
-        <view class="reco_deta_jg">￥29.9</view>
-        <view class="reco_deta_xl">已售8.0万</view>
-      </view>
-    </view>
-    <view class="reco_deta_k">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      <view class="reco_deta_title">天文地理国家地理海</view>
-      <view class="reco_deta_text">
-        <view class="reco_deta_jg">￥29.9</view>
-        <view class="reco_deta_xl">已售8.0万</view>
-      </view>
-    </view>
+    
     <view class="change">换一换</view>
   </view>
 </view>

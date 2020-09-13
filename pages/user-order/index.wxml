@@ -39,8 +39,8 @@
           </view>
         </view>
       </view>
-      <view wx:if="{{item.status === 0}}" class="order_buy">付款</view>
-      <view class="order_buy huise">赚奖学金</view>
+      <view wx:if="{{item.status === 0}}" class="order_buy" data-orderno="{{item.order_no}}" data-id="{{item.course_id}}" bindtap="pay">付款</view>
+      <!-- <view class="order_buy huise">赚奖学金</view> -->
     </view>
   </block>
  </view>

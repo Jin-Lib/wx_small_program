@@ -1,5 +1,5 @@
 //index.js
-
+const API = require('../../config/api');
 Page({
   data: {
     hiddenposter: true, //海报生成弹窗
@@ -27,7 +27,93 @@ Page({
     ], // 拼团列表
     tabChangeList: ['详情', '目录', '评价'], // tab切换目录
     currentTabSub: 0, // tab切换下标
+
+    groupId: '',
+    groupInfo: {},
+    users: [],
+    length: 0,
+    coursedetail: {},
+    courseData: []
   },
+
+  onLoad: function (options) {
+    const { groupId, id } = options;
+    this.setData({
+      groupId,
+      id
+    });
+    this.groupInfoData(groupId)
+    this.getdetailData(id);
+    this.recommendData();
+  },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  // 获取团信息
+  groupInfoData: function (groupId) {
+    API.groupInfo({
+      groupId
+    }).then(res => {//成功
+      let { users = [], groupNum = 0 } = res || {};
+      let len = users.length;
+      for(let i = 0; i < (groupNum - len); i++) {
+        users.push({});
+      }
+     
+      this.setData({
+        users,
+        groupInfo: res,
+        length: len
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
+  },
+
+  // 获取课程信息
+  getdetailData: function (id) {
+    API.getweek({
+      id
+    }).then(res => {//成功
+      this.setData({
+        coursedetail: res
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
+  },
+
+  // 推荐
+  recommendData: function() {
+    API.recommend({
+      scene: 'detail',
+      page: 1,
+      pageSize: 3
+    }).then(res => {//成功
+      this.setData({
+        courseData: res && res.items || []
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
+  },
+
   //--分享出去，别人看到的页面--
   hhsr: function (event) {
     wx.navigateTo({
@@ -83,15 +169,6 @@ Page({
       hiddenposter: !this.data.hiddenposter
     })
   },
-  onLoad: function () {
-
-  },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
   /**
    * 监听页面滚动事件
    * @date 2020-09-04
@@ -114,5 +191,22 @@ Page({
     this.setData({
       currentTabSub: event.currentTarget.dataset.sub
     })
-  }
+  },
+
+  // 分享
+  onShareAppMessage: function() {
+    const { groupInfo = {}, coursedetail = {}, groupId, id } = this.data;
+    console.log(coursedetail)
+
+    return {
+      title: coursedetail.title || "",
+      path: `/pages/course-share/index?groupId=${groupId}&id=${id}`,
+      imageUrl: coursedetail.main_img,
+      desc: coursedetail.subtitle,
+      success: (res) => {
+      },
+      fail: (res) => {
+      }
+    };
+  },
 })

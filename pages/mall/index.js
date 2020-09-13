@@ -10,41 +10,11 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     recommendedAge: ['4岁', '5岁'],
     recommendedAgeSelectIndex: 0,
-    recommendedList: [
-      {
-        logoSrc: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        title: "世界地理之最",
-        desc: "9天提升科学探索欲望",
-        buyCount: '77098',
-        buyImages: [
-          "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132",
-          "https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132",
-          "https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132",
-          "http://cdn.koalaxiezi.com/image1/product.jpg",
-        ]
-      }
+    // 推荐课程
+    recommendCourseData: [
     ],
 
-    bannerData: [
-      {
-        id: 1,
-        url: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        banner_type: 1
-      },
-      {
-        id: 1,
-        url: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        banner_type: 2
-      },
-      {
-        id: 1,
-        url: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        image_url: "http://cdn.koalaxiezi.com/image1/product.jpg",
-        banner_type: 3
-      }
-    ],
+    bannerData: [],
 
     searchKeywords: [
       {
@@ -61,7 +31,20 @@ Page({
       },
     ],
 
-    types: []
+    types: [],
+    // 限时爆款
+    limitTimeCourseData: [],
+    // 最新上架
+    newCourseData: [],
+    // 今日热销
+    todayHotCourseData: [],
+    // 智能推荐
+    courseList: [],
+    panigation: {
+      page: 1,
+      pageSize: 10
+    },
+    isMore: true
   },
 
   //合伙人临时入口
@@ -74,6 +57,13 @@ Page({
   onLoad: function () {
     this.getBannerData();
     this.getTypeData();
+    this.getSomeCourseList('1');
+    this.getSomeCourseList('2');
+    this.getSomeCourseList('3');
+    this.recommendData();
+
+    this.getIndexCateCourse();
+    this.searchCourseList();
   },
   /**
    * 生命周期函数--监听页面显示
@@ -115,7 +105,93 @@ Page({
   },
 
   // 显示爆款
-  getSomeCourseList: function() {},
+  getSomeCourseList: function(type) {
+    let params = {
+      activity_type: type,
+      page: 1,
+      pageSize: 10
+    };
+
+    API.activity(params).then(res => {
+      const { list = [] } = res || {};
+
+      switch(type) {
+        case '1':  // 限时爆款
+          this.setData({
+            limitTimeCourseData: list || []
+          });
+          break;
+        case '2':  // 最新上架
+          this.setData({
+            newCourseData: list || []
+          });
+          break;
+        case '3':  // 今日热销
+          this.setData({
+            todayHotCourseData: list || []
+          });
+          break;
+      }
+      
+    })
+  },
+
+  // 推荐
+  recommendData: function() {
+    wx.showLoading({
+      title: '努力加载中',
+    })
+    API.recommend({
+      scene: 'index',
+      ...this.data.panigation
+    }).then(res => {//成功
+      let data = res && res.items || [];
+
+      if(data.length < this.data.panigation.pageSize) {
+        this.setData({
+          isMore: false
+        });
+      }
+      this.setData({
+        recommendCourseData: this.data.recommendCourseData.concat(res && res.items || []) 
+      });
+      wx.hideLoading()
+    }).catch(err => {
+      wx.hideLoading()
+    })
+  },
+
+  // 智能推荐课程列表
+  searchCourseList: function() {
+    let that = this;
+    let param = {
+      page: 1,
+      pageSize: 10,
+      minAge: 0,
+      maxAge: 3
+    };
+
+    API.searchCourseList(param)
+      .then(res => {
+
+        that.setData({
+          courseList: res && res.items || []
+        });
+      })
+  },
+
+  // 获取分类课程数据
+  getIndexCateCourse: function() {
+    API.indexCateCourse({
+    }).then(res => {//成功
+      let data = res && res.list || [];
+
+      this.setData({
+        indexCateCourseData: data 
+      });
+    }).catch(err => {
+    })
+  },
 
   //点击浮窗活动右下角
   bottom_advertising: function (event) {
@@ -156,7 +232,7 @@ Page({
         break;
       case 2: // 课程
         wx.navigateTo({
-          url: '/pages/course-menu/index'
+          url: `/pages/course-menu/index?cateId=${typeid}`
         })
         break;
       case 3: // 全部课程
@@ -173,9 +249,9 @@ Page({
     })
   },
   //点击商品详情
-  details: function (event) {
+  details: function (e) {
     wx.navigateTo({
-      url: '/pages/course-detail/index'
+      url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}`
     })
   },
 
@@ -193,27 +269,15 @@ Page({
   },
   // 上拉加载
   onReachBottom() {
-    const resultList = {
-      logoSrc: "http://cdn.koalaxiezi.com/image1/product.jpg",
-      title: "世界地理之最",
-      desc: "9天提升科学探索欲望",
-      buyCount: '77098',
-      buyImages: ["https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132",
-        "https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132",
-        "https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132",
-        "http://cdn.koalaxiezi.com/image1/product.jpg",
-      ]
-    }
-    wx.showLoading({
-      title: '努力加载中',
-    })
-    setTimeout(() => {
-      this.setData({
-        recommendedList: this.data.recommendedList.concat(new Array(5).fill(resultList))
-      }, () => {
-        wx.hideLoading()
+    if(!this.data.isMore) {
+      wx.showToast({//错误
+        title: '没有更多数据了',
+        icon: 'none',
+        duration: 1000
       })
-    }, 2000)
+      return;
+    }
+    this.recommendData();
   },
   // 点击banner详情图
   bannerTap: function (event) {
