@@ -58,9 +58,12 @@ page{background-color: #f7f7f7}
 .course_img image{width: 645rpx;}
 .coures_text{margin-left: 30rpx; float: left; margin-top: 14rpx; margin-bottom: 15rpx; width: 400rpx;}
 .text_title{font-size: 28rpx; font-weight: 900;}
-.text_Introduction{font-size: 22rpx; color: #686868; width: 450rpx; overflow: hidden; height: 30rpx;}
-.spike{float: right; margin-right: 24rpx; background-color: #fc4850; padding: 3px 8px; border-radius: 15px; color: #fff; font-size: 24rpx; margin-top: 8px;}
-.spike i{font-size: 34rpx; font-weight: 900; margin-right: 6rpx;}
+.text_Introduction{font-size: 22rpx; color: #686868; width: 420rpx; height: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;}
+.spike{float: right; margin-right: 24rpx; background-color: #fc4850; padding: 3px 8px; border-radius: 15px; color: #fff; font-size: 22rpx; margin-top: 25rpx;}
+.spike i{font-size: 30rpx; font-weight: 900; margin-right: 6rpx;}
 .time_top{position: absolute;top: 0;right: 0; background-color: #f86f22;padding: 3px 18px; font-size: 18rpx; color: #fff;}
 .arrival{width: 675rpx;padding-bottom: 30rpx; margin-top: 30rpx; margin-left: 40rpx; float: left; background-color: #fff; border-radius: 15rpx; position: relative; overflow: hidden;}
 .arri_img{margin-left: 2vw; width: 645rpx; height: 260rpx; overflow: hidden; margin-top: 10px; border-radius: 15rpx;}
