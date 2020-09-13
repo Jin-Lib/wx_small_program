@@ -1,3 +1,27 @@
-<view >
-  购买支付
+
+
+
+<view class="bonus">
+  <view class="bonus_self_purchase">合伙人</view>
+  <view class="bouns_menu">奖金</view>
+</view>
+
+<view class="bonus_informationk">
+
+  <view class="bonus_information">
+    <view class="bonus_information_img">
+        <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+    </view>
+    <view class="bonus_information_text">
+      <view class="bouns_information_text_name">
+        <view class="bonus_information_text_xm">蔡星阳</view>
+      </view>
+      <view class="bonus_information_text_numje">通过你的邀请加入</view>
+    </view>
+    <view class="bonus_information_amount">
+      <view class="amount_je">+50元</view>
+      <view class="amount_time">2020/09/03 20:43</view>
+    </view>
+  </view>
+
 </view>
