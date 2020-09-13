@@ -4,16 +4,17 @@
       头像
     </view>
     <view class="info_k_select">
-      <image src="{{infodetail.head_img}}" mode="widthFix" bindtap='clickImg'></image><i class="more_right"></i>
+      <image src="{{infodetail.head_img}}" mode="widthFix" bindtap='clickImg'></image><i class="more_right" bindtap="uploadImg"></i>
     </view>
   </view>
   <view class="info_k" bindtap="nameshow">
     <view class="info_k_text">
       宝宝昵称
     </view>
-    <view class="info_k_select_text">
-      {{infodetail.nick_name}}<i class="more_right"></i>
+    <view class="info_k_select_text tovh">
+      {{infodetail.nick_name}}
     </view>
+    <i class="more_right_nick_name"></i>
   </view>
   <view class="info_k">
     <view class="info_k_text">
@@ -23,15 +24,16 @@
       <picker
         bindchange="recommendedAgeSelectxb"
         range="{{recommendedAgexb}}"
+        range-key="key"
         value="{{recommendedAgeSelectIndexxb}}">
-          {{recommendedAgexb[recommendedAgeSelectIndexxb]}}
+          {{recommendedAgexb[recommendedAgeSelectIndexxb].key}}
           <i class="more_right"></i>
       </picker>
     </view>
   </view>
   <view class="info_k" bindtap="recommendedAgeSelect">
     <view class="info_k_text">
-      <i></i>宝宝生日
+      <i></i>宝宝年龄
     </view>
     <view class="info_k_select_text">
       <picker
@@ -41,6 +43,17 @@
           {{recommendedAge[recommendedAgeSelectIndex]}}
           <i class="more_right"></i>
       </picker>
+    </view>
+  </view>
+  <view class="info_k" bindtap="birthdaySelect">
+    <view class="info_k_text">
+      <i></i>宝宝生日
+    </view>
+    <view class="info_k_select_text">
+      <view class="info_k_select_text_birthday">
+        {{infodetail.birthday}}
+      </view>
+      <i class="more_right"></i>
     </view>
   </view>
   <view class="info_k" bindtap="iphoneshow">
@@ -60,20 +73,60 @@
 <!--姓名修改-->
 <view class="name_popup" hidden="{{namehidden}}">
   <view class="popup_input">
-    <input placeholder="张驰"></input>
+    <input
+      placeholder="请输入您的姓名"
+      value="{{nickNameValue}}"
+      bindinput="nickNameInput" />
     <view class="popup_anniu">
-      <view class="anniu_qx" bindtap="nameshow">取消</view>
-      <view class="anniu_qd" bindtap="nameshow">确定</view>
+      <view class="anniu_qx" bindtap="nickNameCancel">取消</view>
+      <view class="anniu_qd" bindtap="nickNameConfirm">确定</view>
     </view>
   </view>
 </view>
 <!--姓名手机号-->
 <view class="name_popup" hidden="{{iphonehidden}}">
   <view class="popup_input">
-    <input placeholder="15267000200"></input>
+    <input
+      placeholder="请输入您的手机号"
+      value="{{phoneValue}}"
+      bindinput="phoneInput" />
     <view class="popup_anniu">
-      <view class="anniu_qx" bindtap="iphoneshow">取消</view>
-      <view class="anniu_qd" bindtap="iphoneshow">确定</view>
+      <view class="anniu_qx" bindtap="phoneCancel">取消</view>
+      <view class="anniu_qd" bindtap="phoneConfirm">确定</view>
+    </view>
+  </view>
+</view>
+<!-- 生日选择 -->
+<view class="birthday_popup" hidden="{{birthdaySelectPopup}}">
+  <view class="popup_input">
+    <picker-view
+      class="picker-view-birthday"
+      indicator-style="height: 50px;" style="width: 100%;"
+      bindchange="babyBirthdySelect"
+      value="{{birthdayValue}}"
+    >
+      <picker-view-column>
+        <view wx:for="{{years}}" wx:key="this" style="line-height: 50px; text-align: center;">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" wx:key="this" style="line-height: 50px; text-align: center;">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" wx:key="this" style="line-height: 50px; text-align: center;">{{item}}日</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{hours}}" wx:key="this" style="line-height: 50px; text-align: center;">{{item}}时</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{minutes}}" wx:key="this" style="line-height: 50px; text-align: center;">{{item}}分</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{seconds}}" wx:key="this" style="line-height: 50px; text-align: center;">{{item}}秒</view>
+      </picker-view-column>
+    </picker-view>
+    <view class="popup_anniu">
+      <view class="anniu_qx" bindtap="babyBirthdyCancel">取消</view>
+      <view class="anniu_qd" bindtap="babyBirthdyConfirm">确定</view>
     </view>
   </view>
 </view>
