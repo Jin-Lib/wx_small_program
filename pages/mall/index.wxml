@@ -257,7 +257,7 @@
 <view class="recommend">
   <view class="reco_k" wx:for="{{recommendCourseData}}" wx:key="index" data-id="{{item.id}}" bindtap="details">
     <view class="reco_img">
-        <image src="{{item.main_img}}"></image>
+        <image src="{{item.main_img}}" mode="widthFix"></image>
     </view>
     <view class="reco_text">
       <view class="reco_text_title">{{item.title}}</view>
