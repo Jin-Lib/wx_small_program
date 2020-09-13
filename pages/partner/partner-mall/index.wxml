@@ -1,7 +1,7 @@
 
 <!--分享出去，别人看到的页面-->
 <view class="hhsr" bindtap="hhsr" style="position: fixed; top: 70rpx; right: 0rpx;background-color: #fc4850;padding: 8rpx 20rpx;font-size: 24rpx;color: #fff;z-index: 999999;">
-  个人中心
+  个人中心临时入口
 </view>
 
 <view class="partner_menu_top">

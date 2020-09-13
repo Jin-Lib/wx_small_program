@@ -31,6 +31,14 @@
 任务中心"pages/partner/task/index",
 个人中心"pages/partner/user/index",
 累计总收益"pages/partner/user-totalrevenue",
+
+活动奖金"pages/partner/user-totalrevenue-activitybonus",
+培育奖金"pages/partner/user-totalrevenue-cultivationbonus",
+直邀奖金"pages/partner/user-totalrevenue-directinvitationbonus",
+间接奖金"pages/partner/user-totalrevenue-indirectbonus",
+管理奖金"pages/partner/user-totalrevenue-managementbonus",
+推课奖金"pages/partner/user-totalrevenue-tuitionbonus",
+
 当前粉丝数"pages/partner/user-numberoffans",
 社群合伙人"pages/partner/user-community",
 提现"pages/partner/user-withdraw",
