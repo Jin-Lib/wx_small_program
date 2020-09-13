@@ -11,29 +11,61 @@
     </view>
     <view class="partner_nim_name">张驰</view>
     <view class="partner_nim_partn">初级合伙人</view>
+    <view class="partner_nim_tuand">
+      我的主管：张驰
+    </view>
   </view>
 
   <view class="partner_usertext">
-    <view class="partner_user_num">
-      <view class="partner_user_num_sy" bindtap="totalrevenue">
-        累计总收益 >
-        <view><i>10423</i></view>
-        <view>今日<span>+1423</span></view>
+    <view class="partner_team">
+      <view class="partner_team_text">我的团队</view>
+      <view class="partner_team_num">共<i>20</i>为合伙人</view>
+    </view>
+    <view class="partner_team_category">
+      <view class="partner_team_category_gj" bindtap="teamseniorpartner">
+        高级合伙人 >
+        <view>0</view>
       </view>
-      <view class="partner_user_num_fs" bindtap="numberoffans">
-        当前粉丝数 >
-        <view><i>123</i></view>
-        <view>今日<span>+13</span></view>
+      <view class="partner_team_category_gj" bindtap="juniorpartneroftheteam">
+        初级合伙人 >
+        <view>20</view>
       </view>
-      <view class="partner_user_num_rs" bindtap="community">
-        社群合伙人数 >
-        <view><i>5423</i></view>
-        <view>今日<span>+3</span></view>
+      <view class="partner_team_category_gj" bindtap="currentfansoftheteam">
+        团队当前粉丝 >
+        <view>104</view>
       </view>
     </view>
-    <view class="partner_tinum" bindtap="withdraw">
-      <view class="tinum_text">可提现(元)</view>
-      <view class="tinum_num">5092 ></view>
+  </view>
+</view>
+
+<view class="partner">
+
+  <view class="partner_usertext2">
+    <view class="partner_team">
+      <view class="partner_team_text">我的社群</view>
+      <view class="partner_team_num">共<i>20</i>为合伙人</view>
+    </view>
+    <view class="partner_team_category">
+      <view class="partner_team_category_gj" bindtap="seniorcommunitypartner">
+        高级合伙人 >
+        <view>0</view>
+      </view>
+      <view class="partner_team_category_gj" bindtap="communityjuniorpartner">
+        初级合伙人 >
+        <view>20</view>
+      </view>
+      <view class="partner_team_category_gj" bindtap="currentfansofthecommunity">
+        社群当前粉丝 >
+        <view>104</view>
+      </view>
+    </view>
+  </view>
+  <view class="rule">
+    <view class="rule_description">规则说明</view>
+    <view class="rule_introduction">
+      <view>1、当前粉丝=累计粉丝-已成为合伙人的粉丝</view>
+      <view>2、我的社群=我下属全部的合伙人</view>
+      <view>3、我的团队=我的社群-下属高级合伙人的社群</view>
     </view>
   </view>
 </view>
