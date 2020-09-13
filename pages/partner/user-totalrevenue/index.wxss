@@ -1,0 +1,26 @@
+
+
+page{background-color: #f7f7f7;}
+.totalre_top{width: 750rpx; position: relative;}
+.totalre_img{width: 750rpx;}
+.totalre_img image{width: 750rpx;}
+.totalre_img_text{position: absolute;top: 40rpx; left: 200rpx; width: 350rpx; text-align: center;color: #462908;}
+.totalre_img_text_title{font-size: 34rpx;font-weight: 900;}
+.totalre_img_text_num{font-size: 24rpx;font-weight: 900;}
+.totalre_img_text_num i{font-size: 34rpx;}
+.totalre_centorn{margin-top: 30rpx;}
+.totalre_centorn_title{width: 650rpx; margin-left: 40rpx; margin-top: 30rpx; } 
+.explosion{font-size: 32rpx; border-left: 3px solid #fc4850; padding-left: 3vw; width: 85vw; font-weight: 900;}
+.totalre_centorn_text{width: 630rpx; padding: 20rpx 30rpx; margin-left: 30rpx; background-color: #ffffff;border-radius: 15rpx; margin-top: 25rpx; text-align: center;}
+.totalre_centorn_text_title{font-size: 24rpx; }
+.totalre_centorn_text_num{color: #fc4850; font-size: 28rpx;margin-top: 15rpx;}
+.totalre_centorn_text_day{font-size: 22rpx; color: #6b6b6b; margin-top: 15rpx;}
+.totalre_centorn_text_day i{color: #fc4850;}
+.totalre_centorn_text2{width: 630rpx; padding: 20rpx 30rpx; margin-left: 30rpx; background-color: #ffffff;border-radius: 15rpx; margin-top: 25rpx; text-align: center;display: flex;flex-wrap: wrap;position: relative;}
+.totalre_centorn_text_right{width: 315rpx;}
+.totalre_centorn_text_left{width: 315rpx;}
+.totalre_centorn_text_title2{font-size: 24rpx; width: 300rpx;}
+.totalre_centorn_text_num2{color: #fc4850; font-size: 28rpx;margin-top: 15rpx; width: 300rpx;}
+.totalre_centorn_text_day2{font-size: 22rpx; color: #6b6b6b; margin-top: 15rpx; width: 300rpx;}
+.totalre_centorn_text_day2 i{color: #fc4850;}
+.totalre_poster{position: absolute;top: 0rpx; right: 0rpx; width: 330rpx; height: 175rpx; background: rgba(0, 0, 0, 0.6); color: #fff; font-size: 20rpx;line-height: 175rpx; border-top-right-radius: 15rpx; border-bottom-right-radius: 15rpx;}

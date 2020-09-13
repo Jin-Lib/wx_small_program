@@ -29,6 +29,13 @@ Page({
       },
     ], // 拼团列表
   },
+
+  //--分享出去，别人看到的页面--
+  hhsr: function (event) {
+    wx.navigateTo({
+      url: '/pages/partner/b-course-details/index'
+    })
+  },
   //定时器
   countDown: function () {
     let that = this;

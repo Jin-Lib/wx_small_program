@@ -1,3 +1,167 @@
-<view >
-  更多素材
+
+  <view class="share_popup">
+    <view class="kaiguanjs" bindtap="showkg" hidden="{{hiddenkg}}">
+      <image src="/resource/partner/group_tip.png" mode="widthFix"></image>
+    </view>
+    <view class="purchase_reminder">
+      <view class="purc_text_title" bindtap="showkg">新用户免拼购课<i>?</i></view>
+      <view class="purc_text_kg">
+        <switch-button id="derail"></switch-button>
+      </view>
+    </view>
+  </view>
+
+<!--推广图片-->
+<view class="category">
+  <view class="explosion">
+    推广图片
+  </view>
+</view>
+
+<view class="marter">
+  <view class="marter_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/4.png" mode="widthFix"></image>
+    <i>专属海报</i>
+  </view>
+  <view class="marter_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
+  </view>
+  <view class="marter_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
+  </view>
+  <view class="marter_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
+  </view>
+  <view class="marter_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
+  </view>
+</view>
+
+
+
+<!--推广文案-->
+<view class="category">
+  <view class="explosion">
+    推广文案&链接
+  </view>
+</view>
+<view class="promote_hua">
+
+  <view class="promote">
+    <view class="promote_text">
+      {{
+      contents
+      }}
+    </view>
+    <view class="promote_copy" bindtap="copywriting" data-text="{{contents}}">
+      点击复制文案
+    </view>
+  </view>
+
+  <view class="promote">
+    <view class="promote_text">
+      {{
+      contents
+      }}
+    </view>
+    <view class="promote_copy" bindtap="copywriting" data-text="{{contents}}">
+      点击复制文案
+    </view>
+  </view>
+
+  <view class="promote">
+    <view class="promote_text">
+      {{
+      contents
+      }}
+    </view>
+    <view class="promote_copy" bindtap="copywriting" data-text="{{contents}}">
+      点击复制文案
+    </view>
+  </view>
+
+</view>
+<!--推广视频-->
+<view class="category">
+  <view class="explosion">
+    推广短视频&链接
+  </view>
+</view>
+<view class="promote_hua">
+  <view class="promote_vi">
+    <view class="promote_video">
+      <video src="http://cdn.koalaxiezi.com/ceshi/b2de3c4ec55167e7e1344dc074d35684.mp4"></video>
+    </view>
+    <view class="promote_video_copy">
+      点击下载视频
+    </view>
+    <view class="promote_video_lj" bindtap="copyvideolink" data-text="{{videolink}}">
+      点击复制视频链接
+    </view>
+  </view>
+  <view class="promote_vi">
+    <view class="promote_video">
+      <video src="http://cdn.koalaxiezi.com/ceshi/b2de3c4ec55167e7e1344dc074d35684.mp4"></video>
+    </view>
+    <view class="promote_video_copy">
+      点击下载视频
+    </view>
+    <view class="promote_video_lj" bindtap="copyvideolink" data-text="{{videolink}}">
+      点击复制视频链接
+    </view>
+  </view>
+  <view class="promote_vi">
+    <view class="promote_video">
+      <video src="http://cdn.koalaxiezi.com/ceshi/b2de3c4ec55167e7e1344dc074d35684.mp4"></video>
+    </view>
+    <view class="promote_video_copy">
+      点击下载视频
+    </view>
+    <view class="promote_video_lj" bindtap="copyvideolink" data-text="{{videolink}}">
+      点击复制视频链接
+    </view>
+  </view>
+  <view class="promote_vi">
+    <view class="promote_video">
+      <video src="http://cdn.koalaxiezi.com/ceshi/b2de3c4ec55167e7e1344dc074d35684.mp4"></video>
+    </view>
+    <view class="promote_video_copy">
+      点击下载视频
+    </view>
+    <view class="promote_video_lj" bindtap="copyvideolink" data-text="{{videolink}}">
+      点击复制视频链接
+    </view>
+  </view>
+</view>
+<!--推广链接-->
+<view class="category">
+  <view class="explosion">
+    推广链接
+  </view>
+</view>
+<view class="promote_hua bottomjl">
+  <view class="promote">
+    <view class="promote_text">
+      http://klart.cn
+    </view>
+    <view class="promote_copy" bindtap="copysponsoredlinks" data-text="{{sponsoredlinks}}">
+      点击复制链接
+    </view>
+  </view>
+  <view class="promote">
+    <view class="promote_text">
+      http://klart.cn
+    </view>
+    <view class="promote_copy" bindtap="copysponsoredlinks" data-text="{{sponsoredlinks}}">
+      点击复制链接
+    </view>
+  </view>
+  <view class="promote">
+    <view class="promote_text">
+      http://klart.cn
+    </view>
+    <view class="promote_copy" bindtap="copysponsoredlinks" data-text="{{sponsoredlinks}}">
+      点击复制链接
+    </view>
+  </view>
 </view>

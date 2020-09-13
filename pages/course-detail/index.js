@@ -14,48 +14,47 @@ Page({
     tabList: ['详情', '目录', '评价', '推荐'], // tab 分类
     currentTabSub: 0, // 记录当前tab下标
     isTopBtnShow: false, // 是否展示返回顶部按钮
-    spellGroupList: [
-      {
-        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
-        nick: '天空之岚风雨行不1',
-        status: '1分钟前拼团成功'
-      },
-      {
-        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
-        nick: '天空之岚风雨行不2',
-        status: '1分钟前拼团成功'
-      },
-      {
-        image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
-        nick: '天空之岚风雨行不3',
-        status: '1分钟前拼团成功'
-      },
-    ], // 拼团列表
-    courseBannerDetail: [
-      {
-        type: 'video',
-        src: 'http://cdn.koalaxiezi.com/bh1.mp4',
-        poster: 'http://cdn.koalaxiezi.com/ceshi/2.png'
-      },
-      {
-        src: 'http://cdn.koalaxiezi.com/ceshi/2.png',
-      },
-      {
-        src: 'http://cdn.koalaxiezi.com/ceshi/2.png',
-      },
-    ], // banner 轮播区域数据
+    coursedetail: {},
+
+    // 跑马灯
+    broadcastData: [],
+    // 推荐
+    recommendCourseData: []
   },
+
+  onLoad: function (options) {
+    this.getdetailData(options.id);
+    this.getBroadcast();
+    this.recommendData();
+  },
+
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+  },
 
+  // 跑马灯
+  getBroadcast: function() {
+    API.broadcast({
+    }).then(res => {//成功
+
+      this.setData({
+        broadcastData: res && res.list || []
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
   },
 
   // 获取课程信息
-  getdetailData: function () {
+  getdetailData: function (id) {
     API.getweek({
-      id: 1
+      id
     }).then(res => {//成功
       console.log('课程详情', res);
       //const { rows } = res || {};
@@ -72,10 +71,30 @@ Page({
     })
   },
 
+  // 推荐
+  recommendData: function() {
+    API.recommend({
+      scene: 'detail',
+      page: 1,
+      pageSize: 6
+    }).then(res => {//成功
+      this.setData({
+        recommendCourseData: res && res.items || []
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
+  },
+
   // 下单
   getcreateData: function () {
+    let that = this;
     API.getcreate({
-      courseId: 1
+      courseId: this.data.coursedetail.id
     }).then(res => {//成功
       console.log(res);
       //const { rows } = res || {};
@@ -87,9 +106,19 @@ Page({
           'signType': res.signType,
           'paySign': res.paySign,
           'success': function (res) {
-            hiddenpintuan: !this.data.hiddenpintuan;
-            hiddensingle: !this.data.hiddensingle;
-            url: '/pages/course-share/index';
+            console.log(res);
+            that.setData({
+              hiddensingle: false
+            });
+            wx.showToast({
+              title: '购买成功',
+              icon: 'none',
+              duration: 1000
+            })
+            wx.switchTab({
+              url: '/pages/course/index'
+            })
+            
            },
           'fail': function (res) { },
           'complete': function (res) { }
@@ -184,25 +213,59 @@ Page({
   //点击团购支付按钮
   spell_pay: function (event) {
     wx.navigateTo({
-      url: '/pages/course-share/index'
+      url: `/pages/course-share/index?groupId=2&id=${this.data.coursedetail.id}`
     })
+    return;
+    let that = this;
+    API.getcreate({
+      courseId: this.data.coursedetail.id,
+      isGroup: 1
+    }).then(res => {//成功
+      console.log(res);
+      //const { rows } = res || {};
+      wx.requestPayment(
+        {
+          'timeStamp': res.timeStamp,
+          'nonceStr': res.nonceStr,
+          'package': res.package,
+          'signType': res.signType,
+          'paySign': res.paySign,
+          'success': function (res) {
+            that.setData({
+              hiddenpintuan: false
+            });
+            wx.showToast({
+              title: '创建拼团成功',
+              icon: 'none',
+              duration: 1000
+            })
+            wx.navigateTo({
+              url: `/pages/course-share/index?groupId=${res.groupId}&id=${coursedetail.id}`
+            })
+            
+           },
+          'fail': function (res) { },
+          'complete': function (res) { }
+        })
+      this.setData({
+        coursecreate: res,
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
+    
   },
   // tab 切换
   tabChange: function(event) {
+    console.log(event.currentTarget.dataset.sub)
     this.setData({
       currentTabSub: event.currentTarget.dataset.sub
     })
   },
-  onLoad: function () {
-    this.getcreateData();
-
-    this.getdetailData();
-
-    // wx.navigateTo({
-    //   url: '/pages/course-share/index'
-    // })
-  },
-
   /**
    * 监听页面滚动事件
    * @date 2020-09-04

@@ -5,7 +5,7 @@ page{background-color: #f7f7f7;}
 .red1{text-align:center;flex:1;font-weight:bold;font-size:24rpx;color:#fc4850;border-bottom: solid 3rpx #fc4850; padding: 8px 0px;padding-bottom: 25rpx;}
 .show1{display:block;margin-top: 110rpx;}
 .hidden1{display:none;margin-top: 110rpx;}
-.order_k{width: 610rpx;margin-left: 30rpx;padding: 20rpx 40rpx;margin-top: 30rpx;background-color: #fff;border-radius: 15rpx;}
+.order_k{width: 610rpx;margin-left: 30rpx;margin-top: 30rpx;padding: 20rpx 40rpx;margin-top: 30rpx;background-color: #fff;border-radius: 15rpx;}
 .single_number{padding-bottom: 20rpx;width: 620rpx; margin-left: 15rpx; font-size: 24rpx;color: #6b6b6b;}
 .order_conteron{margin-top: 0rpx; border-bottom: #e2e2e2 3rpx solid;width: 630rpx; border-top: #e2e2e2 3rpx solid; padding-bottom: 30rpx;padding-top: 30rpx;display: flex;}
 .order_right{width: 130rpx; height: 130rpx; overflow: hidden;}
@@ -16,7 +16,7 @@ page{background-color: #f7f7f7;}
 .order_left_status{display: flex;flex-wrap: wrap;justify-content:space-between;/*左右分开*/margin-top: 40rpx;width: 440rpx; margin-left: 20rpx;font-weight: 900;}
 .status_title{font-size: 26rpx;color: #f86f22;}
 .status_num{font-size: 26rpx;}
-.order_buy{margin-left: 438rpx; margin-right: 35rpx; padding: 10rpx 20rpx;border: #f86f22 3rpx solid;border-radius: 30rpx; color: #f86f22; margin-top: 20rpx;font-size: 24rpx;}
+.order_buy{margin-left: 438rpx; margin-right: 35rpx; padding: 10rpx 20rpx;border: #f86f22 3rpx solid;border-radius: 30rpx; color: #f86f22; margin-top: 20rpx;font-size: 24rpx;text-align: center;}
 .huise{border: #6b6b6b 3rpx solid;color: #6b6b6b;}
 .order_k_img{width: 750rpx; text-align: center; margin-top: 220rpx;}
 .order_k_img image{width: 240rpx;}

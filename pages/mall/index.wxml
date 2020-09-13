@@ -74,36 +74,16 @@
     </swiper>
   </view>
   <view class="classification">
-    <view class="leaderboard" bindtap="leaderboard">
-      <view class="lead_img">
-        <image src="/resource/nav/home_active.png" mode="widthFix"></image>
+    <block
+      wx:for="{{types}}"
+      wx:key="id">
+      <view class="leaderboard" data-type="{{item.type}}" data-id="{{item.id}}" data-typeid="{{item.type_id}}" bindtap="onClickM">
+        <view class="lead_img">
+          <image src="{{item.image_url}}" mode="widthFix"></image>
+        </view>
+        {{ item.name }}
       </view>
-      排行榜
-    </view>
-    <view class="leaderboard" bindtap="chinese">
-      <view class="lead_img">
-        <image src="/resource/nav/home_active.png" mode="widthFix"></image>
-      </view>
-      大语文
-    </view>
-    <view class="leaderboard" bindtap="geography">
-      <view class="lead_img">
-        <image src="/resource/nav/home_active.png" mode="widthFix"></image>
-      </view>
-      天文地理
-    </view>
-    <view class="leaderboard" bindtap="teacher">
-      <view class="lead_img">
-        <image src="/resource/nav/home_active.png" mode="widthFix"></image>
-      </view>
-      名师专区
-    </view>
-    <view class="leaderboard" bindtap="allcourses">
-      <view class="lead_img">
-        <image src="/resource/nav/home_active.png" mode="widthFix"></image>
-      </view>
-      全部课程
-    </view>
+    </block>
   </view>
 </view>
 <!--限时爆款文字-->
@@ -114,16 +94,16 @@
   </view>
 </view>
 <!--限时爆款课程图-->
-<view class="explosion_course" bindtap="details">
-  <view class="time_top">限时1折</view>
+<view wx:for="{{limitTimeCourseData}}" wx:key="{{item.course_id}}" data-id="{{item.course_id}}" class="explosion_course" bindtap="details">
+  <view class="time_top">限时{{item.activity_discount}}折</view>
   <view class="course_img">
-    <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+    <image src="{{item.activity_img}}" mode="widthFix"></image>
   </view>
   <view class="coures_text">
-    <view class="text_title">遨游宇宙世界</view>
-    <view class="text_Introduction">发现奇妙之旅</view>
+    <view class="text_title">{{item.activity_title}}</view>
+    <view class="text_Introduction">{{item.activity_subtitle}}</view>
   </view>
-  <view class="spike">￥<i>9.9</i>秒杀</view>
+  <view class="spike">￥<i>{{item.group_price}}</i>秒杀</view>
 </view>
 <!--最新上架文字-->
 <view class="category">
@@ -133,51 +113,35 @@
 </view>
 <!--最新上架课程图-->
 <view class="arrival">
-  <view class="arr_top_k" bindtap="details">
-    <view class="arri_img">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-    </view>
-    <view class="arri_text">
-      <view class="arri_title">遨游宇宙世界</view>
-      <view class="arri_Introduction">发现奇妙之旅</view>
-    </view>
-    <view class="arri_spike">标签</view>
-    <view class="arri_spike">世界</view>
-    <view class="arri_spike">遨游</view>
-  </view>
-  <view class="arri_sort">
-    <view class="sort_k" bindtap="details">
-      <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+  <block wx:if="{{newCourseData && newCourseData.length > 0}}">
+    <view class="arr_top_k" data-id="{{newCourseData[0].course_id}}" bindtap="details">
+      <view class="arri_img">
+        <image src="{{newCourseData[0].activity_img}}" mode="widthFix"></image>
       </view>
-      <view class="sort_title">标题：书法课程</view>
-      <view class="sort_spike">标签</view>
-    </view>
-    <view class="sort_k" bindtap="details">
-      <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="arri_text">
+        <view class="arri_title">{{newCourseData[0].activity_title}}</view>
+        <view class="arri_Introduction">{{newCourseData[0].activity_subtitle}}</view>
       </view>
-      <view class="sort_title">标题：书法课程</view>
-      <view class="sort_spike">标签</view>
-      <view class="sort_spike">标签</view>
+      <view class="arri_spike">标签</view>
+      <view class="arri_spike">世界</view>
+      <view class="arri_spike">遨游</view>
     </view>
-    <view class="sort_k" bindtap="details">
-      <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      </view>
-      <view class="sort_title">标题：书法课程</view>
-      <view class="sort_spike">标签</view>
+    <view class="arri_sort">
+      <block wx:for="{{newCourseData}}" wx:key="{{item.course_id}}">
+        <view wx:if="{{index !== 0}}" data-id="{{item.course_id}}" class="sort_k" bindtap="details">
+          <view class="sort_img">
+            <image src="{{item.activity_img}}" mode="widthFix"></image>
+          </view>
+          <view class="sort_title">{{item.activity_title}}</view>
+          <view class="sort_spike">标签</view>
+        </view>
+      </block>
+      <view class="change">换一换</view>
     </view>
-    <view class="sort_k" bindtap="details">
-      <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      </view>
-      <view class="sort_title">标题：书法课程</view>
-      <view class="sort_spike">标签</view>
-      <view class="sort_spike">标签</view>
-    </view>
-    <view class="change">换一换</view>
-  </view>
+  </block>
+  <block wx:else>
+    空
+  </block>
 </view>
 
 
@@ -190,35 +154,35 @@
 </view>
 <!--今日热销课程图-->
 <view class="arrival">
-  <view class="arri_top_k" bindtap="details">
-    <view class="arri_img">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-    </view>
-    <view class="arri_text">
-      <view class="arri_title">遨游宇宙世界</view>
-      <view class="arri_Introduction">发现奇妙之旅</view>
-    </view>
-    <view class="arri_spike">标签</view>
-    <view class="arri_spike">世界</view>
-    <view class="arri_spike">遨游</view>
-  </view>
-  <view class="arri_sort">
-    <view class="sort_k" bindtap="details">
-      <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+  <block wx:if="{{todayHotCourseData && todayHotCourseData.length > 0}}">
+    <view class="arr_top_k" data-id="{{todayHotCourseData[0].course_id}}" bindtap="details">
+      <view class="arri_img">
+        <image src="{{todayHotCourseData[0].activity_img}}" mode="widthFix"></image>
       </view>
-      <view class="sort_title">标题：书法课程</view>
-      <view class="sort_spike">标签</view>
-    </view>
-    <view class="sort_k" bindtap="details">
-      <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+      <view class="arri_text">
+        <view class="arri_title">{{todayHotCourseData[0].activity_title}}</view>
+        <view class="arri_Introduction">{{todayHotCourseData[0].activity_subtitle}}</view>
       </view>
-      <view class="sort_title">标题：书法课程</view>
-      <view class="sort_spike">标签</view>
-      <view class="sort_spike">标签</view>
+      <view class="arri_spike">标签</view>
+      <view class="arri_spike">世界</view>
+      <view class="arri_spike">遨游</view>
     </view>
-  </view>
+    <view class="arri_sort">
+      <block wx:for="{{todayHotCourseData}}" wx:key="{{item.course_id}}">
+        <view wx:if="{{index !== 0}}" data-id="{{item.course_id}}" class="sort_k" bindtap="details">
+          <view class="sort_img">
+            <image src="{{item.activity_img}}" mode="widthFix"></image>
+          </view>
+          <view class="sort_title">{{item.activity_title}}</view>
+          <view class="sort_spike">标签</view>
+        </view>
+      </block>
+      <view class="change">换一换</view>
+    </view>
+  </block>
+  <block wx:else>
+    空
+  </block>
 </view>
 
 
@@ -241,41 +205,15 @@
 <!--智能推荐课程图-->
 <view class="intelligent">
   <view class="inte_hd">
-    <view class="inte_k" bindtap="details">
+    <view class="inte_k" wx:for="{{courseList}}" wx:key="index" data-id="{{item.id}}" bindtap="details">
       <view class="inte_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+        <image src="{{item.main_img}}"></image>
       </view>
       <view class="inte_text">
         <view class="inte_text_title">
-          <view class="inte_text_title_title">9天提升科学探索欲</view>
-          <view class="inte_text_title_label">标签：4岁的孩子最爱看</view>
-          <view class="inte_text_title_Watch">2.0万人播放</view>
-        </view>
-      </view>
-    </view>
-
-    <view class="inte_k" bindtap="details">
-      <view class="inte_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      </view>
-      <view class="inte_text">
-        <view class="inte_text_title">
-          <view class="inte_text_title_title">9天提升科学探索欲</view>
-          <view class="inte_text_title_label">标签：4岁的孩子最爱看</view>
-          <view class="inte_text_title_Watch">2.0万人播放</view>
-        </view>
-      </view>
-    </view>
-
-    <view class="inte_k" bindtap="details">
-      <view class="inte_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      </view>
-      <view class="inte_text">
-        <view class="inte_text_title">
-          <view class="inte_text_title_title">9天提升科学探索欲</view>
-          <view class="inte_text_title_label">标签：4岁的孩子最爱看</view>
-          <view class="inte_text_title_Watch">2.0万人播放</view>
+          <view class="inte_text_title_title">{{item.title}}</view>
+          <view class="inte_text_title_label">{{item.label}}</view>
+          <view class="inte_text_title_Watch">{{item.buy_count}}万人播放</view>
         </view>
       </view>
     </view>
@@ -283,47 +221,31 @@
 </view>
 
 
-
-<!--自然科普文字-->
-<view class="category">
-  <view class="explosion">
-    自然科普
-  </view>
-</view>
-<!--自然科普课程图-->
-<view class="arrival">
-  <view class="arri_sort">
-    <view class="sort_k" bindtap="details">
-      <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      </view>
-      <view class="sort_title">标题：书法课程</view>
-      <view class="sort_spike">标签</view>
-    </view>
-    <view class="sort_k" bindtap="details">
-      <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      </view>
-      <view class="sort_title">标题：书法课程</view>
-      <view class="sort_spike">标签</view>
-    </view>
-    <view class="sort_k" bindtap="details">
-      <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      </view>
-      <view class="sort_title">标题：书法课程</view>
-      <view class="sort_spike">标签</view>
-    </view>
-    <view class="sort_k" bindtap="details">
-      <view class="sort_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-      </view>
-      <view class="sort_title">标题：书法课程</view>
-      <view class="sort_spike">标签</view>
-      <view class="sort_spike">标签</view>
+<block wx:for="{{indexCateCourseData}}" wx:key="index">
+  <!--自然科普文字-->
+  <view class="category">
+    <view class="explosion">
+      {{item.title}}
     </view>
   </view>
-</view>
+  <!--自然科普课程图-->
+  <view class="arrival">
+    <view class="arri_sort">
+      <block wx:if="{{item.items || [].length > 0}}">
+        <view class="sort_k" wx:for="{{item.items || []}}" wx:for-item="itemData" wx:key="{{itemData.id}}" data-id="{{itemData.id}}" bindtap="details">
+          <view class="sort_img">
+            <image src="{{itemData.main_img}}" mode="widthFix"></image>
+          </view>
+          <view class="sort_title">{{itemData.title}}</view>
+          <view class="sort_spike">{{itemData.label}}</view>
+        </view>
+      </block>
+      <block wx:else>
+        <view>空</view>
+      </block>
+    </view>
+  </view>
+</block>
 
 <!--为你推荐-->
 <view class="category">
@@ -333,12 +255,12 @@
 </view>
 <!--为你推荐课程图-->
 <view class="recommend">
-  <view class="reco_k" bindtap="details">
+  <view class="reco_k" wx:for="{{recommendCourseData}}" wx:key="index" data-id="{{item.id}}" bindtap="details">
     <view class="reco_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+        <image src="{{item.main_img}}"></image>
     </view>
     <view class="reco_text">
-      <view class="reco_text_title">世界地理之最</view>
+      <view class="reco_text_title">{{item.title}}</view>
       <view class="reco_text_introduction">9天提升科学探索欲望</view>
       <view class="reco_buy">
         <view class="buy_img">
@@ -357,86 +279,5 @@
       </view>
     </view>
   </view> 
-  <view class="reco_k" bindtap="details">
-    <view class="reco_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-    </view>
-    <view class="reco_text">
-      <view class="reco_text_title">世界地理之最</view>
-      <view class="reco_text_introduction">9天提升科学探索欲望</view>
-      <view class="reco_buy">
-        <view class="buy_img">
-          <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
-        </view>
-        <view class="buy_img">
-          <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
-        </view>
-        <view class="buy_img">
-          <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
-        </view>
-        <view class="buy_img">
-          <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
-        </view>
-        <view class="buy_num">等77098人购买</view>
-      </view>
-    </view>
-  </view>
-
-   <view class="reco_k" bindtap="details">
-    <view class="reco_img">
-        <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
-    </view>
-    <view class="reco_text">
-      <view class="reco_text_title">世界地理之最</view>
-      <view class="reco_text_introduction">9天提升科学探索欲望</view>
-      <view class="reco_buy">
-        <view class="buy_img">
-          <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
-        </view>
-        <view class="buy_img">
-          <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
-        </view>
-        <view class="buy_img">
-          <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
-        </view>
-        <view class="buy_img">
-          <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
-        </view>
-        <view class="buy_num">等77098人购买</view>
-      </view>
-    </view>
-  </view>
-
-   <view class="reco_k" bindtap="details">
-  <view
-    class="reco_k"
-    wx:for="{{recommendedList}}"
-    wx:key="index">
-    <view class="reco_img">
-        <image src="{{item.logoSrc}}" mode="widthFix"></image>
-    </view>
-    <view class="reco_text">
-      <view class="reco_text_title">{{item.title}}</view>
-      <view class="reco_text_introduction">{{item.desc}}</view>
-      <view class="reco_buy">
-        <view
-          class="buy_img"
-          wx:for="{{item.buyImages}}"
-          wx:for-index="imgSub"
-          wx:for-item="imgSubSrc"
-          wx:key="this">
-          <image 
-            src="{{imgSubSrc}}" >
-            </image>
-        </view>
-        <view class="buy_num">等{{item.buyCount}}人购买</view>
-      </view>
-    </view>
-  </view>
-
-
-
-
-</view>
 
 </view>

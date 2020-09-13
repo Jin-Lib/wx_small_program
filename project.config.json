@@ -264,6 +264,48 @@
 					"id": -1,
 					"name": "pages/partner/share-details/index",
 					"pathName": "pages/partner/share-details/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/group-success/index",
+					"pathName": "pages/group-success/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/more-material/index",
+					"pathName": "pages/partner/more-material/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/explosion-more/index",
+					"pathName": "pages/explosion-more/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/user/index",
+					"pathName": "pages/partner/user/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/user-totalrevenue/index",
+					"pathName": "pages/partner/user-totalrevenue/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/user-totalrevenue-tuitionbonus/index",
+					"pathName": "pages/partner/user-totalrevenue-tuitionbonus/index",
 					"scene": null
 				}
 			]

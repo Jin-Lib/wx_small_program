@@ -8,7 +8,7 @@ page{background-color: #f7f7f7;}
 .category{position: fixed;top: 0;left: 0; width: 700rpx; padding:0rpx 30rpx; background-color: #fff;}
 .category_column{float: left; text-align: center; width: 170rpx; font-size: 28rpx; padding:20rpx 0rpx; }
 .add{color: #fc4850; border-bottom: solid 3rpx #fc4850; font-weight: 900;}
-.filter{float: left;width: 750rpx; background-color: #fcfcfc;margin-top:-16rpx;}
+.filter{float: left;width: 750rpx; background-color: #fcfcfc;margin-top:-16rpx;margin-top: 100rpx;}
 .filter_age{float: left; width: 330rpx; padding: 20rpx 0rpx; text-align: center; margin-left: 25rpx;}
 .filt_age_text{float: left; margin-left: 30rpx; font-size: 28rpx;}
 .filt_age_num{float: left; margin-top: -3rpx; margin-left: 15rpx;}
@@ -19,8 +19,8 @@ page{background-color: #f7f7f7;}
 .scre_cour_k{ margin-top: 30rpx;width: 660rpx; float: left;margin-left: 25rpx; border-radius: 15rpx; padding: 20rpx 20rpx; background-color: #fff;}
 .scre_cour_img{width: 200rpx; height: 200rpx; overflow: hidden; float: left; border-radius: 15rpx;}
 .scre_cour_img image{width: 100%;}
-.scre_cour_text{float: left;margin-left: 15rpx; margin-top: 10rpx; font-size: 28rpx;}
-.scre_cour_text_title{font-size: 34rpx; font-weight: 900;}
+.scre_cour_text{float: left;margin-left: 15rpx; margin-top: 10rpx; font-size: 28rpx;width: 440rpx;}
+.scre_cour_text_title{font-size: 34rpx; font-weight: 900;height: 40rpx; overflow: hidden;}
 .scre_cour_text_label{ margin-top: 20rpx; font-size: 22rpx;}
 .scre_cour_text_label i{padding: 4rpx 12rpx; background-color: #fad2d4; color: #fc4850; border-radius: 15rpx; margin-left: 10rpx;}
 .scre_cour_text_buy{margin-top: 60rpx; font-size: 22rpx; color: #6b6b6b;}

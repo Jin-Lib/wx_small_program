@@ -275,6 +275,12 @@ Page({
       selected4: true,
     });
   },
+  //--个人中心--
+  hhsr: function (event) {
+    wx.navigateTo({
+      url: '/pages/partner/user/index'
+    })
+  },
   //红包按钮
   show: function (e) {
     this.setData({
