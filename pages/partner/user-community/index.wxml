@@ -1,3 +1,39 @@
-<view >
-  社群合伙人数
+
+
+<view class="partner_user">
+  <view class="partner_top_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/user/cp-top.0365f123.png" mode="widthFix"></image>
+  </view>
+  <view class="partner_nim">
+    <view class="partner_nim_img">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <image class="partnervip" src="http://cdn.koalaxiezi.com/ceshi/user/v-icon.76ec6b35.png" mode="widthFix"></image>
+    </view>
+    <view class="partner_nim_name">张驰</view>
+    <view class="partner_nim_partn">初级合伙人</view>
+  </view>
+
+  <view class="partner_usertext">
+    <view class="partner_user_num">
+      <view class="partner_user_num_sy" bindtap="totalrevenue">
+        累计总收益 >
+        <view><i>10423</i></view>
+        <view>今日<span>+1423</span></view>
+      </view>
+      <view class="partner_user_num_fs" bindtap="numberoffans">
+        当前粉丝数 >
+        <view><i>123</i></view>
+        <view>今日<span>+13</span></view>
+      </view>
+      <view class="partner_user_num_rs" bindtap="community">
+        社群合伙人数 >
+        <view><i>5423</i></view>
+        <view>今日<span>+3</span></view>
+      </view>
+    </view>
+    <view class="partner_tinum" bindtap="withdraw">
+      <view class="tinum_text">可提现(元)</view>
+      <view class="tinum_num">5092 ></view>
+    </view>
+  </view>
 </view>
