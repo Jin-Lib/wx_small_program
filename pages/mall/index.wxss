@@ -98,10 +98,11 @@ page{background-color: #f7f7f7}
 .inte_img image{width: 240rpx;height:240rpx;}
 .inte_text{width: 280rpx; height: 190rpx; border-radius: 30rpx; background-color: #fff; margin-top: 190rpx;overflow: hidden;}
 .inte_text_title{margin-top: 70rpx; float: left; margin-left: 15rpx;}
-.inte_text_title_title{font-size: 26rpx; font-weight: 900; width: 280rpx;overflow: hidden;
+.inte_text_title_title{font-size: 26rpx; font-weight: 900; width: 260rpx;overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;}
-.inte_text_title_label{padding: 2px 8px; background-color: #f86f22; color: #fff; font-size: 18rpx; border-radius: 15rpx; margin-top: 13rpx;}
+.inte_text_title_label{ color: #fff; font-size: 18rpx; border-radius: 15rpx; margin-top: 13rpx;width: 250rpx;}
+.inte_text_title_label i{padding: 2px 8px; background-color: #f86f22;}
 .inte_text_title_Watch{color: #686868; font-size: 18rpx; margin-top: 10rpx;}
 .bottom_advertising{position: fixed; bottom: 170rpx; right: 30rpx;z-index: 1112; width: 80rpx; height: 80rpx; overflow: hidden;animation:mymove 3s infinite; }
 .bottom_advertising image{width: 80rpx;}
