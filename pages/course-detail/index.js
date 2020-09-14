@@ -5,6 +5,8 @@ const API = require('../../config/api');
 
 Page({
   data: {
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+
     hiddenrule: true, //服务说明弹窗
     hiddengroup: true,  //拼团规则弹窗
     hiddensingle: true, //单独购买弹窗
@@ -19,7 +21,11 @@ Page({
     // 跑马灯
     broadcastData: [],
     // 推荐
-    recommendCourseData: []
+    recommendCourseData: [],
+
+    winWidth: 0,
+    winHeight: 0,
+    currentTab: 0,
   },
 
   onLoad: function (options) {
@@ -53,11 +59,22 @@ Page({
 
   // 获取课程信息
   getdetailData: function (id) {
+    let that = this;
     API.getweek({
       id
     }).then(res => {//成功
-      console.log('课程详情', res);
       //const { rows } = res || {};
+
+      if(res && res.isBuy) {
+        wx.getSystemInfo({
+          success: function (res) {
+            that.setData({
+              winWidth: res.windowWidth,
+              winHeight: res.windowHeight
+            });
+          }
+        });
+      }
 
       this.setData({
         coursedetail: res
@@ -276,5 +293,23 @@ Page({
     this.setData({
       isTopBtnShow: e.scrollTop > 100
     })
+  },
+
+
+  // 购买课程
+  //  tab切换逻辑
+  swichNav: function (e) {
+    var that = this;
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
+  },
+  bindChange: function (e) {
+    var that = this;
+    that.setData({ currentTab: e.detail.current });
   },
 })
