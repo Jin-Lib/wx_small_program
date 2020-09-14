@@ -13,7 +13,7 @@ page{background-color: #f7f7f7}
 .info_k_select_text i {
   border: solid black; border-width: 0 1px 1px 0;display: inline-block; padding: 5px;position: absolute;top: 13rpx; right: -40rpx;
 }
-.bind{padding: 10rpx 20rpx; background-color: #f86f22; font-size: 24rpx; border-radius: 30rpx; width: 95rpx;color: #fff;margin-left: 200rpx;position: absolute; right: 0;}
+.bind{padding: 10rpx 20rpx; background-color: #f86f22; font-size: 24rpx; border-radius: 30rpx; width: 200rpx!important;color: #fff;margin-left: 200rpx;position: absolute; right: 0;}
 .img_popup{
   position: fixed;
   top: 0;

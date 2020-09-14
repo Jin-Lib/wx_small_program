@@ -56,13 +56,20 @@
       <i class="more_right"></i>
     </view>
   </view>
-  <view class="info_k" bindtap="iphoneshow">
+  <view class="info_k">
     <view class="info_k_text">
       <i></i>绑定手机号码
     </view>
     <view class="info_k_select_text">
       <!-- {{infodetail.phone}}<i class="more_right"></i> 绑定之后的样式-->
-      <view class="bind">立即绑定</view>
+      <button
+        wx:if="{{!infodetail.phone}}"
+        open-type="getPhoneNumber"
+        bindgetphonenumber="getPhoneNumber"
+        class="bind">
+        立即绑定
+      </button>
+      <text wx:else>{{infodetail.phone}}</text>
     </view>
   </view>
 </view>

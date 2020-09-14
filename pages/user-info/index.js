@@ -115,12 +115,14 @@ Page({
     API.getinfo({
       code: 0
     }).then(res => {//成功
-      const { phone, nick_name, sex } = res || {};
+      const { phone, nick_name, sex, age } = res || {};
+      console.log('获取age', age)
       this.setData({
         infodetail: res,
         phoneValue: phone,
         nickNameValue: nick_name,
-        recommendedAgeSelectIndexxb: sex-1
+        recommendedAgeSelectIndexxb: sex-1,
+        recommendedAgeSelectIndex: age
       });
     }).catch(err => {
       wx.showToast({//错误
@@ -331,6 +333,32 @@ Page({
             edit_val: infodetail.head_img
           });
         })
+      }
+    })
+  },
+  /**
+   * 获取当前用户手机号码
+   * @date 2020-09-13
+   * @returns {any}
+   */
+  getPhoneNumber(e) {
+    let that = this;
+    const { infodetail } = this.data;
+    wx.getStorage({
+      key: 'loginCode',
+      success: function(code) {
+        API.bindUserPhone({
+          code: code.data,
+          encryptedData: e.detail.encryptedData,
+          iv: e.detail.iv
+        })
+          .then(resp => {
+            console.log('绑定手机号', resp)
+            infodetail.phone = resp; 
+            that.setData({
+              infodetail
+            })
+          })
       }
     })
   }
