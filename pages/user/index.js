@@ -7,6 +7,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     wxlogin: true,
     userInfoFinish: false,
+    userInfo: {}
   },
 
   onLoad: function () {
@@ -30,9 +31,8 @@ Page({
   // 获取用户信息
   getUserInfo: function() {
     let that = this;
-    API.getUserInfo()
+    API.getinfo()
       .then(data => {
-        console.log('data', data)
         that.setData({
           userInfo: data,
         });
@@ -153,5 +153,9 @@ Page({
       url: '/pages/logs/logs'
     })
   },
+
+  handleContact: function(e) {
+    console.log(e);
+  }
 
 })

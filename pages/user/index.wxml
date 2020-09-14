@@ -13,7 +13,7 @@
   <view class="user_data">
 
     <view class="user_data_img" bindtap="information">
-      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <image src="{{userInfo.head_img}}" mode="widthFix"></image>
     </view>
 
     <view class="user_data_text" bindtap="information">
@@ -95,9 +95,13 @@
       <view class="text_order">意见反馈</view>
     </view>
 
-    <view class="service_order" bindtap="advisory">
+    <view class="service_order">
       <image src="http://cdn.koalaxiezi.com/image1/product.jpg"></image>
       <view class="text_order">咨询客服</view>
+
+      <view style="position: absolute;bottom: 0;left: 0;width: 100%;height: 100%;opacity: 0;">
+        <button open-type="contact" bindcontact="handleContact">客服</button>
+      </view>
     </view>
 
   </view>

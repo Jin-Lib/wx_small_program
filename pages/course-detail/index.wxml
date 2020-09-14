@@ -1,131 +1,330 @@
 <!-- <view >
   课程详情
 </view> -->
-<view class="detail_top">
-  <view class="detail_bner">
-    <image src="{{coursedetail.top_img}}"></image>
-  </view>
-  <view class="detail_video">
-    <swiper autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
-      <swiper-item wx:if="{{coursedetail.video}}">
-        <video src="{{coursedetail.video}}"></video>
-      </swiper-item>
-      <block
-        wx:for="{{coursedetail.imgs || []}}"
-        wx:key="*this">
-        <swiper-item>
-          <image class="swiper-image" src="{{item}}" />
+<block wx:if="{{!coursedetail.isBuy}}">
+  <view class="detail_top">
+    <view class="detail_bner">
+      <image src="{{coursedetail.top_img}}"></image>
+    </view>
+    <view class="detail_video">
+      <swiper autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+        <swiper-item wx:if="{{coursedetail.video}}">
+          <video src="{{coursedetail.video}}"></video>
         </swiper-item>
-      </block>
-    </swiper>
+        <block
+          wx:for="{{coursedetail.imgs || []}}"
+          wx:key="*this">
+          <swiper-item>
+            <image class="swiper-image" src="{{item}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="detail_title">
+      {{coursedetail.subtitle}}
+    </view>
   </view>
-  <view class="detail_title">
-    {{coursedetail.subtitle}}
-  </view>
-</view>
 
-<view class="detail_center clear">
-  <view class="deta_center_num">
-      <i>￥{{coursedetail.price}}</i>起
+  <view class="detail_center clear">
+    <view class="deta_center_num">
+        <i>￥{{coursedetail.price}}</i>起
+    </view>
+    <view class="deta_center_details" bindtap="showrule">
+      <view class="center_details_age"><view class="check"></view>{{coursedetail.min_age}}~{{coursedetail.max_age}}岁</view>
+      <view class="center_details_age"><view class="check"></view>{{coursedetail.chapter_count}}集</view>
+      <view class="center_details_age"><view class="check"></view>永久回放></view>
+    </view>
   </view>
-  <view class="deta_center_details" bindtap="showrule">
-    <view class="center_details_age"><view class="check"></view>{{coursedetail.min_age}}~{{coursedetail.max_age}}岁</view>
-    <view class="center_details_age"><view class="check"></view>{{coursedetail.chapter_count}}集</view>
-    <view class="center_details_age"><view class="check"></view>永久回放></view>
-  </view>
-</view>
 
-<view class="group_details">
-  <view class="group_buy">
-    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
-    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
-    <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
-    <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
-    <view class="group_text">等6893人购买</view>
+  <view class="group_details">
+    <view class="group_buy">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+      <view class="group_text">等6893人购买</view>
+    </view>
+    <view class="group_rule" bindtap="showgroup">
+      拼团规则 >
+    </view>
   </view>
-  <view class="group_rule" bindtap="showgroup">
-    拼团规则 >
-  </view>
-</view>
 
-<view id="navigation-wrap">
-  <mp-sticky offset-top="0">
-    <view class="navigation">
-      <view
-        wx:for="{{tabList}}"
+  <view id="navigation-wrap">
+    <mp-sticky offset-top="0">
+      <view class="navigation">
+        <view
+          wx:for="{{tabList}}"
+          wx:key="*this"
+          class="column {{currentTabSub === index ? 'add' : ''}}"
+          data-sub="{{index}}"
+          bindtap="tabChange">
+          {{item}}
+        </view>
+      </view>
+    </mp-sticky>
+  </view>
+    
+
+  <!--详情-->
+  <view wx:if="{{currentTabSub === 0}}" class="default">
+    <block
+      wx:if="{{coursedetail.detail}}"
+    >
+      <image
+        wx:for="{{coursedetail.detail}}"
         wx:key="*this"
-        class="column {{currentTabSub === index ? 'add' : ''}}"
-        data-sub="{{index}}"
-        bindtap="tabChange">
-        {{item}}
-      </view>
-    </view>
-  </mp-sticky>
-</view>
-  
-
-<!--详情-->
-<view wx:if="{{currentTabSub === 0}}" class="default">
-  <block
-    wx:if="{{coursedetail.detail}}"
-  >
-    <image
-      wx:for="{{coursedetail.detail}}"
-      wx:key="*this"
-      src="{{item}}"
-      mode="widthFix">
-    </image>
-  </block>
-</view>
-<!--目录-->
-<view wx:if="{{currentTabSub === 1}}" class="default">
-  <block
-    wx:if="{{coursedetail.catalog_img}}"
-  >
-    <image
-      wx:for="{{coursedetail.catalog_img || []}}"
-      wx:key="this"
-      src="{{item}}"
-      mode="widthFix">
-    </image>
-  </block>
-</view>
-<!--评价-->
-<view wx:if="{{currentTabSub === 2}}" class="evaluation">
-  <block
-    wx:if="{{coursedetail.appraise_img}}"
-  >
-    <image
-      wx:for="{{coursedetail.appraise_img}}"
-      wx:key="this"
-      src="{{item}}"
-      mode="widthFix">
-    </image>
-  </block>
-</view>
-<!--推荐-->
-<view wx:if="{{currentTabSub === 3}}" class="recommend">
-  <view class="recommend_title">相关推推荐</view>
-  <view class="recommend_detailed">
-    <view class="reco_deta_k" wx:for="{{recommendCourseData}}" wx:key="index" data-id="{{item.id}}">
-      <image src="{{item.main_img}}" mode="widthFix"></image>
-      <view class="reco_deta_title">{{item.title}}</view>
-      <view class="reco_deta_text">
-        <view class="reco_deta_jg">￥{{item.price}}</view>
-        <view class="reco_deta_xl">已售{{item.buy_count}}</view>
-      </view>
-    </view>
-    <view class="change">换一换</view>
+        src="{{item}}"
+        mode="widthFix">
+      </image>
+    </block>
   </view>
-</view>
+  <!--目录-->
+  <view wx:if="{{currentTabSub === 1}}" class="default">
+    <block
+      wx:if="{{coursedetail.catalog_img}}"
+    >
+      <image
+        wx:for="{{coursedetail.catalog_img || []}}"
+        wx:key="this"
+        src="{{item}}"
+        mode="widthFix">
+      </image>
+    </block>
+  </view>
+  <!--评价-->
+  <view wx:if="{{currentTabSub === 2}}" class="evaluation">
+    <block
+      wx:if="{{coursedetail.appraise_img}}"
+    >
+      <image
+        wx:for="{{coursedetail.appraise_img}}"
+        wx:key="this"
+        src="{{item}}"
+        mode="widthFix">
+      </image>
+    </block>
+  </view>
+  <!--推荐-->
+  <view wx:if="{{currentTabSub === 3}}" class="recommend">
+    <view class="recommend_title">相关推推荐</view>
+    <view class="recommend_detailed">
+      <view class="reco_deta_k" wx:for="{{recommendCourseData}}" wx:key="index" data-id="{{item.id}}">
+        <image src="{{item.main_img}}" mode="widthFix"></image>
+        <view class="reco_deta_title">{{item.title}}</view>
+        <view class="reco_deta_text">
+          <view class="reco_deta_jg">￥{{item.price}}</view>
+          <view class="reco_deta_xl">已售{{item.buy_count}}</view>
+        </view>
+      </view>
+      <view class="change">换一换</view>
+    </view>
+  </view>
 
-<scroll-top isTopBtnShow="{{isTopBtnShow}}"></scroll-top>
+  <scroll-top isTopBtnShow="{{isTopBtnShow}}"></scroll-top>
 
-<!--底部购买-->
-<view class="float">
-  <view class="group" bindtap="showpintuan"><view class="num">￥{{coursedetail.group_price}}</view>发起{{coursedetail.group_num}}人团</view>
-  <view class="single" bindtap="showsingled"><view class="num">￥{{coursedetail.price}}</view>单独购买价</view>
-</view>
+  <!--底部购买-->
+  <view class="float">
+    <view class="group" bindtap="showpintuan"><view class="num">￥{{coursedetail.group_price}}</view>发起{{coursedetail.group_num}}人团</view>
+    <view class="single" bindtap="showsingled"><view class="num">￥{{coursedetail.price}}</view>单独购买价</view>
+  </view>
+</block>
+<block wx:else>
+  <view class="play_top">
+    <image src="http://cdn.koalaxiezi.com/ceshi/weektop.png" mode="widthFix"></image>
+  </view>
+  <view class="play_video">
+    <video src="http://cdn.koalaxiezi.com/bh1.mp4" poster="http://cdn.koalaxiezi.com/ceshi/2.png"></video>
+  </view>
+
+  <view class="play_prompt">
+    <view class="check"></view>每周二、四、六各解锁一集
+    <view class="play_prom_right">课后答题并完成秀给朋友看加6学分</view><!--<view class="check"></view>学习完成提示：学习完成，加6学分-->
+  </view>
+
+  <view class="column">
+    <view class="purchased">
+      <!--tab切换-->
+      <view class="swiper-tab">
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">选择课程</view>
+        <!-- <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">课后问答</view> -->
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="2" bindtap="swichNav">相关课程</view>
+      </view>
+      <!--tab切换内容-->
+      <!-- style="height:{{winHeight - 31}}px" -->
+      <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
+          <swiper-item>
+            <view class="week_k" wx:for="{{coursedetail.chapter || []}}" wx:key="index">
+              <view class="week_img">
+                <image src="/resource/img/week_back.png" mode="widthFix"></image>
+                <view class="week_text">
+                  <view class="week_title">{{item.name}}</view>
+                  <view class="five_pointed">
+                    <image src="/resource/img/wujiaoxing-add.png" mode="widthFix"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+
+            <!-- <view class="week_k">
+              <view class="week_img">
+                <image src="/resource/img/week_back.png" mode="widthFix"></image>
+                <view class="week_text">
+                  <view class="week_title">第二节：我是健康小卫士</view>
+                  <view class="five_pointed">
+                    <image src="/resource/img/wujiaoxing-add.png" mode="widthFix"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+
+            <view class="week_k">
+              <view class="week_img">
+                <image src="/resource/img/week_back.png" mode="widthFix"></image>
+                <view class="week_text">
+                  <view class="week_title">第三节：我是健康小卫士</view>
+                  <view class="five_pointed">
+                    <image src="/resource/img/wujiaoxing.png" mode="widthFix"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+
+            <view class="week_k">
+              <view class="week_img">
+                <image src="/resource/img/week_back.png" mode="widthFix"></image>
+                <view class="week_text">
+                  <view class="week_title">第四节：我是健康小卫我是健康小卫我是健康小卫士</view>
+                  <view class="five_pointed">
+                    <image src="/resource/img/wujiaoxing.png" mode="widthFix"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+
+            <view class="week_k">
+              <view class="week_img">
+                <image src="/resource/img/clock.png" mode="widthFix"></image>
+                <view class="week_text">
+                  <view class="week_title_white">第五节：我是健康小卫士</view>
+                </view>
+              </view>
+            </view>
+            <view class="load_more">
+              显示全部课程
+              <view class="more1">
+                <i class="more_right1"></i>
+              </view>
+            </view> -->
+          </swiper-item>
+          <!--
+          class：topi_add选择题目时候的背景颜色
+          class：topi_error错误提示
+          class：topi_correct正确提示
+          -->
+          <swiper-item>
+            <view class="answer">
+              <view class="answer_k">
+                <!--提示***答题获得多少积分-->
+                <view class="prompt">
+                  <view class="prompt_img">
+                    <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+                  </view>
+                  <view class="prompt_text">
+                    <view class="prom_text_title">攻克难题+6</view><!--提示：攻克难题+1、课后答题+1、课后问答100分-->
+                  </view>
+                </view>
+                <view class="answer_top"><image src="/resource/course_play/clip_img.png" mode="widthFix"></image></view>
+                <view class="answer_kids">·1857位小朋友正在做·</view>
+                <view class="answer_topic">
+                  <view class="topic_title">1.我门呼吸时用的是人体的哪个系统？</view>
+                  <view class="topic_text">
+                    <view class="topi_text_one">
+                      <view class="topi_text_bg topi_add">
+                        A.消化系统
+                      </view>
+                      <view class="topi_error"><image src="/resource/course_play/question_error.png" mode="widthFix"></image></view>
+                    </view>
+                    <view class="topi_text_one">
+                      <view class="topi_text_bg">
+                        B.呼吸系统
+                      </view>
+                      <view class="topi_correct"><image src="/resource/course_play/question_right.png" mode="widthFix"></image></view>
+                    </view>
+                    <view class="topi_text_one">
+                      <view class="topi_text_bg">
+                        C.神经系统
+                      </view>
+                    </view>
+                  </view>
+                </view>
+
+                <view class="answer_topic">
+                  <view class="topic_title">2.当病毒入侵身体后，免疫系统会派出谁和病毒作战？</view>
+                  <view class="topic_text">
+                    <view class="topi_text_one">
+                      <view class="topi_text_bg">
+                        A.白雪球
+                      </view>
+                    </view>
+                    <view class="topi_text_one">
+                      <view class="topi_text_bg topi_add">
+                        B.红血球
+                      </view>
+                      <view class="topi_correct"><image src="/resource/course_play/question_right.png" mode="widthFix"></image></view>
+                    </view>
+                    <view class="topi_text_one">
+                      <view class="topi_text_bg">
+                        C.蓝血球
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <!--
+                  class：submit提交按钮
+                  class：re_answer答题错误返回重新答题按钮
+                  class：show_it答题正确返回的秀给爸妈看按钮
+                -->
+                <view class="submit">
+                  <image src="/resource/course_play/question_sub.png" mode="widthFix"></image>
+                </view>
+                <!-- <view class="re_answer">
+                  <image src="/resource/course_play/question_again.png" mode="widthFix"></image>
+                </view>
+                <view class="show_it">
+                  <image src="/resource/course_play/shareToParent.png" mode="widthFix"></image>
+                </view> -->
+
+              </view>
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <view class="recommend_detailed">
+              <view class="reco_deta_k" wx:for="{{recommendCourseData}}" wx:key="index" data-id="{{item.id}}">
+                <image src="{{item.main_img}}" mode="widthFix"></image>
+                <view class="reco_deta_title">{{item.title}}</view>
+                <view class="reco_deta_text">
+                  <view class="reco_deta_jg">￥{{item.price}}</view>
+                  <view class="reco_deta_xl">已售{{item.buy_count}}</view>
+                </view>
+              </view>
+              <!-- <view class="change">换一换</view> -->
+            </view>
+            <!-- <view class="recommend_detailed">
+              <view class="reco_deta_k">
+                <image src="http://cdn.koalaxiezi.com/image1/product.jpg" mode="widthFix"></image>
+                <view class="reco_deta_title">天文地理国家地理海天文地理国家地理海</view>
+                <view class="reco_deta_text">
+                  <view class="reco_deta_jg">￥29.9</view>
+                  <view class="reco_deta_xl">已售8.0万</view>
+                </view>
+              </view>
+            </view> -->
+          </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</block>
+
 
 <!--提示***购买成功-->
 <view class="spell-group-wrapper">

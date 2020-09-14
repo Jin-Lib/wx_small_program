@@ -65,7 +65,12 @@
               <view class="learn_text">
                 <view class="learn_title">10节跨界艺术课</view>
                 <view class="learn_introduction">课程简介</view>
-                <view class="learn_status">未学习</view>
+                <view class="learn_status">
+                  <view class="loadbar">
+                    <view class="bar" style="width:30%"></view>
+                  </view>
+                  <view class="learn_status_yx">已学1/10集</view>
+                </view>
                 <view class="learn_watch">8299位宝宝正在看</view>
               </view>
               <view class="top o_color">置顶</view>

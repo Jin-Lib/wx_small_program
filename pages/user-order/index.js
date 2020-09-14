@@ -66,12 +66,12 @@ Page({
         'paySign': res.paySign,
         'success': function (res) {
           wx.showToast({
-            title: res.isGroup ? '创建拼团成功' : '购买成功',
+            title: res.groupId ? '创建拼团成功' : '购买成功',
             icon: 'none',
             duration: 1000
           })
           that.getorderData();
-          if(res.isGroup) {
+          if(res.groupId) {
             wx.navigateTo({
               url: `/pages/course-share/index?groupId=${res.groupId}&id=${e.currentTarget.dataset.id}`
             })

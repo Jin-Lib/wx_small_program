@@ -630,3 +630,128 @@ page{background-color: #f7f7f7;}
     -webkit-transform: translateX(0px) rotate(0deg);
   }
 }
+
+
+/*
+ * 购买课程后的样式
+ */
+ page{background-color: #f7f7f7;}
+ .play_top{width: 750rpx; height: 100rpx; overflow: hidden;float: left;}
+ .play_top image{width: 750rpx;}
+ .play_video{width: 750rpx;}
+ .play_video video{width: 750rpx;height: 422rpx;}
+ .play_prompt{float: left;width: 700rpx; background-color: #fff;padding: 10rpx 25rpx;font-size: 22rpx;}
+ .play_prom_right{float: right;}
+ .check{
+   float: left;
+         width: 33rpx;
+         height: 33rpx;
+         background-color: #469dff;
+         position: relative;
+         border-radius: 50%;
+         cursor: pointer;
+         margin-right: 13rpx;
+     }
+     .check:after{
+         content: '';
+         display: block;
+         width: 17rpx;
+         height: 10rpx;
+         border: 3rpx solid #fff;
+         border-width: 0 0 5rpx 5rpx;
+         position: absolute;
+         top: 60%;
+         left: 58%;
+         margin-top: -12rpx;
+         margin-left: -12rpx;
+         transform: rotate(-45deg);
+     }
+ 
+ /*红色对勾*/
+ .check_red{
+   float: left;
+         width: 33rpx;
+         height: 33rpx;
+         background-color: #fc4850;
+         position: relative;
+         border-radius: 50%;
+         cursor: pointer;
+         margin-right: 13rpx;
+     }
+     .check_red:after{
+         content: '';
+         display: block;
+         width: 17rpx;
+         height: 10rpx;
+         border: 3rpx solid #fff;
+         border-width: 0 0 5rpx 5rpx;
+         position: absolute;
+         top: 60%;
+         left: 58%;
+         margin-top: -12rpx;
+         margin-left: -12rpx;
+         transform: rotate(-45deg);
+     }
+ .column{width: 750rpx; float: left; margin-top: 3rpx;}
+ .purchased{width: 750rpx; float: left;}
+ .swiper-tab{float: left; width: 750rpx; background-color: #fff;}
+ .swiper-tab-list{width: 50%; float: left; text-align: center; font-size: 26rpx; padding: 20rpx 0rpx;}
+ .on{border-bottom: solid 3rpx #fc4850;color: #fc4850; font-weight: 900}
+ .swiper-box{width: 100%;}
+ .week_k{width: 700rpx; float: left; padding: 0rpx 25rpx; margin-top: 20rpx;}
+ .week_img{width: 620rpx; float: left; position: relative; overflow: hidden; margin-left: 40rpx;}
+ .week_img image{width:620rpx;}
+ .week_text{float: left; position: absolute; top: 33rpx; left: 35rpx; width:580rpx;}
+ .week_title{float: left;color: #0096e7; font-size: 32rpx; width: 450rpx;margin-top: 5rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+ .week_title_white{float: left;color: #fff; font-size: 32rpx; width: 450rpx;margin-top: 5rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+ .five_pointed{float: right; margin-right: 35rpx; width: 50rpx; height: 50rpx; overflow: hidden;}
+ .five_pointed image{width: 50rpx;}
+ .load_more{font-size: 28rpx; font-weight: 900; width: 750rpx; text-align: center; margin-top: 30rpx; float: left;}
+ .more1{ font-size: 24rpx; font-weight: 900; margin-top:-30rpx; margin-right: 260rpx; background-color: #fff; color: #fff; border-radius: 15rpx;}
+ .more1 i {border: solid #000; border-width: 0 4rpx 4rpx 0; padding: 4px;margin-left: 13rpx; float: right; margin-top: 0rpx;}
+ .more_right1 {transform: rotate(45deg);-webkit-transform: rotate(45deg);}
+ .recommend_detailed{float: left; width: 720rpx; padding: 0rpx 0 20rpx 0rpx; margin-left: 20rpx;}
+ .reco_deta_k{float:left; width: 310rpx; margin-left: 30rpx; margin-top:30rpx; border-radius: 15rpx; overflow: hidden;}
+ .reco_deta_k image{width: 310rpx; border-radius: 15rpx;}
+ .reco_deta_title{float: left; width: 310rpx; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height: 34rpx; font-size: 26rpx;font-weight: 900; margin-top: 10rpx;}
+ .reco_deta_text{float: left; width: 205rpx; margin-top: 10rpx;}
+ .reco_deta_jg{float: left;font-size: 22rpx; font-weight: 900; color: #fc4850;}
+ .reco_deta_xl{float: right;font-size: 20rpx; color: #6b6b6b;}
+ .answer{float: left;width: 750rpx;margin-top: 80rpx;}
+ .answer_k{float: left; width: 630rpx; padding: 60rpx 20rpx;margin-left: 40rpx; background-color: #fff;border-radius: 30rpx;position: relative;}
+ .answer_top{position: absolute;top: -40rpx; left: 195rpx; width: 300rpx; overflow: hidden;}
+ .answer_top image{width: 300rpx;}
+ .answer_kids{float: left;font-size: 26rpx; color: #f86f22; width: 630rpx; text-align: center;}
+ .answer_topic{float: left;width: 630rpx; margin-left: 15rpx; margin-top: 30rpx;}
+ .topic_title{float: left;width: 630rpx;font-size: 32rpx; color: #000;font-weight: 900;}
+ .topic_text{float: left;width: 610rpx; font-size: 26rpx;margin-left: 20rpx; margin-top: 15rpx;}
+ .topi_text_one{margin-top: 15rpx; float: left; width: 550rpx;}
+ .topi_text_bg{padding: 10rpx 20rpx; float: left;border-radius: 30rpx; overflow: hidden;}
+ .topi_error{float: left;width: 40rpx; height: 40rpx; overflow: hidden;margin-top:10rpx;margin-left: 20rpx;}
+ .topi_correct{float: left;width: 40rpx; height: 40rpx; overflow: hidden;margin-top:10rpx;margin-left: 20rpx;}
+ .topi_error image{width: 40rpx;}
+ .topi_correct image{width: 40rpx;}
+ .topi_add{background-color: #f86f22; color: #fff;}
+ .submit{float: left;margin-top: 60rpx; width: 280rpx; margin-left: 190rpx;overflow: hidden;}
+ .submit image{width: 280rpx;}
+ .re_answer{float: left;margin-top: 60rpx; width: 280rpx; margin-left: 190rpx;overflow: hidden;}
+ .re_answer image{width: 280rpx;}
+ .show_it{float: left;margin-top: 60rpx; width: 280rpx; margin-left: 190rpx;overflow: hidden;}
+ .show_it image{width: 280rpx;}
+ .week_ups{width: 750rpx; background: rgba(0, 0, 0, 0.8);height: 100%;z-index: 99999;position: fixed;top: 0;left: 0;}
+ .week_ups_img{width: 600rpx; margin-left: 75rpx; margin-top: 260rpx;}
+ .week_ups_img image{width: 600rpx;}
+ .week_poster_k{float: left;}
+ .week_poster_img{width: 500rpx; height: 900rpx; margin-left: 125rpx; margin-top: 80rpx;overflow: hidden;overflow-y:auto;}
+ .week_poster_img image{width: 500rpx;}
+ .week_poster_title{width: 750rpx; text-align: center;font-size: 24rpx; color: #fff; margin-top: 10rpx;}
+ .week_poster_fs{float: left;margin-top: 30rpx; width: 280rpx; margin-left: 230rpx;overflow: hidden;}
+ .week_poster_fs image{width: 280rpx;}
+ .prompt{position: fixed; right: 20rpx; top: 20rpx; background-color: #f86f22; padding: 5rpx 10rpx;color: #fff; border-radius: 30rpx;}
+ .prompt_img{float: left; height: 40rpx; width: 40rpx; overflow: hidden;border-radius: 50%;}
+ .prompt_img image{width: 40rpx;}
+ .prompt_text{float: left; font-size: 22rpx; margin-top: 5rpx; margin-left: 15rpx;}
+ .prom_text_name{float: left; width: 100rpx; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; height: 34rpx; }
+ .prom_text_title{float: left; margin-left: 10rpx;}
+ 
+ 
