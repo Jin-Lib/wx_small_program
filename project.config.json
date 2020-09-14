@@ -306,6 +306,13 @@
 					"id": -1,
 					"name": "pages/partner/user-totalrevenue-tuitionbonus/index",
 					"pathName": "pages/partner/user-totalrevenue-tuitionbonus/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/user-community/index",
+					"pathName": "pages/partner/user-community/index",
 					"scene": null
 				}
 			]

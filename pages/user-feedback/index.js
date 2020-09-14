@@ -1,9 +1,11 @@
 //index.js
+const API = require('../../config/api');
 
 Page({
   data: {
-    // 字数限制
-    current: 0,
+    phone: '',
+    name: '',
+    content: 0,
     max: 300,
     hidden: true, //意见反馈提交弹窗
   },
@@ -11,18 +13,22 @@ Page({
   limit: function (e) {
     var value = e.detail.value;
     var length = parseInt(value.length);
-    if (length > this.data.noteMaxLen) {
+    if (length > this.data.max) {
       return;
     }
     this.setData({
-      current: length
+      content: value
     });
   },
-  //提交按钮
-  show: function (e) {
+  onNameInput: function(e) {
     this.setData({
-      hidden: !this.data.hidden
-    })
+      name: e.detail.value
+    });
+  },
+  onPhoneInput: function(e) {
+    this.setData({
+      phone: e.detail.value
+    });
   },
   //完成按钮
   carry: function (e) {
@@ -39,4 +45,42 @@ Page({
   onShow: function () {
 
   },
+
+  submitFeedback: function() {
+    const { name, phone, content } = this.data;
+
+    if(!content) {
+      wx.showToast({
+        title: '请输入内容',
+        icon: "none"
+      });
+      return;
+    }
+
+    if(!name) {
+      wx.showToast({
+        title: '请输入姓名',
+        icon: "none"
+      });
+      return;
+    }
+    if(!phone) {
+      wx.showToast({
+        title: '请输入手机号',
+        icon: "none"
+      });
+      return;
+    }
+
+    API.feedback({
+      content,
+      real_name: name,
+      phone
+    }).then(res => {//成功
+      this.setData({
+        hidden: !this.data.hidden
+      })
+    }).catch(err => {
+    })
+  }
 })

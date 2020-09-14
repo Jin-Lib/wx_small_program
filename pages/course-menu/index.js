@@ -22,7 +22,7 @@ Page({
     }).then(res => {//成功
       console.log(res);
       //const { rows } = res || {};
-      const rows = res && res.rows || []
+      const rows = res && res.list || []
 
       this.setData({
         courseData: rows || []

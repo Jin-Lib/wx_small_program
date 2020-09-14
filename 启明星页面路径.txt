@@ -39,6 +39,12 @@
 推课奖金"pages/partner/user-totalrevenue-tuitionbonus",
 当前粉丝数"pages/partner/user-numberoffans",
 社群合伙人"pages/partner/user-community",
+团队高级合伙人/pages/partner/user-community-teamseniorpartner/index，
+团队初级合伙人/pages/partner/user-community-juniorpartneroftheteam/index
+团队当前粉丝/pages/partner/user-community-currentfansoftheteam/index
+社群高级合伙人/pages/partner/user-community-seniorcommunitypartner/index
+社群初级合伙人/pages/partner/user-community-communityjuniorpartner/index
+社群当前粉丝/pages/partner/user-community-currentfansofthecommunity/index
 提现"pages/partner/user-withdraw",
 临时粉丝"pages/partner/user-temporaryfans",
 赠课锁粉"pages/partner/user-lockpowder",
