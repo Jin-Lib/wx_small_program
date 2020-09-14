@@ -358,9 +358,9 @@ Page({
       key: 'loginCode',
       success: function(code) {
         API.bindUserPhone({
-          code: code.data,
-          encryptedData: e.detail.encryptedData,
-          iv: e.detail.iv
+          code: encodeURIComponent(code.data),
+          encryptedData: encodeURIComponent(e.detail.encryptedData),
+          iv: encodeURIComponent(e.detail.iv)
         })
           .then(resp => {
             console.log('绑定手机号', resp)
