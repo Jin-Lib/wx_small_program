@@ -212,7 +212,10 @@
       <view class="inte_text">
         <view class="inte_text_title">
           <view class="inte_text_title_title">{{item.title}}</view>
-          <view class="inte_text_title_label">{{item.label}}</view>
+          <view class="inte_text_title_label">
+            <i>{{item.label}}</i>
+          
+          </view>
           <view class="inte_text_title_Watch">{{item.buy_count}}万人播放</view>
         </view>
       </view>
