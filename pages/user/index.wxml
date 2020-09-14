@@ -17,7 +17,16 @@
     </view>
 
     <view class="user_data_text" bindtap="information">
-      <view class="data_text_perfect">尚未完善宝宝信息</view>
+      <view
+        wx:if="{{!userInfoFinish}}"
+        class="data_text_perfect">
+        尚未完善宝宝信息
+      </view>
+      <view
+        wx:else
+        class="data_text_perfect">
+        {{userInfoFinish}}
+      </view>
       <view class="edit_img">
         <image src="/resource/user/baby_info_modify_img.png" mode="widthFix"></image>
       </view>

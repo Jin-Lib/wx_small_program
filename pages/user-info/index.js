@@ -56,7 +56,7 @@ Page({
     days,
     month: 1, // 默认第一月
     day: 1, // 默认第一天
-    birthdayValue: [9999, 0, 0],
+    birthdayValue: [9999, 0, 0, 0, 0, 0],
     birthdaySelectPopup: true, // 选择生日是否显示
   },
   //头像弹窗按钮
@@ -115,14 +115,24 @@ Page({
     API.getinfo({
       code: 0
     }).then(res => {//成功
-      const { phone, nick_name, sex, age } = res || {};
-      console.log('获取age', age)
+      const { phone, nick_name, sex, age, birthday } = res || {};
+      const [yearGroup, timeGroup] = birthday.split(' ');
+      const [year, month, day] = yearGroup.split('-');
+      const [hour, minute, second] = timeGroup.split(':');
+      const yearIndex = years.findIndex(item => item == year);
+      const monthIndex = months.findIndex(item => item == month);
+      const dayIndex = days.findIndex(item => item == day);
+      const hourIndex = hours.findIndex(item => item == hour);
+      const minuteIndex = minutes.findIndex(item => item == minute);
+      const secondIndex = seconds.findIndex(item => item == second);
+
       this.setData({
         infodetail: res,
         phoneValue: phone,
         nickNameValue: nick_name,
         recommendedAgeSelectIndexxb: sex-1,
-        recommendedAgeSelectIndex: age
+        recommendedAgeSelectIndex: age,
+        birthdayValue: [yearIndex, monthIndex, dayIndex, hourIndex, minuteIndex, secondIndex]
       });
     }).catch(err => {
       wx.showToast({//错误
