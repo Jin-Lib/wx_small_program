@@ -42,11 +42,6 @@ Component({
         success: res => {
           let code = res.code;
 
-          wx.setStorage({
-            key: "loginCode",
-            data: code
-          });
-
           let { encryptedData, rawData, signature, iv } = data.detail;
           console.log('data.detail', data.detail);
           let params = {

@@ -121,15 +121,6 @@
       <picker-view-column>
         <view wx:for="{{days}}" wx:key="this" style="line-height: 50px; text-align: center;">{{item}}日</view>
       </picker-view-column>
-      <picker-view-column>
-        <view wx:for="{{hours}}" wx:key="this" style="line-height: 50px; text-align: center;">{{item}}时</view>
-      </picker-view-column>
-      <picker-view-column>
-        <view wx:for="{{minutes}}" wx:key="this" style="line-height: 50px; text-align: center;">{{item}}分</view>
-      </picker-view-column>
-      <picker-view-column>
-        <view wx:for="{{seconds}}" wx:key="this" style="line-height: 50px; text-align: center;">{{item}}秒</view>
-      </picker-view-column>
     </picker-view>
     <view class="popup_anniu">
       <view class="anniu_qx" bindtap="babyBirthdyCancel">取消</view>

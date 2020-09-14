@@ -73,10 +73,6 @@ page{background-color: #f7f7f7}
   white-space: nowrap;
 }
 
-.info_k_select_text_birthday {
-  font-size: 26rpx;
-  line-height: 52rpx;
-}
 
 .info_k .more_right_nick_name{
   border: solid black; border-width: 0 1px 1px 0;display: inline-block; padding: 5px;position: absolute;top: 47rpx; right: 40rpx;

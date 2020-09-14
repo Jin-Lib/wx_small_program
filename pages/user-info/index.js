@@ -56,7 +56,7 @@ Page({
     days,
     month: 1, // 默认第一月
     day: 1, // 默认第一天
-    birthdayValue: [9999, 0, 0, 0, 0, 0],
+    birthdayValue: [9999, 0, 0],
     birthdaySelectPopup: true, // 选择生日是否显示
   },
   //头像弹窗按钮
@@ -82,12 +82,11 @@ Page({
     this.setData({
       recommendedAgeSelectIndex: event.detail.value
     }, () => {
-      console.log('event.detail.value', event.detail.value);
-      
       if (event.detail.value !== undefined && event.detail.value !== null) {
+        const value = this.data.recommendedAge[event.detail.value] ? this.data.recommendedAge[event.detail.value].split('岁')[0] : this.data.recommendedAge[event.detail.value]
         this.editUserInfo({
           edit_key: 'AGE',
-          edit_val: event.detail.value
+          edit_val: value
         });
       }
     })
@@ -115,24 +114,21 @@ Page({
     API.getinfo({
       code: 0
     }).then(res => {//成功
+      const { recommendedAge } = this.data;
       const { phone, nick_name, sex, age, birthday } = res || {};
-      const [yearGroup, timeGroup] = birthday.split(' ');
-      const [year, month, day] = yearGroup.split('-');
-      const [hour, minute, second] = timeGroup.split(':');
+      const [year, month, day] = birthday.split('-');
       const yearIndex = years.findIndex(item => item == year);
       const monthIndex = months.findIndex(item => item == month);
       const dayIndex = days.findIndex(item => item == day);
-      const hourIndex = hours.findIndex(item => item == hour);
-      const minuteIndex = minutes.findIndex(item => item == minute);
-      const secondIndex = seconds.findIndex(item => item == second);
+      const ageIndex = age == 3 ? 0 : recommendedAge.findIndex(item => `${age}岁` == item)
 
       this.setData({
         infodetail: res,
         phoneValue: phone,
         nickNameValue: nick_name,
         recommendedAgeSelectIndexxb: sex-1,
-        recommendedAgeSelectIndex: age,
-        birthdayValue: [yearIndex, monthIndex, dayIndex, hourIndex, minuteIndex, secondIndex]
+        recommendedAgeSelectIndex: ageIndex,
+        birthdayValue: [yearIndex, monthIndex, dayIndex]
       });
     }).catch(err => {
       wx.showToast({//错误
@@ -229,18 +225,6 @@ Page({
       .catch(error => {
         console.log('修改失败', error)
       })
-
-    // age: 0
-    // amount: 0
-    // birthday: ""
-    // create_at: "2020-09-01 22:39:03"
-    // head_img: "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJefEbeicz9b2EZOLbp5ZFKR8DA99IEa9iauIqyqufY9rxCRwJzWhGMyblrbBNNBuaScEKfYcAw0KhA/132"
-    // invite_url: "https://dspfff.oss-cn-hangzhou.aliyuncs.com/22/WechatIMG203.png"
-    // nick_name: "."
-    // phone: "18868439499"
-    // sex: 0
-    // user_id: 13
-    // v_amount: 0
   },
 
   /**
@@ -269,14 +253,10 @@ Page({
   babyBirthdySelect: function(e) {
     const val = e.detail.value;
     const { years, infodetail } = this.data;
-    console.log('val', val)
     let year = years[val[0]];
     let month = months[val[1]];
     let day = days[val[2]];
-    let hour = hours[val[3]];
-    let minute = minutes[val[4]];
-    let second = seconds[val[5]];
-    let time = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+    let time = `${year}-${month}-${day}`;
     infodetail.birthday = time
     this.setData({
       birthdayValue: e.detail.value,
@@ -354,17 +334,16 @@ Page({
   getPhoneNumber(e) {
     let that = this;
     const { infodetail } = this.data;
-    wx.getStorage({
-      key: 'loginCode',
-      success: function(code) {
+    wx.login({
+      success: res => {
+        let code = res.code;
         API.bindUserPhone({
-          code: encodeURIComponent(code.data),
+          code: encodeURIComponent(code),
           encryptedData: encodeURIComponent(e.detail.encryptedData),
           iv: encodeURIComponent(e.detail.iv)
         })
           .then(resp => {
-            console.log('绑定手机号', resp)
-            infodetail.phone = resp; 
+            infodetail.phone = resp.phone; 
             that.setData({
               infodetail
             })
