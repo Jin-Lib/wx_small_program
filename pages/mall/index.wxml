@@ -58,7 +58,7 @@
 <!--轮播图和分类-->
 <view class="carousel">
   <view class="carousel_frame" bindtap='carousel'>
-    <swiper
+    <swiper 
       autoplay="{{true}}"
       indicatorDots="{{true}}"
       interval="{{2000}}"
@@ -91,25 +91,27 @@
       </view>
     </block>
   </view>
-<!--限时爆款文字-->
-<view class="category">
-  <view class="explosion">
-    限时爆款
-    <!--<view class="more" bindtap="more">更多<i class="more_right"></i></view>-->
+
+  <view class="xin_category">
+    <view class="xin_category_title">限时爆款</view>
+    <view class="xin_category_text">爆款先知道 每天一个惊喜折扣</view>
+    <!--限时爆款课程图-->
+    <view wx:for="{{limitTimeCourseData}}" wx:key="course_id" data-id="{{item.course_id}}" class="explosion_course" bindtap="details">
+      <view class="time_top">限时{{item.activity_discount}}折</view>
+      <view class="course_img">
+        <image src="{{item.activity_img}}" mode="widthFix"></image>
+      </view>
+      <view class="coures_text">
+        <view class="text_title">{{item.activity_title}}</view>
+        <view class="text_Introduction">{{item.activity_subtitle}}</view>
+      </view>
+      <view class="spike">￥<i>{{item.group_price}}</i>秒杀</view>
+    </view>
+    <view class="xin_more">
+      点击查看更多 >
+    </view>
   </view>
-</view>
-<!--限时爆款课程图-->
-<view wx:for="{{limitTimeCourseData}}" wx:key="course_id" data-id="{{item.course_id}}" class="explosion_course" bindtap="details">
-  <view class="time_top">限时{{item.activity_discount}}折</view>
-  <view class="course_img">
-    <image src="{{item.activity_img}}" mode="widthFix"></image>
-  </view>
-  <view class="coures_text">
-    <view class="text_title">{{item.activity_title}}</view>
-    <view class="text_Introduction">{{item.activity_subtitle}}</view>
-  </view>
-  <view class="spike">￥<i>{{item.group_price}}</i>秒杀</view>
-</view>
+
 <!--最新上架文字-->
 <view class="category">
   <view class="explosion">

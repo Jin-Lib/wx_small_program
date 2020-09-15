@@ -3,7 +3,7 @@
 const app = getApp()
 const API = require('../../config/api');
 let myStyle = `
---bg-color:#fc4850;
+--bg-color:#ff5e34;
 `
 
 let chageStyle = `
