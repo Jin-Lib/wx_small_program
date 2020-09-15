@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "启明星",
   "usingComponents": {},
-  "onReachBottomDistance": 10
+  "onReachBottomDistance": 10,
+  "navigationStyle": "custom"
 }

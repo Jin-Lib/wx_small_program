@@ -1,10 +1,10 @@
-<!--合伙人临时入口-->
-<view class="hhsr" bindtap="hhsr">
+<!--合伙人临时入口
+<view bindtap="hhsr" style="position: fixed; top: 70rpx; right: 0rpx;background-color: #fc4850;padding: 8rpx 20rpx;font-size: 24rpx;color: #fff;z-index: 999999;">
   合伙人临时入口
-</view>
+</view>-->
 
 
-<!--浮窗活动11-->
+<!--浮窗活动-->
 <view class="bottom_advertising" bindtap="bottom_advertising">
   <image src="http://cdn.koalaxiezi.com/ceshi/3.png" name="浮窗活动" mode="widthFix"></image>
 </view>

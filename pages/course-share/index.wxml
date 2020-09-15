@@ -20,25 +20,15 @@
       mode="widthFix">
     </image>
   </view>
-  <!-- 用户拼团购买后的页面展示 -->
-  <block wx:if="{{!isShare}}">
-    <view class="share_top_button" bindtap="showrecommend">
-      立即邀请
-    </view>
-    <view class="share_top_button2" bindtap="showposter">
-      领加速海报
-    </view>
-    <view class="share_top_button3" bindtap="return_index">
-      回到首页逛逛
-    </view>
-  </block>
-  <!-- 用户分享出去，不是自己打开的页面 -->
-  <block wx:if="{{isShare && !isSelf}}">
-    <view class="share_top_button" bindtap="showpintuan">
-      ￥3.9立即参团
-    </view>
-  </block>
-  
+  <view class="share_top_button" bindtap="showrecommend">
+    立即邀请
+  </view>
+  <view class="share_top_button2" bindtap="showposter">
+    领加速海报
+  </view>
+  <view class="share_top_button3" bindtap="return_index">
+    回到首页逛逛
+  </view>
 </view>
 
 <!--推荐-->
@@ -54,29 +44,40 @@
       </view>
     </view>
     
-    <!-- <view class="change">换一换</view> -->
+    <view class="change">换一换</view>
   </view>
 </view>
 <!--课程详情-->
 <view class="detail_top">
   <view class="detail_bner">
-    <image src="http://cdn.koalaxiezi.com/ceshi/1.png" mode="widthFix"></image>
+    <image src="{{coursedetail.top_img}}"></image>
   </view>
   <view class="detail_video">
-    <video src="http://cdn.koalaxiezi.com/bh1.mp4" poster="http://cdn.koalaxiezi.com/ceshi/2.png"></video>
-  </view>
+        <swiper autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+          <swiper-item wx:if="{{coursedetail.video}}">
+            <video src="{{coursedetail.video}}"></video>
+          </swiper-item>
+          <block
+            wx:for="{{coursedetail.imgs || []}}"
+            wx:key="*this">
+            <swiper-item>
+              <image class="swiper-image" src="{{item}}" />
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
   <view class="detail_title">
-    14天让孩子做情绪的小主人，学会控制自己，提高抗挫折能力，让孩子更自信
+    {{coursedetail.title}}
   </view>
 </view>
 
 <view class="detail_center">
   <view class="deta_center_num">
-    <i>￥29.9</i>起
+    <i>￥{{coursedetail.group_price}}</i>起
   </view>
   <view class="deta_center_details" bindtap="showrule">
-    <view class="center_details_age"><view class="check"></view>4~12岁</view>
-    <view class="center_details_age"><view class="check"></view>20集</view>
+    <view class="center_details_age"><view class="check"></view>{{coursedetail.min_age}}~{{coursedetail.max_age}}岁</view>
+    <view class="center_details_age"><view class="check"></view>{{coursedetail.chapter_count}}集</view>
     <view class="center_details_age"><view class="check"></view>永久回放></view>
   </view>
 </view>
@@ -109,88 +110,52 @@
   </mp-sticky>
 </view>
 
-<!--详情-->
-<view class="default" wx:if="{{currentTabSub === 0}}">
-  <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-  <image src="http://cdn.koalaxiezi.com/ceshi/4.png" mode="widthFix"></image>
-  <image src="http://cdn.koalaxiezi.com/ceshi/5.png" mode="widthFix"></image>
-</view>
-<!--目录-->
-<view class="default" wx:if="{{currentTabSub === 1}}">
-  <image src="http://cdn.koalaxiezi.com/ceshi/6.png" mode="widthFix"></image>
-</view>
-<!--评价-->
-<view class="evaluation" wx:if="{{currentTabSub === 2}}">
-  <image src="http://cdn.koalaxiezi.com/ceshi/7.png" mode="widthFix"></image>
-</view>
 
-<!-- 用户拼团购买后的页面展示 -->
-<block wx:if="{{!isShare}}">
-  <!--底部购买-->
-  <view class="float">
-    <view hidden="{{!isInvitationShow}}" class="share_top_button1" bindtap="showrecommend">
-      立即邀请
+    <!--详情-->
+    <view wx:if="{{currentTabSub === 0}}" class="default">
+      <block
+        wx:if="{{coursedetail.detail}}"
+      >
+        <image
+          wx:for="{{coursedetail.detail}}"
+          wx:key="*this"
+          src="{{item}}"
+          mode="widthFix">
+        </image>
+      </block>
     </view>
-  </view>
-</block>
-
-<!-- 用户分享出去，不是自己打开的页面 -->
-<block wx:if="{{isShare && !isSelf}}">
-  <!--底部购买-->
-  <view class="float1" hidden="{{!isShowBottonBuy}}">
-    <view class="single1" bindtap="return_index">
-      <view class="single1_sy"><image src="/resource/nav/home_active.png" mode="widthFix"></image></view>
-      首页
+    <!--目录-->
+    <view wx:if="{{currentTabSub === 1}}" class="default">
+      <block
+        wx:if="{{coursedetail.catalog_img}}"
+      >
+        <image
+          wx:for="{{coursedetail.catalog_img || []}}"
+          wx:key="this"
+          src="{{item}}"
+          mode="widthFix">
+        </image>
+      </block>
     </view>
-    <view class="group1" bindtap="showpintuan">￥3.9立即参团</view>
-  </view>
-</block>
-
-
-<!--拼团购买弹窗-->
-<view class="bottom_popup" hidden="{{hiddenpintuan}}">
-  <view class="popup">
-    <view class="popup_title add_red">
-      商品详情
+    <!--评价-->
+    <view wx:if="{{currentTabSub === 2}}" class="evaluation">
+      <block
+        wx:if="{{coursedetail.appraise_img}}"
+      >
+        <image
+          wx:for="{{coursedetail.appraise_img}}"
+          wx:key="this"
+          src="{{item}}"
+          mode="widthFix">
+        </image>
+      </block>
     </view>
-    <view class="close" bindtap="showpintuangb"></view>
-    <view class="popup_detailed">
-      <view class="commodity comm_add">
-        <view class="comm_title">商品名</view>
-        <view class="comm_text">104节大课启蒙系列课</view>
-      </view>
-      <view class="commodity comm_add">
-        <view class="comm_title">购买方式</view>
-        <view class="comm_text">3人拼团购</view>
-      </view>
-      <view class="commodity comm_add">
-        <view class="comm_title">优惠券抵扣</view>
-        <view class="comm_text">-￥6 ></view>
-        <view class="comm_coupon">
-          <view class="coupon_text add_yellow"><view class="check_yellow"></view>省6元：启明星新人专享券</view>
-          <view class="coupon_text"><view class="check_wrill"></view>省6元：邀新团专享券</view>
-          <view class="coupon_text"><view class="check_wrill"></view>不使用优惠券</view>
-        </view>
-      </view>
-      <view class="commodity">
-        <view class="comm_title">支付总额</view>
-        <view class="comm_text">￥29.9</view>
-      </view>
-      <view class="pay" bindtap="spell_pay">确认支付</view>
-    </view>
+<!--底部购买-->
+<view class="float">
+  <view hidden="{{!isInvitationShow}}" class="share_top_button1" bindtap="showrecommend">
+    立即邀请
   </view>
 </view>
-
-
-<!--拼团确认取消支付弹窗-->
-<view class="cancelpay" hidden="{{hiddencancelpay}}">
-  <view class="canc_pay_k">
-    <view class="canc_pay_title">确定要取消付款？</view>
-    <view class="canc_pay_determine" bindtap="showcancelpay">确定离开</view>
-    <view class="canc_pay_carry" bindtap="showpintuangb">继续支付</view>
-  </view>
-</view>
-
 
 <!-- 返回顶部 -->
 <scroll-top isTopBtnShow="{{isTopBtnShow}}"></scroll-top>

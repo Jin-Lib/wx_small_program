@@ -8,10 +8,6 @@ Page({
     hiddengroup: true,  //拼团规则弹窗
     isTopBtnShow: false, // 是否展示返回顶部按钮
     isInvitationShow: false, // 是否展示立即邀请按钮
-
-    isShowBottonBuy: false, // 是否展示底部购买
-    hiddencancelpay: true,
-
     spellGroupList: [
       {
         image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
@@ -34,29 +30,17 @@ Page({
 
     groupId: '',
     groupInfo: {},
-    // 用户信息
-    userInfo: {},
     users: [],
     length: 0,
     coursedetail: {},
-    courseData: [],
-
-    // 是否是分享的页面
-    isShare: false,
-    // 是自己还是别人打开分享页面
-    isSelf: false,
-    // 拼团是否完成
-    isFinish: false,
-
-    hiddenpintuan: true
+    courseData: []
   },
 
   onLoad: function (options) {
-    const { groupId, id, share } = options;
+    const { groupId, id } = options;
     this.setData({
       groupId,
-      id,
-      isShare: share == 'true'
+      id
     });
     this.groupInfoData(groupId)
     this.getdetailData(id);
@@ -83,35 +67,9 @@ Page({
       this.setData({
         users,
         groupInfo: res,
-        length: len,
-        isFinish: groupNum <= len
-      }, () => {
-        // 获取用户信息
-        this.getinfoData();
+        length: len
       });
-
-    }).catch(err => {
-      wx.showToast({//错误
-        title: err,
-        icon: 'none',
-        duration: 1000
-      })
-    })
-  },
-
-  // 获取用户信息
-  getinfoData: function () {
-    API.getinfo({
-    }).then(res => {//成功
-      let isSelf = false;
-      if(res.userId == this.data.groupInfo.userId) {
-        isSelf = true
-      }
-
-      this.setData({
-        // isSelf,
-        userInfo: res
-      });
+      console.log(groupInfo)
     }).catch(err => {
       wx.showToast({//错误
         title: err,
@@ -129,6 +87,7 @@ Page({
       this.setData({
         coursedetail: res
       });
+      console.log(res)
     }).catch(err => {
       wx.showToast({//错误
         title: err,
@@ -189,8 +148,8 @@ Page({
   },
   //点击返回首页按钮
   return_index: function (event) {
-    wx.switchTab({
-      url: '/pages/course/index'
+    wx.navigateTo({
+      url: '/pages/mall/index'
     })
   },
   //点击推荐语弹窗
@@ -221,9 +180,7 @@ Page({
   onPageScroll: function(e) {
     this.setData({
       isTopBtnShow: e.scrollTop > 100,
-      isInvitationShow: e.scrollTop > 170,
-
-      isShowBottonBuy: e.scrollTop > 100
+      isInvitationShow: e.scrollTop > 170
     })
   },
   /**
@@ -247,79 +204,12 @@ Page({
       title: coursedetail.title || "",
       path: `/pages/course-share/index?groupId=${groupId}&id=${id}`,
       imageUrl: coursedetail.main_img,
-      desc: coursedetail.subtitle,
+      desc: `仅差${groupInfo.groupNum}人拼团成功!${coursedetail.subtitle}`,
+      // 
       success: (res) => {
       },
       fail: (res) => {
       }
     };
-  },
-
-
-  // ========= 拼团用户操作 ==========
-  //拼团购买弹窗按钮
-  showpintuan: function (e) {
-    this.setData({
-      hiddenpintuan: !this.data.hiddenpintuan,
-    })
-  },
-
-  //拼团关闭弹窗按钮
-  showpintuangb: function (e) {
-    this.setData({
-      hiddencancelpay: !this.data.hiddencancelpay
-    })
-  },
-  //拼团确定离开按钮
-  showcancelpay: function (e) {
-    this.setData({
-      hiddencancelpay: !this.data.hiddencancelpay,
-      hiddenpintuan: !this.data.hiddenpintuan,
-    })
-  },
-
-  //点击团购支付按钮
-  spell_pay: function (event) {
-    let that = this;
-    const { coursedetail, groupId } = that.data;
-    API.getcreate({
-      courseId: coursedetail.id,
-      groupId: groupId,
-      isGroup: 1
-    }).then(res => {//成功
-      wx.requestPayment(
-        {
-          'timeStamp': res.timeStamp,
-          'nonceStr': res.nonceStr,
-          'package': res.package,
-          'signType': res.signType,
-          'paySign': res.paySign,
-          'success': function (res) {
-            that.setData({
-              hiddenpintuan: false
-            });
-            wx.showToast({
-              title: '拼团成功',
-              icon: 'none',
-              duration: 1000
-            })
-            wx.switchTab({
-              url: '/pages/course/index'
-            })
-            
-           },
-          'fail': function (res) { },
-          'complete': function (res) { }
-        })
-      this.setData({
-        coursecreate: res,
-      });
-    }).catch(err => {
-      wx.showToast({//错误
-        title: err,
-        icon: 'none',
-        duration: 1000
-      })
-    })
   },
 })

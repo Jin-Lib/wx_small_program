@@ -267,7 +267,7 @@
       <image src="http://cdn.koalaxiezi.com/ceshi/weektop.png" mode="widthFix"></image>
     </view>
     <view class="play_video">
-      <video src="{{videoUrl}}" poster="http://cdn.koalaxiezi.com/ceshi/2.png"></video>
+      <video src="http://cdn.koalaxiezi.com/bh1.mp4" poster="http://cdn.koalaxiezi.com/ceshi/2.png"></video>
     </view>
 
     <view class="play_prompt">
@@ -287,7 +287,7 @@
         <!-- style="height:{{winHeight - 31}}px" -->
         <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
             <swiper-item>
-              <view class="week_k" wx:for="{{coursedetail.chapter || []}}" wx:key="index" data-video="{{item.video_url}}" bindtap="onClickPlay">
+              <view class="week_k" wx:for="{{coursedetail.chapter || []}}" wx:key="index">
                 <view class="week_img">
                   <image src="/resource/img/week_back.png" mode="widthFix"></image>
                   <view class="week_text">
@@ -357,7 +357,7 @@
             -->
             <swiper-item>
               <view class="recommend_detailed">
-                <view class="reco_deta_k" wx:for="{{recommendCourseData}}" wx:key="index" data-id="{{item.id}}" bindtap="details">
+                <view class="reco_deta_k" wx:for="{{recommendCourseData}}" wx:key="index" data-id="{{item.id}}">
                   <image src="{{item.main_img}}" mode="widthFix"></image>
                   <view class="reco_deta_title">{{item.title}}</view>
                   <view class="reco_deta_text">

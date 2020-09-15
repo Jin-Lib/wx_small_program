@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-const API = require('../../config/api');
 
 Page({
   data: {
@@ -9,17 +8,11 @@ Page({
     winWidth: 0,
     winHeight: 0,
     currentTab: 0,
-
-    // 我的拼团信息
-    orderData: [],
-    // 我的课程信息
-    courseData: []
   },
   //点击邀好友拼团
-  invitefriends: function (e) {
-    const { id, groupId } = e.currentTarget.dataset;
+  invitefriends: function (event) {
     wx.navigateTo({
-      url: `/pages/course-share/index?groupId=${groupId}&id=${id}`
+      url: '/pages/course-share/index'
     })
   },
   //点击添加课程
@@ -46,16 +39,23 @@ Page({
       url: '/pages/course-detail/index'
     })
   },
-  lessons: function (e) {
+  lessons: function (event) {
     wx.navigateTo({
-      url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}`
+      url: '/pages/course-play/index'
     })
   },
   onLoad: function () {
-    // 获取我的拼团列表
-    this.getorderData("2");
-    // 获取我的课程列表
-    this.getorderData("4");
+
+    //  tab切换
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight
+        });
+      }
+    });
 
   },
   //  tab切换逻辑
@@ -86,30 +86,4 @@ Page({
     }
 
   },
-
-  // 获取订单信息
-  getorderData: function (type) {
-    API.getorder({
-      type
-    }).then(res => {//成功
-      const rows = res && res.rows || []
-      if(type === '2') {
-        this.setData({
-          orderData: rows || []
-        });
-      } else if(type === '4') {
-        this.setData({
-          courseData: rows || []
-        });
-      }
-      
-    }).catch(err => {
-      wx.showToast({//错误
-        title: err,
-        icon: 'none',
-        duration: 1000
-      })
-    })
-  },
-
 })
