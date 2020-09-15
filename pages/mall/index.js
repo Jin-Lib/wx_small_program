@@ -7,6 +7,7 @@ Page({
   searchSwiperSub: 0,
 
   data: {
+    statusBarHeight: app.globalData.statusBarHeight,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     recommendedAge: [],
     recommendedAgeSelectIndex: 0,
@@ -57,6 +58,14 @@ Page({
   },
 
   onLoad: function () {
+    // 获取系统状态栏信息
+    wx.getSystemInfo({
+      success: e => {
+        this.globalData.StatusBar = e.statusBarHeight;
+        this.globalData.CustomBar = e.platform == 'android' ? e.statusBarHeight + 50 : e.statusBarHeight + 45;
+      }
+    });
+ 
     this.getBannerData();
     this.getTypeData();
     this.getSomeCourseList('1');
@@ -233,7 +242,7 @@ Page({
       ageList.push(`${i}岁`)
     }
 
-    ageList.unshift('3岁以下');
+    ageList.unshift('3岁');
     
     this.setData({
       recommendedAge: ageList
