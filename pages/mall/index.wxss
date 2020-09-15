@@ -7,7 +7,7 @@
   height: 45px;
   background: var(--bg-color);
   z-index: 999;
-  transition: all 2s ease-in;
+  transition: all 1s ease-in;
  }
  .empty_custom{
   height: 45px;
