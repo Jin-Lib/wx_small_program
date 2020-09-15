@@ -10,7 +10,7 @@
 
 <!--顶部搜索-->
 
-<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px;{{viewData.style}}">
   <view class="custom_top">
     <view class="floating_img">
       <image src="{{userInfo.head_img}}" mode="widthFix"></image>

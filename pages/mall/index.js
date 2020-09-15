@@ -2,11 +2,21 @@
 //获取应用实例
 const app = getApp()
 const API = require('../../config/api');
+let myStyle = `
+--bg-color:#fc4850;
+`
+
+let chageStyle = `
+--bg-color:#ffffff;
+`
 
 Page({
   searchSwiperSub: 0,
 
   data: {
+    viewData: {
+      style: myStyle
+    },
     statusBarHeight: app.globalData.statusBarHeight,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     recommendedAge: [],
@@ -361,5 +371,20 @@ Page({
 
   searchSwiperChange: function(event) {
     this.searchSwiperSub = event.detail.current;
+  },
+  onPageScroll: function (e) {
+     console.log(e.scrollTop)
+     if(e.scrollTop >= 100){
+         this.setData({
+           'viewData.style': chageStyle
+         })
+       console.log(1111111111111)
+     }else if(e.scrollTop <= 100){
+      this.setData({
+        'viewData.style': myStyle
+      })
+
+     }
   }
 })
+
