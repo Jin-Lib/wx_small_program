@@ -50,7 +50,7 @@ Page({
   },
 
   onLoad: function (options) {
-    const { groupId, id } = options;
+    const { groupId, id, share } = options;
     this.setData({
       groupId,
       id,
