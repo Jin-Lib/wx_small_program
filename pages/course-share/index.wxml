@@ -20,15 +20,25 @@
       mode="widthFix">
     </image>
   </view>
-  <view class="share_top_button" bindtap="showrecommend">
-    立即邀请
-  </view>
-  <view class="share_top_button2" bindtap="showposter">
-    领加速海报
-  </view>
-  <view class="share_top_button3" bindtap="return_index">
-    回到首页逛逛
-  </view>
+  <!-- 用户拼团购买后的页面展示 -->
+  <block wx:if="{{!isShare}}">
+    <view class="share_top_button" bindtap="showrecommend">
+      立即邀请
+    </view>
+    <view class="share_top_button2" bindtap="showposter">
+      领加速海报
+    </view>
+    <view class="share_top_button3" bindtap="return_index">
+      回到首页逛逛
+    </view>
+  </block>
+  <!-- 用户分享出去，不是自己打开的页面 -->
+  <block wx:if="{{isShare && !isSelf}}">
+    <view class="share_top_button" bindtap="showpintuan">
+      ￥3.9立即参团
+    </view>
+  </block>
+  
 </view>
 
 <!--推荐-->
@@ -44,7 +54,7 @@
       </view>
     </view>
     
-    <view class="change">换一换</view>
+    <!-- <view class="change">换一换</view> -->
   </view>
 </view>
 <!--课程详情-->
@@ -113,12 +123,74 @@
 <view class="evaluation" wx:if="{{currentTabSub === 2}}">
   <image src="http://cdn.koalaxiezi.com/ceshi/7.png" mode="widthFix"></image>
 </view>
-<!--底部购买-->
-<view class="float">
-  <view hidden="{{!isInvitationShow}}" class="share_top_button1" bindtap="showrecommend">
-    立即邀请
+
+<!-- 用户拼团购买后的页面展示 -->
+<block wx:if="{{!isShare}}">
+  <!--底部购买-->
+  <view class="float">
+    <view hidden="{{!isInvitationShow}}" class="share_top_button1" bindtap="showrecommend">
+      立即邀请
+    </view>
+  </view>
+</block>
+
+<!-- 用户分享出去，不是自己打开的页面 -->
+<block wx:if="{{isShare && !isSelf}}">
+  <!--底部购买-->
+  <view class="float1" hidden="{{!isShowBottonBuy}}">
+    <view class="single1" bindtap="return_index">
+      <view class="single1_sy"><image src="/resource/nav/home_active.png" mode="widthFix"></image></view>
+      首页
+    </view>
+    <view class="group1" bindtap="showpintuan">￥3.9立即参团</view>
+  </view>
+</block>
+
+
+<!--拼团购买弹窗-->
+<view class="bottom_popup" hidden="{{hiddenpintuan}}">
+  <view class="popup">
+    <view class="popup_title add_red">
+      商品详情
+    </view>
+    <view class="close" bindtap="showpintuangb"></view>
+    <view class="popup_detailed">
+      <view class="commodity comm_add">
+        <view class="comm_title">商品名</view>
+        <view class="comm_text">104节大课启蒙系列课</view>
+      </view>
+      <view class="commodity comm_add">
+        <view class="comm_title">购买方式</view>
+        <view class="comm_text">3人拼团购</view>
+      </view>
+      <view class="commodity comm_add">
+        <view class="comm_title">优惠券抵扣</view>
+        <view class="comm_text">-￥6 ></view>
+        <view class="comm_coupon">
+          <view class="coupon_text add_yellow"><view class="check_yellow"></view>省6元：启明星新人专享券</view>
+          <view class="coupon_text"><view class="check_wrill"></view>省6元：邀新团专享券</view>
+          <view class="coupon_text"><view class="check_wrill"></view>不使用优惠券</view>
+        </view>
+      </view>
+      <view class="commodity">
+        <view class="comm_title">支付总额</view>
+        <view class="comm_text">￥29.9</view>
+      </view>
+      <view class="pay" bindtap="spell_pay">确认支付</view>
+    </view>
   </view>
 </view>
+
+
+<!--拼团确认取消支付弹窗-->
+<view class="cancelpay" hidden="{{hiddencancelpay}}">
+  <view class="canc_pay_k">
+    <view class="canc_pay_title">确定要取消付款？</view>
+    <view class="canc_pay_determine" bindtap="showcancelpay">确定离开</view>
+    <view class="canc_pay_carry" bindtap="showpintuangb">继续支付</view>
+  </view>
+</view>
+
 
 <!-- 返回顶部 -->
 <scroll-top isTopBtnShow="{{isTopBtnShow}}"></scroll-top>
