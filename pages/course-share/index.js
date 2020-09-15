@@ -10,10 +10,6 @@ Page({
     hiddengroup: true,  //拼团规则弹窗
     isTopBtnShow: false, // 是否展示返回顶部按钮
     isInvitationShow: false, // 是否展示立即邀请按钮
-
-    isShowBottonBuy: false, // 是否展示底部购买
-    hiddencancelpay: true,
-
     spellGroupList: [
       {
         image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',
@@ -36,8 +32,6 @@ Page({
 
     groupId: '',
     groupInfo: {},
-    // 用户信息
-    userInfo: {},
     users: [],
     length: 0,
     coursedetail: {},
@@ -48,7 +42,7 @@ Page({
     // 是自己还是别人打开分享页面
     isSelf: true,
     // 拼团是否完成
-    isFinish: true,
+    isFinish: false,
 
     hiddenpintuan: true,
 
@@ -56,7 +50,7 @@ Page({
   },
 
   onLoad: function (options) {
-    const { groupId, id, share } = options;
+    const { groupId, id } = options;
     this.setData({
       groupId,
       id,
@@ -94,7 +88,7 @@ Page({
         users,
         groupInfo: res,
         length: len,
-        // isFinish: groupNum <= len
+        isFinish: groupNum <= len
       }, () => {
         // 获取用户信息
         this.getinfoData();
@@ -119,7 +113,7 @@ Page({
       }
 
       this.setData({
-        // isSelf,
+        isSelf,
         userInfo: res
       });
     }).catch(err => {
@@ -139,6 +133,7 @@ Page({
       this.setData({
         coursedetail: res
       });
+      console.log(res)
     }).catch(err => {
       wx.showToast({//错误
         title: err,
@@ -199,8 +194,8 @@ Page({
   },
   //点击返回首页按钮
   return_index: function (event) {
-    wx.switchTab({
-      url: '/pages/course/index'
+    wx.navigateTo({
+      url: '/pages/mall/index'
     })
   },
   //点击推荐语弹窗
@@ -231,9 +226,7 @@ Page({
   onPageScroll: function(e) {
     this.setData({
       isTopBtnShow: e.scrollTop > 100,
-      isInvitationShow: e.scrollTop > 170,
-
-      isShowBottonBuy: e.scrollTop > 100
+      isInvitationShow: e.scrollTop > 170
     })
   },
   /**
@@ -257,7 +250,8 @@ Page({
       title: coursedetail.title || "",
       path: `/pages/course-share/index?groupId=${groupId}&id=${id}`,
       imageUrl: coursedetail.main_img,
-      desc: coursedetail.subtitle,
+      desc: `仅差${groupInfo.groupNum}人拼团成功!${coursedetail.subtitle}`,
+      // 
       success: (res) => {
       },
       fail: (res) => {

@@ -41,7 +41,7 @@
 
 </view>
 <!--发现惊喜-->
-<!-- <view class="surprise">
+<view class="surprise">
 
   <view class="category">
     <view class="explosion">
@@ -72,7 +72,7 @@
     </view>
 
   </view>
-</view> -->
+</view>
 
 <!--自助服务-->
 <view class="service">

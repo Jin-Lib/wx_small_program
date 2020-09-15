@@ -26,21 +26,21 @@ Page({
   },
 
   //社群高级合伙人
-  teamseniorpartner: function (event) {
+  seniorcommunitypartner: function (event) {
     wx.navigateTo({
       url: '/pages/partner/user-community-seniorcommunitypartner/index'
     })
   },
 
   //社群初级合伙人
-  juniorpartneroftheteam: function (event) {
+  communityjuniorpartner: function (event) {
     wx.navigateTo({
       url: '/pages/partner/user-community-communityjuniorpartner/index'
     })
   },
 
   //社群当前粉丝
-  currentfansoftheteam: function (event) {
+  currentfansofthecommunity: function (event) {
     wx.navigateTo({
       url: '/pages/partner/user-community-currentfansofthecommunity/index'
     })

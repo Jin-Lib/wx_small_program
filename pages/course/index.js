@@ -1,8 +1,11 @@
 //index.js
 //获取应用实例
 const app = getApp()
+<<<<<<< HEAD
 const API = require('../../config/api');
 const Auth = require('../../utils/auth');
+=======
+>>>>>>> 6010c7cc8905e6914b56fa808d35e47146b429b8
 
 Page({
   data: {
@@ -10,6 +13,7 @@ Page({
     winWidth: 0,
     winHeight: 0,
     currentTab: 0,
+<<<<<<< HEAD
 
     // 我的拼团信息
     orderData: [],
@@ -17,12 +21,13 @@ Page({
     courseData: [],
     
     wxlogin: true,
+=======
+>>>>>>> 6010c7cc8905e6914b56fa808d35e47146b429b8
   },
   //点击邀好友拼团
-  invitefriends: function (e) {
-    const { id, groupId } = e.currentTarget.dataset;
+  invitefriends: function (event) {
     wx.navigateTo({
-      url: `/pages/course-share/index?groupId=${groupId}&id=${id}`
+      url: '/pages/course-share/index'
     })
   },
   //点击添加课程
@@ -49,12 +54,13 @@ Page({
       url: '/pages/course-detail/index'
     })
   },
-  lessons: function (e) {
+  lessons: function (event) {
     wx.navigateTo({
-      url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}`
+      url: '/pages/course-play/index'
     })
   },
   onLoad: function () {
+<<<<<<< HEAD
     this.initData();
 
   },
@@ -78,6 +84,20 @@ Page({
     this.getorderData("2");
     // 获取我的课程列表
     this.getorderData("4");
+=======
+
+    //  tab切换
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight
+        });
+      }
+    });
+
+>>>>>>> 6010c7cc8905e6914b56fa808d35e47146b429b8
   },
   //  tab切换逻辑
   swichNav: function (e) {
@@ -95,6 +115,7 @@ Page({
     that.setData({ currentTab: e.detail.current });
   },
   
+<<<<<<< HEAD
   // 获取订单信息
   getorderData: function (type) {
     API.getorder({
@@ -150,4 +171,18 @@ Page({
     this.initData();
   },
 
+=======
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 1
+      })
+    }
+
+  },
+>>>>>>> 6010c7cc8905e6914b56fa808d35e47146b429b8
 })

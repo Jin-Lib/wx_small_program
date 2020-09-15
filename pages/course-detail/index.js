@@ -90,9 +90,6 @@ Page({
             });
           }
         });
-        that.setData({
-          videoUrl: res.chapter && res.chapter[0] && res.chapter[0].video_url || ''
-        });
       }
 
       this.setData({
@@ -267,10 +264,10 @@ Page({
   },
   //点击团购支付按钮
   spell_pay: function (event) {
-    wx.navigateTo({
-      url: `/pages/course-share/index?groupId=2&id=${this.data.coursedetail.id}&share=true`
-    })
-    return;
+    // wx.navigateTo({
+    //   url: `/pages/course-share/index?groupId=2&id=${this.data.coursedetail.id}`
+    // })
+    // return;
     let that = this;
     API.getcreate({
       courseId: this.data.coursedetail.id,
@@ -285,7 +282,7 @@ Page({
           'package': res.package,
           'signType': res.signType,
           'paySign': res.paySign,
-          'success': function (data) {
+          'success': function (res) {
             that.setData({
               hiddenpintuan: false
             });
@@ -295,7 +292,7 @@ Page({
               duration: 1000
             })
             wx.navigateTo({
-              url: `/pages/course-share/index?groupId=${res.groupId}&id=${that.data.coursedetail.id}&share=true`
+              url: `/pages/course-share/index?groupId=${res.groupId}&id=${that.data.coursedetail.id}`
             })
             
            },
@@ -334,7 +331,7 @@ Page({
   },
 
 
-  // ===========   购买课程   ==============
+  // 购买课程
   //  tab切换逻辑
   swichNav: function (e) {
     var that = this;
