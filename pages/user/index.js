@@ -6,6 +6,7 @@ Page({
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     wxlogin: true,
+    userInfoFinish: false,
     userInfo: {}
   },
 
@@ -53,6 +54,9 @@ Page({
         if(res) {
           this.setData({
             wxlogin: true
+          }, () => {
+            // 用户登录之后查看当前个人资料是否填写
+            this.getInfoData()
           });
         } else {
           this.setData({
@@ -64,6 +68,28 @@ Page({
           wxlogin: false
         });
       })
+  },
+
+  /**
+   * 获取当前用户个人资料
+   * @date 2020-09-14
+   * @returns {any}
+   */
+  getInfoData: function () {
+    API.getinfo({
+      code: 0
+    }).then(res => {//成功
+      console.log('res', res)
+      const {
+        nick_name, head_img, birthday,
+        age, sex, phone
+      } = res;
+      if (nick_name && head_img && birthday && age && sex && phone) {
+        this.setData({
+          userInfoFinish: nick_name
+        })
+      }
+    })
   },
 
   getUserInfoDetail: function() {

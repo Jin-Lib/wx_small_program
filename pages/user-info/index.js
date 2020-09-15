@@ -82,12 +82,11 @@ Page({
     this.setData({
       recommendedAgeSelectIndex: event.detail.value
     }, () => {
-      console.log('event.detail.value', event.detail.value);
-      
       if (event.detail.value !== undefined && event.detail.value !== null) {
+        const value = this.data.recommendedAge[event.detail.value] ? this.data.recommendedAge[event.detail.value].split('岁')[0] : this.data.recommendedAge[event.detail.value]
         this.editUserInfo({
           edit_key: 'AGE',
-          edit_val: event.detail.value
+          edit_val: value
         });
       }
     })
@@ -115,12 +114,21 @@ Page({
     API.getinfo({
       code: 0
     }).then(res => {//成功
-      const { phone, nick_name, sex } = res || {};
+      const { recommendedAge } = this.data;
+      const { phone, nick_name, sex, age, birthday } = res || {};
+      const [year, month, day] = birthday.split('-');
+      const yearIndex = years.findIndex(item => item == year);
+      const monthIndex = months.findIndex(item => item == month);
+      const dayIndex = days.findIndex(item => item == day);
+      const ageIndex = age == 3 ? 0 : recommendedAge.findIndex(item => `${age}岁` == item)
+
       this.setData({
         infodetail: res,
         phoneValue: phone,
         nickNameValue: nick_name,
-        recommendedAgeSelectIndexxb: sex-1
+        recommendedAgeSelectIndexxb: sex-1,
+        recommendedAgeSelectIndex: ageIndex,
+        birthdayValue: [yearIndex, monthIndex, dayIndex]
       });
     }).catch(err => {
       wx.showToast({//错误
@@ -217,18 +225,6 @@ Page({
       .catch(error => {
         console.log('修改失败', error)
       })
-
-    // age: 0
-    // amount: 0
-    // birthday: ""
-    // create_at: "2020-09-01 22:39:03"
-    // head_img: "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJefEbeicz9b2EZOLbp5ZFKR8DA99IEa9iauIqyqufY9rxCRwJzWhGMyblrbBNNBuaScEKfYcAw0KhA/132"
-    // invite_url: "https://dspfff.oss-cn-hangzhou.aliyuncs.com/22/WechatIMG203.png"
-    // nick_name: "."
-    // phone: "18868439499"
-    // sex: 0
-    // user_id: 13
-    // v_amount: 0
   },
 
   /**
@@ -257,14 +253,10 @@ Page({
   babyBirthdySelect: function(e) {
     const val = e.detail.value;
     const { years, infodetail } = this.data;
-    console.log('val', val)
     let year = years[val[0]];
     let month = months[val[1]];
     let day = days[val[2]];
-    let hour = hours[val[3]];
-    let minute = minutes[val[4]];
-    let second = seconds[val[5]];
-    let time = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+    let time = `${year}-${month}-${day}`;
     infodetail.birthday = time
     this.setData({
       birthdayValue: e.detail.value,
@@ -313,29 +305,50 @@ Page({
    * @returns {any}
    */
   uploadImg() {
+    const { infodetail } = this.data;
     var that = this;
     wx.chooseImage({  //从本地相册选择图片或使用相机拍照
       count: 1, // 默认9
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success:function(res){
-       //前台显示
-        that.setData({
-          source: res.tempFilePaths
-        })
+        //前台显示
+        infodetail.head_img = res.tempFilePaths[0]
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-        var tempFilePaths = res.tempFilePaths
-         wx.uploadFile({
-          url: 'http://www.website.com/home/api/uploadimg',
-          filePath: tempFilePaths[0],
-          name: 'file',
-          success:function(res){
-            //打印
-            console.log(res.data)
-          }
+        that.setData({
+          infodetail
+        }, () => {
+          that.editUserInfo({
+            edit_key: 'HEAD',
+            edit_val: infodetail.head_img
+          });
         })
       }
-
+    })
+  },
+  /**
+   * 获取当前用户手机号码
+   * @date 2020-09-13
+   * @returns {any}
+   */
+  getPhoneNumber(e) {
+    let that = this;
+    const { infodetail } = this.data;
+    wx.login({
+      success: res => {
+        let code = res.code;
+        API.bindUserPhone({
+          code: encodeURIComponent(code),
+          encryptedData: encodeURIComponent(e.detail.encryptedData),
+          iv: encodeURIComponent(e.detail.iv)
+        })
+          .then(resp => {
+            infodetail.phone = resp.phone; 
+            that.setData({
+              infodetail
+            })
+          })
+      }
     })
   }
 })

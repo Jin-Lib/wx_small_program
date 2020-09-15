@@ -41,6 +41,7 @@ Component({
       wx.login({
         success: res => {
           let code = res.code;
+
           let { encryptedData, rawData, signature, iv } = data.detail;
           console.log('data.detail', data.detail);
           let params = {

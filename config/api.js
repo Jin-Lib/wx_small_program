@@ -145,6 +145,12 @@ const API =  {
   recommend: {
     url: `${host}/api/course/recommend`,
     method: 'GET'
+  },
+
+  // 绑定用户手机号
+  'bindUserPhone': {
+    url: `${host}/api/user/bind`,
+    method: 'POST'
   }
 };
 
