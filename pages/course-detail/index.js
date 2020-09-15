@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 const API = require('../../config/api');
+const Auth = require('../../utils/auth');
 
 Page({
   data: {
@@ -28,19 +29,31 @@ Page({
     currentTab: 0,
 
     // 当前观看的课程
-    videoUrl: ''
+    videoUrl: '',
+
+    id: '',
+    wxlogin: false,
+
   },
 
   onLoad: function (options) {
-    this.getdetailData(options.id);
-    this.getBroadcast();
-    this.recommendData();
+    this.setData({
+      id: options.id
+    }, () => {
+      this.initData();
+    });
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+  },
+
+  initData: function() {
+    this.getdetailData(this.data.id);
+    this.getBroadcast();
+    this.recommendData();
   },
 
   // 跑马灯
@@ -185,6 +198,12 @@ Page({
   },
   //单独购买弹窗按钮
   showsingled: function (e) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
     this.setData({
       hiddensingle: !this.data.hiddensingle
     })
@@ -197,6 +216,12 @@ Page({
   },
   //拼团购买弹窗按钮
   showpintuan: function (e) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
     this.setData({
       hiddenpintuan: !this.data.hiddenpintuan,
     })
@@ -333,5 +358,36 @@ Page({
     this.setData({
       videoUrl: video_url
     });
-  }
+  },
+
+  // 是否登录
+  isLogin: function() {
+    // 是否登录
+    Auth.checkHasLogined()
+      .then(res => {
+        if(res) {
+          this.setData({
+            wxlogin: true
+          }, () => {
+            // 用户登录之后查看当前个人资料是否填写
+            // this.getinfoData()
+          });
+        } else {
+          this.setData({
+            wxlogin: false
+          });
+        }
+      }).catch(e => {
+        this.setData({
+          wxlogin: false
+        });
+      })
+  },
+
+  getUserInfoDetail: function() {
+    this.setData({
+      wxlogin: true
+    });
+    this.initData();
+  },
 })

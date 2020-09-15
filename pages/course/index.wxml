@@ -6,7 +6,7 @@
 
 <!--我的拼团文字-->
 <view class="cour_title">
-  我的拼团111111111
+  我的拼团
 </view>
 <!--拼团板块-->
 <view class="group">
@@ -151,6 +151,8 @@
   </view> -->
 
 </view>
+
+<v-login wxlogin="{{wxlogin}}" bindgetUserInfoDetail="getUserInfoDetail"></v-login>
 
 
 

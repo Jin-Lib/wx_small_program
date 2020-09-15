@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 const API = require('../../config/api');
+const Auth = require('../../utils/auth');
 
 Page({
   data: {
@@ -13,7 +14,9 @@ Page({
     // 我的拼团信息
     orderData: [],
     // 我的课程信息
-    courseData: []
+    courseData: [],
+    
+    wxlogin: true,
   },
   //点击邀好友拼团
   invitefriends: function (e) {
@@ -52,11 +55,29 @@ Page({
     })
   },
   onLoad: function () {
+    this.initData();
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 1
+      })
+    }
+    this.isLogin();
+
+  },
+
+  initData: function() {
     // 获取我的拼团列表
     this.getorderData("2");
     // 获取我的课程列表
     this.getorderData("4");
-
   },
   //  tab切换逻辑
   swichNav: function (e) {
@@ -74,19 +95,6 @@ Page({
     that.setData({ currentTab: e.detail.current });
   },
   
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-      this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 1
-      })
-    }
-
-  },
-
   // 获取订单信息
   getorderData: function (type) {
     API.getorder({
@@ -110,6 +118,36 @@ Page({
         duration: 1000
       })
     })
+  },
+
+
+  // 是否登录
+  isLogin: function() {
+    // 是否登录
+    Auth.checkHasLogined()
+      .then(res => {
+        if(res) {
+          this.setData({
+            wxlogin: true
+          });
+        } else {
+          this.setData({
+            wxlogin: false
+          });
+        }
+      }).catch(e => {
+        this.setData({
+          wxlogin: false
+        });
+      })
+  },
+
+  getUserInfoDetail: function() {
+    console.log('test');
+    this.setData({
+      wxlogin: true
+    });
+    this.initData();
   },
 
 })

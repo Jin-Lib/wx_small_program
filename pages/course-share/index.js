@@ -1,5 +1,7 @@
 //index.js
 const API = require('../../config/api');
+const Auth = require('../../utils/auth');
+
 Page({
   data: {
     hiddenposter: true, //海报生成弹窗
@@ -44,11 +46,13 @@ Page({
     // 是否是分享的页面
     isShare: false,
     // 是自己还是别人打开分享页面
-    isSelf: false,
+    isSelf: true,
     // 拼团是否完成
-    isFinish: false,
+    isFinish: true,
 
-    hiddenpintuan: true
+    hiddenpintuan: true,
+
+    wxlogin: true,
   },
 
   onLoad: function (options) {
@@ -57,22 +61,28 @@ Page({
       groupId,
       id,
       isShare: share == 'true'
+    }, () => {
+      this.initData();
     });
-    this.groupInfoData(groupId)
-    this.getdetailData(id);
-    this.recommendData();
   },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.isLogin();
+  },
 
+  // 
+  initData: function() {
+    this.groupInfoData()
+    this.getdetailData();
+    this.recommendData();
   },
 
   // 获取团信息
-  groupInfoData: function (groupId) {
+  groupInfoData: function () {
     API.groupInfo({
-      groupId
+      groupId: this.data.groupId
     }).then(res => {//成功
       let { users = [], groupNum = 0 } = res || {};
       let len = users.length;
@@ -84,7 +94,7 @@ Page({
         users,
         groupInfo: res,
         length: len,
-        isFinish: groupNum <= len
+        // isFinish: groupNum <= len
       }, () => {
         // 获取用户信息
         this.getinfoData();
@@ -122,9 +132,9 @@ Page({
   },
 
   // 获取课程信息
-  getdetailData: function (id) {
+  getdetailData: function () {
     API.getweek({
-      id
+      id: this.data.id
     }).then(res => {//成功
       this.setData({
         coursedetail: res
@@ -259,6 +269,12 @@ Page({
   // ========= 拼团用户操作 ==========
   //拼团购买弹窗按钮
   showpintuan: function (e) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
     this.setData({
       hiddenpintuan: !this.data.hiddenpintuan,
     })
@@ -280,6 +296,12 @@ Page({
 
   //点击团购支付按钮
   spell_pay: function (event) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
     let that = this;
     const { coursedetail, groupId } = that.data;
     API.getcreate({
@@ -321,5 +343,37 @@ Page({
         duration: 1000
       })
     })
+  },
+
+
+  // 是否登录
+  isLogin: function() {
+    // 是否登录
+    Auth.checkHasLogined()
+      .then(res => {
+        if(res) {
+          this.setData({
+            wxlogin: true
+          }, () => {
+            // 用户登录之后查看当前个人资料是否填写
+            this.getinfoData()
+          });
+        } else {
+          this.setData({
+            wxlogin: false
+          });
+        }
+      }).catch(e => {
+        this.setData({
+          wxlogin: false
+        });
+      })
+  },
+
+  getUserInfoDetail: function() {
+    this.setData({
+      wxlogin: true
+    });
+    this.initData();
   },
 })

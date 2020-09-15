@@ -11,7 +11,7 @@ Page({
   },
 
   onLoad: function () {
-    this.getUserInfo();
+    this.getInfoData();
   },
   /**
    * 生命周期函数--监听页面显示
@@ -29,22 +29,22 @@ Page({
   },
 
   // 获取用户信息
-  getUserInfo: function() {
-    let that = this;
-    API.getinfo()
-      .then(data => {
-        that.setData({
-          userInfo: data,
-        });
-      }).catch(err => {
-        console.log('err', err)
-        if(err == '登录已过期') {
-          that.setData({
-            wxlogin: false
-          });
-        }
-      });
-  },
+  // getUserInfo: function() {
+  //   let that = this;
+  //   API.getinfo()
+  //     .then(data => {
+  //       that.setData({
+  //         userInfo: data,
+  //       });
+  //     }).catch(err => {
+  //       console.log('err', err)
+  //       if(err == '登录已过期') {
+  //         that.setData({
+  //           wxlogin: false
+  //         });
+  //       }
+  //     });
+  // },
 
   // 是否登录
   isLogin: function() {
@@ -96,7 +96,7 @@ Page({
     this.setData({
       wxlogin: true
     });
-    this.getUserInfo();
+    this.getInfoData();
   },
   
   //点击修改信息

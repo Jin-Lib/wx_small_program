@@ -106,6 +106,6 @@
 
   </view>
 
-  <v-login wxlogin="{{wxlogin}}"></v-login>
+  <v-login wxlogin="{{wxlogin}}" bindgetUserInfoDetail="getUserInfoDetail"></v-login>
 
 </view>

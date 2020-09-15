@@ -60,7 +60,7 @@ Component({
                 key: "token",
                 data: token
               });
-              //that.getUserInfoDetail();
+              that.getUserInfoDetail();
               
             })
           

@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 const API = require('../../config/api');
+const Auth = require('../../utils/auth');
 
 Page({
   searchSwiperSub: 0,
@@ -46,7 +47,8 @@ Page({
     },
     isMore: true,
 
-    userInfo: {}
+    userInfo: {},
+    wxlogin: true,
   },
 
   //合伙人临时入口
@@ -57,6 +59,10 @@ Page({
   },
 
   onLoad: function () {
+    this.initData();
+  },
+
+  initData: function() {
     this.getBannerData();
     this.getTypeData();
     this.getSomeCourseList('1');
@@ -80,6 +86,8 @@ Page({
         selected: 0
       })
     }
+
+    this.isLogin();
 
   },
 
@@ -218,6 +226,7 @@ Page({
         this.searchCourseList();
       });
     }).catch(err => {
+      this.searchCourseList();
       wx.showToast({//错误
         title: err,
         icon: 'none',
@@ -352,5 +361,44 @@ Page({
 
   searchSwiperChange: function(event) {
     this.searchSwiperSub = event.detail.current;
-  }
+  },
+
+  login: function() {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      })
+    }
+  },
+
+  // 是否登录
+  isLogin: function() {
+    // 是否登录
+    Auth.checkHasLogined()
+      .then(res => {
+        if(res) {
+          this.setData({
+            wxlogin: true
+          }, () => {
+            // 用户登录之后查看当前个人资料是否填写
+            this.getinfoData()
+          });
+        } else {
+          this.setData({
+            wxlogin: false
+          });
+        }
+      }).catch(e => {
+        this.setData({
+          wxlogin: false
+        });
+      })
+  },
+
+  getUserInfoDetail: function() {
+    this.setData({
+      wxlogin: true
+    });
+    this.initData();
+  },
 })
