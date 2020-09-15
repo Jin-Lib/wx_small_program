@@ -10,6 +10,7 @@ Page({
     hiddengroup: true,  //拼团规则弹窗
     isTopBtnShow: false, // 是否展示返回顶部按钮
     isInvitationShow: false, // 是否展示立即邀请按钮
+    hiddencancelpay: true,
     spellGroupList: [
       {
         image: 'https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132',

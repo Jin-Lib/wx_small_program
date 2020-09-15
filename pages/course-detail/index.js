@@ -32,7 +32,7 @@ Page({
     videoUrl: '',
 
     id: '',
-    wxlogin: false,
+    wxlogin: true,
 
   },
 
@@ -48,6 +48,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.isLogin();
   },
 
   initData: function() {
@@ -282,10 +283,10 @@ Page({
           'package': res.package,
           'signType': res.signType,
           'paySign': res.paySign,
-          'success': function (res) {
-            that.setData({
-              hiddenpintuan: false
-            });
+          'success': function (data) {
+            // that.setData({
+            //   hiddenpintuan: false
+            // });
             wx.showToast({
               title: '创建拼团成功',
               icon: 'none',
