@@ -158,6 +158,13 @@ Page({
       console.log(this.data.container())
     })
   },
+
+  //点击商品详情
+  details: function (e) {
+    wx.navigateTo({
+      url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}`
+    })
+  },
   //服务说明按钮
   showrule: function (e) {
     this.setData({

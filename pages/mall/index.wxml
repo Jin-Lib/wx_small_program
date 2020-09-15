@@ -12,7 +12,7 @@
 <!--顶部搜索-->
 <view class="floating">
   <view class="floating_img">
-    <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+    <image src="{{userInfo.head_img}}" mode="widthFix"></image>
   </view>
   <view class="floating_age">
     <picker
@@ -90,11 +90,11 @@
 <view class="category">
   <view class="explosion">
     限时爆款
-    <view class="more" bindtap="more">更多<i class="more_right"></i></view>
+    <!--<view class="more" bindtap="more">更多<i class="more_right"></i></view>-->
   </view>
 </view>
 <!--限时爆款课程图-->
-<view wx:for="{{limitTimeCourseData}}" wx:key="{{item.course_id}}" data-id="{{item.course_id}}" class="explosion_course" bindtap="details">
+<view wx:for="{{limitTimeCourseData}}" wx:key="course_id" data-id="{{item.course_id}}" class="explosion_course" bindtap="details">
   <view class="time_top">限时{{item.activity_discount}}折</view>
   <view class="course_img">
     <image src="{{item.activity_img}}" mode="widthFix"></image>
@@ -127,7 +127,7 @@
       <view class="arri_spike">遨游</view>
     </view>
     <view class="arri_sort">
-      <block wx:for="{{newCourseData}}" wx:key="{{item.course_id}}">
+      <block wx:for="{{newCourseData}}" wx:key="course_id">
         <view wx:if="{{index !== 0}}" data-id="{{item.course_id}}" class="sort_k" bindtap="details">
           <view class="sort_img">
             <image src="{{item.activity_img}}" mode="widthFix"></image>
@@ -136,7 +136,7 @@
           <view class="sort_spike">标签</view>
         </view>
       </block>
-      <view class="change">换一换</view>
+      <!--<view class="change">换一换</view>-->
     </view>
   </block>
   <block wx:else>
@@ -149,7 +149,7 @@
 <view class="category">
   <view class="explosion">
     今日热销
-    <view class="more">更多<i class="more_right"></i></view>
+    <!--<view class="more">更多<i class="more_right"></i></view>-->
   </view>
 </view>
 <!--今日热销课程图-->
@@ -168,7 +168,7 @@
       <view class="arri_spike">遨游</view>
     </view>
     <view class="arri_sort">
-      <block wx:for="{{todayHotCourseData}}" wx:key="{{item.course_id}}">
+      <block wx:for="{{todayHotCourseData}}" wx:key="course_id">
         <view wx:if="{{index !== 0}}" data-id="{{item.course_id}}" class="sort_k" bindtap="details">
           <view class="sort_img">
             <image src="{{item.activity_img}}" mode="widthFix"></image>
@@ -177,7 +177,7 @@
           <view class="sort_spike">标签</view>
         </view>
       </block>
-      <view class="change">换一换</view>
+      <!--<view class="change">换一换</view>-->
     </view>
   </block>
   <block wx:else>

@@ -8,7 +8,7 @@ Page({
 
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    recommendedAge: ['4岁', '5岁'],
+    recommendedAge: [],
     recommendedAgeSelectIndex: 0,
     // 推荐课程
     recommendCourseData: [
@@ -44,7 +44,9 @@ Page({
       page: 1,
       pageSize: 10
     },
-    isMore: true
+    isMore: true,
+
+    userInfo: {}
   },
 
   //合伙人临时入口
@@ -63,7 +65,10 @@ Page({
     this.recommendData();
 
     this.getIndexCateCourse();
-    this.searchCourseList();
+
+    this.getinfoData();
+
+    this.createAgeList();
   },
   /**
    * 生命周期函数--监听页面显示
@@ -164,12 +169,20 @@ Page({
   // 智能推荐课程列表
   searchCourseList: function() {
     let that = this;
+    let { recommendedAgeSelectIndex, recommendedAge } = this.data;
     let param = {
       page: 1,
       pageSize: 10,
-      minAge: 0,
-      maxAge: 3
     };
+
+    if(recommendedAgeSelectIndex === 0) {
+      param.minAge = 0;
+      param.maxAge = 3;
+    } else {
+      let age = parseInt(recommendedAge[recommendedAgeSelectIndex] && recommendedAge[recommendedAgeSelectIndex].replace('岁') || 3);
+      param.minAge = age;
+      param.maxAge = age;
+    }
 
     API.searchCourseList(param)
       .then(res => {
@@ -190,6 +203,40 @@ Page({
         indexCateCourseData: data 
       });
     }).catch(err => {
+    })
+  },
+
+  // 获取用户信息
+  getinfoData: function () {
+    API.getinfo({
+      code: 0
+    }).then(res => {//成功
+      this.setData({
+        userInfo: res || {},
+        recommendedAgeSelectIndex: res.age - 3
+      }, () => {
+        this.searchCourseList();
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
+  },
+
+  createAgeList: function() {
+    const ageList = [];
+
+    for (let i = 4; i<=15; i++) {
+      ageList.push(`${i}岁`)
+    }
+
+    ageList.unshift('3岁以下');
+    
+    this.setData({
+      recommendedAge: ageList
     })
   },
 
@@ -265,6 +312,8 @@ Page({
   recommendedAgeSelect(event) {
     this.setData({
       recommendedAgeSelectIndex: event.detail.value
+    }, () => {
+      this.searchCourseList();
     })
   },
   // 上拉加载
