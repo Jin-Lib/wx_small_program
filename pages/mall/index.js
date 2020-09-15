@@ -135,10 +135,9 @@ Page({
       page: 1,
       pageSize: 10
     };
-
     API.activity(params).then(res => {
       const { list = [] } = res || {};
-
+      console.log(res)
       switch(type) {
         case '1':  // 限时爆款
           this.setData({
