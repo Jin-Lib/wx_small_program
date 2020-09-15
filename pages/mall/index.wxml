@@ -9,7 +9,6 @@
 </view>
 
 <!--顶部搜索-->
-<<<<<<< HEAD
 <view class="floating">
   <view class="floating_img">
     <image src="{{userInfo.head_img || '/resource/img/noUserImg.png'}}" mode="widthFix" bindtap="login"></image>
@@ -29,13 +28,6 @@
   <view class="floating_search" bindtap="search">
     <view class="search_img">
       <image src="/resource/img/search.png" mode="widthFix"></image>
-=======
-
-<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
-  <view class="custom_top">
-    <view class="floating_img">
-      <image src="{{userInfo.head_img}}" mode="widthFix"></image>
->>>>>>> 6010c7cc8905e6914b56fa808d35e47146b429b8
     </view>
     <view class="floating_age">
       <picker

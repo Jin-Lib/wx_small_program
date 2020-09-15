@@ -60,12 +60,10 @@ Page({
   },
 
   onLoad: function () {
-<<<<<<< HEAD
     this.initData();
   },
 
   initData: function() {
-=======
     // 获取系统状态栏信息
     wx.getSystemInfo({
       success: e => {
@@ -74,7 +72,6 @@ Page({
       }
     });
  
->>>>>>> 6010c7cc8905e6914b56fa808d35e47146b429b8
     this.getBannerData();
     this.getTypeData();
     this.getSomeCourseList('1');
