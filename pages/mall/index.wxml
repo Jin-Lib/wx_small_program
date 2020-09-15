@@ -9,25 +9,11 @@
 </view>
 
 <!--顶部搜索-->
-<view class="floating">
-  <view class="floating_img">
-    <image src="{{userInfo.head_img || '/resource/img/noUserImg.png'}}" mode="widthFix" bindtap="login"></image>
-  </view>
-  <view class="floating_age">
-    <picker
-      bindchange="recommendedAgeSelect"
-      range="{{recommendedAge}}"
-      value="{{recommendedAgeSelectIndex}}"
-      class="more1">
-      <view class="more1">
-        {{recommendedAge[recommendedAgeSelectIndex]}}
-        <i class="more_right1"></i>
-      </view>
-    </picker>
-  </view>
-  <view class="floating_search" bindtap="search">
-    <view class="search_img">
-      <image src="/resource/img/search.png" mode="widthFix"></image>
+
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px;{{viewData.style}}">
+  <view class="custom_top">
+    <view class="floating_img">
+      <image src="{{userInfo.head_img}}" mode="widthFix"></image>
     </view>
     <view class="floating_age">
       <picker
@@ -300,7 +286,5 @@
       </view>
     </view>
   </view> 
-
-  <v-login wxlogin="{{wxlogin}}" bindgetUserInfoDetail="getUserInfoDetail"></v-login>
 
 </view>
