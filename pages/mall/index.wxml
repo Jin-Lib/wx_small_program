@@ -72,12 +72,14 @@
         data-banner-type="{{item.banner_type}}"
         data-url="{{item.url}}"
         bindtap="bannerTap">
-          <image src="{{item.image_url}}" mode="widthFix"></image>
+          <image src="{{item.image_url}}"></image>
         </swiper-item>
       </block>
     </swiper>
   </view>
-  <view class="classification">
+</view>
+
+<view class="classification">
     <block
       wx:for="{{types}}"
       wx:key="id">
@@ -89,7 +91,6 @@
       </view>
     </block>
   </view>
-</view>
 <!--限时爆款文字-->
 <view class="category">
   <view class="explosion">

@@ -374,12 +374,12 @@ Page({
   },
   onPageScroll: function (e) {
      console.log(e.scrollTop)
-     if(e.scrollTop >= 100){
+     if(e.scrollTop >= 50){
          this.setData({
            'viewData.style': chageStyle
          })
        console.log(1111111111111)
-     }else if(e.scrollTop <= 100){
+     }else if(e.scrollTop <= 50){
       this.setData({
         'viewData.style': myStyle
       })

@@ -55,10 +55,10 @@ page{background-color: #f7f7f7}
   padding-right: 10rpx;
 }
 
-.carousel{width: 750rpx; padding:20rpx 0rpx;background-color: #ffffff; float: left; margin-top: 0rpx;}
-.carousel_frame{width: 660rpx; margin-left: 25px;overflow: hidden; height: 220rpx; float: left; overflow: hidden;}
-.carousel_frame image{width: 660rpx;}
-.classification{width: 700rpx; margin-left: 25rpx;  margin-top: 30rpx; font-size: 22rpx; float: left;}
+.carousel{width: 750rpx; padding:20rpx 0rpx;background-color: #fc4850; float: left;border-radius: 0 0 50% 50%; border-radius:0% 0% 30% 30%;height: 120rpx;}
+.carousel_frame{width: 660rpx; margin-left: 25px;overflow: hidden; height: 260rpx; float: left; overflow: hidden;border-radius:20rpx;}
+.carousel_frame image{width: 660rpx; border-radius: 20rpx; height: 260rpx;}
+.classification{width: 700rpx; margin-left: 25rpx;  margin-top: 140rpx; font-size: 22rpx; float: left;}
 .leaderboard{width: 140rpx; float: left; overflow: hidden; text-align: center;}
 .lead_img{width: 140rpx; overflow: hidden; float: left;}
 .lead_img image{width: 50rpx; height: 50rpx;}
