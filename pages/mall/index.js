@@ -2,12 +2,21 @@
 //获取应用实例
 const app = getApp()
 const API = require('../../config/api');
-const Auth = require('../../utils/auth');
+let myStyle = `
+--bg-color:#fc4850;
+`
+
+let chageStyle = `
+--bg-color:#ffffff;
+`
 
 Page({
   searchSwiperSub: 0,
 
   data: {
+    viewData: {
+      style: myStyle
+    },
     statusBarHeight: app.globalData.statusBarHeight,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     recommendedAge: [],
@@ -48,8 +57,7 @@ Page({
     },
     isMore: true,
 
-    userInfo: {},
-    wxlogin: true,
+    userInfo: {}
   },
 
   //合伙人临时入口
@@ -60,17 +68,13 @@ Page({
   },
 
   onLoad: function () {
-    this.initData();
-  },
-
-  initData: function() {
     // 获取系统状态栏信息
-    // wx.getSystemInfo({
-    //   success: e => {
-    //     this.globalData.StatusBar = e.statusBarHeight;
-    //     this.globalData.CustomBar = e.platform == 'android' ? e.statusBarHeight + 50 : e.statusBarHeight + 45;
-    //   }
-    // });
+    wx.getSystemInfo({
+      success: e => {
+        this.globalData.StatusBar = e.statusBarHeight;
+        this.globalData.CustomBar = e.platform == 'android' ? e.statusBarHeight + 50 : e.statusBarHeight + 45;
+      }
+    });
  
     this.getBannerData();
     this.getTypeData();
@@ -95,8 +99,6 @@ Page({
         selected: 0
       })
     }
-
-    this.isLogin();
 
   },
 
@@ -235,7 +237,6 @@ Page({
         this.searchCourseList();
       });
     }).catch(err => {
-      this.searchCourseList();
       wx.showToast({//错误
         title: err,
         icon: 'none',
@@ -371,43 +372,19 @@ Page({
   searchSwiperChange: function(event) {
     this.searchSwiperSub = event.detail.current;
   },
-
-  login: function() {
-    if(!this.data.wxlogin) {
+  onPageScroll: function (e) {
+     console.log(e.scrollTop)
+     if(e.scrollTop >= 100){
+         this.setData({
+           'viewData.style': chageStyle
+         })
+       console.log(1111111111111)
+     }else if(e.scrollTop <= 100){
       this.setData({
-        wxlogin: false
+        'viewData.style': myStyle
       })
-    }
-  },
 
-  // 是否登录
-  isLogin: function() {
-    // 是否登录
-    Auth.checkHasLogined()
-      .then(res => {
-        if(res) {
-          this.setData({
-            wxlogin: true
-          }, () => {
-            // 用户登录之后查看当前个人资料是否填写
-            this.getinfoData()
-          });
-        } else {
-          this.setData({
-            wxlogin: false
-          });
-        }
-      }).catch(e => {
-        this.setData({
-          wxlogin: false
-        });
-      })
-  },
-
-  getUserInfoDetail: function() {
-    this.setData({
-      wxlogin: true
-    });
-    this.initData();
-  },
+     }
+  }
 })
+

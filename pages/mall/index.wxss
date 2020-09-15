@@ -56,7 +56,7 @@ page{background-color: #f7f7f7}
 }
 
 .carousel{width: 750rpx; padding:20rpx 0rpx;background-color: #ffffff; float: left; margin-top: 0rpx;}
-.carousel_frame{width: 660rpx; margin-left: 25px;overflow: hidden; height: 300rpx; float: left;}
+.carousel_frame{width: 660rpx; margin-left: 25px;overflow: hidden; height: 220rpx; float: left; overflow: hidden;}
 .carousel_frame image{width: 660rpx;}
 .classification{width: 700rpx; margin-left: 25rpx;  margin-top: 30rpx; font-size: 22rpx; float: left;}
 .leaderboard{width: 140rpx; float: left; overflow: hidden; text-align: center;}
