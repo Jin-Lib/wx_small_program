@@ -43,7 +43,7 @@ page{background-color: #f7f7f7;}
 .surp_coupon{width: 320rpx; margin-left: 30rpx; margin-top: 30rpx;overflow: hidden; position: relative; float: left; border-radius: 15rpx;}
 .surp_coupon image{width: 320rpx; height: 180rpx; border-radius: 15rpx;}
 .surp_coupon_text{position: absolute; width: 335rpx; text-align: center; top: 60rpx; font-size: 44rpx; color: #fff; font-weight: 900;}
-.service{float: left; width: 730rpx; margin-left:10rpx; margin-top: 20rpx; background-color: #fff;padding-bottom: 20rpx; margin-bottom: 120rpx;}
+.service{float: left; width: 730rpx; margin-left:10rpx; margin-top: 100rpx; background-color: #fff;padding-bottom: 20rpx; margin-bottom: 120rpx;}
 .service_k{float: left;width: 730rpx;}
 .service_order{float: left; width: 110rpx;text-align: center; margin-left: 30rpx; margin-top: 30rpx; font-size: 24rpx;position: relative;}
 .service_order image{width: 70rpx; height: 70rpx; overflow: hidden; border-radius: 50%;}

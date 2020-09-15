@@ -286,3 +286,15 @@ page{background-color: #f7f7f7}
   padding-top: 30rpx;
   box-sizing: border-box;
 }
+
+
+/**
+ * 拼团底部按钮样式
+*/
+.float1{float: left;position: fixed;bottom: 0rpx; left: 0; background-color: #fff; display: flex; }
+.single1{float: left; width: 150rpx; text-align: center; color: #000; font-size: 20rpx;margin-top: 8rpx;}
+.single1_sy{float: left; width: 150rpx;color: #fff;}
+.single1_sy image{width: 40rpx;}
+.group1{float: right; width: 603rpx; text-align: center; background-color: #fc4850; padding: 20rpx 0; color: #fff;}
+
+
