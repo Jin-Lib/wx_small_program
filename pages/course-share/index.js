@@ -109,7 +109,7 @@ Page({
     API.getinfo({
     }).then(res => {//成功
       let isSelf = false;
-      if(res.userId == this.data.groupInfo.userId) {
+      if(res.userId == this.data.groupInfo.group_leader) {
         isSelf = true
       }
 
