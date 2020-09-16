@@ -48,10 +48,11 @@ margin-top: 30rpx;}
 .group{width: 665rpx; margin-left: 40rpx;background-color: #fff; border-radius: 15rpx; margin-top: 20rpx; float: left;}
 .group_k{float: left; margin-top: 20rpx; margin-left: 20rpx; width: 660rpx; border-bottom: #f7f7f7 3rpx solid; padding-bottom: 20rpx;}
 .grounp_img{float: left; width: 140rpx; height: 140rpx; overflow: hidden; border-radius: 15rpx;}
-.grounp_text{float: left; margin-left: 20rpx; margin-top: 10rpx;}
+.grounp_img image{width: 140rpx;}
+.grounp_text{float: left; margin-left: 20rpx; margin-top: 10rpx;width: 450rpx;}
 .grounp_title{font-size: 26rpx; font-weight: 900;}
 .grpunp_sj{font-size: 22rpx; color: #f86f22; margin-top: 20rpx;}
-.share{float: right; font-size: 24rpx; background-color: #fc4850; padding: 5rpx 13rpx; border-radius: 30rpx; color: #fff; margin-right: 40rpx; margin-top: 110rpx;}
+.share{float: right; font-size: 24rpx; background-color: #fc4850; padding: 5rpx 13rpx; border-radius: 30rpx; color: #fff; margin-right: 40rpx; margin-top: 0rpx;}
 
 
 

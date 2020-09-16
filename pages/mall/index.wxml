@@ -5,7 +5,7 @@
 
 <!--浮窗活动-->
 <view class="bottom_advertising" bindtap="bottom_advertising">
-  <image src="http://cdn.koalaxiezi.com/ceshi/3.png" name="浮窗活动" mode="widthFix"></image>
+  <image src="http://cdn.koalaxiezi.com/qimingxing/img/fhuodong.png" name="浮窗活动" mode="widthFix"></image>
 </view>
 
 <!--顶部搜索-->
@@ -91,7 +91,9 @@
       </view>
     </block>
   </view>
-
+  <view class="index_hd">
+    <image src="http://cdn.koalaxiezi.com/qimingxing/img/huodong.png" mode="widthFix"></image>
+  </view>
   <view class="xin_category">
     <view class="xin_drenwu"><image src="http://cdn.koalaxiezi.com/qimingxing/img/maotouying.png" mode="widthFix"></image></view>
     <view class="xin_category_title">限时爆款</view>
@@ -111,10 +113,12 @@
     <view class="xin_more">
       点击查看更多 >
     </view>
+  
   </view>
 
 
 <view class="xin_arrival">
+    <view class="xin_arrival_drenwu"><image src="http://cdn.koalaxiezi.com/qimingxing/img/icon_01.png" mode="widthFix"></image></view>
   <!--最新上架文字-->
   <view class="xin_category_title">最新上架</view>
   <view class="xin_category_text">与小朋友们 一同快乐成长</view>
@@ -159,6 +163,7 @@
 
 
 <view class="xin_arrival_re">
+    <view class="xin_arrival_re_drenwu"><image src="http://cdn.koalaxiezi.com/qimingxing/img/icon_02.png" mode="widthFix"></image></view>
   <!--今日热销文字-->
   <view class="xin_category_title">今日热销</view>
   <view class="xin_category_text">精彩内容 马上更新</view>
@@ -237,45 +242,57 @@
   </view>
 </view>
 
-<block wx:for="{{indexCateCourseData}}" wx:key="index">
-  <view class="xin_arrival_ziu">
-    <!--自然科普文字-->
-    <view class="xin_category_title">{{item.title}}</view>
-    <!--自然科普课程图-->
-    <view class="arrival">
-      <view class="arri_sort">
-        <block wx:if="{{item.items || [].length > 0}}">
-          <view class="sort_k" wx:for="{{item.items || []}}" wx:for-item="itemData" wx:key="{{itemData.id}}" data-id="{{itemData.id}}" bindtap="details">
-            <view class="sort_img">
-              <image src="{{itemData.main_img}}" mode="widthFix"></image>
+<view class="menu_lei">
+  <block wx:for="{{indexCateCourseData}}" wx:key="index">
+    <view class="xin_arrival_ziu">
+      <!--自然科普文字-->
+      <view class="category">
+        <view class="explosion">
+          {{item.title}}
+        </view>
+      </view>
+      <!--自然科普课程图-->
+      <view class="arrival">
+        <view class="arri_sort1">
+          <block wx:if="{{item.items || [].length > 0}}">
+            <view class="sort_k" wx:for="{{item.items || []}}" wx:for-item="itemData" wx:key="{{itemData.id}}" data-id="{{itemData.id}}" bindtap="details">
+              <view class="sort_img">
+                <image src="{{itemData.main_img}}" mode="widthFix"></image>
+              </view>
+              <view class="xin_menu">
+                <view class="sort_title">{{itemData.title}}</view>
+                <view class="sort_spikekp"><i>{{itemData.label}}</i></view>
+                <view class="sort_gk">
+                  <image src="../../resource/guank.png" mode="widthFix"></image>
+                  <span>已有{{itemData.buy_count}}人观看</span>
+                </view>
+              </view>
             </view>
-            <view class="sort_title">{{itemData.title}}</view>
-            <view class="sort_spike">{{itemData.label}}</view>
-          </view>
-        </block>
-        <block wx:else>
-          <view>空</view>
-        </block>
+          </block>
+          <block wx:else>
+            <view>空</view>
+          </block>
+        </view>
       </view>
     </view>
-  </view>
-</block>
-
-<!--为你推荐-->
-<view class="category">
-  <view class="explosion">
-    为你推荐
-  </view>
+  </block>
 </view>
 <!--为你推荐课程图-->
 <view class="recommend">
+  <!--为你推荐-->
+  <view class="category">
+    <view class="explosion">
+      为您推荐
+    </view>
+  </view>
   <view class="reco_k" wx:for="{{recommendCourseData}}" wx:key="index" data-id="{{item.id}}" bindtap="details">
     <view class="reco_img">
         <image src="{{item.main_img}}" mode="widthFix"></image>
     </view>
     <view class="reco_text">
       <view class="reco_text_title">{{item.title}}</view>
-      <view class="reco_text_introduction">9天提升科学探索欲望</view>
+      <!-- <view class="reco_text_introduction">9天提升科学探索欲望</view> -->
+                <view class="sort_spikekp"><i>{{item.label}}</i></view>
       <view class="reco_buy">
         <!-- <view class="buy_img">
           <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
