@@ -111,10 +111,12 @@
     <view class="xin_more">
       点击查看更多 >
     </view>
+  
   </view>
 
 
 <view class="xin_arrival">
+    <view class="xin_arrival_drenwu"><image src="http://cdn.koalaxiezi.com/qimingxing/img/icon_01.png" mode="widthFix"></image></view>
   <!--最新上架文字-->
   <view class="xin_category_title">最新上架</view>
   <view class="xin_category_text">与小朋友们 一同快乐成长</view>
@@ -159,6 +161,7 @@
 
 
 <view class="xin_arrival_re">
+    <view class="xin_arrival_re_drenwu"><image src="http://cdn.koalaxiezi.com/qimingxing/img/icon_02.png" mode="widthFix"></image></view>
   <!--今日热销文字-->
   <view class="xin_category_title">今日热销</view>
   <view class="xin_category_text">精彩内容 马上更新</view>
