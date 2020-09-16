@@ -19,9 +19,11 @@ Page({
     wxlogin: true,
   },
   //点击邀好友拼团
-  invitefriends: function (event) {
+  invitefriends: function (e) {
+    const { id, groupid } = e.currentTarget.dataset;
+    console.log(e, id, groupid)
     wx.navigateTo({
-      url: '/pages/course-share/index'
+      url: `/pages/course-share/index?groupId=${groupid}&id=${id}`
     })
   },
   //点击添加课程
@@ -43,9 +45,11 @@ Page({
     })
   },
   //点击商品详情
-  details: function (event) {
+  details: function (e) {
+    const { id } = e.currentTarget.dataset;
+
     wx.navigateTo({
-      url: '/pages/course-detail/index'
+      url: `/pages/course-detail/index?id=${id}`
     })
   },
   lessons: function (event) {

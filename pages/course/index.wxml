@@ -18,7 +18,7 @@
       <view class="grounp_title">{{item.title}}</view>
       <view class="grpunp_sj">剩余时间：30小时20分18秒</view>
     </view>
-    <view class="share" data-id="{{item.course_id}}" data-groupid="{{item.groupId}}" bindtap="invitefriends">邀好友拼团</view>
+    <view class="share" data-id="{{item.course_id}}" data-groupid="{{item.group_id}}" bindtap="invitefriends">邀好友拼团</view>
   </view>
 </view>
 
@@ -38,7 +38,7 @@
     </view>
   </block>
   <block wx:else>
-    <view class="learn" wx:for="{{courseData}}" wx:key="{{index}}" data-id="{{item.course_id}}" bindtap="lessons">
+    <view class="learn" wx:for="{{courseData}}" wx:key="{{index}}" data-id="{{item.course_id}}" bindtap="details">
       <view class="learn_img">
         <image src="{{item.catalog_img}}" mode="widthFix"></image>
         <view class="update">更新至0集</view>
