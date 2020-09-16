@@ -3,7 +3,7 @@
 const app = getApp()
 const API = require('../../config/api');
 let myStyle = `
---bg-color:#fc4850;
+--bg-color:#ff5e34;
 `
 
 let chageStyle = `
@@ -135,10 +135,9 @@ Page({
       page: 1,
       pageSize: 10
     };
-
     API.activity(params).then(res => {
       const { list = [] } = res || {};
-
+      console.log(res)
       switch(type) {
         case '1':  // 限时爆款
           this.setData({
@@ -373,13 +372,13 @@ Page({
     this.searchSwiperSub = event.detail.current;
   },
   onPageScroll: function (e) {
-     console.log(e.scrollTop)
-     if(e.scrollTop >= 100){
+     //console.log(e.scrollTop)
+     if(e.scrollTop >= 50){
          this.setData({
            'viewData.style': chageStyle
          })
-       console.log(1111111111111)
-     }else if(e.scrollTop <= 100){
+       //console.log(1111111111111)
+     }else if(e.scrollTop <= 50){
       this.setData({
         'viewData.style': myStyle
       })

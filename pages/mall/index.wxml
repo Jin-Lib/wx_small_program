@@ -58,7 +58,7 @@
 <!--轮播图和分类-->
 <view class="carousel">
   <view class="carousel_frame" bindtap='carousel'>
-    <swiper
+    <swiper 
       autoplay="{{true}}"
       indicatorDots="{{true}}"
       interval="{{2000}}"
@@ -72,12 +72,14 @@
         data-banner-type="{{item.banner_type}}"
         data-url="{{item.url}}"
         bindtap="bannerTap">
-          <image src="{{item.image_url}}" mode="widthFix"></image>
+          <image src="{{item.image_url}}"></image>
         </swiper-item>
       </block>
     </swiper>
   </view>
-  <view class="classification">
+</view>
+
+<view class="classification">
     <block
       wx:for="{{types}}"
       wx:key="id">
@@ -89,167 +91,172 @@
       </view>
     </block>
   </view>
-</view>
-<!--限时爆款文字-->
-<view class="category">
-  <view class="explosion">
-    限时爆款
-    <!--<view class="more" bindtap="more">更多<i class="more_right"></i></view>-->
-  </view>
-</view>
-<!--限时爆款课程图-->
-<view wx:for="{{limitTimeCourseData}}" wx:key="course_id" data-id="{{item.course_id}}" class="explosion_course" bindtap="details">
-  <view class="time_top">限时{{item.activity_discount}}折</view>
-  <view class="course_img">
-    <image src="{{item.activity_img}}" mode="widthFix"></image>
-  </view>
-  <view class="coures_text">
-    <view class="text_title">{{item.activity_title}}</view>
-    <view class="text_Introduction">{{item.activity_subtitle}}</view>
-  </view>
-  <view class="spike">￥<i>{{item.group_price}}</i>秒杀</view>
-</view>
-<!--最新上架文字-->
-<view class="category">
-  <view class="explosion">
-    最新上架
-  </view>
-</view>
-<!--最新上架课程图-->
-<view class="arrival">
-  <block wx:if="{{newCourseData && newCourseData.length > 0}}">
-    <view class="arr_top_k" data-id="{{newCourseData[0].course_id}}" bindtap="details">
-      <view class="arri_img">
-        <image src="{{newCourseData[0].activity_img}}" mode="widthFix"></image>
+
+  <view class="xin_category">
+    <view class="xin_drenwu"><image src="http://cdn.koalaxiezi.com/qimingxing/img/maotouying.png" mode="widthFix"></image></view>
+    <view class="xin_category_title">限时爆款</view>
+    <view class="xin_category_text">爆款先知道 每天一个惊喜折扣</view>
+    <!--限时爆款课程图-->
+    <view wx:for="{{limitTimeCourseData}}" wx:key="course_id" data-id="{{item.course_id}}" class="explosion_course" bindtap="details">
+      <view class="time_top">限时{{item.activity_discount}}折</view>
+      <view class="course_img">
+        <image src="{{item.activity_img}}" mode="widthFix"></image>
       </view>
-      <view class="arri_text">
-        <view class="arri_title">{{newCourseData[0].activity_title}}</view>
-        <view class="arri_Introduction">{{newCourseData[0].activity_subtitle}}</view>
+      <view class="coures_text">
+        <view class="text_title">{{item.activity_title}}</view>
+        <view class="text_Introduction">{{item.activity_subtitle}}</view>
       </view>
-      <view class="arri_spike">标签</view>
-      <view class="arri_spike">世界</view>
-      <view class="arri_spike">遨游</view>
+      <view class="spike">￥<i>{{item.group_price}}</i>秒杀</view>
     </view>
-    <view class="arri_sort">
-      <block wx:for="{{newCourseData}}" wx:key="course_id">
-        <view wx:if="{{index !== 0}}" data-id="{{item.course_id}}" class="sort_k" bindtap="details">
-          <view class="sort_img">
-            <image src="{{item.activity_img}}" mode="widthFix"></image>
-          </view>
-          <view class="sort_title">{{item.activity_title}}</view>
-          <view class="sort_spike">标签</view>
+    <view class="xin_more">
+      点击查看更多 >
+    </view>
+  </view>
+
+
+<view class="xin_arrival">
+  <!--最新上架文字-->
+  <view class="xin_category_title">最新上架</view>
+  <view class="xin_category_text">与小朋友们 一同快乐成长</view>
+  <!--最新上架课程图-->
+  <view class="arrival">
+    <block wx:if="{{newCourseData && newCourseData.length > 0}}">
+      <view class="arr_top_k" data-id="{{newCourseData[0].course_id}}" bindtap="details">
+        <view class="arri_img">
+          <image src="{{newCourseData[0].activity_img}}" mode="widthFix"></image>
         </view>
-      </block>
-      <!--<view class="change">换一换</view>-->
-    </view>
-  </block>
-  <block wx:else>
-    空
-  </block>
-</view>
-
-
-<!--今日热销文字-->
-<view class="category">
-  <view class="explosion">
-    今日热销
-    <!--<view class="more">更多<i class="more_right"></i></view>-->
+        <view class="arri_text">
+          <view class="arri_title">{{newCourseData[0].activity_title}}</view>
+          <view class="arri_Introduction">{{newCourseData[0].activity_subtitle}}</view>
+        </view>
+        <view class="arri_spike">标签</view>
+        <view class="arri_spike">世界</view>
+        <view class="arri_spike">遨游</view>
+      </view>
+      <view class="arri_sort">
+        <block wx:for="{{newCourseData}}" wx:key="course_id">
+          <view wx:if="{{index !== 0}}" data-id="{{item.course_id}}" class="sort_k" bindtap="details">
+            <view class="sort_img">
+              <image src="{{item.activity_img}}"></image>
+            </view>
+            <view class="xin_sort_text">
+              <view class="sort_title">{{item.activity_title}}</view>
+              <view class="sort_Introduction">{{item.activity_subtitle}}</view>
+              <view class="sort_spike" style="margin-left:0rpx;">标签</view>
+              <view class="sort_spike">标签</view>
+              <view class="sortspike">￥<i>{{item.group_price}}</i></view>
+            </view>
+          </view>
+        </block>
+        <!--<view class="change">换一换</view>-->
+      </view>
+    </block>
+    <block wx:else>
+      空
+    </block>
   </view>
 </view>
-<!--今日热销课程图-->
-<view class="arrival">
-  <block wx:if="{{todayHotCourseData && todayHotCourseData.length > 0}}">
-    <view class="arr_top_k" data-id="{{todayHotCourseData[0].course_id}}" bindtap="details">
-      <view class="arri_img">
-        <image src="{{todayHotCourseData[0].activity_img}}" mode="widthFix"></image>
-      </view>
-      <view class="arri_text">
-        <view class="arri_title">{{todayHotCourseData[0].activity_title}}</view>
-        <view class="arri_Introduction">{{todayHotCourseData[0].activity_subtitle}}</view>
-      </view>
-      <view class="arri_spike">标签</view>
-      <view class="arri_spike">世界</view>
-      <view class="arri_spike">遨游</view>
-    </view>
-    <view class="arri_sort">
-      <block wx:for="{{todayHotCourseData}}" wx:key="course_id">
-        <view wx:if="{{index !== 0}}" data-id="{{item.course_id}}" class="sort_k" bindtap="details">
-          <view class="sort_img">
-            <image src="{{item.activity_img}}" mode="widthFix"></image>
-          </view>
-          <view class="sort_title">{{item.activity_title}}</view>
-          <view class="sort_spike">标签</view>
+
+
+<view class="xin_arrival_re">
+  <!--今日热销文字-->
+  <view class="xin_category_title">今日热销</view>
+  <view class="xin_category_text">精彩内容 马上更新</view>
+  <!--今日热销课程图-->
+  <view class="arrival">
+    <block wx:if="{{todayHotCourseData && todayHotCourseData.length > 0}}">
+      <view class="arr_top_k" data-id="{{todayHotCourseData[0].course_id}}" bindtap="details">
+        <view class="arri_img">
+          <image src="{{todayHotCourseData[0].activity_img}}" mode="widthFix"></image>
         </view>
-      </block>
-      <!--<view class="change">换一换</view>-->
-    </view>
-  </block>
-  <block wx:else>
-    空
-  </block>
+        <view class="arri_text">
+          <view class="arri_title">{{todayHotCourseData[0].activity_title}}</view>
+          <view class="arri_Introduction">{{todayHotCourseData[0].activity_subtitle}}</view>
+        </view>
+        <view class="arri_spike">标签</view>
+        <view class="arri_spike">世界</view>
+        <view class="arri_spike">遨游</view>
+      </view>
+      <view class="arri_sort">
+        <block wx:for="{{todayHotCourseData}}" wx:key="course_id">
+          <view wx:if="{{index !== 0}}" data-id="{{item.course_id}}" class="sort_k" bindtap="details">
+            <view class="sort_img">
+              <image src="{{item.activity_img}}" mode="widthFix"></image>
+            </view>
+            <view class="sort_title">{{item.activity_title}}</view>
+            <view class="sort_spike">标签</view>
+          </view>
+        </block>
+        <!--<view class="change">换一换</view>-->
+      </view>
+    </block>
+    <block wx:else>
+      空
+    </block>
+  </view>
 </view>
 
 
+
+<view class="xin_intelligent">
 <!--智能推荐文字-->
-<view class="category">
-  <view class="explosion">
-    智能推荐
-    <picker
-      bindchange="recommendedAgeSelect"
-      range="{{recommendedAge}}"
-      value="{{recommendedAgeSelectIndex}}"
-      class="more1">
-      <view class="more1">
-        {{recommendedAge[recommendedAgeSelectIndex]}}
-        <i class="more_right1"></i>
-      </view>
-    </picker>
+  <view class="xin_intelligent_tts">
+    <view class="xin_intelligent_title">智能推荐</view>
+    <view class="xin_intelligent_text">给您推荐这个年龄 最适合的</view>
   </view>
-</view>
-<!--智能推荐课程图-->
-<view class="intelligent">
-  <view class="inte_hd">
-    <view class="inte_k" wx:for="{{courseList}}" wx:key="index" data-id="{{item.id}}" bindtap="details">
-      <view class="inte_img">
-        <image src="{{item.main_img}}"></image>
-      </view>
-      <view class="inte_text">
-        <view class="inte_text_title">
-          <view class="inte_text_title_title">{{item.title}}</view>
-          <view class="inte_text_title_label">
-            <i>{{item.label}}</i>
-          
+  <view class="xin_intelligent_menu">
+      <picker
+        bindchange="recommendedAgeSelect"
+        range="{{recommendedAge}}"
+        value="{{recommendedAgeSelectIndex}}"
+        class="more1">
+        <view class="more1">
+          {{recommendedAge[recommendedAgeSelectIndex]}}
+          <i class="more_right1"></i>
+        </view>
+      </picker>
+  </view>
+  <!--智能推荐课程图-->
+  <view class="xin_intelligent_kuang">
+    <view class="inte_hd">
+      <view class="inte_k" wx:for="{{courseList}}" wx:key="index" data-id="{{item.id}}" bindtap="details">
+        <view class="inte_img">
+          <image src="{{item.main_img}}"></image>
+        </view>
+        <view class="inte_text">
+          <view class="inte_text_title">
+            <view class="inte_text_title_title">{{item.title}}</view>
+            <view class="inte_text_title_label">
+              <i>{{item.label}}</i>
+            </view>
+            <view class="inte_text_title_Watch">{{item.buy_count}}万人播放</view>
           </view>
-          <view class="inte_text_title_Watch">{{item.buy_count}}万人播放</view>
         </view>
       </view>
     </view>
   </view>
 </view>
-
 
 <block wx:for="{{indexCateCourseData}}" wx:key="index">
-  <!--自然科普文字-->
-  <view class="category">
-    <view class="explosion">
-      {{item.title}}
-    </view>
-  </view>
-  <!--自然科普课程图-->
-  <view class="arrival">
-    <view class="arri_sort">
-      <block wx:if="{{item.items || [].length > 0}}">
-        <view class="sort_k" wx:for="{{item.items || []}}" wx:for-item="itemData" wx:key="{{itemData.id}}" data-id="{{itemData.id}}" bindtap="details">
-          <view class="sort_img">
-            <image src="{{itemData.main_img}}" mode="widthFix"></image>
+  <view class="xin_arrival_ziu">
+    <!--自然科普文字-->
+    <view class="xin_category_title">{{item.title}}</view>
+    <!--自然科普课程图-->
+    <view class="arrival">
+      <view class="arri_sort">
+        <block wx:if="{{item.items || [].length > 0}}">
+          <view class="sort_k" wx:for="{{item.items || []}}" wx:for-item="itemData" wx:key="{{itemData.id}}" data-id="{{itemData.id}}" bindtap="details">
+            <view class="sort_img">
+              <image src="{{itemData.main_img}}" mode="widthFix"></image>
+            </view>
+            <view class="sort_title">{{itemData.title}}</view>
+            <view class="sort_spike">{{itemData.label}}</view>
           </view>
-          <view class="sort_title">{{itemData.title}}</view>
-          <view class="sort_spike">{{itemData.label}}</view>
-        </view>
-      </block>
-      <block wx:else>
-        <view>空</view>
-      </block>
+        </block>
+        <block wx:else>
+          <view>空</view>
+        </block>
+      </view>
     </view>
   </view>
 </block>

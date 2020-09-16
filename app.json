@@ -95,7 +95,7 @@
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fc4850",
     "navigationBarTitleText": "启明星",
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "backgroundColor": "#f7f7f7"
   },
   "usingComponents": {
