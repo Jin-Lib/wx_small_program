@@ -41,7 +41,9 @@
 }
 page{background-color: #f5f5f5}
 
-.xin_category{width: 645rpx;margin-left: 25rpx;padding:50rpx 30rpx;background-color: #f56e50; display:inline-block; color: #fff; border-radius: 10rpx;margin-top: 30rpx;}
+.xin_category{width: 645rpx;margin-left: 25rpx;padding:50rpx 30rpx;background-color: #f56e50; display:inline-block; color: #fff; border-radius: 10rpx;margin-top: 30rpx;position: relative;}
+.xin_drenwu{position: absolute; top: 55rpx; right: 50rpx;width: 140rpx;}
+.xin_drenwu image{width: 140rpx;}
 .xin_category_title{width: 640rpx; font-size: 36rpx;font-weight: 900;}
 .xin_category_text{width: 640rpx;font-size: 22rpx;margin-top: 10rpx;}
 .xin_arrival{width: 645rpx;margin-left: 25rpx;padding:50rpx 30rpx;background-color: #36b8b0; display:inline-block; color: #fff; border-radius: 10rpx;margin-top: 30rpx;}
@@ -121,7 +123,7 @@ page{background-color: #f5f5f5}
 .sort_spike{margin-left: 15rpx; background-color: #fef3df; padding: 3px 11px; color: #f86f22; font-size: 18rpx; margin-top: 36rpx;height: 24rpx;border-radius: 30rpx; display: inline-block;}
 
 
-.sortspike{ margin-left: 175rpx; background-color: #fc4850;border-radius: 30px; color: #fff; font-size: 22rpx; margin-top: 35rpx;width: 160rpx;height: 50rpx; line-height: 50rpx;font-weight: 0; text-align: center;}
+.sortspike{ margin-left: 5rpx; background-color: #fc4850;border-radius: 30px; color: #fff; font-size: 22rpx; margin-top: 35rpx;width: 160rpx;height: 50rpx; line-height: 50rpx;font-weight: 0; text-align: center;}
 .sortspike i{font-size: 28rpx; margin-right: 6rpx;}
 
 .change{float: left; margin-top: 45rpx; font-size: 24rpx; padding: 5px 22px;color: #f86f22; background-color: #f7f7f7; border-radius: 30rpx; margin-left: 245rpx;}
@@ -141,17 +143,25 @@ page{background-color: #f5f5f5}
 .buy_img image{width: 100%; }
 .buy_num{float: left; font-size: 20rpx; color: #aaa; margin-top: 10rpx; margin-left: 15rpx;}
 .intelligent{float: left; width: 100%; background-color: #fcf0f1; margin-top: 30rpx;overflow: hidden; }
-.inte_hd{white-space: nowrap;overflow-y: auto;margin-left: 10rpx; }
-.inte_k{width: 300rpx;margin-left: 20rpx; position: relative;display: inline-block;}
-.inte_img{width: 240rpx;height:240rpx;overflow: hidden; border-radius: 30rpx; position: absolute; top: 10rpx; left: 20rpx;}
-.inte_img image{width: 240rpx;height:240rpx;}
-.inte_text{width: 280rpx; height: 190rpx; border-radius: 30rpx; background-color: #fff; margin-top: 190rpx;overflow: hidden;}
-.inte_text_title{margin-top: 70rpx; float: left; margin-left: 15rpx;}
-.inte_text_title_title{font-size: 26rpx; font-weight: 900; width: 260rpx;overflow: hidden;
+
+
+.xin_intelligent{width: 701rpx;margin-left: 25rpx;padding:50rpx 0rpx 50rpx 0rpx;background-color: #36b8b0; display:inline-block; color: #fff; border-radius: 10rpx;margin-top: 30rpx; display: flex;flex-wrap: wrap;}
+.xin_intelligent_menu{width: 130rpx;margin-left: 10rpx;margin-top: 15rpx;}
+.xin_intelligent_title{width: 500rpx; font-size: 36rpx;font-weight: 900;}
+.xin_intelligent_tts{width: 500rpx;margin-left: 30rpx;}
+.xin_intelligent_text{width: 500rpx;font-size: 22rpx;margin-top: 10rpx;}
+.xin_intelligent_kuang{width: 706rpx; overflow: hidden;}
+.inte_hd{white-space: nowrap;overflow-y: auto;margin-top: 30rpx; }
+.inte_k{width: 280rpx;display: inline-block; background-color: #fff; margin-left: 10rpx; margin-right: 10rpx; overflow: hidden; border-radius: 10rpx;}
+.inte_img{width: 280rpx;height:280rpx;}
+.inte_img image{width: 280rpx;height:280rpx;}
+.inte_text{width: 280rpx;overflow: hidden;}
+.inte_text_title{margin-top: 15rpx; margin-left: 15rpx;margin-bottom:15rpx;}
+.inte_text_title_title{font-size: 28rpx; width: 260rpx;overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;}
-.inte_text_title_label{ color: #fff; font-size: 18rpx; border-radius: 15rpx; margin-top: 13rpx;width: 250rpx;}
-.inte_text_title_label i{padding: 2px 8px; background-color: #f86f22;}
+  white-space: nowrap;color: #000;}
+.inte_text_title_label{font-size: 18rpx;margin-top: 13rpx;margin-left: -10rpx;width: 250rpx;}
+.inte_text_title_label i{padding: 3px 11px; background-color: #fef3df; color: #f86f22; border-radius: 30rpx;margin-left: 10rpx;}
 .inte_text_title_Watch{color: #686868; font-size: 18rpx; margin-top: 10rpx;}
 .bottom_advertising{position: fixed; bottom: 170rpx; right: 30rpx;z-index: 1112; width: 80rpx; height: 80rpx; overflow: hidden;animation:mymove 3s infinite; }
 .bottom_advertising image{width: 80rpx;}

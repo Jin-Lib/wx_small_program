@@ -93,6 +93,7 @@
   </view>
 
   <view class="xin_category">
+    <view class="xin_drenwu"><image src="http://cdn.koalaxiezi.com/qimingxing/img/maotouying.png" mode="widthFix"></image></view>
     <view class="xin_category_title">限时爆款</view>
     <view class="xin_category_text">爆款先知道 每天一个惊喜折扣</view>
     <!--限时爆款课程图-->
@@ -196,43 +197,45 @@
 </view>
 
 
+
+<view class="xin_intelligent">
 <!--智能推荐文字-->
-<view class="category">
-  <view class="explosion">
-    智能推荐
-    <picker
-      bindchange="recommendedAgeSelect"
-      range="{{recommendedAge}}"
-      value="{{recommendedAgeSelectIndex}}"
-      class="more1">
-      <view class="more1">
-        {{recommendedAge[recommendedAgeSelectIndex]}}
-        <i class="more_right1"></i>
-      </view>
-    </picker>
+  <view class="xin_intelligent_tts">
+    <view class="xin_intelligent_title">智能推荐</view>
+    <view class="xin_intelligent_text">给您推荐这个年龄 最适合的</view>
   </view>
-</view>
-<!--智能推荐课程图-->
-<view class="intelligent">
-  <view class="inte_hd">
-    <view class="inte_k" wx:for="{{courseList}}" wx:key="index" data-id="{{item.id}}" bindtap="details">
-      <view class="inte_img">
-        <image src="{{item.main_img}}"></image>
-      </view>
-      <view class="inte_text">
-        <view class="inte_text_title">
-          <view class="inte_text_title_title">{{item.title}}</view>
-          <view class="inte_text_title_label">
-            <i>{{item.label}}</i>
-          
+  <view class="xin_intelligent_menu">
+      <picker
+        bindchange="recommendedAgeSelect"
+        range="{{recommendedAge}}"
+        value="{{recommendedAgeSelectIndex}}"
+        class="more1">
+        <view class="more1">
+          {{recommendedAge[recommendedAgeSelectIndex]}}
+          <i class="more_right1"></i>
+        </view>
+      </picker>
+  </view>
+  <!--智能推荐课程图-->
+  <view class="xin_intelligent_kuang">
+    <view class="inte_hd">
+      <view class="inte_k" wx:for="{{courseList}}" wx:key="index" data-id="{{item.id}}" bindtap="details">
+        <view class="inte_img">
+          <image src="{{item.main_img}}"></image>
+        </view>
+        <view class="inte_text">
+          <view class="inte_text_title">
+            <view class="inte_text_title_title">{{item.title}}</view>
+            <view class="inte_text_title_label">
+              <i>{{item.label}}</i>
+            </view>
+            <view class="inte_text_title_Watch">{{item.buy_count}}万人播放</view>
           </view>
-          <view class="inte_text_title_Watch">{{item.buy_count}}万人播放</view>
         </view>
       </view>
     </view>
   </view>
 </view>
-
 
 <block wx:for="{{indexCateCourseData}}" wx:key="index">
   <view class="xin_arrival_ziu">
