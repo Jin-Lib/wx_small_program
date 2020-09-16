@@ -76,6 +76,9 @@ Page({
 
   // 获取团信息
   groupInfoData: function () {
+    wx.showLoading({
+      title: '请求中，请耐心等待..'
+    });
     API.groupInfo({
       groupId: this.data.groupId
     }).then(res => {//成功
@@ -84,6 +87,7 @@ Page({
       for(let i = 0; i < (groupNum - len); i++) {
         users.push({});
       }
+      wx.hideLoading();
      
       this.setData({
         users,
@@ -96,16 +100,15 @@ Page({
       });
 
     }).catch(err => {
-      wx.showToast({//错误
-        title: err,
-        icon: 'none',
-        duration: 1000
-      })
+      wx.hideLoading();
     })
   },
 
   // 获取用户信息
   getinfoData: function () {
+    wx.showLoading({
+      title: '请求中，请耐心等待..'
+    });
     API.getinfo({
     }).then(res => {//成功
       let isSelf = false;
@@ -117,12 +120,11 @@ Page({
         isSelf,
         userInfo: res
       });
+      wx.hideLoading();
+
     }).catch(err => {
-      wx.showToast({//错误
-        title: err,
-        icon: 'none',
-        duration: 1000
-      })
+      wx.hideLoading();
+
     })
   },
 
@@ -351,7 +353,7 @@ Page({
             wxlogin: true
           }, () => {
             // 用户登录之后查看当前个人资料是否填写
-            this.getinfoData()
+            // this.getinfoData()
           });
         } else {
           this.setData({

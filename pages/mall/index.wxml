@@ -1,7 +1,7 @@
-<!--合伙人临时入口
-<view bindtap="hhsr" style="position: fixed; top: 70rpx; right: 0rpx;background-color: #fc4850;padding: 8rpx 20rpx;font-size: 24rpx;color: #fff;z-index: 999999;">
+<!--合伙人临时入口-->
+<view bindtap="hhsr" style="position: fixed; top: 200rpx; right: 0rpx;background-color: #fc4850;padding: 8rpx 20rpx;font-size: 24rpx;color: #fff;z-index: 999999;">
   合伙人临时入口
-</view>-->
+</view>
 
 <!--浮窗活动-->
 <view class="bottom_advertising" bindtap="bottom_advertising">
@@ -83,7 +83,7 @@
     <block
       wx:for="{{types}}"
       wx:key="id">
-      <view class="leaderboard" data-type="{{item.type}}" data-id="{{item.id}}" data-typeid="{{item.type_id}}" bindtap="onClickM">
+      <view class="leaderboard" data-type="{{item.type}}" data-link="{{item.link}}" bindtap="onClickM">
         <view class="lead_img">
           <image src="{{item.image_url}}" mode="widthFix"></image>
         </view>
