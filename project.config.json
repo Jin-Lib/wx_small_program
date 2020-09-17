@@ -326,6 +326,12 @@
           "pathName": "pages/partner/user-community/index",
           "query": "",
           "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-community-teamseniorpartner/index",
+          "pathName": "pages/partner/user-community-teamseniorpartner/index",
+          "scene": null
         }
       ]
     }
