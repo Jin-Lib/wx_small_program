@@ -1,3 +1,79 @@
-<view >
-  购买支付
+
+
+<view class="nav1 bc_white">
+  <view class="{{selected?'red1':'default1'}}" style="margin-left:10rpx;" bindtap="selected">临时粉丝</view>
+  <view class="{{selected1?'red1':'default1'}}" bindtap="selected1">已过期</view>
+</view>
+
+<view class="{{selected?'show1':'hidden1'}}">
+  <view class="bonus_informationk">
+    <view class="bonus_information">
+      <view class="bonus_information_img">
+          <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      </view>
+      <view class="bonus_information_text">
+        <view class="bouns_information_text_name">
+          <view class="bonus_information_text_xm">杨伟伟</view>
+        </view>
+        <view class="bonus_information_text_numje">剩余1天20:34:56</view>
+      </view>
+      <view class="bonus_information_amount">
+        <view class="amount_je" bindtap="tuiguang">立即去推广</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="{{selected1?'show1':'hidden1'}}">
+  <view class="bonus_informationk">
+
+    <view class="bonus_information">
+      <view class="bonus_information_img">
+          <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      </view>
+      <view class="bonus_information_text">
+        <view class="bouns_information_text_name">
+          <view class="bonus_information_text_xm">匆匆那些年</view>
+          <view class="bonus_information_text_bq hs">已锁粉</view>
+        </view>
+        <view class="bonus_information_text_numje">2020-08-11</view>
+      </view>
+      <view class="bonus_information_amount">
+        <view class="amount_je add">立即去推广</view>
+      </view>
+    </view>
+
+    
+    <view class="bonus_information">
+      <view class="bonus_information_img">
+          <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      </view>
+      <view class="bonus_information_text">
+        <view class="bouns_information_text_name">
+          <view class="bonus_information_text_xm">聪聪承诺</view>
+          <view class="bonus_information_text_bq ls">老用户</view>
+        </view>
+        <view class="bonus_information_text_numje">2020-09-10</view>
+      </view>
+      <view class="bonus_information_amount">
+        <view class="amount_je add">立即去推广</view>
+      </view>
+    </view>
+    <view class="bonus_information">
+      <view class="bonus_information_img">
+          <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      </view>
+      <view class="bonus_information_text">
+        <view class="bouns_information_text_name">
+          <view class="bonus_information_text_xm">聪聪承诺</view>
+          <view class="bonus_information_text_bq gq">已过期</view>
+        </view>
+        <view class="bonus_information_text_numje">2020-09-10</view>
+      </view>
+      <view class="bonus_information_amount">
+        <view class="amount_je add">立即去推广</view>
+      </view>
+    </view>
+
+  </view>
 </view>

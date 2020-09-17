@@ -8,6 +8,23 @@
 
 <view class="bonus_informationk">
 
+<view class="bonus_information">
+  <view class="bonus_information_img">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+  </view>
+  <view class="bonus_information_text">
+    <view class="bouns_information_text_name">
+      <view class="bonus_information_text_xm">匆匆那些年</view>
+      <view class="bonus_information_text_bq">任务中心</view>
+    </view>
+    <view class="bonus_information_text_numje">任务中心领奖</view>
+  </view>
+  <view class="bonus_information_amount">
+    <view class="amount_je">+5元</view>
+    <view class="amount_time">2020/09/08 10:15</view>
+  </view>
+</view>
+
   <view class="bonus_information">
     <view class="bonus_information_img">
         <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>

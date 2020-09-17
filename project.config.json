@@ -338,6 +338,20 @@
           "id": -1,
           "name": "pages/partner/user-withdraw/index",
           "pathName": "pages/partner/user-withdraw/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/b-course-details/index",
+          "pathName": "pages/partner/b-course-details/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-temporaryfans/index",
+          "pathName": "pages/partner/user-temporaryfans/index",
           "scene": null
         }
       ]
