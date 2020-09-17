@@ -46,13 +46,13 @@
       <view class="learn_text">
         <view class="learn_title">{{item.title}}</view>
         <view class="learn_introduction">课程简介</view>
-        <!-- <view class="learn_status">
+        <view class="learn_status">
           <view class="loadbar">
             <view class="bar" style="width:30%"></view>
           </view>
           <view class="learn_status_yx">已学1/10集</view>
         </view>
-        <view class="learn_watch">8299位宝宝正在看</view> -->
+        <view class="learn_watch">8299位宝宝正在看</view>
       </view>
       <!-- <view class="top o_color">置顶</view> -->
     </view>
