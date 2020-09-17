@@ -1,7 +1,9 @@
 //index.js
+const API = require('../../../config/api');
 
 Page({
   data: {
+    info: {},
   },
 
   //推课奖金
@@ -52,6 +54,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getPartnerAmount();
   },
+
+  getPartnerAmount() {
+    API.getPartnerAmount()
+      .then(resp => {
+        console.log('resp', resp)
+        this.setData({
+          info: resp
+        })
+      })
+  }
 })

@@ -5,7 +5,7 @@
   </view>
   <view class="totalre_img_text">
     <view class="totalre_img_text_title">累计总收益</view>
-    <view class="totalre_img_text_num">￥<i>203042.23</i></view>
+    <view class="totalre_img_text_num">￥<i>{{info.amount.push_coure + info.amount.active_amount + info.amount.direct_amount + info.amount.indirect_amount + info.amount.team_amount + info.amount.breed_amount}}</i></view>
   </view>
 </view>
 
@@ -15,9 +15,9 @@
   </view>
   <view class="totalre_centorn_text" bindtap="tuitionbonus">
     <view class="totalre_centorn_text_title">推课奖金 ></view>
-    <view class="totalre_centorn_text_num">￥540934.20</view>
+    <view class="totalre_centorn_text_num">￥{{info.amount.push_coure}}</view>
     <view class="totalre_centorn_text_day">
-      今日<i>+2454.21</i>
+      今日<i>+{{info.dayamount.push_coure}}</i>
     </view>
   </view>
 </view>
@@ -28,9 +28,9 @@
   </view>
   <view class="totalre_centorn_text" bindtap="activitybonus">
     <view class="totalre_centorn_text_title">活动奖金 ></view>
-    <view class="totalre_centorn_text_num">￥54098</view>
+    <view class="totalre_centorn_text_num">￥{{info.amount.active_amount}}</view>
     <view class="totalre_centorn_text_day">
-      今日<i>+3242.23</i>
+      今日<i>+{{info.dayamount.active_amount}}</i>
     </view>
   </view>
 </view>
@@ -42,16 +42,16 @@
   <view class="totalre_centorn_text2">
     <view class="totalre_centorn_text_left" bindtap="directinvitationbonus">
       <view class="totalre_centorn_text_title2">直邀奖金 ></view>
-      <view class="totalre_centorn_text_num2">￥408</view>
+      <view class="totalre_centorn_text_num2">￥{{info.amount.direct_amount}}</view>
       <view class="totalre_centorn_text_day2">
-        今日<i>+122.03</i>
+        今日<i>+{{info.dayamount.direct_amount}}</i>
       </view>
     </view>
     <view class="totalre_centorn_text_right" bindtap="indirectbonus">
       <view class="totalre_centorn_text_title2">间接奖金 ></view>
-      <view class="totalre_centorn_text_num2">￥0</view>
+      <view class="totalre_centorn_text_num2">￥{{info.amount.indirect_amount}}</view>
       <view class="totalre_centorn_text_day2">
-        今日<i>0</i>
+        今日<i>{{info.dayamount.indirect_amount}}</i>
       </view>
     </view>
     <view class="totalre_poster">
@@ -67,16 +67,16 @@
   <view class="totalre_centorn_text2">
     <view class="totalre_centorn_text_left" bindtap="managementbonus">
       <view class="totalre_centorn_text_title2">管理奖金 ></view>
-      <view class="totalre_centorn_text_num2">￥808</view>
+      <view class="totalre_centorn_text_num2">￥{{info.amount.team_amount}}</view>
       <view class="totalre_centorn_text_day2">
-        今日<i>+122.03</i>
+        今日<i>+{{info.dayamount.team_amount}}</i>
       </view>
     </view>
     <view class="totalre_centorn_text_right" bindtap="cultivationbonus">
       <view class="totalre_centorn_text_title2">培育奖金 ></view>
-      <view class="totalre_centorn_text_num2">￥0</view>
+      <view class="totalre_centorn_text_num2">￥{{info.amount.breed_amount}}</view>
       <view class="totalre_centorn_text_day2">
-        今日<i>0</i>
+        今日<i>{{info.dayamount.breed_amount}}</i>
       </view>
     </view>
     <view class="totalre_poster">

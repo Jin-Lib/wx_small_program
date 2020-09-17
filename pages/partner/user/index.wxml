@@ -6,34 +6,34 @@
   </view>
   <view class="partner_nim">
     <view class="partner_nim_img">
-      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <image src="{{userInfo.head_img}}" mode="widthFix"></image>
       <image class="partnervip" src="http://cdn.koalaxiezi.com/ceshi/user/v-icon.76ec6b35.png" mode="widthFix"></image>
     </view>
-    <view class="partner_nim_name">张驰</view>
-    <view class="partner_nim_partn">初级合伙人</view>
+    <view class="partner_nim_name">{{userInfo.nick_name}}</view>
+    <view class="partner_nim_partn">{{userInfo.type == 0 ? '用户' : (userInfo.type == 1 ? '合伙人' : '高级合伙人' )}}</view>
   </view>
 
   <view class="partner_usertext">
     <view class="partner_user_num">
       <view class="partner_user_num_sy" bindtap="totalrevenue">
         累计总收益 >
-        <view><i>10423</i></view>
-        <view>今日<span>+1423</span></view>
+        <view><i>{{userInfo.income}}</i></view>
+        <view>今日<span>+{{userInfo.day_income}}</span></view>
       </view>
       <view class="partner_user_num_fs" bindtap="numberoffans">
         当前粉丝数 >
-        <view><i>123</i></view>
-        <view>今日<span>+13</span></view>
+        <view><i>{{userInfo.fans}}</i></view>
+        <view>今日<span>+{{userInfo.day_fans}}</span></view>
       </view>
       <view class="partner_user_num_rs" bindtap="community">
         社群合伙人数 >
-        <view><i>5423</i></view>
-        <view>今日<span>+3</span></view>
+        <view><i>{{userInfo.partner_fans_count}}</i></view>
+        <view>今日<span>+{{userInfo.fans_partner + userInfo.fans_high_partner}}</span></view>
       </view>
     </view>
     <view class="partner_tinum" bindtap="withdraw">
       <view class="tinum_text">可提现(元)</view>
-      <view class="tinum_num">5092 ></view>
+      <view class="tinum_num">{{userInfo.withdrawal}} ></view>
     </view>
   </view>
 </view>
@@ -43,22 +43,22 @@
   <view class="unlock_progress_zy">解锁为高级合伙人，收益直涨2-10倍！</view>
   <view class="unlock_progress_jdzt">
     <view class="loadbar">
-      <i>7/10</i>
-      <view class="bar ff6422" style="width:70%"></view>
+      <i>{{userInfo.partner_fans_count}}/{{userInfo.all_partner}}</i>
+      <view class="bar ff6422" style="width:{{userInfo.partner_fans_count/userInfo.all_partner*100}}%"></view>
     </view>
     直推合伙人数
   </view>
   <view class="unlock_progress_jdsq">
     <view class="loadbar">
-      <i>7/200</i>
-      <view class="bar fd8d14" style="width:2%"></view>
+      <i>{{userInfo.fans}}/{{userInfo.all_fans}}</i>
+      <view class="bar fd8d14" style="width:{{userInfo.fans/userInfo.all_fans*100}}%"></view>
     </view>
     社群累计粉丝数
   </view>
   <view class="unlock_progress_jdgr">
     <view class="loadbar">
-      <i>200/1000</i>
-      <view class="bar fdbe14" style="width:20%"></view>
+      <i>{{userInfo.income}}/{{userInfo.all_income}}</i>
+      <view class="bar fdbe14" style="width:{{userInfo.income/userInfo.all_income*100}}%"></view>
     </view>
     个人累计总收益
   </view>

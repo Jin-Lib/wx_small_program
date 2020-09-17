@@ -1,7 +1,9 @@
 //index.js
+const API = require('../../../config/api');
 
 Page({
   data: {
+    userInfo: {}, // 用户信息
   },
 
 
@@ -66,6 +68,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.getPartnerInfo();
+  },
 
+  /**
+   * 获取合伙人详情
+   * @date 2020-09-17
+   * @returns {any}
+   */
+  getPartnerInfo() {
+    API.getPartnerInfo()
+      .then(resp => {
+        this.setData({
+          userInfo: resp
+        })
+      })
   },
 })

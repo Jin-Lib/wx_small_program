@@ -151,6 +151,24 @@ const API =  {
   'bindUserPhone': {
     url: `${host}/api/user/bind`,
     method: 'POST'
+  },
+
+  // 合伙人详情
+  getPartnerInfo: {
+    url: `${host}/api/user/partnerInfo`,
+    method: 'POST'
+  },
+
+  // 合伙人收入详情
+  getPartnerAmountDetail: {
+    url: `${host}/api/user/partnerAmountDetail`,
+    method: 'POST'
+  },
+
+  // 合伙人金额数据
+  getPartnerAmount: {
+    url: `${host}/api/user/partnerAmount`,
+    method: 'POST'
   }
 };
 
