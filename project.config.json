@@ -331,6 +331,13 @@
           "id": -1,
           "name": "pages/partner/user-community-teamseniorpartner/index",
           "pathName": "pages/partner/user-community-teamseniorpartner/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-withdraw/index",
+          "pathName": "pages/partner/user-withdraw/index",
           "scene": null
         }
       ]

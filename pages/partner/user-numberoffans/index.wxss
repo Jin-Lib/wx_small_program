@@ -8,7 +8,7 @@ page{background-color: #f7f7f7;}
 .bonus_information{background-color: #fff;padding: 20rpx 30rpx; width: 693rpx; display: flex;flex-wrap: wrap; border-bottom: #cccccc solid 3rpx;}
 .bonus_information_img{width: 80rpx;height: 80rpx;overflow: hidden; border:#fff solid 2rpx; border-radius: 50%;position: relative;}
 .bonus_information_img image{width: 80rpx;}
-.bonus_information_text{margin-left: 10rpx;width: 360rpx;margin-top: 5rpx;}
+.bonus_information_text{margin-left: 10rpx;width: 350rpx;margin-top: 5rpx;}
 .bouns_information_text_name{width: 300rpx; display: flex;flex-wrap: wrap;}
 .bonus_information_text_xm{font-size: 26rpx;width:160rpx; text-align: left;height: 34rpx;overflow: hidden;}
 .bonus_information_text_bq{padding: 3rpx 8rpx; background-color: #cccccc;color: #fff;font-size: 18rpx;margin-left:8rpx;}
