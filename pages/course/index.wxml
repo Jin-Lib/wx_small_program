@@ -21,6 +21,7 @@
     <view class="share" data-id="{{item.course_id}}" data-groupid="{{item.group_id}}" bindtap="invitefriends">邀好友拼团</view>
   </view>
 </view>
+  <view class="xsmore">显示更多</view>
 
 
 <!--已购课程文字-->
@@ -57,7 +58,7 @@
       <!-- <view class="top o_color">置顶</view> -->
     </view>
   </block>
-  
+  <view class="xsmore">显示更多</view>
   <!--已购课程板块purchased-->
   <!-- <view class="purchased">
      <view class="swiper-tab">
