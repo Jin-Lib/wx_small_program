@@ -1,11 +1,22 @@
 
 
-<view class="search_top">
-  <view class="search_search">
-    <input type='text' placeholder='请您输入想要的搜索内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+
+<!--顶部搜索-->
+
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px;{{viewData.style}}">
+  <view class="custom_top">
+    <view class="search_top">
+      <view class='rt_pos' bindtap="findex"></view>
+      <view class="search_search">
+        <input type='text' placeholder='请您输入想要的搜索内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+      </view>
+      <!-- <view class="search_cancel">取消</view> -->
+    </view>
   </view>
-  <view class="search_cancel">取消</view>
 </view>
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
 
 <view class="popular_search">
   <view class="popular_title">热门搜索</view>
