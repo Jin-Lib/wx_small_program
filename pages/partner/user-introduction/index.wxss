@@ -1,0 +1,99 @@
+
+.introd_img{width: 750rpx;position: relative;}
+.introd_img image{width: 750rpx;margin-top:-9rpx;}
+.introd_k{position: absolute;top: 60rpx;right: 0;width: 90rpx;height: 40rpx;}
+.bottom_button{position: fixed;bottom: 30rpx;left: 125rpx; width: 500rpx;}
+.bottom_button image{width: 500rpx;}
+
+.bottom_popup_share{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+.f_share{width: 550rpx;position: absolute;top: 40rpx;left: 110rpx;}
+.f_share image{width: 550rpx;}
+.f_share2{width: 50rpx;position: absolute;top: 190rpx;right: 125rpx;z-index: 999;}
+.f_share2 image{width: 50rpx;}
+.f_share3{width: 500rpx;position: absolute;top: 240rpx;left: 100rpx;border: dashed 3rpx #ffffff; padding: 20rpx; background: rgba(255, 255, 255, 0.2);border-radius: 20rpx;}
+.f_share3 image{width: 500rpx;}
+.share_title{width: 500rpx;position: absolute;top:330rpx;left: 80rpx;background-color: #ff1d3b;padding: 20rpx 50rpx; text-align: center; color: #ffffff;border-radius: 60rpx;font-size: 24rpx;}
+.share_text{width: 500rpx;position: absolute;top:420rpx;left: 110rpx; color: #ffffff;font-size: 28rpx;}
+.bottom_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.popup {
+  width: 655rpx;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30rpx 50rpx;
+  padding-bottom: 0rpx;
+  animation: popups .4s;
+}
+
+.popup_title {
+  font-size: 30rpx;
+  font-weight: 900;
+  margin-left: 220rpx;
+  border-bottom: solid 5rpx #fc4850;
+  width: 200rpx;
+  text-align: center;
+  padding-bottom: 10rpx;
+  margin-bottom:30rpx;
+}
+.beizhus{float: left;margin-bottom: 120rpx;font-size: 24rpx;color: #999999;margin-top: 15rpx;
+  padding: 10rpx 20rpx;}
+  
+.close {
+  position: absolute;
+  right: 15rpx;
+  top: 30rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  right: 30rpx;
+  content: ' ';
+  height: 40rpx;
+  width: 2px;
+  background-color: #333;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+.popup_detailed {
+  padding: 10rpx 20rpx;
+  float: left;
+}
+
+.popup_text_title {
+  font-size: 24rpx;
+  color: #000;
+}
+@keyframes popups{
+  0%{
+    bottom:-500rpx;
+  }
+  100%{
+    bottom:0rpx;
+  }
+}

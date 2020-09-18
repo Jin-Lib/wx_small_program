@@ -366,6 +366,20 @@
           "id": -1,
           "name": "pages/partner/b-user-lockpowder/index",
           "pathName": "pages/partner/b-user-lockpowder/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-introduction/index",
+          "pathName": "pages/partner/user-introduction/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-visitors/index",
+          "pathName": "pages/partner/user-visitors/index",
           "scene": null
         }
       ]

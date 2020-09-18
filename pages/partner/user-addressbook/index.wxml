@@ -1,3 +1,6 @@
-<view >
-  购买支付
+
+
+
+<view class="visitors_top">
+  <image src="http://cdn.koalaxiezi.com/ceshi/txl.png" mode="widthFix"></image>
 </view>

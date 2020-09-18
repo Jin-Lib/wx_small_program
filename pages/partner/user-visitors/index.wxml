@@ -1,3 +1,102 @@
-<view >
-  购买支付
+
+
+<view class="visitors_top">
+  <image src="http://cdn.koalaxiezi.com/ceshi/fangk.png" mode="widthFix"></image>
 </view>
+
+<view class="visitors_conter">
+  <view class="visitors_conter_textimg">
+    <view class="visit_img">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <view class="visit_title c58f1c">合伙人</view>
+    </view>
+    <view class="visit_text">
+      <view class="visit_text_title">张驰</view>
+      <view class="visit_text_title_text">访问了您分享的课程</view>
+    </view>
+  </view>
+  <view class="visit_conter_textbottom">
+    <view class="visit_conter_img">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_215_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="visit_conter_text">
+      <view class="visit_conter_text_title">用思维导图学好语数英防守对方的手删掉干啥大范甘迪</view>
+      <view class="visit_conter_text_time">2020/09/18 18:47:51</view>
+      <view class="visit_conter_text_num">访问次数：<i>5次</i></view>
+    </view>
+  </view>
+</view>
+
+
+<view class="visitors_conter">
+  <view class="visitors_conter_textimg">
+    <view class="visit_img">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <view class="visit_title ff6222">粉丝</view>
+    </view>
+    <view class="visit_text">
+      <view class="visit_text_title">从新欧诺个你所得税地方</view>
+      <view class="visit_text_title_text">访问了您分享的课程</view>
+    </view>
+  </view>
+  <view class="visit_conter_textbottom">
+    <view class="visit_conter_img">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_215_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="visit_conter_text">
+      <view class="visit_conter_text_title">用思维导图学好语数英防守对方的手删掉干啥大范甘迪</view>
+      <view class="visit_conter_text_time">2020/09/18 18:47:51</view>
+      <view class="visit_conter_text_num">访问次数：<i>5次</i></view>
+    </view>
+  </view>
+</view>
+
+<view class="visitors_conter">
+  <view class="visitors_conter_textimg">
+    <view class="visit_img">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <view class="visit_title f20d790">他人粉丝</view>
+    </view>
+    <view class="visit_text">
+      <view class="visit_text_title">张驰</view>
+      <view class="visit_text_title_text">访问了您分享的课程</view>
+    </view>
+  </view>
+  <view class="visit_conter_textbottom">
+    <view class="visit_conter_img">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_215_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="visit_conter_text">
+      <view class="visit_conter_text_title">用思维导图学好语数英防守对方的手删掉干啥大范甘迪</view>
+      <view class="visit_conter_text_time">2020/09/18 18:47:51</view>
+      <view class="visit_conter_text_num">访问次数：<i>5次</i></view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="visitors_conter">
+  <view class="visitors_conter_textimg">
+    <view class="visit_img">
+      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      <view class="visit_title f363bff">临时粉丝</view>
+    </view>
+    <view class="visit_text">
+      <view class="visit_text_title">张驰</view>
+      <view class="visit_text_title_text">访问了您分享的课程</view>
+    </view>
+  </view>
+  <view class="visit_conter_textbottom">
+    <view class="visit_conter_img">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_215_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="visit_conter_text">
+      <view class="visit_conter_text_title">用思维导图学好语数英防守对方的手删掉干啥大范甘迪</view>
+      <view class="visit_conter_text_time">2020/09/18 18:47:51</view>
+      <view class="visit_conter_text_num">访问次数：<i>5次</i></view>
+    </view>
+  </view>
+</view>
+
+

@@ -1,3 +1,49 @@
-<view >
-  购买支付
+
+
+
+<view class="introd_img">
+  <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/2.png" mode="widthFix"></image>
+  <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/3.png" mode="widthFix"></image>
+  <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/1.png" mode="widthFix"></image>
+  <view class="introd_k" bindtap="showrule"></view>
 </view>
+
+<view class="bottom_button" bindtap="showshare">
+  <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/anniu.png" mode="widthFix"></image>
+</view>
+
+
+  <!--规则弹窗-->
+  <view class="bottom_popup" hidden="{{hiddenrule}}">
+    <view class="popup">
+      <view class="popup_title">
+        介绍锁粉规则
+      </view>
+      <view class="close" bindtap="showrule"></view>
+      <view class="popup_detailed">
+        <view class="popup_text_title">
+          1）合伙人分享品牌介绍给朋友，新用户点击进入将被合伙人临时锁粉。
+        </view>
+      </view>
+      <view class="beizhus">
+        备注：临时锁粉是指新用户成为合伙人的临时粉丝，临时关系是不可被覆盖的，在7天内任意渠道购课会被临时上级永久锁粉。
+      </view>
+    </view>
+  </view>
+
+
+  <!--分享弹窗-->
+  <view class="bottom_popup_share" hidden="{{hiddenshare}}" bindtap="showshare">
+    <view class="f_share">
+      <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/share1.png" mode="widthFix"></image>
+    </view>
+    <view class="f_share2">
+      <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/share2.png" mode="widthFix"></image>
+    </view>
+    <view class="f_share3">
+      <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/share3.jpg" mode="widthFix"></image>
+    </view>
+  </view>
+
+
+
