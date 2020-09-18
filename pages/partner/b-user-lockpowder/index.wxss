@@ -11,7 +11,10 @@ page{background-color: #ff5a21;}
 .lockpowder_time{position: absolute;top: 368rpx;left: 335rpx;color: #e60037;}
 .lockpowder_time i{padding: 10rpx 15rpx; background-color: #e60037;color: #ffe985;font-size: 28rpx;border-radius: 10rpx;margin-left: 4rpx;margin-right: 4rpx;}
 .lockpowder_conter{padding: 30rpx 10rpx;width: 680rpx;margin-left: 25rpx;background-color: #ffffff;border-radius: 10rpx;margin-bottom: 120rpx;display: flex;flex-wrap: wrap;}
-.conter_k{width: 300rpx;margin-left: 25rpx;margin-top: 40rpx;}
+.conter_k{width: 300rpx;margin-left: 25rpx;margin-top: 40rpx;position: relative;}
+.rioad{width: 50rpx;height: 50rpx;overflow: hidden;border-radius: 50%; border: solid 6rpx #ffffff;position: absolute; bottom: 58rpx;right: 0rpx;background-color: #999999;}
+.riadd{background-color: #ff1d3b;}
+.rioad_shik{position: absolute;bottom: 47rpx; right: 0rpx; width: 300rpx;background: rgba(0, 0, 0, 0.8);color: #ffffff;text-align: center;}
 .addcolor{border: #ff1d3b solid 6rpx;}
 .conter_k_title{font-size: 28rpx;padding-left: 10rpx;font-weight: 900;border-left: #ff7e7e solid 10rpx;margin-left: 10rpx;}
 .conter_k_img{width: 300rpx;height: 300rpx;border-radius: 10rpx;overflow: hidden;margin-top: 15rpx;}
@@ -19,3 +22,15 @@ page{background-color: #ff5a21;}
 .conter_k_text{width: 290rpx;font-size: 24rpx;margin-top: 15rpx;margin-left: 10rpx;}
 
 .locak_bottom{position: fixed;bottom: 30rpx; text-align: center; width: 350rpx;left: 170rpx;padding: 20rpx 40rpx; color: #e60037;background-color: #ffe985;font-size: 28rpx;border-radius: 60rpx;}
+
+.bottom_popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+.popup_image{width: 600rpx;margin-left:75rpx;margin-top: 250rpx; color: #ffffff;font-size: 26rpx;text-align: center;}
+.popup_image image{width: 600rpx;}
