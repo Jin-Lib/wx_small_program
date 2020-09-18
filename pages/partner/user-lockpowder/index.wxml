@@ -1,3 +1,22 @@
-<view >
-  购买支付
+
+<view class="zengketop">
+  <view class="zengke_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/zengketop.png" mode="widthFix"></image>
+  </view>
 </view>
+
+<view class="zengke_conter">
+  <view class="bc_white">
+    <view class="{{selected?'red1':'default1'}}" style="margin-left:150rpx;" bindtap="selected">临时粉丝</view>
+    <view class="{{selected1?'red1':'default1'}}" style="margin-right:150rpx;" bindtap="selected1">已过期</view>
+  </view>
+
+  <view class="{{selected?'show1':'hidden1'}}">
+    1
+  </view>
+
+  <view class="{{selected1?'show1':'hidden1'}}">
+    2
+  </view>
+</view>
+

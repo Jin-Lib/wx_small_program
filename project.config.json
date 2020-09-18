@@ -352,6 +352,13 @@
           "id": -1,
           "name": "pages/partner/user-temporaryfans/index",
           "pathName": "pages/partner/user-temporaryfans/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-lockpowder/index",
+          "pathName": "pages/partner/user-lockpowder/index",
           "scene": null
         }
       ]
