@@ -1,3 +1,59 @@
-<view >
-  购买支付
+
+
+<view class="lockpowder_top">
+  <view class="lockpowder_img">
+    <image src="http://cdn.koalaxiezi.com/ceshi/bsharetop.jpg" mode="widthFix"></image>
+  </view>
+  <view class="lockpowder_tx">
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
+  </view>
+  <view class="locapowder_name">张驰</view>
+  <view class="lockpowder_time">
+    <i>59</i>:<i>40</i>:<i>52</i>
+  </view>
 </view>
+
+<view class="lockpowder_conter">
+
+  <view class="conter_k">
+    <view class="conter_k_title">兴趣培养</view>
+    <view class="conter_k_img addcolor">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_215_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="conter_k_text">跟着棋圣学围棋</view>
+  </view>
+
+  <view class="conter_k">
+    <view class="conter_k_title">视野开拓</view>
+    <view class="conter_k_img">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_276_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="conter_k_text">跟着棋圣学围棋</view>
+  </view>
+
+  <view class="conter_k">
+    <view class="conter_k_title">国学启蒙</view>
+    <view class="conter_k_img">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="conter_k_text">跟着棋圣学围棋</view>
+  </view>
+
+  <view class="conter_k">
+    <view class="conter_k_title">自然科普</view>
+    <view class="conter_k_img">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="conter_k_text">跟着棋圣学围棋</view>
+  </view>
+
+</view>
+
+
+
+
+
+
+
+
+<view class="locak_bottom">0元领这门课</view>
