@@ -1,22 +1,162 @@
-
+<!--分享出去别人看到的页面-->
+<view bindtap="hhsr" style="position: fixed; top: 120rpx; right: 0rpx;background-color: #fc4850;padding: 8rpx 20rpx;font-size: 24rpx;color: #fff;z-index: 999999;">
+  分享出去别人看到的页面
+</view>
 <view class="zengketop">
   <view class="zengke_img">
     <image src="http://cdn.koalaxiezi.com/ceshi/zengketop.png" mode="widthFix"></image>
   </view>
+  <view class="guizetext" bindtap="showrule"></view>
+  <view class="zengke_num">10</view>
+  <view class="mashangz" bindtap="showshare"></view>
 </view>
 
 <view class="zengke_conter">
   <view class="bc_white">
-    <view class="{{selected?'red1':'default1'}}" style="margin-left:150rpx;" bindtap="selected">临时粉丝</view>
-    <view class="{{selected1?'red1':'default1'}}" style="margin-right:150rpx;" bindtap="selected1">已过期</view>
+    <view class="{{selected?'red1':'default1'}}" style="margin-left:150rpx;" bindtap="selected">可赠送</view>
+    <view class="{{selected1?'red1':'default1'}}" style="margin-right:150rpx;" bindtap="selected1">已赠送</view>
   </view>
 
   <view class="{{selected?'show1':'hidden1'}}">
-    1
+  
+  <view class="zeng_coner">
+    <view class="zeng_coner_left">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="zeng_coner_right">
+      <view class="zeng_coner_right_title">跟着棋圣学围棋</view>
+      <view class="zeng_coner_right_zhaiyao">30集动画视频课，学习悠远深厚的打开的死哦都发给你</view>
+      <view class="zeng_coner_right_shit">试听课2节</view>
+      <view class="zeng_coner_right_button" bindtap="showshare">赠送给好友</view>
+    </view>
+  </view>
+  
+  <view class="zeng_coner">
+    <view class="zeng_coner_left">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="zeng_coner_right">
+      <view class="zeng_coner_right_title">跟着棋圣学围棋</view>
+      <view class="zeng_coner_right_zhaiyao">30集动画视频课，学习悠远深厚的打开的死哦都发给你</view>
+      <view class="zeng_coner_right_shit">试听课2节</view>
+      <view class="zeng_coner_right_button" bindtap="showshare">赠送给好友</view>
+    </view>
+  </view>
+  
+  <view class="zeng_coner">
+    <view class="zeng_coner_left">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="zeng_coner_right">
+      <view class="zeng_coner_right_title">跟着棋圣学围棋</view>
+      <view class="zeng_coner_right_zhaiyao">30集动画视频课，学习悠远深厚的打开的死哦都发给你</view>
+      <view class="zeng_coner_right_shit">试听课2节</view>
+      <view class="zeng_coner_right_button" bindtap="showshare">赠送给好友</view>
+    </view>
+  </view>
+  
+  <view class="zeng_coner">
+    <view class="zeng_coner_left">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_215_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="zeng_coner_right">
+      <view class="zeng_coner_right_title">跟着棋圣学围棋</view>
+      <view class="zeng_coner_right_zhaiyao">30集动画视频课，学习悠远深厚的打开的死哦都发给你</view>
+      <view class="zeng_coner_right_shit">试听课2节</view>
+      <view class="zeng_coner_right_button" bindtap="showshare">赠送给好友</view>
+    </view>
+  </view>
+
   </view>
 
   <view class="{{selected1?'show1':'hidden1'}}">
-    2
+    
+    
+  
+  <view class="zeng_coner">
+    <view class="zeng_coner_left">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_215_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="zeng_coner_right">
+      <view class="zeng_coner_right_title">跟着棋圣学围棋</view>
+      <view class="zeng_coner_right_zhaiyao">领取时间：2020/09/18 20:06:39</view>
+      <view class="zeng_coner_right_shit">试听课2节</view>
+      <view class="zeng_coner_right_tx">
+        <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+        <view>李菇凉。</view>
+      </view>
+      <view class="zeng_coner_right_buttonimg">
+        <image src="http://cdn.koalaxiezi.com/ceshi/yilingqu.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+
+  
+  
+  <view class="zeng_coner">
+    <view class="zeng_coner_left">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="zeng_coner_right">
+      <view class="zeng_coner_right_title">跟着棋圣学围棋</view>
+      <view class="zeng_coner_right_zhaiyao">领取时间：2020/09/19 22:09:12</view>
+      <view class="zeng_coner_right_shit">试听课2节</view>
+      <view class="zeng_coner_right_tx">
+        <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+        <view>聪聪confgw</view>
+      </view>
+      <view class="zeng_coner_right_buttonimg">
+        <image src="http://cdn.koalaxiezi.com/ceshi/yilingqu.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+
+
+
   </view>
 </view>
+
+
+  <!--服务说明弹窗-->
+  <view class="bottom_popup" hidden="{{hiddenrule}}">
+    <view class="popup">
+      <view class="popup_title">
+        赠课锁粉规则
+      </view>
+      <view class="close" bindtap="showrule"></view>
+      <view class="popup_detailed">
+        <view class="popup_text_title">
+          1）合伙人可赠送任意一门课的2节试听课给新用户进行临时锁粉；
+        </view>
+      </view>
+      <view class="popup_detailed">
+        <view class="popup_text_title">
+          2）只有新用户能够领取试听课；
+        </view>
+      </view>
+      <view class="popup_detailed">
+        <view class="popup_text_title">
+          3）新用户领取合伙人赠送的试听课将成为合伙人的临时粉丝；
+        </view>
+      </view>
+      <view class="beizhus">
+        备注：临时锁粉是指新用户成为合伙人的临时粉丝，临时关系是不可被覆盖的，在7天内任意渠道购课会被临时上级永久锁粉。
+      </view>
+    </view>
+  </view>
+
+
+  <!--分享弹窗-->
+  <view class="bottom_popup_share" hidden="{{hiddenshare}}" bindtap="showshare">
+    <view class="f_share">
+      <image src="http://cdn.koalaxiezi.com/ceshi/lockshare.png" mode="widthFix"></image>
+    </view>
+    <view class="share_title">送朋友2节试听课，和朋友的孩子分享知识吧~</view>
+    <view class="share_text">朋友点击后将成为你的临时粉丝~</view>
+  </view>
+
+
+
+
+
 
