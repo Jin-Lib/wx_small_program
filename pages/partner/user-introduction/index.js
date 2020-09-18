@@ -3,7 +3,7 @@
 Page({
   data: {
     hiddenrule: true, //规则说明弹窗
-    hiddenshare: false, //分享弹窗
+    hiddenshare: true, //分享弹窗
   },
   //规则说明按钮
   showrule: function (e) {

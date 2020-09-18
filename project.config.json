@@ -380,6 +380,13 @@
           "id": -1,
           "name": "pages/partner/user-visitors/index",
           "pathName": "pages/partner/user-visitors/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-addressbook/index",
+          "pathName": "pages/partner/user-addressbook/index",
           "scene": null
         }
       ]

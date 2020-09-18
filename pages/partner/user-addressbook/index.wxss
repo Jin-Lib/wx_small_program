@@ -5,3 +5,48 @@ page{background-color: #f1f1f3;}
 
 .visitors_top{width: 750rpx;}
 .visitors_top image{width: 750rpx;}
+.address_conter{width: 630rpx;padding: 30rpx;margin-left: 30rpx;background-color: #ffffff;border-radius: 10rpx; margin-top: 20rpx;}
+.address_contertd{width: 630rpx;padding: 30rpx;margin-left: 30rpx;background-color: #ffffff;border-radius: 10rpx; margin-top: 20rpx;margin-bottom: 40rpx;}
+.address_conter_title{font-size: 28rpx;padding-left: 20rpx;font-weight: 900;border-left: #ff7e7e solid 10rpx;margin-left: 10rpx;}
+.address_conter_text{width: 600rpx;margin-top: 30rpx;margin-left: 30rpx;}
+.address_conter_texttd{width: 580rpx;margin-top: 30rpx;margin-left: 30rpx;border-bottom: #ff7e7e solid 3rpx; padding-bottom: 30rpx;}
+.address_conter_text_nameimg{display: flex;flex-wrap: wrap;}
+.address_conter_text_img{width: 70rpx;height: 70rpx;overflow: hidden;border-radius: 50%;}
+.address_conter_text_img image{width: 70rpx;}
+.address_conter_text_name{margin-left: 20rpx;font-size: 40rpx;font-weight: 900;margin-top: 10rpx;}
+.address_conter_text_wx{margin-top: 30rpx;font-size: 26rpx;display: flex;flex-wrap: wrap;}
+.address_conter_text_button{padding: 8rpx 20rpx;width: 70rpx;text-align: center; color: #ff7e7e; border: #ff7e7e solid 3rpx;font-size: 24rpx;border-radius: 30rpx;margin-left: 30rpx;margin-top: -8rpx;}
+.address_conter_text_tx{margin-top: 30rpx;font-size: 26rpx;color: #999999;}
+
+.name_popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999;}
+  .bottom_popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 750rpx;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+.popup_center{margin: 0 auto; color: #fff; font-size: 24rpx; background: rgba(0, 0, 0, 0.8);padding: 12rpx 15rpx;width: 300rpx; text-align:center;border-radius: 30rpx; margin-top: 630rpx;}
+.popup_input{position: absolute;bottom: 0;width: 695rpx; padding: 30rpx; background-color: #fff;height: 460rpx;border-top-right-radius: 15rpx;border-top-left-radius: 15rpx;
+  animation:popups 0.6s; }
+.popup_input input{margin-top: 200rpx;border-bottom:  solid 3rpx #e2e2e2; padding-bottom: 15rpx; font-size: 24rpx;width: 675rpx;padding-left: 20rpx;}
+.popup_anniu{margin-top: 130rpx;display: flex;flex-wrap: wrap;}
+.anniu_qx{width: 180rpx;color: #05c260; background-color: #f2f2f2; padding: 15rpx 0rpx;text-align: center;border-radius: 10rpx;font-size: 24rpx;margin-left: 130rpx;}
+.anniu_qd{width: 180rpx;color: #fff; background-color: #05c260; padding: 15rpx 0rpx;text-align: center;border-radius: 10rpx;font-size: 24rpx;margin-left: 30rpx;}
+@keyframes popups{
+  0%{
+    bottom:-800rpx;
+  }
+  100%{
+    bottom:0rpx;
+  }
+}
