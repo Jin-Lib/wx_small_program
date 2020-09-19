@@ -79,14 +79,14 @@ Page({
     API.getinfo({
       code: 0
     }).then(res => {//成功
-      console.log('res', res)
       const {
         nick_name, head_img, birthday,
         age, sex, phone
       } = res;
       if (nick_name && head_img && birthday && age && sex && phone) {
         this.setData({
-          userInfoFinish: nick_name
+          userInfoFinish: nick_name,
+          userInfo: res,
         })
       }
     })

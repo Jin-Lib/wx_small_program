@@ -144,6 +144,7 @@ Page({
         recommendedAgeSelectIndex: ageIndex,
         birthdayValue: [yearIndex, monthIndex, dayIndex]
       });
+      
     }).catch(err => {
       wx.showToast({//错误
         title: err,
