@@ -2,6 +2,25 @@
 const API = require('../../config/api');
 const Auth = require('../../utils/auth');
 
+const formatTime = (mss) => {
+  console.log(mss);
+  let days = parseInt(mss / (1000 * 60 * 60 * 24));
+  let hours = parseInt((mss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = parseInt((mss % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = parseInt((mss % (1000 * 60)) / 1000);
+
+  // this.setData({
+  //   days,
+  //   hours,
+  //   minutes,
+  //   seconds
+  // });
+  // return '';
+  return days + ' : ' + hours + ' : ' + minutes + ' : ' + seconds;
+
+}
+
+
 Page({
   data: {
     hiddenposter: true, //海报生成弹窗
@@ -48,6 +67,15 @@ Page({
     hiddenpintuan: true,
 
     wxlogin: true,
+
+    formatTime: formatTime,
+    creatTargetTime:1601424000000, //时间戳
+
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+
   },
 
   onLoad: function (options) {
@@ -373,4 +401,12 @@ Page({
     });
     this.initData();
   },
+
+  getPageList:function(){
+    //倒计时结束啦
+    console.log('倒计时结束啦')
+  },
+
+
+  
 })

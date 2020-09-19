@@ -1,0 +1,12 @@
+<wxs src="../../comm.wxs" module="comm" />
+<view class="count-down">
+  <text style="color: #888;font-size: 13px;" wx:if="{{result!==''}}">离结束 {{result}}</text>
+  <!-- <block wx:else>
+    <text wx:if="{{comm.numberToFixed(d)>0}}">{{d}}天</text>
+    <text>{{comm.fixedZero(h)}}</text>
+    <text style="font-weight: 500">:</text>
+    <text>{{comm.fixedZero(m)}}</text>
+    <text style="font-weight: 500">:</text>
+    <text>{{comm.fixedZero(s)}}</text>
+  </block> -->
+</view>
