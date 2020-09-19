@@ -1,7 +1,10 @@
 //index.js
+const API = require('../../../config/api');
 
 Page({
   data: {
+    partnerInfo: {},
+    typeMap: ['用户', '初级', '高级']
   },
 
   //团队高级合伙人
@@ -53,6 +56,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getPartnerCount();
   },
+
+  /**
+   * 获取用户团队合伙人
+   * @date 2020-09-19
+   * @returns {any}
+   */
+  getPartnerCount() {
+    API.getPartnerCount()
+      .then(resp => {
+        this.setData({
+          partnerInfo: resp
+        })
+      })
+  }
 })

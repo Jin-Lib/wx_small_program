@@ -169,6 +169,12 @@ const API =  {
   getPartnerAmount: {
     url: `${host}/api/user/partnerAmount`,
     method: 'POST'
+  },
+
+  // 用户团队合伙人
+  getPartnerCount: {
+    url: `${host}/api/team/partnerCount`,
+    method: 'POST'
   }
 };
 
