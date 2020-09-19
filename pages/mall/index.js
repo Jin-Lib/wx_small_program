@@ -289,23 +289,25 @@ Page({
 
   // 点击类目
   onClickM: function(e) {
-    console.log(e);
-    const { type, id, typeid } = e.currentTarget.dataset;
+    const { link } = e.currentTarget.dataset;
+    wx.navigateTo({
+      url: link
+    })
 
-    switch(type) {
-      case 1: // 排行榜
-        break;
-      case 2: // 课程
-        wx.navigateTo({
-          url: `/pages/course-menu/index?cateId=${typeid}`
-        })
-        break;
-      case 3: // 全部课程
-        wx.navigateTo({
-          url: '/pages/course-all/index'
-        })
-        break;
-    }
+    // switch(type) {
+      // case 1: // 排行榜
+      //   break;
+      // case 2: // 课程
+      //   wx.navigateTo({
+      //     url: `/pages/course-menu/index?cateId=${typeid}`
+      //   })
+      //   break;
+      // case 3: // 全部课程
+      //   wx.navigateTo({
+      //     url: '/pages/course-all/index'
+      //   })
+      //   break;
+    // }
   },
   //点击限时爆款更多
   more: function (event) {

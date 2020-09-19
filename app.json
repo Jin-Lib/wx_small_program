@@ -52,6 +52,7 @@
     "pages/partner/b-partner-class-share/index",
     "pages/partner/details/index",
     "pages/partner/b-details/index",
+    "pages/partner/b-user-lockpowder/index",
     "pages/partner/partner-share/index",
     "pages/partner/b-partner-share/index",
     "pages/partner/b-course-details/index",

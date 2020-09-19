@@ -1,3 +1,138 @@
-<view >
-  购买支付
+
+
+
+<view class="visitors_top">
+  <image src="http://cdn.koalaxiezi.com/ceshi/txl.png" mode="widthFix"></image>
+</view>
+
+<view class="address_conter">
+  <view class="address_conter_title">
+    我的
+  </view>
+  <view class="address_conter_text">
+    <view class="address_conter_text_nameimg">
+      <view class="address_conter_text_img">
+        <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      </view>
+      <view class="address_conter_text_name">张驰</view>
+    </view>
+    <view class="address_conter_text_wx">
+      您的微信号：<i>zhangchir</i>
+      <view class="address_conter_text_button" bindtap="nickNameCancel">
+        修改
+      </view>
+    </view>
+    <view class="address_conter_text_tx">
+      填写微信号，可以让您的合伙人和导师联系到您
+    </view>
+  </view>
+</view>
+
+
+
+<view class="address_conter">
+  <view class="address_conter_title">
+    您的专属导师
+  </view>
+  <view class="address_conter_text">
+    <view class="address_conter_text_nameimg">
+      <view class="address_conter_text_img">
+        <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      </view>
+      <view class="address_conter_text_name">启明星林老师</view>
+    </view>
+    <view class="address_conter_text_wx">
+      导师微信号：<i>zhangchir</i>
+      <view class="address_conter_text_button" bindtap="show">
+        复制
+      </view>
+    </view>
+    <view class="address_conter_text_tx">
+      马上复制微信号,联系专属导师吧!
+    </view>
+  </view>
+</view>
+
+
+<view class="address_contertd">
+  <view class="address_conter_title">
+    您的团队 30 人
+  </view>
+  <view class="address_conter_texttd">
+    <view class="address_conter_text_nameimg">
+      <view class="address_conter_text_img">
+        <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      </view>
+      <view class="address_conter_text_name">匆匆那些年</view>
+    </view>
+    <view class="address_conter_text_wx">
+      TA的微信号：<i>zhangchir</i>
+      <view class="address_conter_text_button" bindtap="show">
+        复制
+      </view>
+    </view>
+    <view class="address_conter_text_tx">
+      马上复制微信号,联系TA吧!
+    </view>
+  </view>
+
+
+  
+  <view class="address_conter_texttd">
+    <view class="address_conter_text_nameimg">
+      <view class="address_conter_text_img">
+        <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      </view>
+      <view class="address_conter_text_name">匆匆那些年</view>
+    </view>
+    <view class="address_conter_text_wx">
+      TA的微信号：<i>zhangchir</i>
+      <view class="address_conter_text_button" bindtap="show">
+        复制
+      </view>
+    </view>
+    <view class="address_conter_text_tx">
+      马上复制微信号,联系TA吧!
+    </view>
+  </view>
+
+  
+  <view class="address_conter_texttd">
+    <view class="address_conter_text_nameimg">
+      <view class="address_conter_text_img">
+        <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+      </view>
+      <view class="address_conter_text_name">匆匆那些年</view>
+    </view>
+    <view class="address_conter_text_wx">
+      TA的微信号：<i>zhangchir</i>
+      <view class="address_conter_text_button" bindtap="show">
+        复制
+      </view>
+    </view>
+    <view class="address_conter_text_tx">
+      马上复制微信号,联系TA吧!
+    </view>
+  </view>
+</view>
+
+
+<!--修改微信号-->
+<view class="name_popup" hidden="{{namehidden}}">
+  <view class="popup_input">
+    <input
+      placeholder="请输入您的微信号"
+      value="{{nickNameValue}}"
+      bindinput="nickNameInput" />
+    <view class="popup_anniu">
+      <view class="anniu_qx" bindtap="nickNameCancel">取消</view>
+      <view class="anniu_qd" bindtap="nickNameCancel">确定</view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="bottom_popup" hidden="{{hidden}}" bindtap="show">
+  <view class="popup_center">复制成功，快去联系TA吧~</view>
 </view>

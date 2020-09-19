@@ -285,6 +285,12 @@
         </view>
         <!--tab切换内容-->
         <!-- style="height:{{winHeight - 31}}px" -->
+        <!--没看过的课程是wujiaoxing.png
+            看过的是wujiaoxing-add.png
+        -->
+        <!--未解锁的课程是clock.png
+            解锁的是week_back.png
+        -->
         <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
             <swiper-item>
               <view class="week_k" wx:for="{{coursedetail.chapter || []}}" wx:key="index">
@@ -298,7 +304,7 @@
                   </view>
                 </view>
               </view>
-
+              
               <!-- <view class="week_k">
                 <view class="week_img">
                   <image src="/resource/img/week_back.png" mode="widthFix"></image>

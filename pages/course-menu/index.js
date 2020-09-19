@@ -43,9 +43,9 @@ Page({
     })
   },
   //点击商品详情
-  details: function (event) {
+  details: function (e) {
     wx.navigateTo({
-      url: '/pages/course-detail/index'
+      url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}`
     })
   },
 

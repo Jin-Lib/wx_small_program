@@ -141,7 +141,8 @@ page{background-color: #f7f7f7}
 .zigou{position: absolute;top: 70rpx;right: 40rpx; color: #fff; font-size: 26rpx;}
 .deta_center_num i{font-size: 42rpx; color: #fc4850;}
 
-.sanrentuan{border:#e2e2e2 solid 3rpx;padding: 3rpx 8rpx;font-size: 22rpx; height: 30rpx; line-height: 30rpx;color: #333;margin-top:13rpx;border-radius: 10rpx;}
+.sanrentuan{border:#e2e2e2 solid 3rpx;padding: 3rpx 8rpx;font-size: 22rpx; height: 30rpx; line-height: 30rpx;color: #333;margin-top:13rpx;border-radius: 10rpx;
+width: 60rpx;text-align: center;}
 
 .deta_center_details{margin-left: 100rpx; font-size: 26rpx; margin-top: 8rpx;}
 .deta_center_details2{font-size: 26rpx; background-color: #fff;padding: 15rpx 0rpx;width: 750rpx;}
@@ -295,8 +296,8 @@ page{background-color: #f7f7f7}
 }
 
 .group_buy2 {
-  width: 340rpx;
-  margin-left: 150rpx;
+  width: 230rpx;
+  margin-left: 330rpx;
 }
 
 .group_buy image {

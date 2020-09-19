@@ -24,7 +24,7 @@
     <view class="partner_team_category">
       <view class="partner_team_category_gj" bindtap="teamseniorpartner">
         高级合伙人 >
-        <view>0</view>
+        <view>1</view>
       </view>
       <view class="partner_team_category_gj" bindtap="juniorpartneroftheteam">
         初级合伙人 >
@@ -48,7 +48,7 @@
     <view class="partner_team_category">
       <view class="partner_team_category_gj" bindtap="seniorcommunitypartner">
         高级合伙人 >
-        <view>0</view>
+        <view>1</view>
       </view>
       <view class="partner_team_category_gj" bindtap="communityjuniorpartner">
         初级合伙人 >

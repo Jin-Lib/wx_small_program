@@ -326,6 +326,68 @@
           "pathName": "pages/partner/user-community/index",
           "query": "",
           "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-community-teamseniorpartner/index",
+          "pathName": "pages/partner/user-community-teamseniorpartner/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-withdraw/index",
+          "pathName": "pages/partner/user-withdraw/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/b-course-details/index",
+          "pathName": "pages/partner/b-course-details/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-temporaryfans/index",
+          "pathName": "pages/partner/user-temporaryfans/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-lockpowder/index",
+          "pathName": "pages/partner/user-lockpowder/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/b-user-lockpowder/index",
+          "pathName": "pages/partner/b-user-lockpowder/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-introduction/index",
+          "pathName": "pages/partner/user-introduction/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-visitors/index",
+          "pathName": "pages/partner/user-visitors/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-addressbook/index",
+          "pathName": "pages/partner/user-addressbook/index",
+          "scene": null
         }
       ]
     }

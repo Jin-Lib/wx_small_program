@@ -1,3 +1,130 @@
-<view >
-  购买支付
+
+
+<view class="extract">
+  <image src="/resource/img/jinbi.26c962e6.png" mode="widthFix"></image>
+  <view class="yue">我的余额</view>
+  <view class="num">￥5013</view>
+  <view class="tixian_je"><text wx:for="{{campusList}}" wx:for-item="campus" wx:key="campusId" bindtap="chooseCampus" class="tixianq {{currentCampus==campus.campusId?'active':''}}" data-id="{{campus.campusId}}">{{campus.name}}</text>
+  </view>
+  <view class="tixian" bindtap="show">提现</view>
+  <view class="tixianmx" bindtap="showmx">提现明细</view>
+</view>
+
+
+<view class="bottom_popup" hidden="{{hidden}}" bindtap="show">
+  <view class="popup_center">奖学金为0，无法提现哦~</view>
+</view>
+
+<view class="bottom_popupmx" hidden="{{hiddenmx}}">
+  <view class="popuch" bindtap="showmx">
+    <i class="close"></i>
+  </view>
+  <view class="poptmx">
+    <view class="shije">
+      <view class="shijian">时间</view>
+      <view class="jinije">金额</view>
+    </view>
+    <view class="dsjfs">
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30 <i>提现中</i></view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30 <i>已完成</i></view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      
+      <view class="shijetext">
+        <view class="shijian">2020-09-02 17:58:30</view>
+        <view class="jinije">100元</view>
+      </view>
+      <view class="yansd">————您目前没有提现记录————</view>
+    </view>
+  </view>
 </view>

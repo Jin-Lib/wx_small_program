@@ -1,0 +1,24 @@
+
+
+page{background-color: #f7f7f7;}
+.bonus{background-color: #fff;padding: 20rpx 30rpx; width: 690rpx; display: flex;flex-wrap: wrap;justify-content:space-between;/*左右分开*/}
+.bonus_self_purchase{font-size: 28rpx; color: #fc4850; font-weight: 900;}
+.bouns_menu{font-size: 28rpx;color: #fc4850; font-weight: 900;}
+.bonus_informationk{margin-top: 20rpx;background-color: #fff;}
+.bonus_information{background-color: #fff;padding: 20rpx 30rpx; width: 693rpx; display: flex;flex-wrap: wrap; border-bottom: #cccccc solid 3rpx;}
+.bonus_information_img{width: 100rpx;height: 100rpx;overflow: hidden; border:#fff solid 2rpx; border-radius: 50%;position: relative;}
+.bonus_information_img image{width: 100rpx;}
+.bonus_information_text{margin-left: 10rpx;width: 250rpx;margin-top: 5rpx;}
+.bouns_information_text_name{width: 180rpx;height: 34rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.bonus_information_text_xm{font-size: 26rpx;width:160rpx; text-align: left;height: 34rpx;overflow: hidden;}
+.bonus_information_text_bq{padding: 3rpx 8rpx; background-color: #cccccc;color: #fff;font-size: 18rpx;margin-left:8rpx;}
+.bonus_information_text_numje{font-size: 22rpx;margin-top:12rpx;width:250rpx; display: flex;flex-wrap: wrap; }
+.text_numje_img{width: 40rpx; height: 40rpx;overflow: hidden;border-radius: 50%;}
+.text_numje_img image{width: 40rpx;}
+.text_numje_name{width: 190rpx;height: 34rpx;overflow: hidden;margin-top: 6rpx;margin-left: 10rpx;color: #999999; display: flex;flex-wrap: wrap;}
+.text_numje_name i{width: 90rpx;height: 34rpx;display: inline-block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.bonus_information_amount{margin-left: 10rpx;width: 280rpx; margin-top: 5rpx;color: #999999;}
+.amount_je{width: 310rpx;font-size: 26rpx; display: flex;flex-wrap: wrap;justify-content:space-between;/*左右分开*/}
+.amount_time{width: 310rpx;font-size: 26rpx;margin-top: 20rpx;display: flex;flex-wrap: wrap;justify-content:space-between;/*左右分开*/}
+.amount_time_num{color: #fc4850;}
+.amount_je_num{color: #fc4850;}

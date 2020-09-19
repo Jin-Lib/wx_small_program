@@ -14,7 +14,7 @@
   </view>
   <view class="arrival">
     <view class="arri_sort">
-      <view class="sort_k" wx:for="{{item.itmes || []}}" wx:for-item="itemData" wx:key="itemData.id" id="{{itemData.id}}" bindtap="details">
+      <view class="sort_k" wx:for="{{item.itmes || []}}" wx:for-item="itemData" wx:key="itemData.id" data-id="{{itemData.id}}" bindtap="details">
         <view class="sort_img">
           <image src="{{itemData.imgs && itemData.imgs[0]}}" mode="widthFix"></image>
         </view>
