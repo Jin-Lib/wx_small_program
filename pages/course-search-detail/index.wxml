@@ -1,0 +1,65 @@
+
+<!--顶部搜索-->
+
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px;{{viewData.style}}">
+  <view class="custom_top">
+    <view class="search_top">
+      <view class='rt_pos' bindtap="findex"></view>
+      <view class="search_search">
+        <input type='text' placeholder='请您输入想要的搜索内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+      </view>
+      <!-- <view class="search_cancel">取消</view> -->
+    </view>
+  </view>
+</view>
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+
+<view class="menu_lei">
+    <view class="xin_arrival_ziu" bindtap="details">
+      <view class="arrival">
+        <view class="arri_sort1">
+            <view class="sort_k">
+              <view class="sort_img">
+                <image src="http://qmximg.oss-cn-hangzhou.aliyuncs.com/ed00aec15abe1b53/2e165199b807458b.png" mode="widthFix"></image>
+              </view>
+              <view class="xin_menu">
+                <view class="sort_title">探秘亚马逊</view>
+                <view class="sort_title2">探秘亚马逊探秘亚马逊探秘亚马逊探秘亚马逊探秘亚马逊</view>
+                <view class="sort_spikekp"><i>自然地理</i><i>自然地理</i><i>自然地理</i></view>
+                <view class="sort_gk">
+                  <image src="../../resource/guank.png" mode="widthFix"></image>
+                  <span>21集</span><span>已有1001人观看</span>
+                </view>
+              </view>
+            </view>
+        </view>
+      </view>
+    </view>
+</view>
+
+
+
+<view class="menu_lei">
+    <view class="xin_arrival_ziu" bindtap="details">
+      <view class="arrival">
+        <view class="arri_sort1">
+            <view class="sort_k">
+              <view class="sort_img">
+                <image src="http://qmximg.oss-cn-hangzhou.aliyuncs.com/ed00aec15abe1b53/2e165199b807458b.png" mode="widthFix"></image>
+              </view>
+              <view class="xin_menu">
+                <view class="sort_title">探秘亚马逊</view>
+                <view class="sort_title2">探秘亚马逊探秘亚马逊探秘亚马逊探秘亚马逊探秘亚马逊</view>
+                <view class="sort_spikekp"><i>自然地理</i><i>自然地理</i><i>自然地理</i></view>
+                <view class="sort_gk">
+                  <image src="../../resource/guank.png" mode="widthFix"></image>
+                  <span>21集</span><span>已有1001人观看</span>
+                </view>
+              </view>
+            </view>
+        </view>
+      </view>
+    </view>
+</view>

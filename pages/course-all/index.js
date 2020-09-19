@@ -97,7 +97,6 @@ Page({
   searchCourseList: function() {
     let that = this;
     let { pagination, selectedKey, cacheClassification, classificationIndex } = this.data;
-    console.log(cacheClassification, classificationIndex)
     let param = {
       ...pagination,
       sort: selectedKey,

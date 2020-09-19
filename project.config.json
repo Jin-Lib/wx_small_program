@@ -100,7 +100,7 @@
           "id": 4,
           "name": "pages/course-detail/index",
           "pathName": "pages/course-detail/index",
-          "query": "id=1",
+          "query": "id=2",
           "scene": null
         },
         {
@@ -394,6 +394,21 @@
           "id": -1,
           "name": "pages/money/index",
           "pathName": "pages/money/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/course-search/index",
+          "pathName": "pages/course-search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/course-search-detail/index",
+          "pathName": "pages/course-search-detail/index",
+          "query": "",
           "scene": null
         }
       ]

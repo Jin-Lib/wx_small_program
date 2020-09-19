@@ -19,6 +19,7 @@
     "pages/course-pay/index",
     "pages/course-share/index",
     "pages/course-search/index",
+    "pages/course-search-detail/index",
     "pages/course-play/index",
     "pages/successful-purchase/index",
     "pages/explosion-more/index",
