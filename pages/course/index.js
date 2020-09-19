@@ -17,6 +17,20 @@ Page({
     courseData: [],
     
     wxlogin: true,
+
+    showMore: true,
+    showCourseMore: true
+  },
+
+  onClickMore: function() {
+    this.setData({
+      showMore: !this.data.showMore
+    });
+  },
+  onClickCourseMore: function() {
+    this.setData({
+      showCourseMore: !this.data.showCourseMore
+    });
   },
   //点击邀好友拼团
   invitefriends: function (e) {

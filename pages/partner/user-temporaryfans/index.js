@@ -1,21 +1,26 @@
 //index.js
+const API = require('../../../config/api');
 
 Page({
   data: {
-    selected: true,
-    selected1: false,
+    selectedKey: '1',
+
+    panigation: {
+      page: 1,
+      pageSize: 10
+    },
+    shortFansListData: []
   },
   
   selected: function (e) {
     this.setData({
-      selected1: false,
-      selected: true,
-    });
-  },
-  selected1: function (e) {
-    this.setData({
-      selected: false,
-      selected1: true,
+      selectedKey: e.currentTarget.dataset.key,
+      panigation: {
+        ...this.data.panigation,
+        page: 1
+      }
+    }, () => {
+      this.getShortFansList();
     });
   },
   
@@ -32,6 +37,22 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.getShortFansList();
+  },
 
+  /**
+   * 获取临时粉丝
+   */
+  getShortFansList() {
+    let params = {
+      ...this.data.panigation
+    };
+
+    API.shortFansList(params)
+      .then(resp => {
+        this.setData({
+          shortFansListData: resp && resp.list || []
+        })
+      })
   },
 })
