@@ -33,9 +33,9 @@
       <i></i>
     </view>
 
-    <view class="user_data_credit" bindtap="credit">
+    <!-- <view class="user_data_credit" bindtap="credit">
       <view class="data_credit_num">{{userInfo.v_amount}}</view>学分>
-    </view>
+    </view> -->
 
   </view>
 
