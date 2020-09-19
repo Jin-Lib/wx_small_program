@@ -40,7 +40,7 @@
   </view>
 
 </view>
-<!--发现惊喜-->
+<!--发现惊喜
 <view class="surprise">
 
   <view class="category">
@@ -72,7 +72,7 @@
     </view>
 
   </view>
-</view>
+</view>-->
 
 <!--自助服务-->
 <view class="service">
@@ -84,24 +84,39 @@
   </view>
 
   <view class="service_k">
-
+    
     <view class="service_order" bindtap="order">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg"></image>
+      <view class="order_img">
+        <image src="../../resource/user/grzx_icon04.png" mode="widthFix"></image>
+      </view>
       <view class="text_order">我的订单</view>
+      <view class="order_img_jp">
+        <image src="../../resource/user/grzx_icon05.png" mode="widthFix"></image>
+      </view>
     </view>
 
     <view class="service_order" bindtap="feedback">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg"></image>
+      <view class="order_img">
+        <image src="../../resource/user/grzx_icon06.png" mode="widthFix"></image>
+      </view>
       <view class="text_order">意见反馈</view>
+      <view class="order_img_jp">
+        <image src="../../resource/user/grzx_icon05.png" mode="widthFix"></image>
+      </view>
     </view>
 
     <view class="service_order">
-      <image src="http://cdn.koalaxiezi.com/image1/product.jpg"></image>
-      <view class="text_order">咨询客服</view>
-
       <view style="position: absolute;bottom: 0;left: 0;width: 100%;height: 100%;opacity: 0;">
         <button open-type="contact" bindcontact="handleContact">客服</button>
       </view>
+      <view class="order_img">
+        <image src="../../resource/user/grzx_icon07.png" mode="widthFix"></image>
+      </view>
+      <view class="text_order">咨询客服</view>
+      <view class="order_img_jp">
+        <image src="../../resource/user/grzx_icon05.png" mode="widthFix"></image>
+      </view>
+
     </view>
 
   </view>
