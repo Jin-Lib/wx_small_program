@@ -21,7 +21,7 @@
 }
 
 page{background-color: #f7f7f7;}
-.scholarship{position: relative; float: left; width: 750rpx; height:200rpx; background-color: #fc4850; border-bottom-left-radius: 60rpx; border-bottom-right-radius: 60rpx;}
+.scholarship{position: relative; width: 750rpx; height:200rpx; background-color: #fc4850; border-bottom-left-radius: 60rpx; border-bottom-right-radius: 60rpx;}
 .scho_title{position: absolute; top: 15rpx; left: 30rpx; font-size: 44rpx; color: #fff;}
 .scho_rule{position: absolute;right: 0rpx;top: 20rpx; padding:15rpx 10rpx; font-size: 24rpx; background-color: #f86f22;width: 25rpx;color: #fff;}
 .scho_k{position: absolute; float: left; width: 635rpx;top:130rpx; left: 30rpx; background-color: #fff; padding: 30rpx 30rpx; border-radius: 15rpx; font-size: 24rpx; text-align: center;}
@@ -129,7 +129,7 @@ page{background-color: #ffb649;}
 .zengke_img image{width: 750rpx;}
 
 
-.zengke_conter{width: 690rpx; background-color: #ffffff;border-radius: 10rpx; margin-left: 30rpx;margin-top:300rpx;margin-bottom:150rpx;}
+.zengke_conter{width: 690rpx; background-color: #ffffff;border-radius: 10rpx; margin-left: 30rpx;margin-top:120rpx;margin-bottom:150rpx;}
 
 .bc_white{width: 570rpx;padding-top: 10px; border-bottom: solid 3rpx #f5f5f5; padding-bottom: 3rpx;padding-left:120rpx;
   display: flex;
@@ -146,7 +146,7 @@ white-space: nowrap;margin-left:30rpx;}
 .show1{display:block;margin-top: 20rpx;}
 .hidden1{display:none;margin-top: 20rpx;}
 .zeng_coner{width: 630rpx;display: flex;flex-wrap: wrap;padding: 0rpx 30rpx;margin-top: 30rpx;padding-bottom:15rpx;}
-.zeng_coner_left{width: 200rpx;height: 200rpx;border-radius: 10rpx;}
+.zeng_coner_left{width: 200rpx;height: 200rpx;border-radius: 10rpx;overflow: hidden;}
 .zeng_coner_left image{width: 200rpx;height: 200rpx; border-radius: 10rpx;}
 .zeng_coner_right{width: 410rpx; margin-left: 20rpx; border-bottom: #f5f5f5 solid 3rpx;padding-bottom:15rpx;margin-top: 10rpx;}
 .zeng_coner_right_title{font-size: 26rpx;}
