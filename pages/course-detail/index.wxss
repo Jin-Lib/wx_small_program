@@ -538,45 +538,42 @@ page{background-color: #f7f7f7;}
   position: fixed;
   left: 20rpx;
   top: 230rpx;
-  z-index: 400;
-  width: 430rpx;
-  height: 100rpx;
+  z-index: 310;
+  width: 312rpx;
   overflow: hidden;
 }
 
 .page-nobuy-detail .prompt {
-  width: 100%;
-  height: 84rpx;
   background: rgba(0, 0, 0, 0.5);
-  padding: 12rpx 20rpx;
+  padding: 6rpx 12rpx;
   color: #fff;
   border-radius: 15rpx;
   display: flex;
-  box-sizing: border-box;
   align-items: center;
 }
 
 .page-nobuy-detail .prompt_img {
-  float: left;
-  height: 60rpx;
-  width: 60rpx;
+  height: 40rpx;
+  width: 40rpx;
   overflow: hidden;
   border-radius: 50%;
 }
 
 .page-nobuy-detail .prompt_img image {
-  width: 60rpx;
+  width: 40rpx;
+  height: 40rpx;
 }
 
 .page-nobuy-detail .prompt_text {
-  float: left;
-  font-size: 26rpx;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 22rpx;
   margin-left: 15rpx;
+  width: 300rpx;
 }
 
 .page-nobuy-detail .prom_text_name {
-  float: left;
-  width: 100rpx;
+  width: 70rpx;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -584,7 +581,7 @@ page{background-color: #f7f7f7;}
 }
 
 .page-nobuy-detail .prom_text_title {
-  float: left;
+  width: 160rpx;
   margin-left: 10rpx;
 }
 

@@ -135,6 +135,7 @@
     <swiper
       autoplay="{{true}}"
       vertical="{{true}}"
+      easing-function="easeInOutCubic"
     >
       <block
         wx:for="{{broadcastData }}"
