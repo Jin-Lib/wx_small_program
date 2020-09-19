@@ -10,12 +10,6 @@ Page({
     },
     statusBarHeight: app.globalData.statusBarHeight
   },
-  //--搜索页--
-  hhsr: function (event) {
-    wx.navigateTo({
-      url: '/pages/course-search-detail/index'
-    })
-  },
     //点击返回首页
   findex: function() {
     wx.navigateBack({
@@ -43,6 +37,12 @@ Page({
         linkToKeywords: data.searchKeywords,
         inputValue: data.searchKeywords && data.searchKeywords.text || ''
       })
+    })
+  },
+  //课程详情
+  details: function (e) {
+    wx.navigateTo({
+      url: `/pages/course-detail/index?id=1`
     })
   },
   /**

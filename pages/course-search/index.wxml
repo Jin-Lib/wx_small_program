@@ -1,6 +1,13 @@
 
 
 
+
+<!--搜索页面-->
+<view class="hhsr" bindtap="hhsr" style="position: fixed; top: 170rpx; right: 0rpx;background-color: #fc4850;padding: 8rpx 20rpx;font-size: 24rpx;color: #fff;z-index: 999999;">
+  搜索临时入口
+</view>
+
+
 <!--顶部搜索-->
 
 <view class="custom flex_center" style="padding-top:{{statusBarHeight}}px;{{viewData.style}}">
