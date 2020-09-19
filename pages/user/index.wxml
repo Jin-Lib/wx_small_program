@@ -34,13 +34,13 @@
     </view>
 
     <view class="user_data_credit" bindtap="credit">
-      <view class="data_credit_num">88</view>学分>
+      <view class="data_credit_num">{{userInfo.v_amount}}</view>学分>
     </view>
 
   </view>
 
 </view>
-<!--发现惊喜-->
+<!--发现惊喜
 <view class="surprise">
 
   <view class="category">
@@ -48,7 +48,6 @@
       发现惊喜
     </view>
   </view>
-
   <view class="surp_k">
 
     <view class="surp_coupon" bindtap="coupon">
@@ -72,7 +71,7 @@
     </view>
 
   </view>
-</view>
+</view> -->
 
 <!--自助服务-->
 <view class="service">

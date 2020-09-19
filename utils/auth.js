@@ -1,4 +1,4 @@
-
+const API = require('../config/api');
 
 async function checkSession(){
   return new Promise((resolve, reject) => {
@@ -16,86 +16,57 @@ async function checkSession(){
 // 检测登录状态，返回 true / false
 async function checkHasLogined() {
 
-  // return new Promise((resolve, reject) => {
-    // try {
-    //   const token = wx.getStorageSync('token')
-    //   if (!token) {
-    //     // return false
-    //     resolve(false);
-    //   }
-    //   // const loggined = await checkSession()
-    //   // if (!loggined) {
-    //   //   wx.removeStorageSync('token')
-    //   //   return false
-    //   // }
-    //   // return true
-    //   resolve(true);
-    // } catch(e) {
-    //   reject(e);
-    // }
+  const token = wx.getStorageSync('token')
+  if (!token) {
+    return false
+  }
+  const loggined = await checkSession()
+  if (!loggined) {
+    wx.removeStorageSync('token')
+    return false
+  }
+  const isUserInfo = await getUserInfo();
+  if(!isUserInfo) {
+    wx.removeStorageSync('token')
+    return false;
+  }
+  return true
+  
+}
 
-    const token = wx.getStorageSync('token')
-    if (!token) {
-      return false
-    }
-    const loggined = await checkSession()
-    if (!loggined) {
-      wx.removeStorageSync('token')
-      return false
-    }
-    return true
-  // })
+function isLogin() {
+  return new Promise((resolve, reject) => {
+    checkHasLogined().then(res => {
+      resolve(res);
+    }).catch(e => {
+      resolve(false)
+    })
+  })
+}
+
+function getUserInfo() {
+  return new Promise((resolve, reject) => {
+    API.getinfo({
+    }).then(res => {//成功
+      if(res && res.code == 401) {
+        resolve(false);
+      } else {
+        resolve(true);
+      }
+    }).catch(err => {
+      resolve(true);
+    })
+  })
   
 }
 
 function loginOut(){
   wx.removeStorageSync('token')
-  wx.removeStorageSync('uid')
+  wx.removeStorageSync('userId')
 }
-
-// async function checkAndAuthorize (scope) {
-//   return new Promise((resolve, reject) => {
-//     wx.getSetting({
-//       success(res) {
-//         console.log(res);
-//         if (!res.authSetting[scope]) {
-//           wx.authorize({
-//             scope: scope,
-//             success() {
-//               resolve() // 无返回参数
-//             },
-//             fail(e){
-//               console.error(e)
-//               wx.showModal({
-//                 title: '无权操作',
-//                 content: '需要获得您的授权',
-//                 showCancel: false,
-//                 confirmText: '立即授权',
-//                 confirmColor: '#e64340',
-//                 success(res) {
-//                   wx.openSetting();
-//                 },
-//                 fail(e){
-//                   console.error(e)
-//                   reject(e)
-//                 },
-//               })
-//             }
-//           })
-//         } else {
-//           resolve() // 无返回参数
-//         }
-//       },
-//       fail(e){
-//         console.error(e)
-//         reject(e)
-//       }
-//     })
-//   })  
-// }
-
 
 module.exports = {
   checkHasLogined,
-  loginOut
+  loginOut,
+  isLogin
 }

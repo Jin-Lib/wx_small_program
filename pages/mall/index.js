@@ -2,6 +2,8 @@
 //获取应用实例
 const app = getApp()
 const API = require('../../config/api');
+const Auth = require('../../utils/auth');
+
 let myStyle = `
 --bg-color:#ff5e34;
 `
@@ -85,7 +87,7 @@ Page({
 
     this.getIndexCateCourse();
 
-    this.getinfoData();
+    // this.getinfoData();
 
     this.createAgeList();
   },
@@ -100,6 +102,19 @@ Page({
       })
     }
 
+    this.isLogin(this);
+
+  },
+
+
+  // 是否登录
+  isLogin: async (that) => {
+    let login = await Auth.isLogin();
+
+    that.setData({
+      wxlogin: login
+    });
+    login && that.getinfoData();
   },
 
   // 获取banner

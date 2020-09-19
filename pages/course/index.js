@@ -71,8 +71,18 @@ Page({
       url: '/pages/course-play/index'
     })
   },
+
+  // 是否登录
+  isLogin: async (that) => {
+    let login = await Auth.isLogin();
+
+    that.setData({
+      wxlogin: login
+    });
+    login && that.initData();
+  },
+
   onLoad: function () {
-    this.initData();
 
   },
 
@@ -86,7 +96,7 @@ Page({
         selected: 1
       })
     }
-    this.isLogin();
+    this.isLogin(this);
 
   },
 
@@ -114,6 +124,9 @@ Page({
   
   // 获取订单信息
   getorderData: function (type) {
+    wx.showLoading({
+      title: '请求中，请耐心等待..'
+    });
     API.getorder({
       type
     }).then(res => {//成功
@@ -127,8 +140,11 @@ Page({
           courseData: rows || []
         });
       }
+      wx.hideLoading();
       
     }).catch(err => {
+      wx.hideLoading();
+
       wx.showToast({//错误
         title: err,
         icon: 'none',
@@ -139,28 +155,27 @@ Page({
 
 
   // 是否登录
-  isLogin: function() {
-    // 是否登录
-    Auth.checkHasLogined()
-      .then(res => {
-        if(res) {
-          this.setData({
-            wxlogin: true
-          });
-        } else {
-          this.setData({
-            wxlogin: false
-          });
-        }
-      }).catch(e => {
-        this.setData({
-          wxlogin: false
-        });
-      })
-  },
+  // isLogin: function() {
+  //   // 是否登录
+  //   Auth.checkHasLogined()
+  //     .then(res => {
+  //       if(res) {
+  //         this.setData({
+  //           wxlogin: true
+  //         });
+  //       } else {
+  //         this.setData({
+  //           wxlogin: false
+  //         });
+  //       }
+  //     }).catch(e => {
+  //       this.setData({
+  //         wxlogin: false
+  //       });
+  //     })
+  // },
 
   getUserInfoDetail: function() {
-    console.log('test');
     this.setData({
       wxlogin: true
     });

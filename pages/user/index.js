@@ -101,12 +101,25 @@ Page({
   
   //点击修改信息
   information: function (event) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
+
     wx.navigateTo({
       url: '/pages/user-info/index'
     })
   },
   //点击学分
   credit: function (event) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
     wx.navigateTo({
       url: '/pages/logs/logs'
     })
@@ -137,18 +150,36 @@ Page({
   },
   //点击我的订单
   order: function (event) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
     wx.navigateTo({
       url: '/pages/user-order/index'
     })
   },
   //点击意见反馈
   feedback: function (event) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
     wx.navigateTo({
       url: '/pages/user-feedback/index'
     })
   },
   //点击咨询客服
   advisory: function (event) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
     wx.navigateTo({
       url: '/pages/logs/logs'
     })

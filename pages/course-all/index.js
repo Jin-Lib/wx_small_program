@@ -10,7 +10,7 @@ Page({
     selectedKey: '0',
     cacheClassification: [], // 存储类目数据列表
     classification: [], // 类目数据列表
-    classificationIndex: [], // 类目数据列表选项
+    classificationIndex: [0, 0], // 类目数据列表选项
     agePickerArray: [], // 年龄数据
     agePickerIndex: 0, // 年龄选择值
 
@@ -29,7 +29,6 @@ Page({
     // 创建年龄数据
     this.createAgeList();
 
-    this.searchCourseList();
   },
   /**
    * 生命周期函数--监听页面显示
@@ -77,7 +76,8 @@ Page({
         this.setData({
           cacheClassification: list,
           classification: that.getClassificationColumnData(list, 0),
-          classificationIndex: []
+        }, () => {
+          this.searchCourseList();
         })
       })
   },
@@ -96,11 +96,12 @@ Page({
   // 搜索课程列表
   searchCourseList: function() {
     let that = this;
-    let { pagination, selectedKey } = this.data;
+    let { pagination, selectedKey, cacheClassification, classificationIndex } = this.data;
+    console.log(cacheClassification, classificationIndex)
     let param = {
       ...pagination,
       sort: selectedKey,
-      // cateId: 
+      cateId: cacheClassification[classificationIndex[0]].items[classificationIndex[1]].id
     };
 
     API.searchCourseList(param)

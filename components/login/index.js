@@ -52,6 +52,11 @@ Component({
             iv: encodeURIComponent(iv)
           };
 
+          var userId = wx.getStorageSync('userId');
+          if(userId) {
+            params.superior_id = userId;
+          }
+
           API.login(params)
             .then(res => {
               console.log(res);

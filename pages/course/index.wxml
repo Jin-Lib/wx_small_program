@@ -32,6 +32,8 @@
   我的课程
 </view>
 
+<v-login wxlogin="{{wxlogin}}" bindgetUserInfoDetail="getUserInfoDetail"></v-login>
+
 <view class="course">
   <!--未购课程板块not_purchased-->
   <block wx:if="{{courseData.length === 0}}">
