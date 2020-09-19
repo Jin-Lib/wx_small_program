@@ -3,7 +3,6 @@ const API = require('../../config/api');
 const Auth = require('../../utils/auth');
 
 const formatTime = (mss) => {
-  console.log(mss);
   let days = parseInt(mss / (1000 * 60 * 60 * 24));
   let hours = parseInt((mss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = parseInt((mss % (1000 * 60 * 60)) / (1000 * 60));
@@ -69,7 +68,7 @@ Page({
     wxlogin: true,
 
     formatTime: formatTime,
-    creatTargetTime:1601424000000, //时间戳
+    creatTargetTime: 0, //时间戳
 
     days: 0,
     hours: 0,
@@ -121,7 +120,8 @@ Page({
         users,
         groupInfo: res,
         length: len,
-        isFinish: groupNum <= len
+        isFinish: groupNum <= len,
+        creatTargetTime: new Date(res.groupEnd).getTime()
       }, () => {
         // 获取用户信息
         this.getinfoData();

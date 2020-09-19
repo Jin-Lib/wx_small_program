@@ -45,7 +45,9 @@
     <block wx:else>
       <view class="share_top_title">仅剩{{groupInfo.groupNum - length}}个名额，先到先得</view>
       <!-- <view class="share_top_time">离结束<i>{{days}}</i>:<i>58</i>:<i>42</i>:<i>{{seconds}}</i></view> -->
-      <countDown bind:onEnd="getPageList" format="{{formatTime}}" target="{{creatTargetTime}}" />
+      <block wx:if="{{creatTargetTime}}">
+        <countDown bind:onEnd="getPageList" format="{{formatTime}}" target="{{creatTargetTime}}" />
+      </block>
     </block>
   </block>
 
