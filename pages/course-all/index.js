@@ -45,7 +45,7 @@ Page({
     const ageList = [];
 
     for (let i = 4; i<=15; i++) {
-      ageList.push(`${i}岁`)
+      ageList.push(`${i}`)
     }
 
     ageList.unshift('3岁以下');
@@ -90,16 +90,20 @@ Page({
   classificationChange: function(event) {
     this.setData({
       classificationIndex: event.detail.value
+    }, () => {
+      this.searchCourseList();
     })
   },
 
   // 搜索课程列表
   searchCourseList: function() {
     let that = this;
-    let { pagination, selectedKey, cacheClassification, classificationIndex } = this.data;
+    let { pagination, selectedKey, cacheClassification, classificationIndex, agePickerIndex, agePickerArray } = this.data;
     let param = {
       ...pagination,
       sort: selectedKey,
+      minAge: agePickerIndex === 0 ? 0 : agePickerArray[agePickerIndex],
+      maxAge: agePickerIndex === 0 ? 3 : agePickerArray[agePickerIndex],
       cateId: cacheClassification[classificationIndex[0]].items[classificationIndex[1]].id
     };
 
@@ -161,6 +165,8 @@ Page({
   agePickerChange: function(e) {
     this.setData({
       agePickerIndex: e.detail.value
+    }, () => {
+      this.searchCourseList();
     })
   }
 })
