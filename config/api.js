@@ -173,6 +173,11 @@ const API =  {
     method: 'POST'
   },
 
+  // 用户团队合伙人
+  getPartnerCount: {
+    url: `${host}/api/team/partnerCount`,
+    method: 'POST'
+  },
   // 临时粉丝
   shortFansList: {
     url: `${host}/api/Team/shortFansList`,

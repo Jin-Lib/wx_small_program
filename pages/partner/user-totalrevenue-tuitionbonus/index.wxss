@@ -1,10 +1,10 @@
 
 
 page{background-color: #f7f7f7;}
-.bonus{background-color: #fff;padding: 20rpx 30rpx; width: 690rpx; display: flex;flex-wrap: wrap;justify-content:space-between;/*左右分开*/}
+.bonus{height: 30px;background-color: #fff;padding: 0 30rpx; width: 690rpx; display: flex;flex-wrap: wrap;justify-content:space-between;/*左右分开*/align-items: center;font-size: 0;line-height: 1;margin-bottom: 10px;}
 .bonus_self_purchase{font-size: 28rpx; color: #fc4850; font-weight: 900;}
 .bouns_menu{font-size: 28rpx;color: #fc4850; font-weight: 900;}
-.bonus_informationk{margin-top: 20rpx;background-color: #fff;}
+.bonus_informationk{background-color: #fff;}
 .bonus_information{background-color: #fff;padding: 20rpx 30rpx; width: 693rpx; display: flex;flex-wrap: wrap; border-bottom: #cccccc solid 3rpx;}
 .bonus_information_img{width: 80rpx;height: 80rpx;overflow: hidden; border:#fff solid 2rpx; border-radius: 50%;position: relative;}
 .bonus_information_img image{width: 80rpx;}
@@ -16,3 +16,8 @@ page{background-color: #f7f7f7;}
 .bonus_information_amount{margin-left: 40rpx;width: 200rpx; text-align: right;margin-top: 5rpx;}
 .amount_je{width: 200rpx;font-size: 28rpx; color: #fc4850;font-weight:900;}
 .amount_time{width: 200rpx;font-size: 22rpx;margin-top: 10rpx;color: #6b6b6b;}
+
+.bonus_information_no_data {
+    text-align: center;
+    margin-top: 40px;
+}

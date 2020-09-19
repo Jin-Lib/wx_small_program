@@ -6,33 +6,33 @@
   </view>
   <view class="partner_nim">
     <view class="partner_nim_img">
-      <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
-      <image class="partnervip" src="http://cdn.koalaxiezi.com/ceshi/user/v-icon.76ec6b35.png" mode="widthFix"></image>
+      <image src="{{partnerInfo.head_img}}" mode="widthFix"></image>
+      <image class="partnervip" src="{{partnerInfo.head_img}}" mode="widthFix"></image>
     </view>
-    <view class="partner_nim_name">张驰</view>
-    <view class="partner_nim_partn">初级合伙人</view>
+    <view class="partner_nim_name">{{partnerInfo.nick_name}}</view>
+    <view class="partner_nim_partn">{{typeMap[partnerInfo.type]}}</view>
     <view class="partner_nim_tuand">
-      我的主管：张驰
+      我的主管：{{partnerInfo.super_nick_name}}
     </view>
   </view>
 
   <view class="partner_usertext">
     <view class="partner_team">
       <view class="partner_team_text">我的团队</view>
-      <view class="partner_team_num">共<i>20</i>为合伙人</view>
+      <view class="partner_team_num">共<i>{{(partnerInfo.team_fans_high_partner * 1) + (partnerInfo.team_fans_partner * 1)}}</i>为合伙人</view>
     </view>
     <view class="partner_team_category">
       <view class="partner_team_category_gj" bindtap="teamseniorpartner">
         高级合伙人 >
-        <view>1</view>
+        <view>{{partnerInfo.team_fans_high_partner}}</view>
       </view>
       <view class="partner_team_category_gj" bindtap="juniorpartneroftheteam">
         初级合伙人 >
-        <view>20</view>
+        <view>{{partnerInfo.team_fans_partner}}</view>
       </view>
       <view class="partner_team_category_gj" bindtap="currentfansoftheteam">
         团队当前粉丝 >
-        <view>104</view>
+        <view>{{partnerInfo.team_fans}}</view>
       </view>
     </view>
   </view>
@@ -43,20 +43,20 @@
   <view class="partner_usertext2">
     <view class="partner_team">
       <view class="partner_team_text">我的社群</view>
-      <view class="partner_team_num">共<i>20</i>为合伙人</view>
+      <view class="partner_team_num">共<i>{{(partnerInfo.fans_high_partner * 1) + (partnerInfo.fans_partner * 1)}}</i>为合伙人</view>
     </view>
     <view class="partner_team_category">
       <view class="partner_team_category_gj" bindtap="seniorcommunitypartner">
         高级合伙人 >
-        <view>1</view>
+        <view>{{partnerInfo.fans_high_partner}}</view>
       </view>
       <view class="partner_team_category_gj" bindtap="communityjuniorpartner">
         初级合伙人 >
-        <view>20</view>
+        <view>{{partnerInfo.fans_partner}}</view>
       </view>
       <view class="partner_team_category_gj" bindtap="currentfansofthecommunity">
         社群当前粉丝 >
-        <view>104</view>
+        <view>{{partnerInfo.fans}}</view>
       </view>
     </view>
   </view>
