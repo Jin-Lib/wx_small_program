@@ -252,24 +252,22 @@ page{background-color: #f7f7f7;}
 }
 
 .page-nobuy-detail .group_details {
-  float: left;
+  display: flex;
+  flex-wrap: wrap;
   width: 700rpx;
   padding: 30rpx 26rpx;
   background-color: #fff;
 }
 
 .page-nobuy-detail .group_buy {
-  float: left;
-  width: 370rpx;
-  margin-left: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  width: 390rpx;
 }
 
 .page-nobuy-detail .group_buy image {
-  width: 60rpx;
-  height: 60rpx;
-  border-radius: 50%;
+  width: 200rpx;
   float: left;
-  margin-left: -15rpx;
 }
 
 .page-nobuy-detail .group_text {
@@ -280,7 +278,7 @@ page{background-color: #f7f7f7;}
 }
 
 .page-nobuy-detail .group_rule {
-  float: right;
+  margin-left:170rpx;
   font-size: 26rpx;
   margin-top: 12rpx;
 }
@@ -544,10 +542,11 @@ page{background-color: #f7f7f7;}
 }
 
 .page-nobuy-detail .prompt {
+  overflow: hidden;
+  width: 325rpx;
   background: rgba(0, 0, 0, 0.5);
   padding: 6rpx 12rpx;
   color: #fff;
-  border-radius: 15rpx;
   display: flex;
   align-items: center;
 }

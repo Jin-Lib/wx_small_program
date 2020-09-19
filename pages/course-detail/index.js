@@ -107,7 +107,7 @@ Page({
       id
     }).then(res => {//成功
       //const { rows } = res || {};
-
+      console.log(res)
       if(res && res.isBuy) {
         wx.getSystemInfo({
           success: function (res) {
