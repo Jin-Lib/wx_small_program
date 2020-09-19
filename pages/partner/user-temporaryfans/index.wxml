@@ -1,30 +1,32 @@
 
 
 <view class="nav1 bc_white">
-  <view class="{{selected?'red1':'default1'}}" style="margin-left:10rpx;" bindtap="selected">临时粉丝</view>
-  <view class="{{selected1?'red1':'default1'}}" bindtap="selected1">已过期</view>
+  <view class="{{selectedKey === '1'?'red1':'default1'}}" style="margin-left:10rpx;" data-key="1" bindtap="selected">临时粉丝</view>
+  <view class="{{selectedKey === '2'?'red1':'default1'}}" bindtap="selected" data-key="2">已过期</view>
 </view>
 
-<view class="{{selected?'show1':'hidden1'}}">
-  <view class="bonus_informationk">
+<view>
+  <view style="text-align: center;padding: 30rpx;color: #666;background-color: #fff;" wx:if="{{shortFansListData && shortFansListData.length === 0}}">空</view>
+  <view class="bonus_informationk" wx:for="{{shortFansListData}}" wx:key="index">
     <view class="bonus_information">
       <view class="bonus_information_img">
-          <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
+          <image src="{{item.head_img}}" mode="widthFix"></image>
       </view>
       <view class="bonus_information_text">
         <view class="bouns_information_text_name">
-          <view class="bonus_information_text_xm">杨伟伟</view>
+          <view class="bonus_information_text_xm">{{item.nick_name}}</view>
+          <view class="bonus_information_text_bq hs" wx:if="{{item.is_clock === 1}}">已锁粉</view>
         </view>
         <view class="bonus_information_text_numje">剩余1天20:34:56</view>
       </view>
       <view class="bonus_information_amount">
-        <view class="amount_je" bindtap="tuiguang">立即去推广</view>
+        <view class="amount_je" bindtap="tuiguang" data-id="{{item.user_id}}">立即去推广</view>
       </view>
     </view>
   </view>
 </view>
-
-<view class="{{selected1?'show1':'hidden1'}}">
+<!-- 
+<view>
   <view class="bonus_informationk">
 
     <view class="bonus_information">
@@ -76,4 +78,4 @@
     </view>
 
   </view>
-</view>
+</view> -->

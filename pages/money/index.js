@@ -6,6 +6,21 @@ Page({
   data: {
     hiddenweek:false,
     hiddenrule:true,
+    hiddenshare: true, //分享弹窗
+    selected: true,
+  },
+  
+  //分享按钮
+  showshare: function (e) {
+    this.setData({
+      hiddenshare: !this.data.hiddenshare
+    })
+  },
+  //课程详情
+  details: function (e) {
+    wx.navigateTo({
+      url: `/pages/course-detail/index?id=1`
+    })
   },
   showrule: function (e) {
     this.setData({

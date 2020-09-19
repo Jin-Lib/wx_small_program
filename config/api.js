@@ -153,6 +153,8 @@ const API =  {
     method: 'POST'
   },
 
+  // ================ 合伙人接口写下面 ==================
+
   // 合伙人详情
   getPartnerInfo: {
     url: `${host}/api/user/partnerInfo`,
@@ -175,7 +177,18 @@ const API =  {
   getPartnerCount: {
     url: `${host}/api/team/partnerCount`,
     method: 'POST'
-  }
+  },
+  // 临时粉丝
+  shortFansList: {
+    url: `${host}/api/Team/shortFansList`,
+    method: 'POST'
+  },
+
+  // 正式粉丝
+  fansList: {
+    url: `${host}/api/Team/fansList`,
+    method: 'POST'
+  },
 };
 
 let API_RES = {};

@@ -10,18 +10,21 @@
 </view>
 <!--拼团板块-->
 <view class="group">
-  <view class="group_k" wx:for="{{orderData}}" wx:key="index">
-    <view class="grounp_img">
-      <image src="{{item.catalog_img}}" mode="widthFix"></image>
+  <block wx:for="{{orderData}}" wx:key="index">
+    <view class="group_k" wx:if="{{index <= 2 || !showMore}}">
+      <view class="grounp_img">
+        <image src="{{item.catalog_img}}" mode="widthFix"></image>
+      </view>
+      <view class="grounp_text">
+        <view class="grounp_title">{{item.title}}</view>
+        <view class="grpunp_sj">剩余时间：30小时20分18秒</view>
+      </view>
+      <view class="share" data-id="{{item.course_id}}" data-groupid="{{item.group_id}}" bindtap="invitefriends">邀好友拼团</view>
     </view>
-    <view class="grounp_text">
-      <view class="grounp_title">{{item.title}}</view>
-      <view class="grpunp_sj">剩余时间：30小时20分18秒</view>
-    </view>
-    <view class="share" data-id="{{item.course_id}}" data-groupid="{{item.group_id}}" bindtap="invitefriends">邀好友拼团</view>
-  </view>
+  </block>
 </view>
-  <view class="xsmore">显示更多</view>
+<view class="xsmore" wx:if="{{showMore}}" bindtap="onClickMore">显示更多</view>
+<view class="xsmore" wx:if="{{!showMore}}" bindtap="onClickMore">收起</view>
 
 
 <!--已购课程文字-->
@@ -39,26 +42,30 @@
     </view>
   </block>
   <block wx:else>
-    <view class="learn" wx:for="{{courseData}}" wx:key="{{index}}" data-id="{{item.course_id}}" bindtap="details">
-      <view class="learn_img">
-        <image src="{{item.catalog_img}}" mode="widthFix"></image>
-        <view class="update">更新至0集</view>
-      </view>
-      <view class="learn_text">
-        <view class="learn_title">{{item.title}}</view>
-        <view class="learn_introduction">课程简介</view>
-        <view class="learn_status">
-          <view class="loadbar">
-            <view class="bar" style="width:30%"></view>
-          </view>
-          <view class="learn_status_yx">已学1/10集</view>
+    <block wx:for="{{courseData}}" wx:key="index">
+      <view class="learn" wx:if="{{index <= 2 || !showCourseMore}}" wx:key="{{index}}" data-id="{{item.course_id}}" bindtap="details">
+        <view class="learn_img">
+          <image src="{{item.catalog_img}}" mode="widthFix"></image>
+          <view class="update">更新至{{item.update_chapter}}集</view>
         </view>
-        <view class="learn_watch">8299位宝宝正在看</view>
+        <view class="learn_text">
+          <view class="learn_title">{{item.title}}</view>
+          <view class="learn_introduction">课程简介</view>
+          <view class="learn_status">
+            <view class="loadbar">
+              <view class="bar" style='width: {{item.look_chapter/item.chapter_count * 100 + "%"}}'></view>
+            </view>
+            <view class="learn_status_yx">已学{{item.look_chapter}}/{{item.chapter_count}}集</view>
+          </view>
+          <view class="learn_watch">{{item.browse_count}}位宝宝正在看</view>
+        </view>
+        <!-- <view class="top o_color">置顶</view> -->
       </view>
-      <!-- <view class="top o_color">置顶</view> -->
-    </view>
+    </block>
   </block>
-  <view class="xsmore">显示更多</view>
+
+  <view class="xsmore" wx:if="{{showCourseMore}}" bindtap="onClickCourseMore">显示更多</view>
+  <view class="xsmore" wx:if="{{!showCourseMore}}" bindtap="onClickCourseMore">收起</view>
   <!--已购课程板块purchased-->
   <!-- <view class="purchased">
      <view class="swiper-tab">
