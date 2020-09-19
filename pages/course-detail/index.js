@@ -373,7 +373,13 @@ Page({
     that.setData({
       wxlogin: login
     });
-    login && that.getInfoData();
+
+    if(login) {
+      // 锁粉
+      that.lockFans(that.data.userId);
+      that.getInfoData();
+    }
+
     // 是否登录
     // Auth.checkHasLogined()
     //   .then(res => {
@@ -414,6 +420,14 @@ Page({
       this.setData({
         userInfo: res
       });
+    })
+  },
+
+  lockFans: function(id) {
+    API.clickFans({
+      superior_id: id
+    }).then(res => {//成功
+      
     })
   },
 

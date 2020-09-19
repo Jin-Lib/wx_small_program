@@ -189,6 +189,12 @@ const API =  {
     url: `${host}/api/Team/fansList`,
     method: 'POST'
   },
+
+  // 锁粉
+  clickFans: {
+    url: `${host}/api/Team/clickFans`,
+    method: 'POST'
+  }
 };
 
 let API_RES = {};

@@ -35,6 +35,15 @@ Component({
       });
     },
 
+
+    lockFans: function(id) {
+      API.clickFans({
+        superior_id: id
+      }).then(res => {//成功
+        
+      })
+    },
+
     // 登录
     login: function(data) {
       let that = this;
@@ -65,6 +74,7 @@ Component({
                 key: "token",
                 data: token
               });
+              that.lockFans(userId);
               that.getUserInfoDetail();
               
             })
