@@ -74,7 +74,7 @@
   </view>
   <view class="info_k" bindtap="alipayshow">
     <view class="info_k_text">
-      支付宝或银行卡姓名
+      支付宝姓名
     </view>
     <view class="info_k_select_text tovh">
       {{infodetail.nick_name}}
@@ -84,7 +84,7 @@
   
   <view class="info_k" bindtap="accountshow">
     <view class="info_k_text">
-      支付宝或银行卡帐号
+      支付宝帐号
     </view>
     <view class="info_k_select_text tovh">
       52634818564528581584
@@ -153,7 +153,7 @@
 <view class="name_popup" hidden="{{alipayhidden}}">
   <view class="popup_input">
     <input
-      placeholder="请输入支付宝或银行卡帐号"
+      placeholder="请输入支付宝帐号"
        />
     <view class="popup_anniu">
       <view class="anniu_qx" bindtap="alipayCancel">取消</view>
@@ -165,7 +165,7 @@
 <view class="name_popup" hidden="{{accounthidden}}">
   <view class="popup_input">
     <input
-      placeholder="请输入您的支付宝或银行卡姓名"
+      placeholder="请输入您的支付宝姓名"
        />
     <view class="popup_anniu">
       <view class="anniu_qx" bindtap="accountCancel">取消</view>
