@@ -387,6 +387,13 @@
           "id": -1,
           "name": "pages/partner/user-addressbook/index",
           "pathName": "pages/partner/user-addressbook/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/money/index",
+          "pathName": "pages/money/index",
           "scene": null
         }
       ]

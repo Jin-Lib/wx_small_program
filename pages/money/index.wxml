@@ -33,59 +33,63 @@
   </view>
 </view>
 
-<view class="recording">
-  购买课程后才可邀好友赚奖学金哦~
-</view>
-
-<view class="bottom_popup" hidden="{{hiddenweek}}">
-  <view class="popup_img_text">
-    <view class="popup_img">
-      <image src="/resource/img/weekts.png" mode="widthFix"></image>
-    </view>
-    <view class="popup_text"></view>
-    <view class="popup_kk">
-      <view class="popup_kx">
-        <view class="popup_img_left">
-          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-        </view>
-        <view class="popup_text_right">
-          <view class="text_one">世界地理之最</view>
-          <view class="text_jiag">价格：￥29.9</view>
-          <view class="text_ann">赚￥7.53</view>
-        </view>
-      </view>
-      <view class="popup_kx">
-        <view class="popup_img_left">
-          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-        </view>
-        <view class="popup_text_right">
-          <view class="text_one">世界地理之最</view>
-          <view class="text_jiag">价格：￥29.9</view>
-          <view class="text_ann">赚￥7.53</view>
-        </view>
-      </view>
-      <view class="popup_kx">
-        <view class="popup_img_left">
-          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-        </view>
-        <view class="popup_text_right">
-          <view class="text_one">世界地理之最</view>
-          <view class="text_jiag">价格：￥29.9</view>
-          <view class="text_ann">赚￥7.53</view>
-        </view>
-      </view>
-      
-      <view class="popup_kx">
-        <view class="popup_img_left">
-          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-        </view>
-        <view class="popup_text_right">
-          <view class="text_one">世界地理之最</view>
-          <view class="text_jiag">价格：￥29.9</view>
-          <view class="text_ann">赚￥7.53</view>
-        </view>
-      </view>
-    </view>
-    <view class="popup_bul" bindtap="showweek"></view>
+  <!-- 购买课程后才可邀好友赚奖学金哦~ -->
+<view class="zengke_conter">
+  <view class="bc_white">
+    <view class="{{selected?'red1':'default1'}}" style="margin-left:150rpx;" bindtap="selected">赚取奖学金课程</view>
   </view>
+
+  <view class="{{selected?'show1':'hidden1'}}">
+  
+  <view class="zeng_coner">
+    <view class="zeng_coner_left" bindtap="details">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="zeng_coner_right">
+      <view class="zeng_coner_right_title" bindtap="details">跟着棋圣学围棋</view>
+      <view class="zeng_coner_right_zhaiyao" bindtap="details">30集动画视频课，学习悠远深厚的打开的死哦都发给你</view>
+      <view class="zeng_coner_right_shit" bindtap="details">最高赚 ￥20.09*3</view>
+      <view class="zeng_coner_right_button" bindtap="showshare">邀好友赚奖学金</view>
+    </view>
+  </view>
+  
+  <view class="zeng_coner">
+    <view class="zeng_coner_left" bindtap="details">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_279_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="zeng_coner_right">
+      <view class="zeng_coner_right_title" bindtap="details">跟着棋圣学围棋</view>
+      <view class="zeng_coner_right_zhaiyao" bindtap="details">30集动画视频课，学习悠远深厚的打开的死哦都发给你</view>
+      <view class="zeng_coner_right_shit" bindtap="details">最高赚 ￥20.09*3</view>
+      <view class="zeng_coner_right_button" bindtap="showshare">邀好友赚奖学金</view>
+    </view>
+  </view>
+  
+  <view class="zeng_coner">
+    <view class="zeng_coner_left" bindtap="details">
+      <image src="http://static2.61info.com/service/imgs/groupPurchase/newCourseImg/c_277_intro_share.png" mode="widthFix"></image>
+    </view>
+    <view class="zeng_coner_right">
+      <view class="zeng_coner_right_title" bindtap="details">跟着棋圣学围棋</view>
+      <view class="zeng_coner_right_zhaiyao" bindtap="details">30集动画视频课，学习悠远深厚的打开的死哦都发给你</view>
+      <view class="zeng_coner_right_shit" bindtap="details">最高赚 ￥20.09*3</view>
+      <view class="zeng_coner_right_button" bindtap="showshare">邀好友赚奖学金</view>
+    </view>
+  </view>
+  
+
 </view>
+  </view>
+
+  <!--分享弹窗-->
+  <view class="bottom_popup_share" hidden="{{hiddenshare}}" bindtap="showshare">
+    <view class="f_share">
+      <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/share1.png" mode="widthFix"></image>
+    </view>
+    <view class="f_share2">
+      <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/share2.png" mode="widthFix"></image>
+    </view>
+    <view class="f_share3">
+      <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/share3.jpg" mode="widthFix"></image>
+    </view>
+  </view>
