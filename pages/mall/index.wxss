@@ -131,7 +131,7 @@ page{background-color: #f5f5f5}
   white-space: nowrap;margin-top: 15rpx;}
 .sort_spike{ background-color: #fef3df; padding: 3px 11px; color: #f86f22; font-size: 18rpx; margin-top: 20rpx;height: 24rpx;border-radius: 30rpx; display: inline-block;}
 .sort_spikekp{ display: inline-block; margin-top: 30rpx;}
-.sort_spikekp i{ background-color: #fef3df; padding: 3px 13px; color: #f86f22; font-size: 22rpx;border-radius: 30rpx;}
+.sort_spikekp i{ background-color: #fef3df; padding: 3px 13px; color: #f86f22; font-size: 22rpx;border-radius: 30rpx;margin-right: 5rpx;}
 .sort_gk{color: #999999; font-size: 22rpx; margin-top: 70rpx;display: flex;}
 .sort_gk image{width: 30rpx;}
 .sort_gk span{margin-left: 10rpx;}
