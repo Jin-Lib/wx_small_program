@@ -72,6 +72,24 @@
       <text wx:else>{{infodetail.phone}}</text>
     </view>
   </view>
+  <view class="info_k" bindtap="aliPayAccountCancel">
+    <view class="info_k_text">
+      <i></i>支付宝账号
+    </view>
+    <view class="info_k_select_text tovh">
+      {{infodetail.account}}
+    </view>
+    <i class="more_right_nick_name"></i>
+  </view>
+  <view class="info_k" bindtap="aliPayNameCancel">
+    <view class="info_k_text">
+      <i></i>支付宝姓名
+    </view>
+    <view class="info_k_select_text tovh">
+      {{infodetail.account_name}}
+    </view>
+    <i class="more_right_nick_name"></i>
+  </view>
 </view>
 <!--头像放大-->
 <view class="img_popup" hidden="{{hidden}}" bindtap='clickImg'>
@@ -87,6 +105,32 @@
     <view class="popup_anniu">
       <view class="anniu_qx" bindtap="nickNameCancel">取消</view>
       <view class="anniu_qd" bindtap="nickNameConfirm">确定</view>
+    </view>
+  </view>
+</view>
+<!--支付宝修改-->
+<view class="name_popup" hidden="{{accountHidden}}">
+  <view class="popup_input">
+    <input
+      placeholder="请输入您的支付宝账号"
+      value="{{aliPayAccount}}"
+      bindinput="aliPayAccountInput" />
+    <view class="popup_anniu">
+      <view class="anniu_qx" bindtap="aliPayAccountCancel">取消</view>
+      <view class="anniu_qd" bindtap="aliPayAccountConfirm">确定</view>
+    </view>
+  </view>
+</view>
+<!--支付宝姓名修改-->
+<view class="name_popup" hidden="{{accountNameHidden}}">
+  <view class="popup_input">
+    <input
+      placeholder="请输入您的支付宝姓名"
+      value="{{aliPayName}}"
+      bindinput="aliPayNameInput" />
+    <view class="popup_anniu">
+      <view class="anniu_qx" bindtap="aliPayNameCancel">取消</view>
+      <view class="anniu_qd" bindtap="aliPayNameConfirm">确定</view>
     </view>
   </view>
 </view>

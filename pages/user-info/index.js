@@ -40,6 +40,10 @@ Page({
     hidden: true, //头像弹窗
     namehidden: true, //修改姓名弹窗
     iphonehidden: true, //修改手机号弹窗
+    accountHidden: true, // 修改支付宝
+    accountNameHidden: true, // 修改支付宝名称
+    aliPayAccount: '', // 支付宝账号
+    aliPayName: '', // 支付宝名称
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     recommendedAge: [],
     recommendedAgeSelectIndex: 0,
@@ -115,7 +119,7 @@ Page({
       code: 0
     }).then(res => {//成功
       const { recommendedAge } = this.data;
-      const { phone, nick_name, sex, age, birthday } = res || {};
+      const { phone, nick_name, sex, age, birthday, account, account_name } = res || {};
       const [year, month, day] = birthday.split('-');
       const yearIndex = years.findIndex(item => item == year);
       const monthIndex = months.findIndex(item => item == month);
@@ -128,7 +132,9 @@ Page({
         nickNameValue: nick_name,
         recommendedAgeSelectIndexxb: sex-1,
         recommendedAgeSelectIndex: ageIndex,
-        birthdayValue: [yearIndex, monthIndex, dayIndex]
+        birthdayValue: [yearIndex, monthIndex, dayIndex],
+        aliPayAccount: account,
+        aliPayName: account_name,
       });
     }).catch(err => {
       wx.showToast({//错误
@@ -350,5 +356,87 @@ Page({
           })
       }
     })
-  }
+  },
+
+  /**
+   * 支付宝账号修改
+   * @date 2020-09-20
+   * @returns {any}
+   */
+  aliPayAccountInput(event) {
+    this.setData({
+      aliPayAccount: event.detail.value
+    })
+  },
+
+  /**
+   * 取消支付宝账号修改弹框
+   * @date 2020-09-20
+   * @returns {any}
+   */
+  aliPayAccountCancel() {
+    this.setData({
+      accountHidden: !this.data.accountHidden
+    })
+  },
+
+  /**
+   * 确认支付宝账号修改
+   * @date 2020-09-20
+   * @returns {any}
+   */
+  aliPayAccountConfirm() {
+    const { infodetail, aliPayAccount } = this.data;
+    infodetail.account = aliPayAccount;
+    this.setData({
+      infodetail,
+      accountHidden: !this.data.accountHidden
+    }, () => {
+      this.editUserInfo({
+        edit_key: 'ACCOUNT',
+        edit_val: aliPayAccount
+      });
+    })
+  },
+
+  /**
+   * 修改支付宝姓名弹框状态
+   * @date 2020-09-20
+   * @returns {any}
+   */
+  aliPayNameCancel() {
+    this.setData({
+      accountNameHidden: !this.data.accountNameHidden
+    })
+  },
+
+  /**
+   * 支付宝姓名修改
+   * @date 2020-09-20
+   * @returns {any}
+   */
+  aliPayNameInput(event) {
+    this.setData({
+      aliPayName: event.detail.value
+    })
+  },
+
+  /**
+   * 确认支付宝姓名修改
+   * @date 2020-09-20
+   * @returns {any}
+   */
+  aliPayNameConfirm() {
+    const { infodetail, aliPayName } = this.data;
+    infodetail.account_name = aliPayName;
+    this.setData({
+      infodetail,
+      accountNameHidden: !this.data.accountNameHidden
+    }, () => {
+      this.editUserInfo({
+        edit_key: 'ACCOUNT_NAME',
+        edit_val: aliPayName
+      });
+    })
+  },
 })
