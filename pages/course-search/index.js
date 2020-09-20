@@ -8,7 +8,8 @@ Page({
     navbarData: {
       showCapsule: 1
     },
-    statusBarHeight: app.globalData.statusBarHeight
+    statusBarHeight: app.globalData.statusBarHeight,
+    
   },
   //--搜索页--
   hhsr: function (event) {
@@ -51,4 +52,5 @@ Page({
   onShow: function () {
 
   },
+
 })
