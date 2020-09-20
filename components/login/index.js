@@ -35,6 +35,15 @@ Component({
       });
     },
 
+
+    lockFans: function(id) {
+      API.clickFans({
+        superior_id: id
+      }).then(res => {//成功
+        
+      })
+    },
+
     // 登录
     login: function(data) {
       let that = this;
@@ -52,6 +61,11 @@ Component({
             iv: encodeURIComponent(iv)
           };
 
+          var userId = wx.getStorageSync('userId');
+          if(userId) {
+            params.superior_id = userId;
+          }
+
           API.login(params)
             .then(res => {
               console.log(res);
@@ -60,6 +74,7 @@ Component({
                 key: "token",
                 data: token
               });
+              that.lockFans(userId);
               that.getUserInfoDetail();
               
             })

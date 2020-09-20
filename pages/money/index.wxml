@@ -24,68 +24,61 @@
   <view class="scho_k">
     <view class="scho_grandtotal" bindtap="income">
       累计奖学金(元)>
-      <view class="scho_num">0</view>
+      <view class="scho_num">{{userInfo.amount}}</view>
     </view>
     <view class="scho_withdraw" bindtap="extract">
       可提现(元)>
-      <view class="scho_num">0</view>
+      <view class="scho_num">{{userInfo.withdrawal}}</view>
     </view>
   </view>
 </view>
 
-<view class="recording">
-  购买课程后才可邀好友赚奖学金哦~
-</view>
+  <!-- 购买课程后才可邀好友赚奖学金哦~ -->
+<view class="zengke_conter">
+  <view class="bc_white">
+    <view class="{{selected?'red1':'default1'}}" style="margin-left:150rpx;" bindtap="selected">赚取奖学金课程</view>
+  </view>
 
-<view class="bottom_popup" hidden="{{hiddenweek}}">
-  <view class="popup_img_text">
-    <view class="popup_img">
-      <image src="/resource/img/weekts.png" mode="widthFix"></image>
-    </view>
-    <view class="popup_text"></view>
-    <view class="popup_kk">
-      <view class="popup_kx">
-        <view class="popup_img_left">
-          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
+  <view class="{{selected?'show1':'hidden1'}}">
+  
+    <block wx:for="{{courseData || []}}" wx:key="index">
+      <view class="zeng_coner">
+        <view class="zeng_coner_left" data-id="{{item.course_id}}" bindtap="details">
+          <image src="{{item.catalog_img}}" mode="widthFix"></image>
         </view>
-        <view class="popup_text_right">
-          <view class="text_one">世界地理之最</view>
-          <view class="text_jiag">价格：￥29.9</view>
-          <view class="text_ann">赚￥7.53</view>
-        </view>
-      </view>
-      <view class="popup_kx">
-        <view class="popup_img_left">
-          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-        </view>
-        <view class="popup_text_right">
-          <view class="text_one">世界地理之最</view>
-          <view class="text_jiag">价格：￥29.9</view>
-          <view class="text_ann">赚￥7.53</view>
+        <view class="zeng_coner_right">
+          <view class="zeng_coner_right_title" data-id="{{item.course_id}}" bindtap="details">{{item.title}}</view>
+          <view class="zeng_coner_right_zhaiyao">无字段</view>
+          <view class="zeng_coner_right_shit">最高赚 ￥无字段</view>
+          <!-- bindtap="showshare" -->
+          <button 
+            open-type="share" 
+            class="zeng_coner_right_button"
+            data-id="{{item.course_id}}"
+            data-title="{{item.title}}"
+            data-img="{{item.catalog_img}}"
+          >
+            邀好友赚奖学金
+          </button>
         </view>
       </view>
-      <view class="popup_kx">
-        <view class="popup_img_left">
-          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-        </view>
-        <view class="popup_text_right">
-          <view class="text_one">世界地理之最</view>
-          <view class="text_jiag">价格：￥29.9</view>
-          <view class="text_ann">赚￥7.53</view>
-        </view>
-      </view>
-      
-      <view class="popup_kx">
-        <view class="popup_img_left">
-          <image src="http://cdn.koalaxiezi.com/ceshi/3.png" mode="widthFix"></image>
-        </view>
-        <view class="popup_text_right">
-          <view class="text_one">世界地理之最</view>
-          <view class="text_jiag">价格：￥29.9</view>
-          <view class="text_ann">赚￥7.53</view>
-        </view>
-      </view>
-    </view>
-    <view class="popup_bul" bindtap="showweek"></view>
+    </block>
+
   </view>
 </view>
+
+<v-login wxlogin="{{wxlogin}}" bindgetUserInfoDetail="getUserInfoDetail"></v-login>
+
+
+  <!--分享弹窗-->
+  <view class="bottom_popup_share" hidden="{{hiddenshare}}" bindtap="showshare">
+    <view class="f_share">
+      <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/share1.png" mode="widthFix"></image>
+    </view>
+    <view class="f_share2">
+      <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/share2.png" mode="widthFix"></image>
+    </view>
+    <view class="f_share3">
+      <image src="http://cdn.koalaxiezi.com/ceshi/ppxc/share3.jpg" mode="widthFix"></image>
+    </view>
+  </view>

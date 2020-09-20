@@ -75,6 +75,18 @@ Page({
       namehidden: !this.data.namehidden
     })
   },
+  //支付宝姓名弹窗
+  alipayshow: function (e) {
+    this.setData({
+      alipayhidden: !this.data.alipayhidden
+    })
+  },
+  //支付宝帐号弹窗
+  accountshow: function (e) {
+    this.setData({
+      accounthidden: !this.data.accounthidden
+    })
+  },
   //手机号弹窗
   iphoneshow: function (e) {
     this.setData({
@@ -136,6 +148,7 @@ Page({
         aliPayAccount: account,
         aliPayName: account_name,
       });
+      
     }).catch(err => {
       wx.showToast({//错误
         title: err,
@@ -187,6 +200,30 @@ Page({
   nickNameCancel: function() {
     this.setData({
       namehidden: !this.data.namehidden
+    })
+  },
+  //支付宝帐号取消弹窗
+  accountCancel: function() {
+    this.setData({
+      accounthidden: !this.data.accounthidden
+    })
+  },
+  //支付宝帐号确定弹窗
+  accountConfirm: function() {
+    this.setData({
+      accounthidden: !this.data.accounthidden
+    })
+  },
+  //支付宝姓名取消弹窗
+  alipayCancel: function() {
+    this.setData({
+      alipayhidden: !this.data.alipayhidden
+    })
+  },
+  //支付宝姓名确定弹窗
+  alipayConfirm: function() {
+    this.setData({
+      alipayhidden: !this.data.alipayhidden
     })
   },
   /**

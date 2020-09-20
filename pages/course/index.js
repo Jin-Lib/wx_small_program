@@ -4,6 +4,27 @@ const app = getApp()
 const API = require('../../config/api');
 const Auth = require('../../utils/auth');
 
+const formatTime = (mss) => {
+  let days = parseInt(mss / (1000 * 60 * 60 * 24));
+  let hours = parseInt((mss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = parseInt((mss % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = parseInt((mss % (1000 * 60)) / 1000);
+
+  // this.setData({
+  //   days,
+  //   hours,
+  //   minutes,
+  //   seconds
+  // });
+  // return '';
+  return fixedZero(days) + ' : ' + fixedZero(hours) + ' : ' + fixedZero(minutes) + ' : ' + fixedZero(seconds);
+
+}
+
+function fixedZero(val) {
+  return val * 1 < 10 ? '0' + val : val;
+}
+
 Page({
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -17,6 +38,23 @@ Page({
     courseData: [],
     
     wxlogin: true,
+
+    formatTime: formatTime,
+    creatTargetTime: 1601424000000,
+
+    showMore: true,
+    showCourseMore: true
+  },
+
+  onClickMore: function() {
+    this.setData({
+      showMore: !this.data.showMore
+    });
+  },
+  onClickCourseMore: function() {
+    this.setData({
+      showCourseMore: !this.data.showCourseMore
+    });
   },
   //点击邀好友拼团
   invitefriends: function (e) {
@@ -57,8 +95,18 @@ Page({
       url: '/pages/course-play/index'
     })
   },
+
+  // 是否登录
+  isLogin: async (that) => {
+    let login = await Auth.isLogin();
+
+    that.setData({
+      wxlogin: login
+    });
+    login && that.initData();
+  },
+
   onLoad: function () {
-    this.initData();
 
   },
 
@@ -72,7 +120,7 @@ Page({
         selected: 1
       })
     }
-    this.isLogin();
+    this.isLogin(this);
 
   },
 
@@ -100,6 +148,9 @@ Page({
   
   // 获取订单信息
   getorderData: function (type) {
+    wx.showLoading({
+      title: '请求中，请耐心等待..'
+    });
     API.getorder({
       type
     }).then(res => {//成功
@@ -113,8 +164,11 @@ Page({
           courseData: rows || []
         });
       }
+      wx.hideLoading();
       
     }).catch(err => {
+      wx.hideLoading();
+
       wx.showToast({//错误
         title: err,
         icon: 'none',
@@ -125,28 +179,27 @@ Page({
 
 
   // 是否登录
-  isLogin: function() {
-    // 是否登录
-    Auth.checkHasLogined()
-      .then(res => {
-        if(res) {
-          this.setData({
-            wxlogin: true
-          });
-        } else {
-          this.setData({
-            wxlogin: false
-          });
-        }
-      }).catch(e => {
-        this.setData({
-          wxlogin: false
-        });
-      })
-  },
+  // isLogin: function() {
+  //   // 是否登录
+  //   Auth.checkHasLogined()
+  //     .then(res => {
+  //       if(res) {
+  //         this.setData({
+  //           wxlogin: true
+  //         });
+  //       } else {
+  //         this.setData({
+  //           wxlogin: false
+  //         });
+  //       }
+  //     }).catch(e => {
+  //       this.setData({
+  //         wxlogin: false
+  //       });
+  //     })
+  // },
 
   getUserInfoDetail: function() {
-    console.log('test');
     this.setData({
       wxlogin: true
     });

@@ -10,7 +10,7 @@ Page({
     selectedKey: '0',
     cacheClassification: [], // 存储类目数据列表
     classification: [], // 类目数据列表
-    classificationIndex: [], // 类目数据列表选项
+    classificationIndex: [0, 0], // 类目数据列表选项
     agePickerArray: [], // 年龄数据
     agePickerIndex: 0, // 年龄选择值
 
@@ -29,7 +29,6 @@ Page({
     // 创建年龄数据
     this.createAgeList();
 
-    this.searchCourseList();
   },
   /**
    * 生命周期函数--监听页面显示
@@ -46,7 +45,7 @@ Page({
     const ageList = [];
 
     for (let i = 4; i<=15; i++) {
-      ageList.push(`${i}岁`)
+      ageList.push(`${i}`)
     }
 
     ageList.unshift('3岁以下');
@@ -58,7 +57,7 @@ Page({
   //点击商品详情
   details: function (e) {
     wx.navigateTo({
-      url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}`
+      url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}&userId=123`
     })
   },
   /**
@@ -77,7 +76,8 @@ Page({
         this.setData({
           cacheClassification: list,
           classification: that.getClassificationColumnData(list, 0),
-          classificationIndex: []
+        }, () => {
+          this.searchCourseList();
         })
       })
   },
@@ -90,17 +90,21 @@ Page({
   classificationChange: function(event) {
     this.setData({
       classificationIndex: event.detail.value
+    }, () => {
+      this.searchCourseList();
     })
   },
 
   // 搜索课程列表
   searchCourseList: function() {
     let that = this;
-    let { pagination, selectedKey } = this.data;
+    let { pagination, selectedKey, cacheClassification, classificationIndex, agePickerIndex, agePickerArray } = this.data;
     let param = {
       ...pagination,
       sort: selectedKey,
-      // cateId: 
+      minAge: agePickerIndex === 0 ? 0 : agePickerArray[agePickerIndex],
+      maxAge: agePickerIndex === 0 ? 3 : agePickerArray[agePickerIndex],
+      cateId: cacheClassification[classificationIndex[0]].items[classificationIndex[1]].id
     };
 
     API.searchCourseList(param)
@@ -161,6 +165,8 @@ Page({
   agePickerChange: function(e) {
     this.setData({
       agePickerIndex: e.detail.value
+    }, () => {
+      this.searchCourseList();
     })
   }
 })

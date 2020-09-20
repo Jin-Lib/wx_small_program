@@ -16,7 +16,7 @@
         range="{{agePickerArray}}"
         >
         <view class="more1">
-          {{agePickerArray[agePickerIndex]}}
+          {{agePickerArray[agePickerIndex]}}岁
           <i class="more_right1"></i>
         </view>
       </picker>

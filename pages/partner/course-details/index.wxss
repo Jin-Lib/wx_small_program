@@ -736,7 +736,7 @@ page{background-color: #f7f7f7;}
 .share_popup image{width: 450rpx;margin-left: 150rpx;margin-top: 20rpx;}
 .purc_text_title{font-size: 26rpx;}
 .purc_text_title i{font-size: 28rpx;padding: 0rpx 14rpx; background-color: #f86f22; color: #fff;height: 17rpx;border-radius: 50%;margin-left: 5rpx;}
-.purc_text_kg{margin-left: 390rpx;}
+.purc_text_kg{margin-left: 380rpx;}
 .huise{width: 80rpx; border-radius: 30rpx; height: 30rpx; background-color: #b6b6b6;margin-top: 5rpx;margin-left: 400rpx;}
 .wahtih{width: 30rpx; height: 30rpx; border-radius: 50%; background-color: #fff;margin-left: 50rpx;}
 .addjj{width: 30rpx; height: 30rpx; border-radius: 50%; background-color: #fff;margin-left: 3rpx;}

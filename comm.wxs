@@ -1,0 +1,8 @@
+function fixedZero(val) {
+  return val * 1 < 10 ? '0' + val : val;
+}
+//保留 pos位小数
+function numberToFixed(number, pos) {
+  if (number === null || number === '' || number < 0) return ''
+  return parseFloat(number).toFixed(pos)
+}

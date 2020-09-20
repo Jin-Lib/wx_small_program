@@ -39,10 +39,7 @@
 
     <view class="group_details">
       <view class="group_buy">
-        <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>
-        <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKgicHcQo3k7TAsCk2yx83dibmjfjuYc802xhESE0ibJYWrchL9gCAFgRXvsw8ictEL4J2cSlaqFXtwrg/132" mode="widthFix"></image>
-        <image src="https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJzTZiciatBCickuevSAsGPxI4xJmZptoXibsTl8MxcBhae45y5hsxWWgrjafpYkSROSPqP3mbPHeAVUA/132" mode="widthFix"></image>
-        <image src="https://wx.qlogo.cn/mmopen/vi_32/cZ0jibwydlA3pVRYXKicTiaFNtsApQ8lbhTe757lTDaZ2IvibTI0JiaicGLyPzuS9Bwd1IH1zPyyS1c3PXpVibg7R1A5g/132" mode="widthFix"></image>
+        <view><image src="{{coursedetail.buy_img}}" mode="widthFix"></image></view>
         <view class="group_text">等{{coursedetail.buy_count}}人购买</view>
       </view>
       <view class="group_rule" bindtap="showgroup">
@@ -53,21 +50,34 @@
     <view id="navigation-wrap">
       <mp-sticky offset-top="0">
         <view class="navigation">
-          <view
+          <view bindtap="scrollTap" data-hash="one" class="column {{to_Id=='one' ? 'add':''}}">
+            详情
+          </view>
+          <view bindtap="scrollTap" data-hash="two" class="column {{to_Id=='two' ? 'add':''}}">
+            目录
+          </view>
+          <view bindtap="scrollTap" data-hash="three" class="column {{to_Id=='three' ? 'add':''}}">
+            评价
+          </view>
+          <view bindtap="scrollTap" data-hash="four" class="column {{to_Id=='four' ? 'add':''}}">
+            推荐
+          </view>
+          <!-- <view
             wx:for="{{tabList}}"
             wx:key="*this"
             class="column {{currentTabSub === index ? 'add' : ''}}"
             data-sub="{{index}}"
             bindtap="tabChange">
             {{item}}
-          </view>
+          </view> -->
         </view>
       </mp-sticky>
     </view>
       
 
     <!--详情-->
-    <view wx:if="{{currentTabSub === 0}}" class="default">
+<scroll-view style="height:{{winHeight}}" scroll-into-view="{{to_Id}}" scroll-y="true">
+  <view id="one" class="default">
       <block
         wx:if="{{coursedetail.detail}}"
       >
@@ -80,7 +90,7 @@
       </block>
     </view>
     <!--目录-->
-    <view wx:if="{{currentTabSub === 1}}" class="default">
+  <view id="two" class="default">
       <block
         wx:if="{{coursedetail.catalog_img}}"
       >
@@ -93,7 +103,7 @@
       </block>
     </view>
     <!--评价-->
-    <view wx:if="{{currentTabSub === 2}}" class="evaluation">
+  <view id="three" class="default">
       <block
         wx:if="{{coursedetail.appraise_img}}"
       >
@@ -106,7 +116,7 @@
       </block>
     </view>
     <!--推荐-->
-    <view wx:if="{{currentTabSub === 3}}" class="recommend">
+  <view id="four" class="recommend">
       <view class="recommend_title">相关推推荐</view>
       <view class="recommend_detailed">
         <view class="reco_deta_k" wx:for="{{recommendCourseData}}" wx:key="index" data-id="{{item.id}}" bindtap="details">
@@ -121,6 +131,7 @@
       </view>
     </view>
 
+  </scroll-view>
     <scroll-top isTopBtnShow="{{isTopBtnShow}}"></scroll-top>
 
     <!--底部购买-->
@@ -135,6 +146,7 @@
     <swiper
       autoplay="{{true}}"
       vertical="{{true}}"
+      easing-function="easeInOutCubic"
     >
       <block
         wx:for="{{broadcastData }}"

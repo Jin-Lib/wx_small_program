@@ -79,14 +79,14 @@ Page({
     API.getinfo({
       code: 0
     }).then(res => {//成功
-      console.log('res', res)
       const {
         nick_name, head_img, birthday,
         age, sex, phone
       } = res;
       if (nick_name && head_img && birthday && age && sex && phone) {
         this.setData({
-          userInfoFinish: nick_name
+          userInfoFinish: nick_name,
+          userInfo: res,
         })
       }
     })
@@ -98,15 +98,33 @@ Page({
     });
     this.getInfoData();
   },
-  
+  //点击进入合伙人
+  partner: function (event) {
+    wx.navigateTo({
+      url: '/pages/partner/partner-mall/index'
+    })
+  },
   //点击修改信息
   information: function (event) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
+
     wx.navigateTo({
       url: '/pages/user-info/index'
     })
   },
   //点击学分
   credit: function (event) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
     wx.navigateTo({
       url: '/pages/logs/logs'
     })
@@ -137,18 +155,36 @@ Page({
   },
   //点击我的订单
   order: function (event) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
     wx.navigateTo({
       url: '/pages/user-order/index'
     })
   },
   //点击意见反馈
   feedback: function (event) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
     wx.navigateTo({
       url: '/pages/user-feedback/index'
     })
   },
   //点击咨询客服
   advisory: function (event) {
+    if(!this.data.wxlogin) {
+      this.setData({
+        wxlogin: false
+      });
+      return;
+    }
     wx.navigateTo({
       url: '/pages/logs/logs'
     })

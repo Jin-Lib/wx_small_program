@@ -18,7 +18,7 @@
   </view>
   <view class="info_k">
     <view class="info_k_text">
-      <i></i>宝宝性别
+      宝宝性别
     </view>
     <view class="info_k_select_text">
       <picker
@@ -33,7 +33,7 @@
   </view>
   <view class="info_k" bindtap="recommendedAgeSelect">
     <view class="info_k_text">
-      <i></i>宝宝年龄
+      宝宝年龄
     </view>
     <view class="info_k_select_text">
       <picker
@@ -47,7 +47,7 @@
   </view>
   <view class="info_k" bindtap="birthdaySelect">
     <view class="info_k_text">
-      <i></i>宝宝生日
+      宝宝生日
     </view>
     <view class="info_k_select_text">
       <view class="info_k_select_text_birthday">
@@ -74,7 +74,7 @@
   </view>
   <view class="info_k" bindtap="aliPayAccountCancel">
     <view class="info_k_text">
-      <i></i>支付宝账号
+      支付宝账号
     </view>
     <view class="info_k_select_text tovh">
       {{infodetail.account}}
@@ -83,7 +83,7 @@
   </view>
   <view class="info_k" bindtap="aliPayNameCancel">
     <view class="info_k_text">
-      <i></i>支付宝姓名
+      支付宝姓名
     </view>
     <view class="info_k_select_text tovh">
       {{infodetail.account_name}}
@@ -169,6 +169,32 @@
     <view class="popup_anniu">
       <view class="anniu_qx" bindtap="babyBirthdyCancel">取消</view>
       <view class="anniu_qd" bindtap="babyBirthdyConfirm">确定</view>
+    </view>
+  </view>
+</view>
+
+
+<!--支付宝姓名弹窗-->
+<view class="name_popup" hidden="{{alipayhidden}}">
+  <view class="popup_input">
+    <input
+      placeholder="请输入支付宝帐号"
+       />
+    <view class="popup_anniu">
+      <view class="anniu_qx" bindtap="alipayCancel">取消</view>
+      <view class="anniu_qd" bindtap="alipayConfirm">确定</view>
+    </view>
+  </view>
+</view>
+<!--支付宝帐号弹窗-->
+<view class="name_popup" hidden="{{accounthidden}}">
+  <view class="popup_input">
+    <input
+      placeholder="请输入您的支付宝姓名"
+       />
+    <view class="popup_anniu">
+      <view class="anniu_qx" bindtap="accountCancel">取消</view>
+      <view class="anniu_qd" bindtap="accountConfirm">确定</view>
     </view>
   </view>
 </view>

@@ -1,395 +1,417 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"enhance": false,
-		"postcss": true,
-		"preloadBackgroundData": false,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"nodeModules": false,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"uglifyFileName": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"useMultiFrameRuntime": true,
-		"useApiHook": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false,
-		"packNpmManually": false,
-		"packNpmRelationList": []
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.12.1",
-	"appid": "wx84cb6cf7741fd661",
-	"projectname": "%E5%90%AF%E6%98%8E%E6%98%9F",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "pages/course/index",
-					"pathName": "pages/course/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/money/index",
-					"pathName": "pages/money/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/user/index",
-					"pathName": "pages/user/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/course-all/index",
-					"pathName": "pages/course-all/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 4,
-					"name": "pages/course-detail/index",
-					"pathName": "pages/course-detail/index",
-					"query": "id=1",
-					"scene": null
-				},
-				{
-					"id": 5,
-					"name": "pages/course-menu/index",
-					"pathName": "pages/course-menu/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 6,
-					"name": "pages/course-pay/index",
-					"pathName": "pages/course-pay/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 7,
-					"name": "pages/course-share/index",
-					"pathName": "pages/course-share/index",
-					"query": "groupId=5&id=1",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/course-play/index",
-					"pathName": "pages/course-play/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/course-search/index",
-					"pathName": "pages/course-search/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/user-spell-group/index",
-					"pathName": "pages/user-spell-group/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/user-info/index",
-					"pathName": "pages/user-info/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/user-coupons/index",
-					"pathName": "pages/user-coupons/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/user-order/index",
-					"pathName": "pages/user-order/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/user-feedback/index",
-					"pathName": "pages/user-feedback/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/user-challenge/index",
-					"pathName": "pages/user-challenge/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/user-privilege/index",
-					"pathName": "pages/user-privilege/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/user-extract/index",
-					"pathName": "pages/user-extract/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 18,
-					"name": "pages/partner/partner-mall/index",
-					"pathName": "pages/partner/partner-mall/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/user-bonus-income/index",
-					"pathName": "pages/user-bonus-income/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/successful-purchase/index",
-					"pathName": "pages/successful-purchase/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/course-details/index",
-					"pathName": "pages/partner/course-details/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/partner-class-share/index",
-					"pathName": "pages/partner/partner-class-share/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/partner-share/index",
-					"pathName": "pages/partner/partner-share/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/b-partner-share/index",
-					"pathName": "pages/partner/b-partner-share/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/b-course-details/index",
-					"pathName": "pages/partner/b-course-details/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/details/index",
-					"pathName": "pages/partner/details/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/b-partner-class-share/index",
-					"pathName": "pages/partner/b-partner-class-share/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/b-details/index",
-					"pathName": "pages/partner/b-details/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/share-details/index",
-					"pathName": "pages/partner/share-details/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/group-success/index",
-					"pathName": "pages/group-success/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/more-material/index",
-					"pathName": "pages/partner/more-material/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/explosion-more/index",
-					"pathName": "pages/explosion-more/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/user/index",
-					"pathName": "pages/partner/user/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/user-totalrevenue/index",
-					"pathName": "pages/partner/user-totalrevenue/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/user-totalrevenue-tuitionbonus/index",
-					"pathName": "pages/partner/user-totalrevenue-tuitionbonus/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/user-community/index",
-					"pathName": "pages/partner/user-community/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/user-community-teamseniorpartner/index",
-					"pathName": "pages/partner/user-community-teamseniorpartner/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/user-withdraw/index",
-					"pathName": "pages/partner/user-withdraw/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/b-course-details/index",
-					"pathName": "pages/partner/b-course-details/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/user-temporaryfans/index",
-					"pathName": "pages/partner/user-temporaryfans/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/user-lockpowder/index",
-					"pathName": "pages/partner/user-lockpowder/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/b-user-lockpowder/index",
-					"pathName": "pages/partner/b-user-lockpowder/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/user-introduction/index",
-					"pathName": "pages/partner/user-introduction/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/user-visitors/index",
-					"pathName": "pages/partner/user-visitors/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/partner/user-addressbook/index",
-					"pathName": "pages/partner/user-addressbook/index",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.12.1",
+  "appid": "wx84cb6cf7741fd661",
+  "projectname": "%E5%90%AF%E6%98%8E%E6%98%9F",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/course/index",
+          "pathName": "pages/course/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/money/index",
+          "pathName": "pages/money/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/user/index",
+          "pathName": "pages/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/course-all/index",
+          "pathName": "pages/course-all/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 4,
+          "name": "pages/course-detail/index",
+          "pathName": "pages/course-detail/index",
+          "query": "id=2",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "pages/course-menu/index",
+          "pathName": "pages/course-menu/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 6,
+          "name": "pages/course-pay/index",
+          "pathName": "pages/course-pay/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 7,
+          "name": "pages/course-share/index",
+          "pathName": "pages/course-share/index",
+          "query": "groupId=5&id=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/course-play/index",
+          "pathName": "pages/course-play/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/course-search/index",
+          "pathName": "pages/course-search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/user-spell-group/index",
+          "pathName": "pages/user-spell-group/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/user-info/index",
+          "pathName": "pages/user-info/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/user-coupons/index",
+          "pathName": "pages/user-coupons/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/user-order/index",
+          "pathName": "pages/user-order/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/user-feedback/index",
+          "pathName": "pages/user-feedback/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/user-challenge/index",
+          "pathName": "pages/user-challenge/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/user-privilege/index",
+          "pathName": "pages/user-privilege/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/user-extract/index",
+          "pathName": "pages/user-extract/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 18,
+          "name": "pages/partner/partner-mall/index",
+          "pathName": "pages/partner/partner-mall/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/user-bonus-income/index",
+          "pathName": "pages/user-bonus-income/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/successful-purchase/index",
+          "pathName": "pages/successful-purchase/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/course-details/index",
+          "pathName": "pages/partner/course-details/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/partner-class-share/index",
+          "pathName": "pages/partner/partner-class-share/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/partner-share/index",
+          "pathName": "pages/partner/partner-share/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/b-partner-share/index",
+          "pathName": "pages/partner/b-partner-share/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/b-course-details/index",
+          "pathName": "pages/partner/b-course-details/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/details/index",
+          "pathName": "pages/partner/details/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/b-partner-class-share/index",
+          "pathName": "pages/partner/b-partner-class-share/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/b-details/index",
+          "pathName": "pages/partner/b-details/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/share-details/index",
+          "pathName": "pages/partner/share-details/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/group-success/index",
+          "pathName": "pages/group-success/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/more-material/index",
+          "pathName": "pages/partner/more-material/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/explosion-more/index",
+          "pathName": "pages/explosion-more/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user/index",
+          "pathName": "pages/partner/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-totalrevenue/index",
+          "pathName": "pages/partner/user-totalrevenue/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-totalrevenue-tuitionbonus/index",
+          "pathName": "pages/partner/user-totalrevenue-tuitionbonus/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-community/index",
+          "pathName": "pages/partner/user-community/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-community-teamseniorpartner/index",
+          "pathName": "pages/partner/user-community-teamseniorpartner/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-withdraw/index",
+          "pathName": "pages/partner/user-withdraw/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/b-course-details/index",
+          "pathName": "pages/partner/b-course-details/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-temporaryfans/index",
+          "pathName": "pages/partner/user-temporaryfans/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-lockpowder/index",
+          "pathName": "pages/partner/user-lockpowder/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/b-user-lockpowder/index",
+          "pathName": "pages/partner/b-user-lockpowder/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-introduction/index",
+          "pathName": "pages/partner/user-introduction/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-visitors/index",
+          "pathName": "pages/partner/user-visitors/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/partner/user-addressbook/index",
+          "pathName": "pages/partner/user-addressbook/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/money/index",
+          "pathName": "pages/money/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/course-search/index",
+          "pathName": "pages/course-search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/course-search-detail/index",
+          "pathName": "pages/course-search-detail/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

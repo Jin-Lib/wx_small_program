@@ -18,6 +18,7 @@ Page({
     currentTabSub: 0, // 记录当前tab下标
     isTopBtnShow: false, // 是否展示返回顶部按钮
     coursedetail: {},
+    userInfo: {},
 
     // 跑马灯
     broadcastData: [],
@@ -32,29 +33,54 @@ Page({
     videoUrl: '',
 
     id: '',
+    userId: '',
     wxlogin: true,
+    winHeight: '100%',
+    to_Id: 'one', //锚点跳转的ID
 
   },
 
   onLoad: function (options) {
+    let that = this;
+    wx.getSystemInfo({
+      success: function(res) {
+        console.log(res)
+        //屏幕的宽度/屏幕的高度 = 微信固定宽度(750)/微信高度
+        that.setData({
+          // 80是上面导航条的高度
+          winHeight: res.windowHeight - (res.windowWidth * 80 / 750) + 'px'
+        })
+      }
+    });
+    const { id, userId } = options;
+    if(userId) {
+      wx.setStorageSync('userId', userId)
+    }
     this.setData({
-      id: options.id
+      id,
+      userId
     }, () => {
       this.initData();
     });
+  },
+  scrollTap: function(e) {
+    this.setData({
+      to_Id: e.target.dataset.hash
+    })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.isLogin();
+    this.isLogin(this);
   },
 
   initData: function() {
     this.getdetailData(this.data.id);
     this.getBroadcast();
     this.recommendData();
+    this.data.wxlogin && this.getInfoData();
   },
 
   // 跑马灯
@@ -81,7 +107,7 @@ Page({
       id
     }).then(res => {//成功
       //const { rows } = res || {};
-
+      console.log(res)
       if(res && res.isBuy) {
         wx.getSystemInfo({
           success: function (res) {
@@ -359,27 +385,37 @@ Page({
   },
 
   // 是否登录
-  isLogin: function() {
+  isLogin: async (that) => {
+    let login = await Auth.isLogin();
+
+    that.setData({
+      wxlogin: login
+    });
+
+    if(login) {
+      // 锁粉
+      that.lockFans(that.data.userId);
+      that.getInfoData();
+    }
+
     // 是否登录
-    Auth.checkHasLogined()
-      .then(res => {
-        if(res) {
-          this.setData({
-            wxlogin: true
-          }, () => {
-            // 用户登录之后查看当前个人资料是否填写
-            // this.getinfoData()
-          });
-        } else {
-          this.setData({
-            wxlogin: false
-          });
-        }
-      }).catch(e => {
-        this.setData({
-          wxlogin: false
-        });
-      })
+    // Auth.checkHasLogined()
+    //   .then(res => {
+    //     console.log(res, 'res')
+    //     if(res) {
+    //       this.setData({
+    //         wxlogin: true
+    //       });
+    //     } else {
+    //       this.setData({
+    //         wxlogin: false
+    //       });
+    //     }
+    //   }).catch(e => {
+    //     this.setData({
+    //       wxlogin: false
+    //     });
+    //   })
   },
 
   getUserInfoDetail: function() {
@@ -387,5 +423,47 @@ Page({
       wxlogin: true
     });
     this.initData();
+  },
+
+  /**
+   * 获取当前用户个人资料
+   * @date 2020-09-14
+   * @returns {any}
+   */
+  getInfoData: function () {
+    API.getinfo({
+      code: 0
+    }).then(res => {//成功
+      
+      this.setData({
+        userInfo: res
+      });
+    })
+  },
+
+  lockFans: function(id) {
+    API.clickFans({
+      superior_id: id
+    }).then(res => {//成功
+      
+    })
+  },
+
+
+  // 分享
+  onShareAppMessage: function(res) {
+    const { id, title, subtitle, main_img } = this.data.coursedetail || {};
+
+    return {
+      title: title,
+      path: `/pages/course-detail/index?id=${id}&userId=${this.data.userInfo.user_id}`,
+      imageUrl: main_img,
+      desc: subtitle,
+      // 
+      success: (res) => {
+      },
+      fail: (res) => {
+      }
+    };
   },
 })
