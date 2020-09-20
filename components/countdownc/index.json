@@ -1,4 +1,3 @@
 {
-  "navigationBarTitleText": "开关组件",
-  "usingComponents": {}
+  "component": true
 }
