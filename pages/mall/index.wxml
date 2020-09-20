@@ -3,10 +3,10 @@
   合伙人临时入口
 </view>
 
-<!--浮窗活动-->
+<!--浮窗活动
 <view class="bottom_advertising" bindtap="bottom_advertising">
   <image src="http://cdn.koalaxiezi.com/qimingxing/img/fhuodong.png" name="浮窗活动" mode="widthFix"></image>
-</view>
+</view>-->
 
 <!--顶部搜索-->
 
@@ -91,9 +91,10 @@
       </view>
     </block>
   </view>
+  <!--活动板块
   <view class="index_hd">
     <image src="http://cdn.koalaxiezi.com/qimingxing/img/huodong.png" mode="widthFix"></image>
-  </view>
+  </view>-->
   <view class="xin_category">
     <view class="xin_drenwu"><image src="http://cdn.koalaxiezi.com/qimingxing/img/maotouying.png" mode="widthFix"></image></view>
     <view class="xin_category_title">限时爆款</view>

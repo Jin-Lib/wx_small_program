@@ -49,6 +49,8 @@ page{background-color: #f5f5f5;}
 .order_img{width: 50rpx;}
 .order_img image{width: 50rpx;}
 .order_img_jp{width: 20rpx;margin-top: 6rpx;margin-left:400rpx;}
+.order_img_jp1{width: 20rpx;margin-top: 6rpx;margin-left:360rpx;}
+.order_img_jp1 image{width: 20rpx;margin-top: 6rpx;margin-left:10rpx;}
 .order_img_jp image{width: 20rpx;}
 .text_order{margin-top: 3rpx;margin-left: 50rpx;font-size: 28rpx;}
 

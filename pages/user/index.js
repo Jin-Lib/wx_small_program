@@ -98,7 +98,12 @@ Page({
     });
     this.getInfoData();
   },
-  
+  //点击进入合伙人
+  partner: function (event) {
+    wx.navigateTo({
+      url: '/pages/partner/partner-mall/index'
+    })
+  },
   //点击修改信息
   information: function (event) {
     if(!this.data.wxlogin) {

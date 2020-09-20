@@ -1,7 +1,7 @@
-<!--浮窗活动-->
+<!--浮窗活动
 <view class="bottom_advertising" bindtap="bottom_advertising">
   <image src="http://cdn.koalaxiezi.com/ceshi/3.png" name="浮窗活动" mode="widthFix"></image>
-</view>
+</view>-->
 
 
 <!--我的拼团文字-->
