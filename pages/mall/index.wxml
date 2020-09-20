@@ -230,7 +230,7 @@
           <view class="inte_text_title">
             <view class="inte_text_title_title">{{item.title}}</view>
             <view class="inte_text_title_label">
-              <i>{{item.label}}</i>
+              <i wx:for="{{item.label}}" wx:for-item="itemData" wx:key="itemData">{{itemData}}</i>
             </view>
             <view class="inte_text_title_Watch">{{item.buy_count}}万人播放</view>
           </view>
@@ -259,7 +259,9 @@
               </view>
               <view class="xin_menu">
                 <view class="sort_title">{{itemData.title}}</view>
-                <view class="sort_spikekp"><i>{{itemData.label}}</i></view>
+                <view class="sort_spikekp">
+                  <i wx:for="{{itemData.label}}" wx:for-item="itemSec" wx:key="itemSec">{{itemSec}}</i>
+                </view>
                 <view class="sort_gk">
                   <image src="../../resource/guank.png" mode="widthFix"></image>
                   <span>已有{{itemData.buy_count}}人观看</span>
@@ -290,7 +292,9 @@
     <view class="reco_text">
       <view class="reco_text_title">{{item.title}}</view>
       <!-- <view class="reco_text_introduction">9天提升科学探索欲望</view> -->
-                <view class="sort_spikekp"><i>{{item.label}}</i></view>
+      <view class="sort_spikekp">
+        <i wx:for="{{item.label}}" wx:for-item="itemSec" wx:key="itemSec">{{itemSec}}</i>
+      </view>
       <view class="reco_buy">
         <!-- <view class="buy_img">
           <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKdHSx7Q5yqUbPian0hrUNElOVQOFoFRmmhCZkHshLvGjO99usZtA4xdfz3p4lRldiaIuZ2NueqCLjw/132" mode="widthFix"></image>

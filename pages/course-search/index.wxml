@@ -138,7 +138,7 @@
                   <view class="sort_title">{{item.title}}</view>
                   <view class="sort_title2">{{item.subtitle}}</view>
                   <view class="sort_spikekp">
-                      <i>{{item.label}}</i>
+                      <i wx:for="{{item.label}}" wx:for-item="itemSec" wx:key="itemSec">{{itemSec}}</i>
                     <!-- <i>自然地理</i><i>自然地理</i><i>自然地理</i> -->
                   </view>
                   <view class="sort_gk">
