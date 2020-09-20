@@ -46,6 +46,12 @@ Page({
       })
     })
   },
+  //点击商品详情
+  details: function (e) {
+    wx.navigateTo({
+      url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}`
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

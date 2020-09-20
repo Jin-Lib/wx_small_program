@@ -127,7 +127,7 @@
 
 <block wx:for="{{searchCourseList.items}}" data-item="item" wx:for-index="idx">
   <view class="menu_lei">
-      <view class="xin_arrival_ziu" bindtap="details">
+      <view class="xin_arrival_ziu" bindtap="details" data-id="{{item.id}}">
         <view class="arrival">
           <view class="arri_sort1">
               <view class="sort_k">
