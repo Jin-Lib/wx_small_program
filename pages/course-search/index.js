@@ -53,6 +53,30 @@ Page({
       url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}`
     })
   },
+
+  searchSubmit: function (e) {
+    this.setData({
+      hiddenyc:!this.data.hiddenyc
+  })
+    const keywords = e.detail.value
+    console.log(keywords)
+      API.searchCourseList({
+        name: keywords,
+      }).then(res => {//成功
+        this.setData({
+          searchCourseList: res,
+          searchCourseListw: res.items,
+        });
+        console.log(res.items)
+      }).catch(err => {
+        wx.showToast({//错误
+          title: err,
+          icon: 'none',
+          duration: 1000
+        })
+      })
+  },
+
   //点击热门搜索词
   keywordOnlick: function (e) {
     this.setData({

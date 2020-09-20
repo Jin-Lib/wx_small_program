@@ -15,7 +15,7 @@
     <view class="search_top">
       <view class='rt_pos' bindtap="findex"></view>
       <view class="search_search">
-        <input type='text' placeholder='请您输入想要的搜索内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+        <input type='text' placeholder='请您输入想要的搜索内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm="searchSubmit"></input>
       </view>
       <!-- <view class="search_cancel">取消</view> -->
     </view>
