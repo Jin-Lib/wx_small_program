@@ -17,7 +17,9 @@
       </view>
       <view class="grounp_text">
         <view class="grounp_title">{{item.title}}</view>
-        <view class="grpunp_sj">剩余时间：30小时20分18秒</view>
+        <view class="grpunp_sj">
+          <countDownC format="{{formatTime}}" target="{{creatTargetTime}}" />
+        </view>
       </view>
       <view class="share" data-id="{{item.course_id}}" data-groupid="{{item.group_id}}" bindtap="invitefriends">邀好友拼团</view>
     </view>

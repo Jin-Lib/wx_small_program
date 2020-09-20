@@ -20,7 +20,8 @@
     <block wx:else>
       <view class="share_top_title">邀请{{groupInfo.groupNum - length}}个新用户，即可成团</view><!--邀请2个用户，即可成团-->
       <!-- <view class="share_top_time">离结束<i>{{days}}</i>:<i>58</i>:<i>42</i>:<i>{{seconds}}</i></view> -->
-      <countDown bind:onEnd="getPageList" format="{{formatTime}}" target="{{creatTargetTime}}" />
+      <!-- bind:onEnd="getPageList" -->
+      <countDown format="{{formatTime}}" target="{{creatTargetTime}}" />
     </block>
   </block>
   <block wx:else>
@@ -46,7 +47,7 @@
       <view class="share_top_title">仅剩{{groupInfo.groupNum - length}}个名额，先到先得</view>
       <!-- <view class="share_top_time">离结束<i>{{days}}</i>:<i>58</i>:<i>42</i>:<i>{{seconds}}</i></view> -->
       <block wx:if="{{creatTargetTime}}">
-        <countDown bind:onEnd="getPageList" format="{{formatTime}}" target="{{creatTargetTime}}" />
+        <countDown format="{{formatTime}}" target="{{creatTargetTime}}" />
       </block>
     </block>
   </block>

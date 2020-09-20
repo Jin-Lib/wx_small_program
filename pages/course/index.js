@@ -4,6 +4,27 @@ const app = getApp()
 const API = require('../../config/api');
 const Auth = require('../../utils/auth');
 
+const formatTime = (mss) => {
+  let days = parseInt(mss / (1000 * 60 * 60 * 24));
+  let hours = parseInt((mss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = parseInt((mss % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = parseInt((mss % (1000 * 60)) / 1000);
+
+  // this.setData({
+  //   days,
+  //   hours,
+  //   minutes,
+  //   seconds
+  // });
+  // return '';
+  return fixedZero(days) + ' : ' + fixedZero(hours) + ' : ' + fixedZero(minutes) + ' : ' + fixedZero(seconds);
+
+}
+
+function fixedZero(val) {
+  return val * 1 < 10 ? '0' + val : val;
+}
+
 Page({
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -17,6 +38,9 @@ Page({
     courseData: [],
     
     wxlogin: true,
+
+    formatTime: formatTime,
+    creatTargetTime: 1601424000000,
 
     showMore: true,
     showCourseMore: true
