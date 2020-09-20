@@ -172,29 +172,3 @@
     </view>
   </view>
 </view>
-
-
-<!--支付宝姓名弹窗-->
-<view class="name_popup" hidden="{{alipayhidden}}">
-  <view class="popup_input">
-    <input
-      placeholder="请输入支付宝帐号"
-       />
-    <view class="popup_anniu">
-      <view class="anniu_qx" bindtap="alipayCancel">取消</view>
-      <view class="anniu_qd" bindtap="alipayConfirm">确定</view>
-    </view>
-  </view>
-</view>
-<!--支付宝帐号弹窗-->
-<view class="name_popup" hidden="{{accounthidden}}">
-  <view class="popup_input">
-    <input
-      placeholder="请输入您的支付宝姓名"
-       />
-    <view class="popup_anniu">
-      <view class="anniu_qx" bindtap="accountCancel">取消</view>
-      <view class="anniu_qd" bindtap="accountConfirm">确定</view>
-    </view>
-  </view>
-</view>
