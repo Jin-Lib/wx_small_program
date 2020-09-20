@@ -1,6 +1,7 @@
 //index.js
 
 const app = getApp()
+const API = require('../../config/api');
 Page({
   data: {
     linkToKeywords: {},
@@ -9,7 +10,7 @@ Page({
       showCapsule: 1
     },
     statusBarHeight: app.globalData.statusBarHeight,
-    
+    keyword:[]
   },
   //--搜索页--
   hhsr: function (event) {
@@ -50,7 +51,25 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.getkeyword();
 
+  },
+  
+  getkeyword: function () {
+    API.getkeyword({
+      code: 0
+    }).then(res => {//成功
+      this.setData({
+        keyword: res,
+      });
+      console.log(res.list)
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
   },
 
 })

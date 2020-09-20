@@ -28,15 +28,17 @@
 <view class="popular_search">
   <view class="popular_title">热门搜索</view>
   <view class="popular_text">
-    <view class="text_titlt">免费<i class="colour_red">热</i></view>
-    <view class="text_titlt">大语文<i class="colour_orange">新</i></view>
+    <block wx:for="{{keyword.list}}" data-item="item" wx:for-index="idx" >
+      <view class="text_titlt" bindtap="keyword{{idx}}">{{item.keyword}}</view>
+    </block>
+    <!-- <view class="text_titlt">大语文<i class="colour_orange">新</i></view>
     <view class="text_titlt">棋圣</view>
     <view class="text_titlt">恐龙世界<i class="colour_red">热</i></view>
     <view class="text_titlt">恐龙世界<i class="colour_red">热</i></view>
     <view class="text_titlt">棋圣</view>
     <view class="text_titlt">恐龙世界<i class="colour_red">热</i></view>
     <view class="text_titlt">大语文</view>
-    <view class="text_titlt">恐龙世界</view>
+    <view class="text_titlt">恐龙世界</view> -->
   </view>
 </view>
 
