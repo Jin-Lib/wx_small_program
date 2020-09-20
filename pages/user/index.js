@@ -11,7 +11,6 @@ Page({
   },
 
   onLoad: function () {
-    this.getInfoData();
   },
   /**
    * 生命周期函数--监听页面显示
@@ -83,10 +82,12 @@ Page({
         nick_name, head_img, birthday,
         age, sex, phone
       } = res;
+      this.setData({
+        userInfo: res,
+      })
       if (nick_name && head_img && birthday && age && sex && phone) {
         this.setData({
           userInfoFinish: nick_name,
-          userInfo: res,
         })
       }
     })
