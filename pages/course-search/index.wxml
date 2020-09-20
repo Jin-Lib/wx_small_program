@@ -15,7 +15,7 @@
     <view class="search_top">
       <view class='rt_pos' bindtap="findex"></view>
       <view class="search_search">
-        <input type='text' placeholder='请您输入想要的搜索内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+        <input type='text' placeholder='请您输入想要的搜索内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm="searchSubmit"></input>
       </view>
       <!-- <view class="search_cancel">取消</view> -->
     </view>
@@ -24,12 +24,12 @@
 <view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
 
 
-
+<view class="buttonyc" hidden="{{hiddenyc}}">
 <view class="popular_search">
   <view class="popular_title">热门搜索</view>
   <view class="popular_text">
     <block wx:for="{{keyword.list}}" data-item="item" wx:for-index="idx" >
-      <view class="text_titlt" bindtap="keyword{{idx}}">{{item.keyword}}</view>
+      <view class="text_titlt" bindtap="keywordOnlick" data-text="{{item.keyword}}">{{item.keyword}}</view>
     </block>
     <!-- <view class="text_titlt">大语文<i class="colour_orange">新</i></view>
     <view class="text_titlt">棋圣</view>
@@ -54,7 +54,7 @@
     <view class="text_titlt">恐龙世界</view>
   </view>
 </view>
-
+<!-- 
 <view class="hot_search">
   <view class="hot_title">实时热搜</view>
   <view class="hot_k">
@@ -121,9 +121,9 @@
     </view>
 
   </view>
+</view> -->
+
 </view>
-
-
 
 <block wx:for="{{searchCourseList.items}}" data-item="item" wx:for-index="idx">
   <view class="menu_lei">

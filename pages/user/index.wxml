@@ -117,15 +117,15 @@
       </view>
     </view>
 
-    <view class="service_order" bindtap="partner">
+    <!-- <view class="service_order" bindtap="partner">
       <view class="order_img">
-        <!-- <image src="../../resource/user/grzx_icon06.png" mode="widthFix"></image> -->
+        <image src="../../resource/user/grzx_icon06.png" mode="widthFix"></image>
       </view>
       <view class="text_order">合伙人商城</view>
       <view class="order_img_jp1">
         <image src="../../resource/user/grzx_icon05.png" mode="widthFix"></image>
       </view>
-    </view>
+    </view> -->
 
   </view>
 

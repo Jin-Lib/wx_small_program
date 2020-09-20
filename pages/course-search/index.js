@@ -4,6 +4,7 @@ const app = getApp()
 const API = require('../../config/api');
 Page({
   data: {
+    hiddenyc:false,
     linkToKeywords: {},
     //默认值  默认显示左上角
     navbarData: {
@@ -52,6 +53,53 @@ Page({
       url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}`
     })
   },
+
+  searchSubmit: function (e) {
+    this.setData({
+      hiddenyc:true
+  })
+    const keywords = e.detail.value
+    console.log(keywords)
+      API.searchCourseList({
+        name: keywords,
+      }).then(res => {//成功
+        this.setData({
+          searchCourseList: res,
+          searchCourseListw: res.items,
+        });
+        console.log(res.items)
+      }).catch(err => {
+        wx.showToast({//错误
+          title: err,
+          icon: 'none',
+          duration: 1000
+        })
+      })
+  },
+
+  //点击热门搜索词
+  keywordOnlick: function (e) {
+    this.setData({
+      hiddenyc:!this.data.hiddenyc
+  })
+    const keywords = e.currentTarget.dataset.text
+    // console.log(keywords)
+      API.searchCourseList({
+        name: keywords,
+      }).then(res => {//成功
+        this.setData({
+          searchCourseList: res,
+          searchCourseListw: res.items,
+        });
+        console.log(res.items)
+      }).catch(err => {
+        wx.showToast({//错误
+          title: err,
+          icon: 'none',
+          duration: 1000
+        })
+      })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
@@ -59,23 +107,6 @@ Page({
     this.getkeyword();
     this.searchCourseList();
 
-  },
-  searchCourseList: function () {
-    API.searchCourseList({
-      name: `发电`
-    }).then(res => {//成功
-      this.setData({
-        searchCourseList: res,
-        searchCourseListw: res.items,
-      });
-      console.log(res.items)
-    }).catch(err => {
-      wx.showToast({//错误
-        title: err,
-        icon: 'none',
-        duration: 1000
-      })
-    })
   },
   //热词搜索
   getkeyword: function () {
