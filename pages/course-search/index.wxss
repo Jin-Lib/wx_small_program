@@ -108,7 +108,7 @@ input{padding: 8rpx 30rpx;}
 .popular_search{ padding: 10rpx 30rpx;width: 690rpx; margin-top: 30rpx;}
 .popular_title{font-size: 30rpx; color: #000;font-weight: 600;}
 .popular_text{display: flex;flex-wrap: wrap;margin-top: 20rpx; font-size: 22rpx;}
-.text_titlt{padding: 15rpx 25rpx; border-radius: 30rpx; background-color: #fff;margin-top: 20rpx;}
+.text_titlt{padding: 15rpx 25rpx; border-radius: 30rpx; background-color: #fff;margin-top: 20rpx;margin-left:15rpx;}
 .colour_red{border-radius: 50%; background-color: #fc4850;font-size: 20rpx; color: #fff; padding: 4rpx 8rpx; margin-left: 10rpx;}
 .colour_orange{border-radius: 50%; background-color: #f86f22;font-size: 20rpx; color: #fff; padding: 4rpx 8rpx; margin-left: 10rpx;}
 .history_search{ padding: 10rpx 30rpx;width: 690rpx; margin-top: 30rpx;}

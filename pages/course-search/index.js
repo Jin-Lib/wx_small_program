@@ -10,7 +10,6 @@ Page({
       showCapsule: 1
     },
     statusBarHeight: app.globalData.statusBarHeight,
-    keyword:[]
   },
   //--搜索页--
   hhsr: function (event) {
@@ -52,9 +51,27 @@ Page({
    */
   onShow: function () {
     this.getkeyword();
+    this.searchCourseList();
 
   },
-  
+  searchCourseList: function () {
+    API.searchCourseList({
+      name: `发电`
+    }).then(res => {//成功
+      this.setData({
+        searchCourseList: res,
+        searchCourseListw: res.items,
+      });
+      console.log(res.items)
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
+  },
+  //热词搜索
   getkeyword: function () {
     API.getkeyword({
       code: 0
@@ -62,7 +79,6 @@ Page({
       this.setData({
         keyword: res,
       });
-      console.log(res.list)
     }).catch(err => {
       wx.showToast({//错误
         title: err,
