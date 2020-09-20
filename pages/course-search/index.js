@@ -52,6 +52,27 @@ Page({
       url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}`
     })
   },
+  //点击热门搜索词
+  keywordOnlick: function (e) {
+    const keywords = e.currentTarget.dataset.text
+    console.log(keywords)
+    
+      API.searchCourseList({
+        name: keywords,
+      }).then(res => {//成功
+        this.setData({
+          searchCourseList: res,
+          searchCourseListw: res.items,
+        });
+        console.log(res.items)
+      }).catch(err => {
+        wx.showToast({//错误
+          title: err,
+          icon: 'none',
+          duration: 1000
+        })
+      })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
@@ -59,23 +80,6 @@ Page({
     this.getkeyword();
     this.searchCourseList();
 
-  },
-  searchCourseList: function () {
-    API.searchCourseList({
-      name: `发电`
-    }).then(res => {//成功
-      this.setData({
-        searchCourseList: res,
-        searchCourseListw: res.items,
-      });
-      console.log(res.items)
-    }).catch(err => {
-      wx.showToast({//错误
-        title: err,
-        icon: 'none',
-        duration: 1000
-      })
-    })
   },
   //热词搜索
   getkeyword: function () {
