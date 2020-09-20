@@ -49,8 +49,10 @@ Page({
     tabChangeList: ['详情', '目录', '评价'], // tab切换目录
     currentTabSub: 0, // tab切换下标
 
+    userId: '',
     groupId: '',
     groupInfo: {},
+    userInfo: {},
     users: [],
     length: 0,
     coursedetail: {},
@@ -78,8 +80,12 @@ Page({
   },
 
   onLoad: function (options) {
-    const { groupId, id, share } = options;
+    const { groupId, id, share, userId } = options;
+    if(userId) {
+      wx.setStorageSync('userId', userId)
+    }
     this.setData({
+      userId,
       groupId,
       id,
       isShare: share == 'true'
@@ -100,6 +106,15 @@ Page({
     this.getdetailData();
     this.recommendData();
   },
+
+  lockFans: function(id) {
+    API.clickFans({
+      superior_id: id
+    }).then(res => {//成功
+      
+    })
+  },
+
 
   // 获取团信息
   groupInfoData: function () {
@@ -279,7 +294,7 @@ Page({
 
     return {
       title: coursedetail.title || "",
-      path: `/pages/course-share/index?groupId=${groupId}&id=${id}`,
+      path: `/pages/course-share/index?groupId=${groupId}&id=${id}&userId=${this.data.userInfo.user_id}`,
       imageUrl: coursedetail.main_img,
       desc: `仅差${groupInfo.groupNum}人拼团成功!${coursedetail.subtitle}`,
       // 
@@ -381,7 +396,8 @@ Page({
             wxlogin: true
           }, () => {
             // 用户登录之后查看当前个人资料是否填写
-            // this.getinfoData()
+            this.getinfoData();
+            this.data.userId && this.lockFans(this.data.userId);
           });
         } else {
           this.setData({
