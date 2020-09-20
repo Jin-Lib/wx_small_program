@@ -56,7 +56,7 @@ Page({
 
   searchSubmit: function (e) {
     this.setData({
-      hiddenyc:!this.data.hiddenyc
+      hiddenyc:true
   })
     const keywords = e.detail.value
     console.log(keywords)
