@@ -54,7 +54,7 @@
     <view class="text_titlt">恐龙世界</view>
   </view>
 </view>
-
+<!-- 
 <view class="hot_search">
   <view class="hot_title">实时热搜</view>
   <view class="hot_k">
@@ -121,7 +121,7 @@
     </view>
 
   </view>
-</view>
+</view> -->
 
 </view>
 
