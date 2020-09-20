@@ -96,7 +96,6 @@
     <image src="http://cdn.koalaxiezi.com/qimingxing/img/huodong.png" mode="widthFix"></image>
   </view>-->
   <view class="xin_category">
-    <view class="xin_drenwu"><image src="http://cdn.koalaxiezi.com/qimingxing/img/maotouying.png" mode="widthFix"></image></view>
     <view class="xin_category_title">限时爆款</view>
     <view class="xin_category_text">爆款先知道 每天一个惊喜折扣</view>
     <!--限时爆款课程图-->
@@ -119,7 +118,6 @@
 
 
 <view class="xin_arrival">
-    <view class="xin_arrival_drenwu"><image src="http://cdn.koalaxiezi.com/qimingxing/img/icon_01.png" mode="widthFix"></image></view>
   <!--最新上架文字-->
   <view class="xin_category_title">最新上架</view>
   <view class="xin_category_text">与小朋友们 一同快乐成长</view>
@@ -164,7 +162,6 @@
 
 
 <view class="xin_arrival_re">
-    <view class="xin_arrival_re_drenwu"><image src="http://cdn.koalaxiezi.com/qimingxing/img/icon_02.png" mode="widthFix"></image></view>
   <!--今日热销文字-->
   <view class="xin_category_title">今日热销</view>
   <view class="xin_category_text">精彩内容 马上更新</view>
