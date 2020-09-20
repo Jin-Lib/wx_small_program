@@ -24,7 +24,7 @@
 <view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
 
 
-
+<view class="buttonyc" hidden="{{hiddenyc}}">
 <view class="popular_search">
   <view class="popular_title">热门搜索</view>
   <view class="popular_text">
@@ -123,7 +123,7 @@
   </view>
 </view>
 
-
+</view>
 
 <block wx:for="{{searchCourseList.items}}" data-item="item" wx:for-index="idx">
   <view class="menu_lei">

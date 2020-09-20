@@ -4,6 +4,7 @@ const app = getApp()
 const API = require('../../config/api');
 Page({
   data: {
+    hiddenyc:false,
     linkToKeywords: {},
     //默认值  默认显示左上角
     navbarData: {
@@ -54,9 +55,11 @@ Page({
   },
   //点击热门搜索词
   keywordOnlick: function (e) {
+    this.setData({
+      hiddenyc:!this.data.hiddenyc
+  })
     const keywords = e.currentTarget.dataset.text
-    console.log(keywords)
-    
+    // console.log(keywords)
       API.searchCourseList({
         name: keywords,
       }).then(res => {//成功
