@@ -410,6 +410,13 @@
           "pathName": "pages/course-search-detail/index",
           "query": "",
           "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/course-search/index",
+          "pathName": "pages/course-search/index",
+          "query": "id=2",
+          "scene": null
         }
       ]
     }

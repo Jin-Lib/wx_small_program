@@ -152,7 +152,12 @@ const API =  {
     url: `${host}/api/user/bind`,
     method: 'POST'
   },
-
+  
+  // 课程搜索
+  'keyword': {
+    url: `${host}/api/course/keyword`,
+    method: 'GET'
+  },
   // ================ 合伙人接口写下面 ==================
 
   // 合伙人详情
