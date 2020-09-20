@@ -31,7 +31,7 @@
         bindcolumnchange="classificationColumnChange"
         value="{{classificationIndex}}"
         range="{{classification}}"
-        class="more1">
+        class="more1" style="padding:3rpx">
         <view class="more1">
           {{classification[1][classificationIndex[1]]}}
           <i class="more_right1"></i>

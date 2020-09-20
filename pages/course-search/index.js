@@ -1,6 +1,7 @@
 //index.js
 
 const app = getApp()
+const API = require('../../config/api');
 Page({
   data: {
     linkToKeywords: {},
@@ -9,7 +10,6 @@ Page({
       showCapsule: 1
     },
     statusBarHeight: app.globalData.statusBarHeight,
-    
   },
   //--搜索页--
   hhsr: function (event) {
@@ -46,11 +46,52 @@ Page({
       })
     })
   },
+  //点击商品详情
+  details: function (e) {
+    wx.navigateTo({
+      url: `/pages/course-detail/index?id=${e.currentTarget.dataset.id}`
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.getkeyword();
+    this.searchCourseList();
 
+  },
+  searchCourseList: function () {
+    API.searchCourseList({
+      name: `发电`
+    }).then(res => {//成功
+      this.setData({
+        searchCourseList: res,
+        searchCourseListw: res.items,
+      });
+      console.log(res.items)
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
+  },
+  //热词搜索
+  getkeyword: function () {
+    API.getkeyword({
+      code: 0
+    }).then(res => {//成功
+      this.setData({
+        keyword: res,
+      });
+    }).catch(err => {
+      wx.showToast({//错误
+        title: err,
+        icon: 'none',
+        duration: 1000
+      })
+    })
   },
 
 })

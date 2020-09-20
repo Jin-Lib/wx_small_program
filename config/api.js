@@ -154,9 +154,9 @@ const API =  {
   },
   
   // 课程搜索
-  'keyword': {
+  'getkeyword': {
     url: `${host}/api/course/keyword`,
-    method: 'GET'
+    method: 'POST'
   },
   // ================ 合伙人接口写下面 ==================
 

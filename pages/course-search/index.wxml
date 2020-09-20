@@ -28,15 +28,17 @@
 <view class="popular_search">
   <view class="popular_title">热门搜索</view>
   <view class="popular_text">
-    <view class="text_titlt">免费<i class="colour_red">热</i></view>
-    <view class="text_titlt">大语文<i class="colour_orange">新</i></view>
+    <block wx:for="{{keyword.list}}" data-item="item" wx:for-index="idx" >
+      <view class="text_titlt" bindtap="keyword{{idx}}">{{item.keyword}}</view>
+    </block>
+    <!-- <view class="text_titlt">大语文<i class="colour_orange">新</i></view>
     <view class="text_titlt">棋圣</view>
     <view class="text_titlt">恐龙世界<i class="colour_red">热</i></view>
     <view class="text_titlt">恐龙世界<i class="colour_red">热</i></view>
     <view class="text_titlt">棋圣</view>
     <view class="text_titlt">恐龙世界<i class="colour_red">热</i></view>
     <view class="text_titlt">大语文</view>
-    <view class="text_titlt">恐龙世界</view>
+    <view class="text_titlt">恐龙世界</view> -->
   </view>
 </view>
 
@@ -123,50 +125,31 @@
 
 
 
-<view class="menu_lei">
-    <view class="xin_arrival_ziu" bindtap="details">
-      <view class="arrival">
-        <view class="arri_sort1">
-            <view class="sort_k">
-              <view class="sort_img">
-                <image src="http://qmximg.oss-cn-hangzhou.aliyuncs.com/ed00aec15abe1b53/2e165199b807458b.png" mode="widthFix"></image>
-              </view>
-              <view class="xin_menu">
-                <view class="sort_title">探秘亚马逊</view>
-                <view class="sort_title2">探秘亚马逊探秘亚马逊探秘亚马逊探秘亚马逊探秘亚马逊</view>
-                <view class="sort_spikekp"><i>自然地理</i><i>自然地理</i><i>自然地理</i></view>
-                <view class="sort_gk">
-                  <image src="../../resource/guank.png" mode="widthFix"></image>
-                  <span>21集</span><span>已有1001人观看</span>
+<block wx:for="{{searchCourseList.items}}" data-item="item" wx:for-index="idx">
+  <view class="menu_lei">
+      <view class="xin_arrival_ziu" bindtap="details" data-id="{{item.id}}">
+        <view class="arrival">
+          <view class="arri_sort1">
+              <view class="sort_k">
+                <view class="sort_img">
+                  <image src="{{item.main_img}}" mode="widthFix"></image>
+                </view>
+                <view class="xin_menu">
+                  <view class="sort_title">{{item.title}}</view>
+                  <view class="sort_title2">{{item.subtitle}}</view>
+                  <view class="sort_spikekp">
+                      <i>{{item.label}}</i>
+                    <!-- <i>自然地理</i><i>自然地理</i><i>自然地理</i> -->
+                  </view>
+                  <view class="sort_gk">
+                    <image src="../../resource/guank.png" mode="widthFix"></image>
+                    <span>{{item.chapter_count}}集</span><span>已有{{item.browse_count}}人观看</span>
+                  </view>
                 </view>
               </view>
-            </view>
+          </view>
         </view>
       </view>
-    </view>
-</view>
+  </view>
+</block>
 
-
-
-<view class="menu_lei">
-    <view class="xin_arrival_ziu" bindtap="details">
-      <view class="arrival">
-        <view class="arri_sort1">
-            <view class="sort_k">
-              <view class="sort_img">
-                <image src="http://qmximg.oss-cn-hangzhou.aliyuncs.com/ed00aec15abe1b53/2e165199b807458b.png" mode="widthFix"></image>
-              </view>
-              <view class="xin_menu">
-                <view class="sort_title">探秘亚马逊</view>
-                <view class="sort_title2">探秘亚马逊探秘亚马逊探秘亚马逊探秘亚马逊探秘亚马逊</view>
-                <view class="sort_spikekp"><i>自然地理</i><i>自然地理</i><i>自然地理</i></view>
-                <view class="sort_gk">
-                  <image src="../../resource/guank.png" mode="widthFix"></image>
-                  <span>21集</span><span>已有1001人观看</span>
-                </view>
-              </view>
-            </view>
-        </view>
-      </view>
-    </view>
-</view>
