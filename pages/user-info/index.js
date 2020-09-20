@@ -40,6 +40,8 @@ Page({
     hidden: true, //头像弹窗
     namehidden: true, //修改姓名弹窗
     iphonehidden: true, //修改手机号弹窗
+    accounthidden: true, //支付宝帐号弹窗
+    alipayhidden: true, //支付宝姓名弹窗
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     recommendedAge: [],
     recommendedAgeSelectIndex: 0,
@@ -69,6 +71,18 @@ Page({
   nameshow: function (e) {
     this.setData({
       namehidden: !this.data.namehidden
+    })
+  },
+  //支付宝姓名弹窗
+  alipayshow: function (e) {
+    this.setData({
+      alipayhidden: !this.data.alipayhidden
+    })
+  },
+  //支付宝帐号弹窗
+  accountshow: function (e) {
+    this.setData({
+      accounthidden: !this.data.accounthidden
     })
   },
   //手机号弹窗
@@ -130,6 +144,7 @@ Page({
         recommendedAgeSelectIndex: ageIndex,
         birthdayValue: [yearIndex, monthIndex, dayIndex]
       });
+      
     }).catch(err => {
       wx.showToast({//错误
         title: err,
@@ -181,6 +196,30 @@ Page({
   nickNameCancel: function() {
     this.setData({
       namehidden: !this.data.namehidden
+    })
+  },
+  //支付宝帐号取消弹窗
+  accountCancel: function() {
+    this.setData({
+      accounthidden: !this.data.accounthidden
+    })
+  },
+  //支付宝帐号确定弹窗
+  accountConfirm: function() {
+    this.setData({
+      accounthidden: !this.data.accounthidden
+    })
+  },
+  //支付宝姓名取消弹窗
+  alipayCancel: function() {
+    this.setData({
+      alipayhidden: !this.data.alipayhidden
+    })
+  },
+  //支付宝姓名确定弹窗
+  alipayConfirm: function() {
+    this.setData({
+      alipayhidden: !this.data.alipayhidden
     })
   },
   /**

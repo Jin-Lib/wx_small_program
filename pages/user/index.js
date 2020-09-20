@@ -79,14 +79,14 @@ Page({
     API.getinfo({
       code: 0
     }).then(res => {//成功
-      console.log('res', res)
       const {
         nick_name, head_img, birthday,
         age, sex, phone
       } = res;
       if (nick_name && head_img && birthday && age && sex && phone) {
         this.setData({
-          userInfoFinish: nick_name
+          userInfoFinish: nick_name,
+          userInfo: res,
         })
       }
     })
@@ -98,7 +98,12 @@ Page({
     });
     this.getInfoData();
   },
-  
+  //点击进入合伙人
+  partner: function (event) {
+    wx.navigateTo({
+      url: '/pages/partner/partner-mall/index'
+    })
+  },
   //点击修改信息
   information: function (event) {
     if(!this.data.wxlogin) {

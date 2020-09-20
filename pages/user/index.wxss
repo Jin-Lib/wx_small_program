@@ -23,7 +23,7 @@
 page{background-color: #f5f5f5;}
 
 .user_top{float: left; position: relative; width: 750rpx; height: 150rpx; background-color: #fc4850;}
-.user_top_y{position: absolute; width: 80rpx; height: 80rpx; border-radius: 50%; top: 40rpx; left: 100rpx; opacity: 0.3; background-color: #fff;}
+.user_top_y{position: absolute; width: 80rpx; height: 80rpx; border-radius: 50%; top: 0rpx; left: 60rpx; opacity: 0.3; background-color: #fff;}
 .user_top_y1{position: absolute; width: 30rpx; height: 30rpx; border-radius: 50%; top: 25rpx; left: 300rpx; opacity: 0.3; background-color: #fff;}
 .user_top_y2{position: absolute; width: 60rpx; height:60rpx; border-radius: 50%; top: 10rpx; left: 720rpx; opacity: 0.3; background-color: #fff;}
 .user_data{width: 645rpx;margin-left: 25rpx;padding:30rpx 30rpx; display:inline-block; background-color: #fff; border-radius: 10rpx;margin-top: 50rpx;}
@@ -31,7 +31,7 @@ page{background-color: #f5f5f5;}
 .user_data_img image{width: 100%;}
 .user_data_text{float: left; margin-left: 30rpx; margin-top: 30rpx; font-size: 26rpx; font-weight: 900;}
 .user_data_text i{ height: 10rpx; width: 10rpx; background-color:red;border-radius: 50%; float: left;}
-.data_text_perfect{float: left;}
+.data_text_perfect{float: left;font-size: 36rpx;}
 .edit_img{float: left; width: 25rpx; height: 25rpx; margin-top: 5rpx; margin-left: 10rpx;}
 .edit_img image{width: 25rpx;}
 .user_data_credit{float: right; font-size: 36rpx;color: #fc4850;}
@@ -49,6 +49,8 @@ page{background-color: #f5f5f5;}
 .order_img{width: 50rpx;}
 .order_img image{width: 50rpx;}
 .order_img_jp{width: 20rpx;margin-top: 6rpx;margin-left:400rpx;}
+.order_img_jp1{width: 20rpx;margin-top: 6rpx;margin-left:360rpx;}
+.order_img_jp1 image{width: 20rpx;margin-top: 6rpx;margin-left:10rpx;}
 .order_img_jp image{width: 20rpx;}
 .text_order{margin-top: 3rpx;margin-left: 50rpx;font-size: 28rpx;}
 

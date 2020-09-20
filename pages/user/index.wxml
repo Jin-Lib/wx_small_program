@@ -33,9 +33,9 @@
       <i></i>
     </view>
 
-    <view class="user_data_credit" bindtap="credit">
+    <!-- <view class="user_data_credit" bindtap="credit">
       <view class="data_credit_num">{{userInfo.v_amount}}</view>学分>
-    </view>
+    </view> -->
 
   </view>
 
@@ -115,7 +115,16 @@
       <view class="order_img_jp">
         <image src="../../resource/user/grzx_icon05.png" mode="widthFix"></image>
       </view>
+    </view>
 
+    <view class="service_order" bindtap="partner">
+      <view class="order_img">
+        <!-- <image src="../../resource/user/grzx_icon06.png" mode="widthFix"></image> -->
+      </view>
+      <view class="text_order">合伙人商城</view>
+      <view class="order_img_jp1">
+        <image src="../../resource/user/grzx_icon05.png" mode="widthFix"></image>
+      </view>
     </view>
 
   </view>
