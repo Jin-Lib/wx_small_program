@@ -110,9 +110,9 @@
       </view>
       <view class="spike">￥<i>{{item.group_price}}</i>秒杀</view>
     </view>
-    <view class="xin_more">
+    <!-- <view class="xin_more">
       点击查看更多 >
-    </view>
+    </view> -->
   
   </view>
 
